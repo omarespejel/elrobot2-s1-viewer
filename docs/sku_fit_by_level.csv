@@ -1,0 +1,21 @@
+sku,level,H_mm,z_g_m,z_c_m,in_Z_range,free_lift_flat_closed_form_mm,free_lift_CAD_place_pose_min_lane_mm,fits_vertical,note
+can_355_std,0,122.7,0.243,0.393,True,146.7,>=90,True,
+can_355_std,1,122.7,0.683,0.833,True,,,True,
+can_355_slim,0,156.0,0.266,0.416,True,123.7,,True,no CAD run for this SKU: fit judged on the closed form minus 21.1 mm
+can_355_slim,1,156.0,0.706,0.856,True,,,True,
+can_473_tall,0,157.2,0.267,0.417,True,122.5,,True,no CAD run for this SKU: fit judged on the closed form minus 21.1 mm
+can_473_tall,1,157.2,0.707,0.857,True,,,True,
+pet_500_water,0,210.0,0.32,0.47,True,69.7,,True,"tote cell (-300,0) unusable at level 0 (500 mL, 600 mL, 1 L); cans can use it as the last pick; no CAD run for this SKU: fit judged on the closed form minus 21.1 mm"
+pet_500_water,1,210.0,0.76,0.91,True,,,True,
+pet_600_soda,0,237.0,0.347,0.497,True,42.7,21.6,True,"tote cell (-300,0) unusable at level 0 (500 mL, 600 mL, 1 L); cans can use it as the last pick"
+pet_600_soda,1,237.0,0.787,0.937,True,,,True,
+pet_1000,0,290.0,0.4,0.55,True,-10.3,blocked,False,"tote cell (-300,0) unusable at level 0 (500 mL, 600 mL, 1 L); cans can use it as the last pick"
+pet_1000,1,290.0,0.84,0.99,True,,,True,
+pet_1500,0,311.0,0.421,0.571,True,-31.3,,False,geometry only: needs clamp above the 41.7 N cap and/or a lane wider than the 5-lane set (see report section 5); no CAD run for this SKU: fit judged on the closed form minus 21.1 mm
+pet_1500,1,311.0,0.861,1.011,True,,,True,geometry only: needs clamp above the 41.7 N cap and/or a lane wider than the 5-lane set (see report section 5)
+pet_2000,0,320.0,0.43,0.58,True,-40.3,,False,geometry only: needs clamp above the 41.7 N cap and/or a lane wider than the 5-lane set (see report section 5); no CAD run for this SKU: fit judged on the closed form minus 21.1 mm
+pet_2000,1,320.0,0.87,1.02,True,,,True,geometry only: needs clamp above the 41.7 N cap and/or a lane wider than the 5-lane set (see report section 5)
+pet_2500,0,345.0,0.455,0.605,True,-65.3,,False,geometry only: needs clamp above the 41.7 N cap and/or a lane wider than the 5-lane set (see report section 5); no CAD run for this SKU: fit judged on the closed form minus 21.1 mm
+pet_2500,1,345.0,0.895,1.045,True,,,True,geometry only: needs clamp above the 41.7 N cap and/or a lane wider than the 5-lane set (see report section 5)
+pet_3000,0,330.0,0.44,0.59,True,-50.3,,False,geometry only: needs clamp above the 41.7 N cap and/or a lane wider than the 5-lane set (see report section 5); no CAD run for this SKU: fit judged on the closed form minus 21.1 mm
+pet_3000,1,330.0,0.88,1.03,True,,,True,geometry only: needs clamp above the 41.7 N cap and/or a lane wider than the 5-lane set (see report section 5)

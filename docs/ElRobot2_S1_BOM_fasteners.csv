@@ -1,0 +1,27 @@
+fastener,gripper,arm,fixture,z_module,total_needed,on_hand_or_ordered,buy
+Ruthex M3 x 5 x 4 heat-set insert,30 (+12 dummies),50,40 (+12 wide set),0,120,100,buy 1 pack of 100 (need 144 with options)
+M3 x 5 flat head DIN 7991,0,4,0,0,4,0,buy 6
+M3 x 8 socket cap,2,4,0,12,18,0,buy 25 (+2 x M3 x 8 button head ISO 7380 for the J1 clamp)
+M3 x 10 socket cap,22 (+12),16,0,4,42,300,on hand (x300 ordered)
+M3 x 10 flat head DIN 7991,0,22,0,0,22,0,buy 30 (arm covers)
+M3 x 12 socket cap,4,(same 4),0,0,4,0,buy 8 (the J3 flange screws are counted once)
+M3 x 16 socket cap,2,6,0,4,12,0,buy 16
+M3 x 18 socket cap,4,0,0,0,4,0,buy 6 (pinion to horn)
+M3 x 20 socket cap,0,0,40 (+12),0,40,0,buy 52 (+ 52 washers)
+M3 x 20 flat head DIN 7991,0,1,0,0,1,0,buy 4 (J3 single central screw)
+M3 x 50 socket cap,0,16,0,0,16,0,"buy 20 (horn clamp screws, J1 x8 and J2 x8)"
+M3 Belleville washer 3.2 x 7 x 0.4 (DIN 6796),0,16,0,0,16,0,buy 20
+M3 washer DIN 125,0,0,40 (+12),4,44,0,buy 60
+M3 nut,0,0,0,8,8,0,buy 12
+M2 x 12 socket cap,4,0,0,4,8,220,on hand (x220 ordered)
+M2 nut,4,0,0,4,8,0,buy 12 (not on the order list)
+M3 slot T-nut for 6 mm V-slot,0,0,0,36,36,0,buy 40
+M4 x 60 + M4 nyloc + washers,0,0,0,2,2,0,buy 4
+M5 x 16 DIN 912 + slot T-nut,0,0,0,16,16,0,buy 20
+M5 x 25 DIN 912 + slot T-nut,0,0,0,2,2,0,buy 4
+M5 x 30 + nut + washer (foot brackets),0,0,0,8,8,0,buy 10
+M5 x 60 + nyloc + penny washer (rod anchors),0,0,0,4,4,0,buy 6
+"M6 threaded rod, about 1.25 m (tie rods)",0,0,0,2,2,0,"buy 2 lengths of 1 m + 0.5 m, or 2 x 1.5 m"
+M6 x 50 + M6 nut + 2 washers (frame brackets),0,0,16,0,16,0,buy 20
+M6 x 35 + M6 nut + 2 washers (tote brackets),0,0,8,0,8,0,buy 10
+Wood screws 4 x 20 / 4 x 30 / 4 x 40 / 4 x 50 / 5 x 20 / 5 x 25 / 5 x 30 / 3.5 x 16,0,0,98 in total (see fixture_hardware_list.csv),0,98,0,buy an assortment box

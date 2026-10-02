@@ -1,0 +1,544 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>gripper_README.md</title><link rel="stylesheet" href="../assets/style.css"></head><body><header class="site"><div class="wrap"><p class="sub">ElRobot2 &middot; document</p><nav class="top"><a href="../">Versions</a><a href="../viewer/">3D viewer (S1 v1.1)</a><a href="../report.html">Design report</a><a href="../docs/">Documents</a></nav></div></header><main class="wrap"><article><div class="banner"><strong>Working document (2 October 2026).</strong> Design, simulation and desk research only: nothing has been printed, built or measured. Raw file: <a href="gripper_README.md">gripper_README.md</a>.</div><h1 id="elrobot2-s1-gripper-gripper-track-revision-4-face-14-mm-pinion-hub-flange-can-fit-fixes">ElRobot2-S1 gripper (GRIPPER track) - revision 4 (face 14 mm, pinion hub flange, can-fit fixes)</h1>
+<h2 id="1-revision-4-in-five-lines">1. Revision 4 in five lines</h2>
+<ol>
+<li>Face width b = 14 mm for pinion and racks. Pinion tip-loading stall margin 0.89 (b = 12: 0.76); with the 1.2x-rated torque cap 1.27; pitch/HPSTC margins rated 2.74 / cap 2.28 / burst 2.38 / stall 1.60.</li>
+<li>Pinion hub flange D24 x 3.5 mm carries the four horn-screw counterbores. It is on the SCREW-HEAD (floor) side of the gear, not the horn side: the heads must be reached from that side, so only a flange there can carry the counterbores. It runs in a D25 pocket in the base, 0.25 mm above the pocket floor / 624, and a neck D20 x 0.5 mm keeps its top 0.5 mm below the rack bottoms (the flange R12 passes under the rack tooth tips at y = 10.5).
+   Walls: counterbore to flange edge 2.03 mm; M3 hole to tooth space 1.68 mm (rev 3: 0.48 mm). EXCEPTION: the 0.5 mm tall neck web is 1.23 mm wide at each hole (rule 1.6), compression only.</li>
+<li>Stack: J3 interface plane = 45 + 14 + 3.5 + 0.5 = zeta 63.0 (rev 3: 57.0; expected 62.5 + 0.5 mm neck clearance). Body bottom -3.8 to J3 plane 63.0 = 66.8 mm.</li>
+<li>Found and fixed with the new grasp-fit check (cylinders D57..D110, top at zeta -10, 320 mm long): the rev 3 finger head (6 mm inner thickening) and full-width yoke straps entered a can silhouette (1317 and 3747 mm3 at D66). Now: inner head 3 mm (clears a D57 can by 0.5 mm), yoke strap L-shaped (lower leg inner edge 7.5 mm inside the seat plane, full width only above zeta -2, R3 fillet). Overlap now 0 mm3 for all six diameters.</li>
+<li>Re-run: 18/18 parts watertight, 15-body matrix at gap 70 and 20-position sweep all 0 mm3, positive controls 5 of 6 detected at one fixed 1 mm3 criterion (the sixth is a sensitivity limit, section 5), hand calcs, previews (6 PNG incl. a section through the pinion axis).</li>
+</ol>
+<h2 id="2-stack-zeta-mm-up-origin-on-the-j3pinion-axis-and-grasp-datums">2. Stack (zeta mm, +up, origin on the J3/pinion axis) and grasp datums</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>level</th>
+<th>zeta</th>
+<th></th>
+<th>datum</th>
+<th>zeta</th>
+<th>from body bottom</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>body bottom (floor underside)</td>
+<td>-3.8</td>
+<td></td>
+<td>bottle top, rule z_g = z_floor + H + 10 mm</td>
+<td>-10.0</td>
+<td>body bottom is 6.2 mm above it</td>
+</tr>
+<tr>
+<td>624 top = pocket floor</td>
+<td>3</td>
+<td></td>
+<td>finger top</td>
+<td>-4.3</td>
+<td>0.5 mm below</td>
+</tr>
+<tr>
+<td>pinion flange</td>
+<td>3.25 .. 6.75</td>
+<td></td>
+<td>pad band top</td>
+<td>-87</td>
+<td><strong>83.2 mm below</strong></td>
+</tr>
+<tr>
+<td>neck / rack bed</td>
+<td>6.75..7.25 / 7</td>
+<td></td>
+<td>pad band centre</td>
+<td>-112</td>
+<td>108.2 mm below</td>
+</tr>
+<tr>
+<td>racks + gear (b = 14)</td>
+<td>7.25 .. 21.25</td>
+<td></td>
+<td>pad band bottom</td>
+<td>-137</td>
+<td>133.2 mm below</td>
+</tr>
+<tr>
+<td>cover plate</td>
+<td>21.5 .. 24.75</td>
+<td></td>
+<td>fingertip</td>
+<td>-140</td>
+<td>136.2 mm below</td>
+</tr>
+<tr>
+<td>STS3215 (shaft down)</td>
+<td>24.75 .. 59.75</td>
+<td></td>
+<td>camera wedge</td>
+<td>30 .. 62</td>
+<td></td>
+</tr>
+<tr>
+<td>top plate / J3 plane</td>
+<td>60 .. 63</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Gap = distance between the two pad V-apex lines; 40..125 mm = 42.5 mm per rack = 202.9 deg = 2309 ticks (gripper_gap_angle_ticks.csv). Hard stops (notch ends): 2.0 mm/rack (109 ticks) beyond gap 40, 0.75 mm/rack (41 ticks) beyond gap 125.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="3-force-chain-allowables-margins">3. Force chain, allowables, margins</h2>
+<p>T = 2 F_t r_p, F_t = T/(2 r_p), clamp per finger = 0.85 F_t (r_p 12 mm): rated 0.981 N<em>m -&gt; 34.7 N, 1.2x cap 1.177 N</em>m -&gt; 41.7 N, stall 2.942 N*m -&gt; 104.2 N. Allowables (lead): in-plane PETG 20 MPa repeated / 35 MPa single event, across layers 0.5x (assumption). Pinion stress = k F_t / b with the lead's FEM k (2.5 pitch/HPSTC, 4.5 tip, MPa per N/mm of face; generated outline, m 1.5, z 16, x = 0), taken proportional to 1/b (not re-run at b = 14).</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>item (MPa, margin)</th>
+<th>rated 34.7 N</th>
+<th>cap 41.7 N</th>
+<th>burst 70 N</th>
+<th>stall 104.2 N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pinion tooth, pitch/HPSTC loading</td>
+<td>7.3 (2.74)</td>
+<td>8.8 (2.28)</td>
+<td>14.7 (2.38)</td>
+<td>21.9 (1.60)</td>
+</tr>
+<tr>
+<td>pinion tooth, tip loading</td>
+<td>13.1 (1.52)</td>
+<td>15.8 (1.27)</td>
+<td>26.5 (1.32)</td>
+<td>39.4 (0.89) <strong>FAIL</strong></td>
+</tr>
+<tr>
+<td>rack tooth (Lewis x Kt 1.5)</td>
+<td>6.0 (3.32)</td>
+<td>7.2 (2.77)</td>
+<td>12.1 (2.89)</td>
+<td>18.1 (1.94)</td>
+</tr>
+<tr>
+<td>finger bending (as built)</td>
+<td>4.6 (4.32)</td>
+<td>5.5 (3.60)</td>
+<td>9.3 (3.75)</td>
+<td>13.9 (2.52)</td>
+</tr>
+<tr>
+<td>yoke leg bending (net of hole)</td>
+<td>5.5 (3.67)</td>
+<td>6.5 (3.06)</td>
+<td>11.0 (3.19)</td>
+<td>16.3 (2.14)</td>
+</tr>
+<tr>
+<td>finger-head screws, hole bearing</td>
+<td>3.8 (5.29)</td>
+<td>4.5 (4.41)</td>
+<td>7.6 (4.60)</td>
+<td>11.3 (3.09)</td>
+</tr>
+<tr>
+<td>tab bearing in yoke slot (across layers)</td>
+<td>3.3 (3.00)</td>
+<td>4.0 (2.50)</td>
+<td>6.7 (2.61)</td>
+<td>10.0 (1.75)</td>
+</tr>
+<tr>
+<td>tab root bending (w_eff 20 mm estimate)</td>
+<td>9.4 (2.12)</td>
+<td>11.3 (1.77)</td>
+<td>19.0 (1.84)</td>
+<td>28.2 (1.24)</td>
+</tr>
+<tr>
+<td>hard stop (tab on notch end)</td>
+<td>1.8 (10.86)</td>
+<td>2.2 (9.05)</td>
+<td>3.7 (9.44)</td>
+<td>5.5 (6.34)</td>
+</tr>
+<tr>
+<td>Max clamp with all margins &gt;= 1: 52.9 N repeated, 92.6 N single event (pinion tip loading). Stall is covered ONLY by the torque cap: set the STS3215 torque limit &lt;= 1.2x rated = 1.177 N*m (about 400 on a 0-1000 register; VERIFY scaling). Pad deflection at rated 2.6 mm. 624-2RS 11.2 vs 500 N; J3 inserts 45 vs 300 N.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="4-clamp-command-limits-per-finger-supersede-the-param-file">4. Clamp command limits per finger (supersede the param file)</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>class</th>
+<th>mass kg</th>
+<th>clamp needed N (mu 0.5, SF 2, 0.5 g)</th>
+<th>command limit N</th>
+<th>torque N*m</th>
+<th>% rated</th>
+<th>% stall</th>
+<th>min mu</th>
+<th>within 1.2x cap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>can 355 mL</td>
+<td>0.382</td>
+<td>11.2</td>
+<td>15</td>
+<td>0.424</td>
+<td>43%</td>
+<td>14%</td>
+<td>0.37</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>PET &lt;= 600 mL (500/600 mL)</td>
+<td>0.650</td>
+<td>19.1</td>
+<td>25</td>
+<td>0.706</td>
+<td>72%</td>
+<td>24%</td>
+<td>0.38</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>PET 1 L</td>
+<td>1.072</td>
+<td>31.5</td>
+<td>34</td>
+<td>0.960</td>
+<td>98%</td>
+<td>33%</td>
+<td>0.46</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>PET 1.5 L</td>
+<td>1.605</td>
+<td>47.2</td>
+<td>47</td>
+<td>1.327</td>
+<td>135%</td>
+<td>45%</td>
+<td>0.50</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>PET 2 L</td>
+<td>2.130</td>
+<td>62.7</td>
+<td>63</td>
+<td>1.779</td>
+<td>181%</td>
+<td>60%</td>
+<td>0.50</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>1.5 L / 2 L need 47-63 N at mu 0.5: above rated torque and the cap, burst-only (steel M1.5 gears, smaller r_p or STS3250 for nominal use).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="5-verification-gripper_parts_verificationcsv-_interference_matrix_gap70csv-_sweep_checkscsv-_grasp_fit_checkscsv-_positive_controlscsv">5. Verification (gripper_parts_verification.csv, _interference_matrix_gap70.csv, _sweep_checks.csv, _grasp_fit_checks.csv, _positive_controls.csv)</h2>
+<p>Parts: 18/18 watertight, consistent winding, positive volume, fit the 250 x 250 x 255 bed. Matrix: 105 pairs, max overlap 0.0 mm3. Sweep: 20/20 positions (gap 40..125 in 5 mm steps + both overtravel stops) 0 mm3, footprint x 144..149.5 mm (&lt;= 150), y 60.3 mm (&lt; 62).
+Grasp-fit: D57, 66, 71, 89, 105, 110 at their V-flank contact gap, cylinders from zeta -10 down 320 mm: 0 mm3 against every printed part. 2D gear mesh (453 positions): overlap 0, min flank gap 0.082 mm, contact ratio 1.74.
+Positive controls (gripper_positive_controls.csv, one criterion fixed in advance: overlap &gt; 1 mm3, the same as the PASS limit): pinion +0.6 mm in x 29.0 mm3; pinion +1.0 mm in z 1.9 mm3; pinion -0.3 mm in z 13.6 mm3; rev 3 yoke strap vs D66 3747 mm3; rev 3 finger head vs D66 1317 mm3 - detected. Pinion +0.6 mm in z (0.1 mm flange/rack penetration) gives 0.37 mm3 and is NOT detected: overlap grows ~3.7 mm3 per mm of penetration there, so the check resolves ~0.27 mm; it certifies nominal CAD clearance (0.5 mm flange to rack), not printed tolerances.</p>
+<h2 id="6-print-table-petg-04-nozzle-02-layer-6-walls-22-gyroid-unless-stated-supports-none-by-design">6. Print table (PETG 0.4 nozzle, 0.2 layer, 6 walls, 22% gyroid unless stated; supports none by design)</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>part</th>
+<th>qty</th>
+<th>material</th>
+<th>print orientation</th>
+<th>infill</th>
+<th>bbox mm</th>
+<th>est. g each</th>
+<th>supports</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gripper_base</td>
+<td>1</td>
+<td>PETG</td>
+<td>floor down, channels up</td>
+<td>22% gyroid + 6 walls</td>
+<td>144.0x58.3x25.3</td>
+<td>72.3</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_carrier</td>
+<td>1</td>
+<td>PETG</td>
+<td>cover plate face down, tower up (pocket open up)</td>
+<td>22% gyroid + 6 walls</td>
+<td>144.0x58.3x38.5</td>
+<td>68.8</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_top_plate</td>
+<td>1</td>
+<td>PETG</td>
+<td>flat</td>
+<td>22% gyroid + 6 walls</td>
+<td>64.0x43.5x3.0</td>
+<td>10.3</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_pinion</td>
+<td>1</td>
+<td>PETG</td>
+<td>flipped: horn face down, journal pointing up, 100% infill; flange underside bridges 2 mm over the 0.5 mm neck gap</td>
+<td>100%</td>
+<td>27.0x27.0x23.0</td>
+<td>9.0</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_rack</td>
+<td>2</td>
+<td>PETG</td>
+<td>flipped: top face (tab side) down, teeth flat, 100% infill</td>
+<td>100%</td>
+<td>75.0x19.6x14.0</td>
+<td>10.8</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_yoke</td>
+<td>2</td>
+<td>PETG</td>
+<td>outer face down (strap lies flat)</td>
+<td>100%</td>
+<td>40.0x73.4x8.0</td>
+<td>16.9</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_finger</td>
+<td>2</td>
+<td>PETG</td>
+<td>on its long side (strap-side end face up), 6 walls</td>
+<td>22% gyroid + 6 walls</td>
+<td>13.0x135.7x44.3</td>
+<td>43.4</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_pad</td>
+<td>2</td>
+<td>TPU 95A</td>
+<td>back face down, V + ribs up, 100% infill, slow</td>
+<td>100%</td>
+<td>50.0x40.0x7.9</td>
+<td>10.6</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_camera_plate</td>
+<td>1</td>
+<td>PETG</td>
+<td>back face down</td>
+<td>22% gyroid + 6 walls</td>
+<td>32.0x36.0x25.4</td>
+<td>11.7</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_coupon_sts3215</td>
+<td>1</td>
+<td>PETG</td>
+<td>flat (15-minute fit test)</td>
+<td>22% gyroid + 6 walls</td>
+<td>35.0x80.0x8.0</td>
+<td>17.9</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_dummy_D66</td>
+<td>1</td>
+<td>PETG</td>
+<td>upright, open top</td>
+<td>100%</td>
+<td>66.0x66.0x120.0</td>
+<td>105.0</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_dummy_lid_D66</td>
+<td>1</td>
+<td>PETG</td>
+<td>flat</td>
+<td>100%</td>
+<td>66.0x66.0x3.0</td>
+<td>12.8</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_dummy_D71</td>
+<td>1</td>
+<td>PETG</td>
+<td>upright, open top</td>
+<td>100%</td>
+<td>71.0x71.0x120.0</td>
+<td>112.3</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_dummy_lid_D71</td>
+<td>1</td>
+<td>PETG</td>
+<td>flat</td>
+<td>100%</td>
+<td>71.0x71.0x3.0</td>
+<td>14.8</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_dummy_D89</td>
+<td>1</td>
+<td>PETG</td>
+<td>upright, open top</td>
+<td>100%</td>
+<td>89.0x89.0x120.0</td>
+<td>139.4</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_dummy_lid_D89</td>
+<td>1</td>
+<td>PETG</td>
+<td>flat</td>
+<td>100%</td>
+<td>89.0x89.0x3.0</td>
+<td>23.4</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_dummy_D105</td>
+<td>1</td>
+<td>PETG</td>
+<td>upright, open top</td>
+<td>100%</td>
+<td>105.0x105.0x120.0</td>
+<td>164.9</td>
+<td>none</td>
+</tr>
+<tr>
+<td>gripper_dummy_lid_D105</td>
+<td>1</td>
+<td>PETG</td>
+<td>flat</td>
+<td>100%</td>
+<td>105.0x105.0x3.0</td>
+<td>32.7</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Printed gripper mass (no servo, inserts, screws): 335.5 g vs 250 g target: OVER (base 72, carrier 69, fingers 2x43, yokes 2x17); no lightening done. Pinion: flange underside bridges 2 mm over the 0.5 mm neck gap - check the slit stays open.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="7-hardware-gripper-only-dummies-add-3-inserts-3-m3x10-each">7. Hardware (gripper only; dummies add 3 inserts + 3 M3x10 each)</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>item</th>
+<th>qty</th>
+<th>where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STS3215 C018 with horn</td>
+<td>1</td>
+<td>tower pocket, shaft down</td>
+</tr>
+<tr>
+<td>624-2RS (4 x 13 x 5)</td>
+<td>1</td>
+<td>base seat, flush with pocket floor</td>
+</tr>
+<tr>
+<td>M3 heat-set insert (hole 4.2 x 5.5)</td>
+<td>30</td>
+<td>base 4, carrier 12 (J3 4, plate 2, servo-adjust 4, camera 2), racks 2, fingers 12</td>
+</tr>
+<tr>
+<td>M3 x 18 (buy)</td>
+<td>4</td>
+<td>pinion to horn, heads in the flange counterbores (was M3 x 12)</td>
+</tr>
+<tr>
+<td>M3 x 12 (buy)</td>
+<td>4</td>
+<td>J3 hub to tower inserts</td>
+</tr>
+<tr>
+<td>M3 x 10</td>
+<td>22</td>
+<td>carrier to base 4, top plate 2, servo-adjust 4, yoke to finger 8, pad to finger 4</td>
+</tr>
+<tr>
+<td>M3 x 8 (buy)</td>
+<td>2</td>
+<td>yoke to rack-tab insert</td>
+</tr>
+<tr>
+<td>M3 x 16 (buy)</td>
+<td>2</td>
+<td>camera wedge</td>
+</tr>
+<tr>
+<td>M2 x 12 + M2 nut (buy)</td>
+<td>4 + 4</td>
+<td>camera board</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="8-assembly-order">8. Assembly order</h2>
+<ol>
+<li>Press all inserts. 2. Print the coupon; check pocket, shaft window, 624 seat, inserts. 3. Press the 624 into the base seat. 4. Horn on the STS3215 shaft; servo into the carrier from the top (horn through the D25 cover window), adjust screws loose. 5. Turn the carrier over; bolt the pinion to the horn from below (4 x M3 x 18). 6. Racks into the base channels, tabs through the notches, closed to the stops (gap 40).</li>
+<li>Lower the carrier onto the base (journal into the 624, flange into the pocket, gear between the racks), 4 x M3 x 10; tune the adjust screws until the pinion turns freely. 8. Yokes on the tabs (M3 x 8), yokes on the finger heads (4 x M3 x 10), TPU pads (2 x M3 x 10). 9. Top plate, camera wedge, J3 hub (4 x M3 x 12). 10. Set the torque cap.</li>
+</ol>
+<h2 id="9-verify-before-printing-weak-points">9. VERIFY BEFORE PRINTING / weak points</h2>
+<p>Caliper (named parameters at the top of gripper_build.py): SV_SHAFT_FROM_END 12.5, servo 45.2 x 24.7 x 35, HORN_STANDOFF 3.5, HORN_OD 22, horn thread depth &gt;= 3.2 mm (M3 x 18 engagement), 624 fit, journal 3.95, insert hole 4.2 x 5.5, M3 head vs counterbore 5.8, TPU pad fit, tick sign, Torque_Limit scaling, PETG vs 20/35 MPa.
+Weak points: (a) stall with tip loading 0.89 unless the torque cap is set; (b) neck web 1.23 mm and the 0.5 mm slit between flange and gear (if it fuses the flange top rubs the rack bottoms: file it); (c) tab-root bending uses an estimated 20 mm spread width (stall margin 1.24); (d) mass over target; (e) no FEA and no test print; the lead's FEM was not re-run at b = 14.</p>
+<h2 id="10-deviations-from-the-brief-lead-request">10. Deviations from the brief / lead request</h2>
+<p>Face 14 (brief 10); J3 plane 63.0 (brief 55); flange on the floor side with a 0.5 mm neck (expected horn side, 62.5); body-bottom datum -3.8; finger 44.3 wide with a 3 mm inner head; yoke/tab finger mount with an L-shaped strap; servo pocket +-2 mm with adjust screws; J3 inserts in tower walls; housing 144 mm; 202.9 deg (not 191); r_p 9 mm and lightening not touched (gripper_rp9_variant_estimate.csv is regenerated by the script only).</p></article></main><footer><div class="wrap">Design, simulation and desk research only; nothing has been printed, built or measured. Updated 2 October 2026.</div></footer></body></html>

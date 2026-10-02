@@ -1,0 +1,96 @@
+id,category,check,value,criterion,status,note
+V001,datum_stack_level,j1_flange_top,"145.00 mm (nominal 145.00, dev +0.00)",|dev| <= 0.5 mm,PASS,hub zmax
+V002,datum_stack_level,j1_cap_top,"139.50 mm (nominal 139.50, dev +0.00)",|dev| <= 0.5 mm,PASS,cap zmax
+V003,datum_stack_level,j1_hsg_top,"135.10 mm (nominal 135.10, dev +0.00)",|dev| <= 0.5 mm,PASS,cap zmin (seat plane)
+V004,datum_stack_level,j1_horn_top,"101.00 mm (nominal 101.00, dev +0.00)",|dev| <= 0.5 mm,PASS,ring zmin (rests on horn)
+V005,datum_stack_level,j1_hub_len,"44.00 mm (nominal 44.00, dev -0.00)",|dev| <= 0.5 mm,PASS,hub zmax - ring zmin
+V006,datum_stack_level,j1_servo_bot,"49.50 mm (nominal 49.50, dev +0.00)",|dev| <= 0.5 mm,PASS,servo dummy zmin
+V007,datum_stack_level,l1_floor_bot,"145.00 mm (nominal 145.00, dev +0.00)",|dev| <= 0.5 mm,PASS,L1 zmin
+V008,datum_stack_level,j2_servo_top,"198.00 mm (nominal 198.00, dev +0.00)",|dev| <= 0.5 mm,PASS,L1 wall top (cover seat)
+V009,datum_stack_level,j2_clamp_top,"201.00 mm (nominal 201.00, dev +0.00)",|dev| <= 0.5 mm,PASS,L1 cover zmax
+V010,datum_stack_level,j2_horn_bot,"146.50 mm (nominal 146.50, dev +0.00)",|dev| <= 0.5 mm,PASS,J2 ring zmax (rests on horn)
+V011,datum_stack_level,j2_hsg_bot,"115.40 mm (nominal 115.40, dev +0.00)",|dev| <= 0.5 mm,PASS,J2 housing zmin
+V012,datum_stack_level,j2_cap_bot,"111.00 mm (nominal 111.00, dev +0.00)",|dev| <= 0.5 mm,PASS,J2 cap zmin
+V013,datum_stack_level,j2_hubfl_bot,"105.50 mm (nominal 105.50, dev +0.00)",|dev| <= 0.5 mm,PASS,J2 hub zmin
+V014,datum_stack_level,j2_hub_len,"36.00 mm (nominal 36.00, dev +0.00)",|dev| <= 0.5 mm,PASS,ring zmax - hub flange top
+V015,datum_stack_level,j3_fl_bot,"62.50 mm (nominal 62.50, dev +0.00)",|dev| <= 0.5 mm,PASS,J3 flange zmin; J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv
+V016,datum_stack_level,j3_hsg_bot,"65.80 mm (nominal 65.80, dev +0.00)",|dev| <= 0.5 mm,PASS,J3 housing zmin; J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv
+V017,datum_stack_level,j3_hsg_top,"85.20 mm (nominal 85.20, dev -0.00)",|dev| <= 0.5 mm,PASS,J3 housing zmax; J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv
+V018,datum_stack_level,j3_floor_bot,"85.30 mm (nominal 85.30, dev +0.00)",|dev| <= 0.5 mm,PASS,L2 zmin (J3 floor bottom); J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv
+V019,datum_stack_level,j3_T_top,"89.00 mm (nominal 89.00, dev +0.00)",|dev| <= 0.5 mm,PASS,horn plate zmax; J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv
+V020,datum_stack_level,j3_servo_top,"127.30 mm (nominal 127.30, dev +0.00)",|dev| <= 0.5 mm,PASS,servo dummy zmax; J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv
+V021,datum_stack_level,l2_max_top,"130.00 mm (nominal 130.00, dev +0.00)",|dev| <= 0.5 mm,PASS,L2 cover zmax (target <=130; shown as measured); J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv
+V022,datum_stack_level,j1_flange_bot,"139.98 mm (nominal 140.00, dev -0.02)",|dev| <= 0.5 mm,PASS,arm_j1_hub section-area step (dA=1178 mm2)
+V023,datum_stack_level,j1_lip_top,"107.92 mm (nominal 107.90, dev +0.02)",|dev| <= 0.5 mm,PASS,arm_j1_pedestal section-area step (dA=396 mm2)
+V024,datum_stack_level,j1_servo_top (pocket roof),"97.47 mm (nominal 97.50, dev -0.03)",|dev| <= 0.5 mm,PASS,arm_j1_pedestal section-area step (dA=2383 mm2)
+V025,datum_stack_level,j1_hsg_top (pedestal cylinder top),"135.13 mm (nominal 135.10, dev +0.03)",|dev| <= 0.5 mm,PASS,arm_j1_pedestal section-area step (dA=1165 mm2)
+V026,datum_stack_level,l1_floor_top,"149.98 mm (nominal 150.00, dev -0.02)",|dev| <= 0.5 mm,PASS,arm_l1 section-area step (dA=11269 mm2)
+V027,datum_stack_level,j2_hsg_flange_bot,"137.48 mm (nominal 137.50, dev -0.02)",|dev| <= 0.5 mm,PASS,arm_j2_housing section-area step (dA=907 mm2)
+V028,datum_stack_level,j2_lip_bot,"142.63 mm (nominal 142.60, dev +0.03)",|dev| <= 0.5 mm,PASS,arm_j2_housing section-area step (dA=396 mm2)
+V029,datum_stack_level,j2_hubfl_top,"110.47 mm (nominal 110.50, dev -0.03)",|dev| <= 0.5 mm,PASS,arm_j2_hub section-area step (dA=1178 mm2)
+V030,datum_stack_level,j3_fl_top,"65.47 mm (nominal 65.50, dev -0.03)",|dev| <= 0.5 mm,PASS,arm_j3_flange section-area step (dA=1998 mm2); J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv
+V031,datum_stack_level,j3_lip_top,"66.97 mm (nominal 67.00, dev -0.03)",|dev| <= 0.5 mm,PASS,arm_j3_housing section-area step (dA=80 mm2); J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv
+V032,datum_stack_level,j3_b_lo (pin collar top),"67.07 mm (nominal 67.10, dev -0.03)",|dev| <= 0.5 mm,PASS,"arm_j3_pin section-area step (dA=42 mm2); NOTE: a +-1 mm window also contains the key-pocket ceiling step (dA larger), so the collar step is isolated in a +-0.4 mm window and the pocket ceiling is checked in its own row; J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv"
+V033,datum_stack_level,"j3 pin key-pocket ceiling (65.5 + 2.6; NOT a datum, explains the larger 68.07 area step)","68.07 mm (nominal 68.10, dev -0.03)",|dev| <= 0.5 mm,PASS,arm_j3_pin section-area step (dA=48 mm2); J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv
+V034,datum_stack_level,j3_T_bot (plate underside),"85.47 mm (nominal 85.50, dev -0.03)",|dev| <= 0.5 mm,PASS,arm_j3_horn_plate section-area step (dA=277 mm2); J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv
+V035,datum_stack_level,j3_floor_top,"92.32 mm (nominal 92.30, dev +0.02)",|dev| <= 0.5 mm,PASS,arm_l2 section-area step (dA=1981 mm2); J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv
+V036,datum_stack_level,l2_floor_top,"89.32 mm (nominal 89.30, dev +0.02)",|dev| <= 0.5 mm,PASS,arm_l2 section-area step (dA=7362 mm2); J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv
+V037,datum_stack_level,l2_root_top,"105.47 mm (nominal 105.50, dev -0.03)",|dev| <= 0.5 mm,PASS,arm_l2 section-area step (dA=3108 mm2); J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv
+V038,datum_stack_level,l2_root_bot,"97.47 mm (nominal 97.50, dev -0.03)",|dev| <= 0.5 mm,PASS,arm_l2 section-area step (dA=2562 mm2); J3/L2 nominal recomputed for J3 plane zeta 62.5 (lead update); J1/J2 = original arm_datum_table.csv
+V039,geometry,all 23 exported STLs watertight and winding-consistent (trimesh),True,True,PASS,cable clips / shims are multi-body by design (6 / 13 bodies)
+V040,geometry,every STL bbox within 256 x 256 x 260 mm bed (print pose),max 216.2 x 216.2 x 100.0 mm,<= 256 x 256 x 260,PASS,L1 / L2 / covers printed rotated 45 deg about Z
+V041,interface_carriage,"pedestal envelope vs keep-out (|x|<=45, z 45..145, y >= -110)","x -45.0..45.0, y -110.0..29.0, z 45.0..145.0",|x|<=45; 45<=z<=145; y>=-110,PASS,"clamp plate z45..48, hub flange top z145, J1 cap top z139.5 also inside"
+V042,interface_carriage,6 x M3 insert holes in pedestal flange rear face,"x = +-30 mm; z = 130, 95, 60 (= 150 - 20/55/90); D4.2 x 9 deep; flange 11 mm thick (y -110..-99)",brief pattern,PASS,by construction (build_j1_pedestal); screws M3x16 from behind the 8 mm plate
+V043,interface_gripper,"J3 flange 46 x 46 x 3 (R6), 4 x D3.4 on 36 x 36; lead: must not cover x >= 26","bbox x -23.0..23.0, y -23.0..23.0",|x|<=23,PASS,plane zeta 62.5 (J3_IFACE_ZETA); M3x12 through both plates
+V044,datum,L2 highest point,130.0 mm (cover top); J3 servo top 127.3,<= 130 (lead target),PASS,"walls 127.0, cover 127..130 over u=36..161; J3 servo top 127.3 left uncovered"
+V045,datum,L1 floor bottom / highest point,145.0 / 201.0 mm,floor bottom 145; L1 top free up to 200 (design_params),PASS (floor) / NOTE (top),"L1 top = J2 clamp cover = 201 (datum j2_clamp_top), 1 mm above the 200 free-space line: confirm with other tracks"
+V046,kinematics,J2 limit +-130 deg -> minimum reach radius,169.0 mm,brief: 0.17 m,PASS,r_min = 2 L cos(130/2); 0.14 m needs q2 = 139 deg
+V047,interference,"pairwise OCC boolean on all assembled parts + servo/bearing/screw/shim dummies (q1=90, q2=0)",240 AABB-overlapping pairs tested; unintended overlaps (> 0.2 mm3): 0 [],0,PASS,items: 21 printed + 29 dummies + 13 TPU shims
+V048,interference,intentional overlaps (list),"17 x thread engagement: 16 x 21.2 mm3 (M3x50 in horns, 3.0 mm) + 1 x 6.3 mm3 (M3x20 forming a thread in the horn-plate pilot)",intentional,PASS,bearings in D42.1 / D18.1 seats and on D29.95 / D11.95 journals show clearance (no press fits modelled)
+V049,interference,intentional face contacts (zero volume),"hub flange/L1 floor, servo/pocket ceiling, cap/housing, hub flange/L2 root plate, J3 housing/L2 floor (0.1 mm gap)",by design,INFO,
+V050,sweep,"J1 -20..160 x J2 -130..130 (10 deg), gripper aligned, J3 in front of J1 axis (y>=0)","406 configs, 0 contacts; min clearance: gripper-pedestal tunnel 50.2 mm, L2-pedestal tunnel 93.2 mm, L1 (J2 flange)-plate plane 3.1 mm (q1=-20)",no contact,PASS,"obstacles: pedestal (plate, tunnel, housing+cap), carriage plate y<-110 (half-space, conservative), 2040 column x+-10, y -171..-131"
+V051,sweep,"same, gripper at any J3 angle (0..165 deg step 15), J3 in front (y>=0)","19488 gripper configs, 0 contacts; min clearance 30.0 mm (plate plane), 50.0 mm (tunnel)",no contact,PASS,
+V052,sweep,full joint box (J3 allowed behind the J1 axis): FIRST-CONTACT RADIUS,"0.169 m (q2 = +-130 deg) for gripper/L2 vs carriage plane, column, pedestal; contact starts at larger r for q1 away from 90 deg (q1=0: 0.394 m, q1=20: 0.346 m, q1=50: 0.169 m); none for 60<=q1<=120",report,INFO,"all contact configs have the J3 axis behind y=0 (outside the working half-plane); see arm_sweep_first_contact.csv, arm_sweep_summary.csv"
+V053,stiffness,"L2 beam: bending deflection at J3 (23.5 N = 2.4 kg, E = 1.2 GPa, CAD sections incl. root plate)",1.19 mm,report,INFO,I(u) from 5 mm-station CAD sections (arm_stiffness_sections.csv)
+V054,stiffness,L1 beam: bending + tip-slope contribution at full reach 0.385 m (q2 = 31.5 deg),0.80 mm,report,INFO,
+V055,stiffness,"L1 torsion (load 104 mm off the L1 axis, T = 2.45 N m): closed box (cover bonded/preloaded) | open channel (cover not acting)",0.27 mm | 40.2 mm,cover must act as the closed-box lid,CONDITIONAL,with screw slip k_s = 340 N/mm: total 2.55 mm; k_s = 30: 5.6; k_s = 10: 12.3; k_s = 3 N/mm: 35.6 mm. Bond the cover (CA/epoxy) and verify joint slip
+V056,stiffness,"pedestal tunnel (inverted-U, I = 1.8..2.3e5 mm4 in the cable channel) bending, payload only","1.32 mm at the gripper (housing disp 0.18 mm, rotation 2.96 mrad)",report,INFO,carriage plate / insert compliance not included
+V057,stiffness,"TOTAL tip deflection at r = 0.385 m, 2.4 kg at the gripper: L2 + L1 + pedestal (cover acts as lid)",3.6 mm (3.9 mm with screw slip k_s = 340 N/mm),report (target < ~5 mm),PASS (conditional on cover bond),"Euler-Bernoulli, shear deformation neglected; PROVISIONAL until measured. Worst case, cover not acting: 45 mm"
+V058,stiffness,bearing / housing play (NOT beam): J1 diametral clearance 0.10 (D42.1 seat) + 0.05 (journal),<= 7.5 mrad tilt -> up to 2.9 mm peak-to-peak at the gripper; J2 up to 1.5 mm,report,INFO,depends on coupon result; choose seat +0.0/+0.1
+V059,interface_carriage,"pedestal flange load: 6 screws, lever 70 mm, M = 12.2 N m (+ V x 0.110 m)",top-row tension 92 N (pivot bottom row) / 69 N (pivot plate edge); shear 5.9 N each,insert pull-out >= 250 N typical (verify by pull test),PASS,plate moment 16.1 N m (spec case 10.6 N m: 14.5)
+V060,loads,J1 2 x 6806: radial reaction each at spec M = 10.6 N m (s = 20 mm),530 N,C0r ~2.8 kN (verify),PASS,utilisation 0.19
+V061,loads,J1 2 x 6806: radial reaction each at recomputed M = 12.2 N m,611 N,C0r ~2.8 kN (verify),PASS,utilisation 0.22; projected bore pressure 2.1 MPa vs PETG ~5 MPa creep limit
+V062,loads,J2 2 x 6806 radial each (M_J2 = 5.35 N m),268 N,C0r ~2.8 kN,PASS,utilisation 0.10
+V063,loads,"J3 2 x 6701 radial each (ASSUMED 30 mm COG offset of bottle+gripper 2.57 kg, s = 14 mm)",54 N,C0r ~0.55 kN (verify),PASS,utilisation 0.10
+V064,loads,"J1/J2 hub tube bending (OD29.95/ID18, 8 holes, I_eff 2.75e+04 mm4) at spec / recomputed moment",5.8 / 6.7 MPa,<= 10 MPa in-plane (print lying down); 5 MPa across layers,PASS (lying down only),exceeds the across-layer 5 MPa limit if printed upright
+V065,loads,horn M3 screws (8 on PCD 24): shear at servo stall 9.3 N m | rated 2.2 N m,97 N | 23 N each,bearing on 3 mm L1 floor under head: allowable 10 MPa,PASS at rated; MARGINAL at stall (9.5 MPa),set J1/J2 torque limit <= rated; clamp friction carries most of the load
+V066,loads,"J2 housing 4 x M3 (tension, M_J2)",51 N each,insert pull-out >= 250 N,PASS,
+V067,loads,J3 pin torsion at the 1.0 N m servo limit (D11.95 PETG) and cruciform key bearing,tau = 3.0 MPa; key bearing ~6 MPa (4 tabs 3 x 5 x 2.5),tau <= 5.8 MPa; bearing <= ~10 MPa,PASS,stall 2.94 N m would give 8.8 MPa -> keep the 1.0 N m limit
+V068,loads,J3 central M3x20 (axial: gripper 0.44 kg + payload 2.13 kg x 3 g dynamic) in the horn-plate pilot,axial 76 N vs thread-forming pull-out in 3.6 mm PETG ~150-250 N,>= 2x,PASS (verify by pull test),
+V069,mass,L1 side (L1 + cover + J2 cartridge + bearings + J2 servo) vs budget 0.485 kg,0.627 kg,<= 0.485,FAIL,printed L1 + cover = 292 g; no lightening pass done
+V070,mass,L2 side (L2 + cover + J3 parts + J3 servo) vs budget 0.195 kg,0.303 kg,<= 0.195,FAIL,printed L2 + cover = 204 g
+V071,mass,"J1 tilt moment (r = 0.40 m, payload 2.13 + gripper 0.44 kg)",12.2 N m (r=0.385: 11.8); with the old 0.278 kg gripper 11.6,spec 10.6 N m,FAIL (+15%),"bearings, hub, pedestal screws keep margin (see load rows)"
+V072,print,total PETG for one arm set (excluding coupon): filament estimate / print time,912 g / 27 h (solid 1029 g); TPU 15 g,estimate,INFO,model: 6 walls (2.5 mm shell) + 18% infill + 1 mm skins; 9 mm3/s mean flow; +/-30%; no slicer run
+V073,print,arm_j1_hub (per part),"28 g, 1.0 h, bbox 37.0 x 46.0 x 46.0","fits bed, watertight",PASS,"orient: lying down: tube axis horizontal (along X), flange flat edge on bed (in-plane strength) | supports: tree/normal under tube+collar (~35 mm long, paint-on, 0.1 mm Z gap); ream 8 x 3.4 holes, sand OD29.95 journal"
+V074,print,arm_j1_ring (per part),"5 g, 0.2 h, bbox 34.0 x 34.0 x 7.0","fits bed, watertight",PASS,"orient: flat, axis vertical | supports: none"
+V075,print,arm_j1_cap (per part),"8 g, 0.2 h, bbox 58.0 x 58.0 x 4.4","fits bed, watertight",PASS,"orient: flat, counterbores up | supports: none"
+V076,print,arm_j1_spacer (per part),"6 g, 0.2 h, bbox 41.9 x 41.9 x 13.0","fits bed, watertight",PASS,"orient: flat, axis vertical | supports: none"
+V077,print,arm_j1_clamp (per part),"13 g, 0.4 h, bbox 40.0 x 95.0 x 3.0","fits bed, watertight",PASS,"orient: flat, flipped so counterbores face up | supports: none"
+V078,print,arm_j1_pedestal (per part),"232 g, 6.9 h, bbox 90.0 x 139.0 x 100.0","fits bed, watertight",PASS,"orient: upright as assembled (flange plate vertical, servo pocket opening down, bearing bore vertical) | supports: bridge over servo-pocket ceiling (31x67 mm): tree/normal supports under the ceiling; cable-window tops 16 mm bridge"
+V079,print,arm_l1 (per part),"244 g, 7.0 h, bbox 216.2 x 216.2 x 53.0","fits bed, watertight",PASS,"orient: upright as assembled (floor down, open top), rotated 45 deg about Z on the bed | supports: none expected (wall bases over the 35.6 J2 hole overhang <=2.3 mm; cable windows bridge 14 mm)"
+V080,print,arm_l1_cover (per part),"48 g, 1.4 h, bbox 216.2 x 216.2 x 3.0","fits bed, watertight",PASS,"orient: flat (countersinks up), rotated 45 deg about Z on the bed | supports: none"
+V081,print,arm_j2_housing (per part),"43 g, 1.3 h, bbox 60.0 x 60.0 x 29.6","fits bed, watertight",PASS,"orient: flange face down on the bed (flipped), bore opening up; lip printed first | supports: none"
+V082,print,arm_j2_hub (per part),"28 g, 1.0 h, bbox 37.0 x 46.0 x 46.0","fits bed, watertight",PASS,"orient: lying down: tube axis horizontal, flange flat edge on bed (same part as arm_j1_hub) | supports: tree/normal under tube+collar (paint-on, 0.1 mm Z gap); ream 8 x 3.4 holes, sand OD29.95 journal"
+V083,print,arm_j2_ring (per part),"3 g, 0.1 h, bbox 34.0 x 34.0 x 4.0","fits bed, watertight",PASS,orient: flat | supports: none
+V084,print,arm_j2_cap (per part),"8 g, 0.2 h, bbox 58.0 x 58.0 x 4.4","fits bed, watertight",PASS,"orient: flat, flipped so counterbores face up | supports: none"
+V085,print,arm_j2_spacer (per part),"6 g, 0.2 h, bbox 41.9 x 41.9 x 13.0","fits bed, watertight",PASS,orient: flat | supports: none
+V086,print,arm_l2 (per part),"183 g, 5.3 h, bbox 207.7 x 207.7 x 42.0","fits bed, watertight",PASS,"orient: upright as assembled (floor down), rotated 45 deg about Z on the bed | supports: supports under the 8 mm-high root-plate ceiling (52x62 mm) only; 14 mm cable-window tops bridge"
+V087,print,arm_l2_cover (per part),"21 g, 0.6 h, bbox 123.5 x 123.5 x 3.0","fits bed, watertight",PASS,"orient: flat, countersinks up | supports: none"
+V088,print,arm_j3_housing (per part),"19 g, 0.6 h, bbox 48.0 x 48.0 x 19.4","fits bed, watertight",PASS,"orient: flipped: 48x48 flange face down on the bed, cylinder up, bore opening up (lip printed last: <=1.6 mm overhang) | supports: none"
+V089,print,arm_j3_pin (per part),"2 g, 0.1 h, bbox 14.0 x 14.0 x 20.0","fits bed, watertight",PASS,"orient: standing, collar end on the bed (brim recommended) | supports: none; cross pockets open at both ends"
+V090,print,arm_j3_horn_plate (per part),"2 g, 0.1 h, bbox 24.0 x 24.0 x 8.5","fits bed, watertight",PASS,"orient: flipped: top face on the bed, key tabs + centring post up | supports: none"
+V091,print,arm_j3_flange (per part),"8 g, 0.2 h, bbox 46.0 x 46.0 x 5.5","fits bed, watertight",PASS,"orient: flat, bottom on the bed, key tabs up | supports: none"
+V092,print,arm_tpu_shims (per part),"15 g, 0.4 h, bbox 170.0 x 92.0 x 1.5","fits bed, watertight",PASS,"orient: flat; TPU 95A, 100% walls / 0.2 mm layers; 13 pieces: J1 (side x2, end x2, clamp pad), J2 (side x2, end x2), J3 (side x2, end x2) | supports: none"
+V093,print,arm_cable_clips (per part),"4 g, 0.1 h, bbox 123.0 x 14.0 x 4.5","fits bed, watertight",PASS,"orient: flat, lip down; 6 window grommets (14 x 10 windows in L1/L2 walls) | supports: none"
+V094,print,arm_j3_spacer (per part),"1 g, 0.1 h, bbox 17.9 x 17.9 x 10.0","fits bed, watertight",PASS,"orient: flat, axis vertical | supports: none"
+V095,print,arm_coupon_sts3095 (per part),"65 g, 1.9 h, bbox 166.0 x 127.0 x 11.2","fits bed, watertight",PASS,"orient: flat, no supports (166 x 127 x 11.2 mm) | supports: none"

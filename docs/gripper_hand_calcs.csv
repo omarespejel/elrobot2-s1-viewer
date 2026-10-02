@@ -1,0 +1,76 @@
+case,item,check,load,demand,allowable,unit,margin,status,note
+R,force chain,T = 2 F_t r_p; clamp = eta F_t (pinion between two racks),rated torque 0.981 N*m (repeated),34.7,40.9,N clamp per finger (demand) / N tooth force per contact (allowable col.),,INFO,torque 0.981 N*m = 33% of stall = 1.00 x rated
+R,"pinion tooth bending, pitch/HPSTC loading (FEM 2.5 MPa per N/mm, b=14)",allowable inplane 20.0 MPa,"rated torque 0.981 N*m (repeated); clamp 34.7 N, F_t 40.9 N",7.3,20.0,MPa,2.74,PASS,
+R,"pinion tooth bending, tip loading (FEM 4.5 MPa per N/mm, b=14)",allowable inplane 20.0 MPa,"rated torque 0.981 N*m (repeated); clamp 34.7 N, F_t 40.9 N",13.14,20.0,MPa,1.52,PASS,
+R,"rack tooth bending, Lewis x Kt 1.5 (Y 0.485, b=14)",allowable inplane 20.0 MPa,"rated torque 0.981 N*m (repeated); clamp 34.7 N, F_t 40.9 N",6.02,20.0,MPa,3.32,PASS,
+R,"pinion-horn screws, hole bearing",allowable inplane 20.0 MPa,"rated torque 0.981 N*m (repeated); clamp 34.7 N, F_t 40.9 N",0.69,20.0,MPa,29.02,PASS,
+R,finger bending (as built),allowable inplane 20.0 MPa,"rated torque 0.981 N*m (repeated); clamp 34.7 N, F_t 40.9 N",4.63,20.0,MPa,4.32,PASS,
+R,"finger-head screws, strap hole bearing",allowable inplane 20.0 MPa,"rated torque 0.981 N*m (repeated); clamp 34.7 N, F_t 40.9 N",3.78,20.0,MPa,5.29,PASS,
+R,yoke leg bending (net of M3 hole; M = F x tab-to-screw-group arm),allowable inplane 20.0 MPa,"rated torque 0.981 N*m (repeated); clamp 34.7 N, F_t 40.9 N",5.45,20.0,MPa,3.67,PASS,
+R,tab bearing in strap slot (tab z-faces),allowable across 10.0 MPa,"rated torque 0.981 N*m (repeated); clamp 34.7 N, F_t 40.9 N",3.33,10.0,MPa,3.0,PASS,
+R,tab root bending (w_eff 20 mm estimate),allowable inplane 20.0 MPa,"rated torque 0.981 N*m (repeated); clamp 34.7 N, F_t 40.9 N",9.42,20.0,MPa,2.12,PASS,
+R,rack floor/cover bearing (across layers),allowable across 10.0 MPa,"rated torque 0.981 N*m (repeated); clamp 34.7 N, F_t 40.9 N",0.65,10.0,MPa,15.47,PASS,
+R,"hard stop, tab on notch end",allowable inplane 20.0 MPa,"rated torque 0.981 N*m (repeated); clamp 34.7 N, F_t 40.9 N",1.84,20.0,MPa,10.86,PASS,
+C,force chain,T = 2 F_t r_p; clamp = eta F_t (pinion between two racks),firmware cap 1.2 x rated = 1.177 N*m (repeated),41.7,49.0,N clamp per finger (demand) / N tooth force per contact (allowable col.),,INFO,torque 1.177 N*m = 40% of stall = 1.20 x rated
+C,"pinion tooth bending, pitch/HPSTC loading (FEM 2.5 MPa per N/mm, b=14)",allowable inplane 20.0 MPa,"firmware cap 1.2 x rated = 1.177 N*m (repeated); clamp 41.7 N, F_t 49.0 N",8.76,20.0,MPa,2.28,PASS,
+C,"pinion tooth bending, tip loading (FEM 4.5 MPa per N/mm, b=14)",allowable inplane 20.0 MPa,"firmware cap 1.2 x rated = 1.177 N*m (repeated); clamp 41.7 N, F_t 49.0 N",15.77,20.0,MPa,1.27,PASS,
+C,"rack tooth bending, Lewis x Kt 1.5 (Y 0.485, b=14)",allowable inplane 20.0 MPa,"firmware cap 1.2 x rated = 1.177 N*m (repeated); clamp 41.7 N, F_t 49.0 N",7.22,20.0,MPa,2.77,PASS,
+C,"pinion-horn screws, hole bearing",allowable inplane 20.0 MPa,"firmware cap 1.2 x rated = 1.177 N*m (repeated); clamp 41.7 N, F_t 49.0 N",0.83,20.0,MPa,24.18,PASS,
+C,finger bending (as built),allowable inplane 20.0 MPa,"firmware cap 1.2 x rated = 1.177 N*m (repeated); clamp 41.7 N, F_t 49.0 N",5.55,20.0,MPa,3.6,PASS,
+C,"finger-head screws, strap hole bearing",allowable inplane 20.0 MPa,"firmware cap 1.2 x rated = 1.177 N*m (repeated); clamp 41.7 N, F_t 49.0 N",4.53,20.0,MPa,4.41,PASS,
+C,yoke leg bending (net of M3 hole; M = F x tab-to-screw-group arm),allowable inplane 20.0 MPa,"firmware cap 1.2 x rated = 1.177 N*m (repeated); clamp 41.7 N, F_t 49.0 N",6.54,20.0,MPa,3.06,PASS,
+C,tab bearing in strap slot (tab z-faces),allowable across 10.0 MPa,"firmware cap 1.2 x rated = 1.177 N*m (repeated); clamp 41.7 N, F_t 49.0 N",4.0,10.0,MPa,2.5,PASS,
+C,tab root bending (w_eff 20 mm estimate),allowable inplane 20.0 MPa,"firmware cap 1.2 x rated = 1.177 N*m (repeated); clamp 41.7 N, F_t 49.0 N",11.31,20.0,MPa,1.77,PASS,
+C,rack floor/cover bearing (across layers),allowable across 10.0 MPa,"firmware cap 1.2 x rated = 1.177 N*m (repeated); clamp 41.7 N, F_t 49.0 N",0.78,10.0,MPa,12.89,PASS,
+C,"hard stop, tab on notch end",allowable inplane 20.0 MPa,"firmware cap 1.2 x rated = 1.177 N*m (repeated); clamp 41.7 N, F_t 49.0 N",2.21,20.0,MPa,9.05,PASS,
+B,force chain,T = 2 F_t r_p; clamp = eta F_t (pinion between two racks),"burst 70 N clamp (2 L bottle), above the cap",70.0,82.4,N clamp per finger (demand) / N tooth force per contact (allowable col.),,INFO,torque 1.976 N*m = 67% of stall = 2.01 x rated
+B,"pinion tooth bending, pitch/HPSTC loading (FEM 2.5 MPa per N/mm, b=14)",allowable inplane 35.0 MPa,"burst 70 N clamp (2 L bottle), above the cap; clamp 70.0 N, F_t 82.4 N",14.71,35.0,MPa,2.38,PASS,
+B,"pinion tooth bending, tip loading (FEM 4.5 MPa per N/mm, b=14)",allowable inplane 35.0 MPa,"burst 70 N clamp (2 L bottle), above the cap; clamp 70.0 N, F_t 82.4 N",26.47,35.0,MPa,1.32,PASS,
+B,"rack tooth bending, Lewis x Kt 1.5 (Y 0.485, b=14)",allowable inplane 35.0 MPa,"burst 70 N clamp (2 L bottle), above the cap; clamp 70.0 N, F_t 82.4 N",12.13,35.0,MPa,2.89,PASS,
+B,"pinion-horn screws, hole bearing",allowable inplane 35.0 MPa,"burst 70 N clamp (2 L bottle), above the cap; clamp 70.0 N, F_t 82.4 N",1.39,35.0,MPa,25.2,PASS,
+B,finger bending (as built),allowable inplane 35.0 MPa,"burst 70 N clamp (2 L bottle), above the cap; clamp 70.0 N, F_t 82.4 N",9.32,35.0,MPa,3.75,PASS,
+B,"finger-head screws, strap hole bearing",allowable inplane 35.0 MPa,"burst 70 N clamp (2 L bottle), above the cap; clamp 70.0 N, F_t 82.4 N",7.61,35.0,MPa,4.6,PASS,
+B,yoke leg bending (net of M3 hole; M = F x tab-to-screw-group arm),allowable inplane 35.0 MPa,"burst 70 N clamp (2 L bottle), above the cap; clamp 70.0 N, F_t 82.4 N",10.97,35.0,MPa,3.19,PASS,
+B,tab bearing in strap slot (tab z-faces),allowable across 17.5 MPa,"burst 70 N clamp (2 L bottle), above the cap; clamp 70.0 N, F_t 82.4 N",6.71,17.5,MPa,2.61,PASS,
+B,tab root bending (w_eff 20 mm estimate),allowable inplane 35.0 MPa,"burst 70 N clamp (2 L bottle), above the cap; clamp 70.0 N, F_t 82.4 N",18.98,35.0,MPa,1.84,PASS,
+B,rack floor/cover bearing (across layers),allowable across 17.5 MPa,"burst 70 N clamp (2 L bottle), above the cap; clamp 70.0 N, F_t 82.4 N",1.3,17.5,MPa,13.44,PASS,
+B,"hard stop, tab on notch end",allowable inplane 35.0 MPa,"burst 70 N clamp (2 L bottle), above the cap; clamp 70.0 N, F_t 82.4 N",3.71,35.0,MPa,9.44,PASS,
+S,force chain,T = 2 F_t r_p; clamp = eta F_t (pinion between two racks),single stall event 2.942 N*m,104.2,122.6,N clamp per finger (demand) / N tooth force per contact (allowable col.),,INFO,torque 2.942 N*m = 100% of stall = 3.00 x rated
+S,"pinion tooth bending, pitch/HPSTC loading (FEM 2.5 MPa per N/mm, b=14)",allowable inplane 35.0 MPa,"single stall event 2.942 N*m; clamp 104.2 N, F_t 122.6 N",21.89,35.0,MPa,1.6,PASS,
+S,"pinion tooth bending, tip loading (FEM 4.5 MPa per N/mm, b=14)",allowable inplane 35.0 MPa,"single stall event 2.942 N*m; clamp 104.2 N, F_t 122.6 N",39.4,35.0,MPa,0.89,FAIL (<1),
+S,"rack tooth bending, Lewis x Kt 1.5 (Y 0.485, b=14)",allowable inplane 35.0 MPa,"single stall event 2.942 N*m; clamp 104.2 N, F_t 122.6 N",18.05,35.0,MPa,1.94,PASS,
+S,"pinion-horn screws, hole bearing",allowable inplane 35.0 MPa,"single stall event 2.942 N*m; clamp 104.2 N, F_t 122.6 N",2.07,35.0,MPa,16.93,PASS,
+S,finger bending (as built),allowable inplane 35.0 MPa,"single stall event 2.942 N*m; clamp 104.2 N, F_t 122.6 N",13.88,35.0,MPa,2.52,PASS,
+S,"finger-head screws, strap hole bearing",allowable inplane 35.0 MPa,"single stall event 2.942 N*m; clamp 104.2 N, F_t 122.6 N",11.33,35.0,MPa,3.09,PASS,
+S,yoke leg bending (net of M3 hole; M = F x tab-to-screw-group arm),allowable inplane 35.0 MPa,"single stall event 2.942 N*m; clamp 104.2 N, F_t 122.6 N",16.33,35.0,MPa,2.14,PASS,
+S,tab bearing in strap slot (tab z-faces),allowable across 17.5 MPa,"single stall event 2.942 N*m; clamp 104.2 N, F_t 122.6 N",9.98,17.5,MPa,1.75,PASS,
+S,tab root bending (w_eff 20 mm estimate),allowable inplane 35.0 MPa,"single stall event 2.942 N*m; clamp 104.2 N, F_t 122.6 N",28.25,35.0,MPa,1.24,PASS,
+S,rack floor/cover bearing (across layers),allowable across 17.5 MPa,"single stall event 2.942 N*m; clamp 104.2 N, F_t 122.6 N",1.94,17.5,MPa,9.03,PASS,
+S,"hard stop, tab on notch end",allowable inplane 35.0 MPa,"single stall event 2.942 N*m; clamp 104.2 N, F_t 122.6 N",5.52,35.0,MPa,6.34,PASS,
+R,"pinion Lewis, module form, Y 0.296, no Kt (cross-check)",FEM HPSTC / Lewis = 1.11,rated torque 0.981 N*m (repeated),6.58,20.0,MPa,3.04,INFO,generated outline FEM is 1.0-1.1 x Lewis
+S,"pinion Lewis, module form, Y 0.296, no Kt (cross-check)",FEM HPSTC / Lewis = 1.11,single stall event 2.942 N*m,19.72,35.0,MPa,1.77,INFO,generated outline FEM is 1.0-1.1 x Lewis
+R,face-width study b=10: pinion HPSTC loading,allowable inplane 20 MPa,rated torque 0.981 N*m (repeated),10.22,20.0,MPa,1.96,INFO,built b=14
+R,face-width study b=10: pinion tip loading,allowable inplane 20 MPa,rated torque 0.981 N*m (repeated),18.39,20.0,MPa,1.09,INFO,built b=14
+S,face-width study b=10: pinion HPSTC loading,allowable inplane 35 MPa,single stall event 2.942 N*m,30.65,35.0,MPa,1.14,INFO,built b=14
+S,face-width study b=10: pinion tip loading,allowable inplane 35 MPa,single stall event 2.942 N*m,55.16,35.0,MPa,0.63,INFO,built b=14
+R,face-width study b=12: pinion HPSTC loading,allowable inplane 20 MPa,rated torque 0.981 N*m (repeated),8.52,20.0,MPa,2.35,INFO,built b=14
+R,face-width study b=12: pinion tip loading,allowable inplane 20 MPa,rated torque 0.981 N*m (repeated),15.33,20.0,MPa,1.3,INFO,built b=14
+S,face-width study b=12: pinion HPSTC loading,allowable inplane 35 MPa,single stall event 2.942 N*m,25.54,35.0,MPa,1.37,INFO,built b=14
+S,face-width study b=12: pinion tip loading,allowable inplane 35 MPa,single stall event 2.942 N*m,45.97,35.0,MPa,0.76,INFO,built b=14
+R,face-width study b=14: pinion HPSTC loading,allowable inplane 20 MPa,rated torque 0.981 N*m (repeated),7.3,20.0,MPa,2.74,INFO,built b=14
+R,face-width study b=14: pinion tip loading,allowable inplane 20 MPa,rated torque 0.981 N*m (repeated),13.14,20.0,MPa,1.52,INFO,built b=14
+S,face-width study b=14: pinion HPSTC loading,allowable inplane 35 MPa,single stall event 2.942 N*m,21.89,35.0,MPa,1.6,INFO,built b=14
+S,face-width study b=14: pinion tip loading,allowable inplane 35 MPa,single stall event 2.942 N*m,39.4,35.0,MPa,0.89,INFO,built b=14
+R,face-width study b=16: pinion HPSTC loading,allowable inplane 20 MPa,rated torque 0.981 N*m (repeated),6.39,20.0,MPa,3.13,INFO,built b=14
+R,face-width study b=16: pinion tip loading,allowable inplane 20 MPa,rated torque 0.981 N*m (repeated),11.5,20.0,MPa,1.74,INFO,built b=14
+S,face-width study b=16: pinion HPSTC loading,allowable inplane 35 MPa,single stall event 2.942 N*m,19.15,35.0,MPa,1.83,INFO,built b=14
+S,face-width study b=16: pinion tip loading,allowable inplane 35 MPa,single stall event 2.942 N*m,34.48,35.0,MPa,1.02,INFO,built b=14
+R,"finger bending (as briefed: 28 wide root, z0=0)",reference only,rated torque 0.981 N*m (repeated),8.34,20.0,MPa,2.4,INFO,pad deflection 7.4 mm (built 2.6 mm)
+B,"finger bending (as briefed: 28 wide root, z0=0)",reference only,"burst 70 N clamp (2 L bottle), above the cap",16.8,35.0,MPa,2.08,INFO,pad deflection 14.9 mm (built 5.3 mm)
+S,"finger bending (as briefed: 28 wide root, z0=0)",reference only,single stall event 2.942 N*m,25.01,35.0,MPa,1.4,INFO,pad deflection 22.2 mm (built 7.9 mm)
+R,MAX clamp force with all margins >= 1 (repeated allowables),min over items of F x allowable/stress,"limiting item: pinion tooth bending, tip loading (FEM 4.5 MPa per N/mm, b=14)",52.9,34.7,N per finger,1.52,PASS,
+C,MAX clamp force with all margins >= 1 (repeated allowables),min over items of F x allowable/stress,"limiting item: pinion tooth bending, tip loading (FEM 4.5 MPa per N/mm, b=14)",52.9,41.7,N per finger,1.27,PASS,
+S,MAX clamp force with all margins >= 1 (single-event allowables),min over items of F x allowable/stress,"limiting item: pinion tooth bending, tip loading (FEM 4.5 MPa per N/mm, b=14)",92.6,104.2,N per finger,0.89,FAIL (<case load),
+-,624-2RS journal bearing,radial load = 25% of tooth separation at stall vs C0 ~0.5 kN (VERIFY),stall,11.2,500.0,N,44.8,PASS,
+-,J3 interface (4 inserts),5 m/s2 lateral accel of 2.13 kg bottle + gripper; pull-out ~300 N assumed (VERIFY),M=3.24 N*m,45.1,300.0,N per insert,6.7,PASS,
+-,pinion minimum wall at the horn screws (counterbore-to-flange edge 2.03 / through-hole-to-tooth-space 1.68 mm),geometry (shapely),flange Ø24 x 3.5 mm carries the counterbores,1.68,1.6,mm,1.05,PASS,rev 3 had 0.48 mm. EXCEPTION: the 0.5 mm tall neck web (flange to gear) is 1.23 mm wide at the hole (<1.6 rule; loaded in compression by the screw preload only)

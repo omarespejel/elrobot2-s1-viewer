@@ -1,0 +1,25 @@
+{
+ "dx": 1.0,
+ "E": 1200.0,
+ "l1_vol_ratio": 0.9395081711619226,
+ "open_U_no_cover": {
+  "nel": 180116,
+  "ndof": 726960,
+  "torsion_twist_mrad_per_Nm": 24.11330753073283,
+  "torsion_iters": 401,
+  "bending_rot_mrad_per_Nm": 2.279390284528755,
+  "bending_dz_mm_per_Nm": 0.2675147245962051,
+  "bending_iters": 86,
+  "force_dz_mm_per_10N": 0.4460428155535041
+ },
+ "closed_box_cover_bonded": {
+  "nel": 224942,
+  "ndof": 901890,
+  "torsion_twist_mrad_per_Nm": 1.3659487267517634,
+  "torsion_iters": 71,
+  "bending_rot_mrad_per_Nm": 1.2177204199274092,
+  "bending_dz_mm_per_Nm": 0.16221552057210514,
+  "bending_iters": 73,
+  "force_dz_mm_per_10N": 0.299033470440691
+ }
+}

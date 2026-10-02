@@ -1,0 +1,16 @@
+wage_case,base_mxn_h,loaded_mxn_h,restock_h_per_day,annual_saving_usd,capex_ceiling_2yr_usd,capex_ceiling_3yr_usd
+statutory minimum (39.4 MXN/h),39.38,53.2,0.5,420,699,968
+statutory minimum (39.4 MXN/h),39.38,53.2,1.0,839,1399,1936
+statutory minimum (39.4 MXN/h),39.38,53.2,2.0,1678,2797,3873
+statutory minimum (39.4 MXN/h),39.38,53.2,3.0,2517,4196,5809
+statutory minimum (39.4 MXN/h),39.38,53.2,4.0,3356,5594,7746
+assumed store clerk (60 MXN/h),60.0,81.0,0.5,639,1065,1475
+assumed store clerk (60 MXN/h),60.0,81.0,1.0,1278,2131,2950
+assumed store clerk (60 MXN/h),60.0,81.0,2.0,2557,4262,5901
+assumed store clerk (60 MXN/h),60.0,81.0,3.0,3835,6392,8851
+assumed store clerk (60 MXN/h),60.0,81.0,4.0,5114,8523,11801
+assumed high (90 MXN/h),90.0,121.5,0.5,959,1598,2213
+assumed high (90 MXN/h),90.0,121.5,1.0,1918,3196,4426
+assumed high (90 MXN/h),90.0,121.5,2.0,3835,6392,8851
+assumed high (90 MXN/h),90.0,121.5,3.0,5753,9589,13277
+assumed high (90 MXN/h),90.0,121.5,4.0,7671,12785,17702

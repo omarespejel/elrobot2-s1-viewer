@@ -1,0 +1,1346 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>ElRobot2 design report</title><link rel="stylesheet" href="assets/style.css"></head><body><header class="site"><div class="wrap"><p class="sub">ElRobot2 &middot; design report</p><nav class="top"><a href="">Versions</a><a href="viewer/">3D viewer (S1 v1.1)</a><a href="report.html">Design report</a><a href="docs/">Documents</a></nav></div></header><div class="layout"><aside class="toc"><details open><summary>Contents</summary><ul><li><a href="#0-result-in-brief">0. Result in brief</a></li><li><a href="#1-reference-system-market-context-and-bottle-envelope">1. Reference system, market context and bottle envelope</a></li><li><a href="#2-concept-and-layout">2. Concept and layout</a><ul><li><a href="#21-why-not-the-stock-am-arm200">2.1 Why not the stock AM-ARM200</a></li><li><a href="#22-layout-behind-the-cooler-loading-through-the-rear">2.2 Layout: behind the cooler, loading through the rear</a></li><li><a href="#23-one-cycle-in-words">2.3 One cycle in words</a></li></ul></li><li><a href="#3-the-design-module-by-module">3. The design, module by module</a><ul><li><a href="#31-gripper-revision-4-gripper-readme-hand-calculations">3.1 Gripper (revision 4): gripper README, hand calculations</a></li><li><a href="#32-arm-j1-j2-j3-links-arm-readme-verification-table-arm_assemblystep">3.2 Arm (J1, J2, J3, links): arm README, verification table, arm_assembly.step</a></li><li><a href="#33-z-module-v061-z-module-readme-verification-table-zmod_assemblystep">3.3 Z module v0.6.1: Z module README, verification table, zmod_assembly.step</a></li><li><a href="#34-fixture-v11-fixture-readme-interface-limits">3.4 Fixture v1.1: fixture README, interface limits</a></li><li><a href="#35-single-table-of-shared-datums">3.5 Single table of shared datums</a></li><li><a href="#36-payload-mass-what-is-modelled-what-is-not-added-2026-10-02">3.6 Payload mass: what is modelled, what is not (added 2026-10-02)</a></li></ul></li><li><a href="#4-how-the-design-was-checked-and-what-that-does-not-prove">4. How the design was checked, and what that does not prove</a><ul><li><a href="#41-independent-integration-checks-lead-on-the-real-cad-meshes">4.1 Independent integration checks (lead, on the real CAD meshes)</a></li><li><a href="#42-free-lift-above-the-place-pose-600-ml-level-0-the-ceiling-is-the-level-1-plate-and-bracket-seats">4.2 Free lift above the place pose, 600 mL, level 0 (the ceiling is the level-1 plate and bracket seats)</a></li><li><a href="#43-errors-found-in-order-of-consequence-full-log-design_review_logcsv-65-rows">4.3 Errors found, in order of consequence (full log: design_review_log.csv, 65 rows)</a></li></ul></li><li><a href="#5-simulation-mujoco-fixture-v11-sim_summarymd-sim_key_numbersjson">5. Simulation (MuJoCo, fixture v1.1): sim_summary.md, sim_key_numbers.json</a></li><li><a href="#6-see-it">6. See it</a></li><li><a href="#7-building-it">7. Building it</a><ul><li><a href="#71-bill-of-materials-elrobot2_s1_bomcsv-fasteners">7.1 Bill of materials: ElRobot2_S1_BOM.csv, fasteners</a></li><li><a href="#72-printing-plan-print-manifest-print-package-stl-manifest-bom-notes">7.2 Printing plan: print manifest, print package (STL, manifest, BOM, notes)</a></li><li><a href="#73-test-plan-build-and-test-plan-v23">7.3 Test plan: build and test plan v2.3</a></li><li><a href="#74-control-software-sketch-not-built">7.4 Control software sketch (not built)</a></li></ul></li><li><a href="#8-the-real-cooler-gap-desk-research-and-the-s2-decision">8. The real-cooler gap, desk research and the S2 decision</a><ul><li><a href="#81-what-manufacturers-and-resellers-publish">8.1 What manufacturers and resellers publish</a></li><li><a href="#82-reference-rack-used-for-the-design-desk">8.2 Reference rack used for the design (desk)</a></li><li><a href="#83-what-fits-the-clearance-model">8.3 What fits: the clearance model</a></li><li><a href="#84-decision-s2-an-offset-wrist-with-low-profile-end-effectors">8.4 Decision: S2, an offset wrist with low-profile end effectors</a></li><li><a href="#85-other-gaps-not-changed-by-the-desk-research">8.5 Other gaps (not changed by the desk research)</a></li><li><a href="#86-what-desk-research-cannot-close">8.6 What desk research cannot close</a></li></ul></li><li><a href="#9-business-view">9. Business view</a></li><li><a href="#10-stage-0-the-am-arm200-you-are-building">10. Stage 0: the AM-ARM200 you are building</a><ul><li><a href="#101-a-short-physical-demonstration-for-a-retail-contact-added-2026-10-02">10.1 A short physical demonstration for a retail contact (added 2026-10-02)</a></li></ul></li><li><a href="#11-what-i-need-from-you-one-batch">11. What I need from you (one batch)</a></li><li><a href="#12-limits-of-this-work">12. Limits of this work</a></li><li><a href="#13-files">13. Files</a></li></ul></details></aside><article><div class="banner"><strong>Working design report, third round (2 October 2026).</strong> Design, simulation and desk research only: nothing has been printed, built or measured. Sections addressed to &ldquo;you&rdquo; (for example Section 11) are notes to the project owner. Items marked &dagger; are files that are not published on this site.</div><h1 id="elrobot2-s1-a-z-lift-scara-that-restocks-cans-and-pet-bottles-through-the-rear-of-a-cooler">ElRobot2-S1: a Z-lift SCARA that restocks cans and PET bottles through the rear of a cooler</h1>
+<p>Design report for package v1.1 with the S2 addendum, 2026-10-02. Everything here is design, simulation and desk research: nothing has been printed, built or measured. Numbers are tagged (CAD) boolean checks on the real meshes, (sim) MuJoCo, (calc) hand calculation, (FE) self-written voxel finite elements, (desk) public sources or inference from them, or ASSUMED.</p>
+<p>Addendum from the second review round (two questions from a colleague). Section 3.6 adds the payload-mass analysis (liquid density, grip limits, 70 further simulation runs), Section 8 the rack data from public catalogues, and Section 10.1 a plan for a short physical demonstration. Two findings: the 1 L bottle must be clamped at the 41.7 N cap when wet, and the shelf pitch implied by vendor data is below what the v1 stack needs for a 600 mL bottle.</p>
+<p>Addendum from the third review round (2026-10-02). The user removed glass and returnable containers from the plan and stated that a store visit, a scale with real containers and a tilt-friction test are not available for now. The unknowns those three items were meant to settle were therefore researched from public sources (Section 8; 28 graded evidence rows). Result: standard racks put the shelves 0.287-0.381 m apart (an inference from manufacturers' shelf counts), and at that pitch the v1 gripper stack, which stands 140 mm above the object, cannot enter the shelf tunnel over a 600 mL or larger PET bottle. The recommended next design is S2: an offset wrist carrying a neck-jaw for PET bottles and a flat clamp for cans (Section 8.4). S2 exists only as a brief; it has no CAD, no simulation and no test. Sections 0, 1, 3.6, 4.3, 7.2, 7.3, 8, 10.1, 11, 12 and 13 were rewritten or extended; Section 3.6 no longer discusses glass.</p>
+<h2 id="0-result-in-brief">0. Result in brief</h2>
+<ol>
+<li><strong>Design.</strong> ElRobot2-S1 is a Z-lift SCARA on a 4040 V-slot column. Two 200 mm links with vertical joint axes (J1 and J2 STS3095, J3 wrist and the gripper STS3215), a top-down rack-and-pinion gripper with 140 mm fingers and TPU pads, and a carriage that travels 0.37-1.06 m. It is built from hobby servos, a NEMA17 with a 24 V brake and PETG parts that print on the Bambu X2D. The top-down gripper is the v1 hand; Section 8.4 proposes its replacement for PET bottles.</li>
+<li><strong>It replaces the AM-ARM200 as the production body.</strong> The stock AM-ARM200 loads its most-stressed joint at 0.95-2.6 times rated torque with a 600 mL bottle (calc, Section 2); with vertical axes the S1 joints carry no gravity torque. The AM-ARM200 stays useful for Stage 0 demos and teleoperation data (Section 10).</li>
+<li><strong>Scope that was checked.</strong> Cans, 500 mL and 600 mL PET on two shelf levels; the 1 L at level 1 only (with caveats on lane width and wet friction); 1.5 L and 2 L are stretch (they need 47-63 N of clamp against a 41.7 N cap). Glass and returnable containers are out of the plan (user decision, 2026-10-02).</li>
+<li><strong>Simulation on the final fixture (sim, v1.1):</strong> 45 of 45 accepted picks succeed dry and 45 of 45 wet; 600 mL Monte Carlo 60/60 at level 0 and 60/60 at level 1; loaded joint torques at most 0.45 N*m on J1 (rated 2.206). 5 of 50 matrix entries are impossible, all of them the 1 L at level 0.</li>
+<li><strong>One open behaviour problem.</strong> After release the open gripper touches the neighbouring lane's first bottle in 29 of 45 default retreats. A feeding rule (the bay rule) removes it: 45 of 45 retreats contact-free, 19.9 s per bottle, at the cost of capacity (21 of 25 slots). The open gripper still drags the released bottle sideways by 7.3 mm on average (14.5 mm at most) until it meets a divider. Fully populated lanes are impossible with this gripper at the 90 mm pitch.</li>
+<li><strong>Independent checks found real errors</strong> (65-row review log): gear stress 3.14 times understated, clamp force 2 times overstated, lead-screw whirl formula wrong by about 10 times (twice), a 2040 column that leans 9.3 mm, a camera that overlapped the L1 link, headroom measured at the wrong datum, and level-0 and tote-cell limits that the first fixture hid. All are corrected or listed as open.</li>
+<li><strong>What is not known yet.</strong> Servo dimensions are inferred from AM-ARM200 files; friction is assumed (every published value for printed TPU is dry, and nothing was found for wet PET); the printed arm depends on a bonded cover (FE: 17-21 times stiffer closed than open); brake and detent values are assumed; the real cooler is unmeasured. Desk research (Section 8) puts the shelf pitch of standard racks at 0.287-0.381 m (0.318 m design-driving; an inference from manufacturers' shelf counts) and the lane glides at 75 mm, against the 0.41-0.43 m that the v1 stack needs for a 600 mL bottle and the 90 mm lanes of the fixture. The consequence is item 11.</li>
+<li><strong>To see it:</strong> interactive viewer, three replay videos and a live MuJoCo package (Section 6). <strong>To build it:</strong> BOM about US$553 (+-35 %) for what is not on hand, a staged print plan of 1.6 kg for the robot and 6.7 kg for the fixture, and a test plan whose first step is 8 hours of coupon printing (Section 7).</li>
+<li><strong>Business case.</strong> At Mexican wage levels a labour-only payback supports an installed cost of roughly US$1,400-8,500 depending on hours replaced (Section 9). It does not support an industrial machine on labour alone.</li>
+<li><strong>Mass and container type (added).</strong> Mass is modelled per SKU (density x volume + assumed pack). Drinks of the same volume differ by about 4 % in liquid mass. In 70 added simulation runs a container was held up to 0.996 times the static friction limit and dropped from 1.015 times it, and the design criterion (safety factor 2, 0.5 g) is about 3.1 times stricter than that limit. The 1 L bottle must be clamped at the 41.7 N cap when wet, or held by form closure (Section 3.6). Glass and returnable containers were removed from the plan on 2026-10-02.</li>
+<li><strong>Racks and the S2 decision (added 2026-10-02, desk research).</strong> Manufacturers' shelf counts (five, six or seven shelves in a 75-79 in door) imply a shelf pitch of 0.287-0.381 m. With 30 mm of shelf structure, the v1 stack cannot enter a shelf tunnel over a 600 mL or larger PET bottle in any of the five standard configurations, nor over a 500 mL bottle except in the sparsest rack and then only if the structure is thinner than about 26 mm (Figure 9); it serves a 355 mL can down to 0.298 m. The recommended next design, S2, replaces the top-down hand by an offset wrist carrying a neck-jaw with 15 mm of profile above the cap (PET, held by form closure on the support ring) and a flat clamp with 50 mm of profile (cans); a push-in transfer plate is the fallback (Section 8.4). The level-0 half of the fixture and the 90 mm lane plates are on hold. S2 has no CAD, no simulation and no test.</li>
+</ol>
+<h2 id="1-reference-system-market-context-and-bottle-envelope">1. Reference system, market context and bottle envelope</h2>
+<p>Telexistence's TX SCARA is the closest commercial reference: a SCARA arm with cameras that <a href="https://www.deeplearning.ai/the-batch/tx-scar-robot/">runs on a rail between the stock shelves and the rear of the customer-facing cooler</a> and was introduced at a FamilyMart store in November 2021. <a href="https://tx-inc.com/en/blog/2021/11/02/11451/">Its maker states it restocks about 1,000 beverages a day</a>, hands control to a remote operator on failure, and <a href="https://blogs.nvidia.com/blog/telexistence-convenience-store-robotics/">FamilyMart rolled it out to 300 stores from August 2022 with a reported autonomous restocking success rate above 98 %</a>. The price is <a href="https://www.clickondetroit.com/business/2022/09/01/robot-that-stocks-drinks-is-newest-thing-at-the-corner-store/">undisclosed</a>. A successor, TX Ghost, <a href="https://tx-inc.com/en/">is in pilot at selected 7-Eleven stores in Tokyo</a>, and Seven-Eleven Japan and Telexistence <a href="https://chainstoreage.com/news-briefs/2025-10-01?article=7-eleven-japan-partners-develop-humanoid-robotic-workers">target humanoid deployment for 2029 across a chain of more than 20,000 stores</a>. The architecture (a SCARA in the store backyard with joint axes and link length chosen for that space) and the reported success rate were re-checked on 2026-10-02 (Section 8.1); the other figures come from the earlier literature pass of this project and were not re-checked for this report.</p>
+<p>Design consequences: a fixed arm on a vertical axis behind the cooler is a proven architecture; remote recovery is part of the product (rolled-over bottles are the hard case, so the leader arm stays as a teleoperation fallback); cans and PET bottles up to about 2 L are the working envelope.</p>
+<p>Mexico is the target market. <a href="https://finance.yahoo.com/markets/stocks/articles/femsa-q2-earnings-revenues-beat-135200603.html">OXXO Mexico ended June 2026 with 24,708 stores after adding 253 in the quarter</a>. The statutory minimum wage <a href="https://www.gob.mx/conasami/articulos/incremento-a-los-salarios-minimos-para-2026?idiom=es">rose from 278.80 to 315.04 pesos a day on 1 January 2026</a> (general zone). No OXXO cooler was measured; the fixture in this work is a test rig, not an OXXO replica. Section 8 collects what manufacturers' and resellers' catalogues say about the racks behind 'tipo OXXO' doors.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>Volume (mL)</th>
+<th>Diameter (mm)</th>
+<th>Height (mm)</th>
+<th>Mass full (kg)</th>
+<th>Source quality</th>
+<th>v1 scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>355 mL can</td>
+<td>355</td>
+<td>66</td>
+<td>122.7</td>
+<td>0.38</td>
+<td>measured dimensions (reference sites)</td>
+<td>core</td>
+</tr>
+<tr>
+<td>355 mL slim can</td>
+<td>355</td>
+<td>57</td>
+<td>156</td>
+<td>0.38</td>
+<td>reference site</td>
+<td>core</td>
+</tr>
+<tr>
+<td>500 mL PET</td>
+<td>500</td>
+<td>63.5-68</td>
+<td>210</td>
+<td>0.52</td>
+<td>reference sites, brand dependent</td>
+<td>core</td>
+</tr>
+<tr>
+<td>600 mL PET (Mexico soda)</td>
+<td>600</td>
+<td>64-71</td>
+<td>237</td>
+<td>0.65</td>
+<td>retailer listing</td>
+<td>core</td>
+</tr>
+<tr>
+<td>1 L PET</td>
+<td>1000</td>
+<td>76-82</td>
+<td>290</td>
+<td>1.07</td>
+<td>ESTIMATE, no source found: measure</td>
+<td>level 1 only</td>
+</tr>
+<tr>
+<td>1.5 L PET</td>
+<td>1500</td>
+<td>89</td>
+<td>311</td>
+<td>1.61</td>
+<td>reference site</td>
+<td>stretch</td>
+</tr>
+<tr>
+<td>2 L PET</td>
+<td>2000</td>
+<td>102-110</td>
+<td>320</td>
+<td>2.13</td>
+<td>reference sites (300-330 x 100-120)</td>
+<td>stretch</td>
+</tr>
+</tbody>
+</table></div>
+<p>Full table with 473 mL, 2.5 L and 3 L (outside v1): <a href="docs/bottle_sku_envelope.csv">bottle_sku_envelope.csv</a>.</p>
+<h2 id="2-concept-and-layout">2. Concept and layout</h2>
+<h3 id="21-why-not-the-stock-am-arm200">2.1 Why not the stock AM-ARM200</h3>
+<p>AM-ARM200 is an <a href="https://github.com/liyiteng/AM-ARM">Apache-2.0 open arm</a> with six joints plus gripper (three STS3095 and four STS3215), stated at 1 kg and 52 cm reach. Gravity torques from its URDF with forward kinematics and a sagittal inverse-kinematics solve (calc), for a printed-mass estimate and the URDF masses (the 1.27 kg camera link is a placeholder and was excluded):</p>
+<figure><img alt="Figure 1. Highest joint load divided by rated torque against reach, gripper forward (a) and pointing down (b). Solid: printed-mass estimate; dotted: URDF." src="img/fig1_amarm200_payload_envelope.png" /><figcaption>Figure 1. Highest joint load divided by rated torque against reach, gripper forward (a) and pointing down (b). Solid: printed-mass estimate; dotted: URDF.</figcaption></figure>
+<ol>
+<li>A 600 mL bottle loads the most-stressed joint at 1.4-2.6 times rated torque in the forward approach (0.26-0.52 m) and 0.95-1.9 times top-down (0.20-0.34 m). Wrist flex (stall only 3 times rated) and shoulder or elbow limit.</li>
+<li>A 2 L bottle exceeds the stall torque of the weakest joint in the forward approach everywhere.</li>
+<li>Rated torque is the continuous limit; stall is short-term. Loads between them heat the servos within a shift.</li>
+<li>Limits: URDF masses are placeholders and the follower has not been weighed. Weighing it is the cheapest way to remove the largest uncertainty.</li>
+</ol>
+<p>Conclusion: AM-ARM200 is suitable for Stage 0 (cans and 500-600 mL at short reach, intermittent duty, data collection) and not as the production body. A SCARA with vertical axes removes gravity torque from the rotary joints, so the redesign changes the architecture instead of strengthening the existing arm.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Gravity torque on rotary joints</th>
+<th>New mechanical design</th>
+<th>Fit to the task</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A. Stock AM-ARM200, fixed base</td>
+<td>High</td>
+<td>None</td>
+<td>Cans and 500-600 mL, no vertical travel</td>
+<td>Stage 0</td>
+</tr>
+<tr>
+<td>B. AM-ARM200 on a Z lift</td>
+<td>Same as A</td>
+<td>Z column only</td>
+<td>Multi-level access, same joint overload</td>
+<td>not designed</td>
+</tr>
+<tr>
+<td>C. Z-lift SCARA (ElRobot2-S1)</td>
+<td>None on J1-J3; bearings carry the cantilever</td>
+<td>Turret, links, gripper, Z column</td>
+<td>Top-down picks and lane drops, cans to 2 L</td>
+<td><strong>chosen</strong></td>
+</tr>
+<tr>
+<td>D. Cartesian XYZ gantry</td>
+<td>None</td>
+<td>Three long axes</td>
+<td>Simplest kinematics, large and heavy</td>
+<td>X axis only, in v2</td>
+</tr>
+<tr>
+<td>E. Mobile base with arm (Go2)</td>
+<td>Arm dependent</td>
+<td>Large</td>
+<td>Not needed for a fixed cooler wall</td>
+<td>rejected</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="22-layout-behind-the-cooler-loading-through-the-rear">2.2 Layout: behind the cooler, loading through the rear</h3>
+<p>The robot stands in the rear corridor. The fixture's lane-entrance datum is 270 mm in front of the J1 axis (the lane plates start at 253 mm), and the illustrative cooler outline in the figures puts the rear opening plane at 250 mm; where the rear opening of a real cooler sits relative to the lanes is unmeasured. Lanes fall 6 degrees away from the robot, so a bottle released at the rear end can slide the 0.4 m of lane toward the customer side (in the simulation only a lane friction near 0.10 flows without toppling). A staging tote (a crate or cart in the corridor) sits beside the robot at the same level. In the 600 mL replays, measured on the CAD poses, the placed bottle spans y = 272-339 mm (22-89 mm past the assumed rear plane) and the open front finger reaches y = 400 mm during the retreat: 130 mm past the lane-entrance datum and 150 mm past the assumed rear plane (1 L: 407 mm).</p>
+<figure><img alt="Figure 2a. Side view of the CAD at the placing pose (level 0, 600 mL, lane 3). The cooler outline is illustrative: its dimensions are assumed (dashed lines: rear opening plane at y = 250 mm and customer doors at y = 710 mm; dotted green line: the fixture's lane-entrance datum, y = 270 mm). 35 mm is the closed-form vertical gap between the L2 cover top and the level-1 plate underside at y = 345 mm; the CAD boolean search gives 38.5 mm for lane 3 (Section 4.2)." src="img/fig2a_side_view_rear_loading.png" /><figcaption>Figure 2a. Side view of the CAD at the placing pose (level 0, 600 mL, lane 3). The cooler outline is illustrative: its dimensions are assumed (dashed lines: rear opening plane at y = 250 mm and customer doors at y = 710 mm; dotted green line: the fixture's lane-entrance datum, y = 270 mm). 35 mm is the closed-form vertical gap between the L2 cover top and the level-1 plate underside at y = 345 mm; the CAD boolean search gives 38.5 mm for lane 3 (Section 4.2).</figcaption></figure>
+<figure><img alt="Figure 2b. Plan view: corridor depth behind the assumed rear plane (y = 250 mm, dotted), tote, arm reach annulus (170-385 mm) and the five lanes, which start at the fixture datum y = 270 mm." src="img/fig2b_plan_view_rear_loading.png" /><figcaption>Figure 2b. Plan view: corridor depth behind the assumed rear plane (y = 250 mm, dotted), tote, arm reach annulus (170-385 mm) and the five lanes, which start at the fixture datum y = 270 mm.</figcaption></figure>
+<p>What the fixture models: the shelf plates and their tilt, lane modules with dividers and end stops, brackets, posts, the tote tray and its ledge. What it does not model, because nothing real was measured: the cooler body (rear wall and door frame, uprights between bays, side panels, front doors), the real shelf pitch, the corridor depth and temperature. The v1 stack needs a 0.44 m level pitch: the L2 cover top is 130 mm above the grasp datum, and the datum is 10 mm above a 237 mm bottle. If the real pitch is smaller, v1 cannot reach in; Section 8 describes the fix.</p>
+<h3 id="23-one-cycle-in-words">2.3 One cycle in words</h3>
+<ol>
+<li>The Z carriage descends to the grasp height (z_g = floor + max(H + 10 mm, 143 mm); the J1 horn plane is 150 mm above z_g) and J1-J3 place the gripper over a tote pocket.</li>
+<li>The fingers close to D / cos 15 degrees and the bottle is lifted 25 mm clear of the 11 mm tray rim.</li>
+<li>The arm carries it to the lane entrance, lowers it until its base touches the sloped lane floor, and releases.</li>
+<li>The gripper opens to 125 mm, clears forward, sweeps sideways between neighbouring lanes and returns to the tote. Mean cycle 24.3 s with the default retreat, 19.9 s with the bay rule (sim).</li>
+</ol>
+<h2 id="3-the-design-module-by-module">3. The design, module by module</h2>
+<p>Each module was designed by its own track with scripted, parametric CAD (STEP for assemblies, STL in print orientation, build scripts in the artifact store); the lead set the interfaces and audited the integration. Servo dimensions are inferred from AM-ARM200 STL files, so every pocket is a named parameter with adjustable carriers and a coupon.</p>
+<h3 id="31-gripper-revision-4-gripper-readme-hand-calculations">3.1 Gripper (revision 4): <a href="docs/gripper_README.md.html">gripper README</a>, <a href="docs/gripper_hand_calcs.csv">hand calculations</a></h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mechanism</td>
+<td>One STS3215 drives a pinion (module 1.5, 16 teeth, face 14 mm) between two racks; pad gap 40-125 mm over 42.5 mm per rack (2309 ticks, 202.9 degrees)</td>
+</tr>
+<tr>
+<td>Fingers</td>
+<td>140 mm, TPU 95A pads, V pads; closing axis along the lane axis so the fingers never sit between lateral neighbours</td>
+</tr>
+<tr>
+<td>Footprint, mass</td>
+<td>149.5 x 60.3 mm, body zeta -3.8 to 63.0 mm; printed 335.5 g against a 250 g target (over budget, no lightening done)</td>
+</tr>
+<tr>
+<td>Clamp per finger</td>
+<td>34.7 N at rated torque (0.981 N<em>m), 41.7 N at the 1.2 x cap (1.177 N</em>m), 70 N burst, 104.2 N at stall</td>
+</tr>
+<tr>
+<td>Command limits</td>
+<td>can 15 N, PET up to 600 mL 25 N, 1 L 34 N; 1.5 L (47 N) and 2 L (63 N) exceed the cap</td>
+</tr>
+<tr>
+<td>Margins (calc)</td>
+<td>Pinion tooth, pitch loading 2.74 at rated and 1.60 at stall; <strong>tip loading 1.52 at rated, 1.27 at the cap, 0.89 at stall (fails)</strong>: stall is covered only by the torque cap</td>
+</tr>
+<tr>
+<td>Other margins</td>
+<td>Rack tooth 3.32 rated, finger bending 4.32, yoke leg 3.67, tab root bending 2.12, hard stop 10.9 (rated)</td>
+</tr>
+<tr>
+<td>Gear fit</td>
+<td>Minimum flank gap 0.082 mm, contact ratio 1.74: the weakest tolerance in the design (test A3)</td>
+</tr>
+</tbody>
+</table></div>
+<figure><img alt="Figure 3. Clamp force envelope against SKU requirements (rated 34.7 N, cap 41.7 N, burst 70 N, stall 104.2 N)." src="img/fig3_gripper_envelope.png" /><figcaption>Figure 3. Clamp force envelope against SKU requirements (rated 34.7 N, cap 41.7 N, burst 70 N, stall 104.2 N).</figcaption></figure>
+<p>Checks: 18 of 18 parts watertight; a 15-body matrix at gap 70 and a 20-position sweep show 0 mm3 overlap; grasp-fit cylinders from D57 to D110 clear every printed part. The 2D tooth finite-element check (<span class="unpub" title="file not published on this site">tooth_fem.py</span>) put the generated outline at 1.0-1.1 times the Lewis stress, which is the formula the margins use; it was not re-run at face 14 mm (scaled by 1/b).</p>
+<h3 id="32-arm-j1-j2-j3-links-arm-readme-verification-table-arm_assemblystep">3.2 Arm (J1, J2, J3, links): <a href="docs/arm_README.md.html">arm README</a>, <a href="docs/arm_verification.csv">verification table</a>, <span class="unpub" title="file not published on this site">arm_assembly.step</span></h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kinematics</td>
+<td>L1 = L2 = 200 mm, vertical axes, reach annulus 0.17-0.385 m; J1 -20 to 160 degrees, J2 +-130, J3 +-180; closing axis angle = q1 + q2 + q3</td>
+</tr>
+<tr>
+<td>Joints</td>
+<td>J1 and J2: STS3095 (rated 2.206, stall 9.316 N<em>m) in the same cartridge, two 6806-2RS bearings carry the moment; J3: STS3215 on two 6701-2RS (torque limit 1.0 N</em>m)</td>
+</tr>
+<tr>
+<td>Printed parts</td>
+<td>22 parts plus a servo coupon: 927 g PETG and TPU, about 28 h (estimate +-30 %)</td>
+</tr>
+<tr>
+<td>Heights (zeta, mm)</td>
+<td>L1 145-201 (cover 198-201), J2 housing 115.4-145, L2 85.3-130, J3 housing top 127.3, J3 interface plane 62.5</td>
+</tr>
+<tr>
+<td>Masses</td>
+<td>J1 turret 0.555 kg, L1 side 0.627 kg (budget 0.485), L2 side 0.303 kg (budget 0.195), gripper 0.44 kg; J1 tilt moment 12.2 N*m</td>
+</tr>
+<tr>
+<td>Bearing load</td>
+<td>J1 6806 radial 611 N each at 12.2 N*m: 0.22 of an assumed static rating of 2.8 kN</td>
+</tr>
+<tr>
+<td>Stiffness (calc)</td>
+<td>Tip droop 3.6 mm at 0.385 m with 2.4 kg <strong>if the L1 cover acts as a bonded lid</strong>; 36-44 mm if it does not</td>
+</tr>
+</tbody>
+</table></div>
+<p>The L1 cover dependence was re-checked independently with a voxel finite-element model (<span class="unpub" title="file not published on this site">l1_fe2.py</span>, E 1200 MPa, 1.0 and 1.5 mm voxels): closed box torsion 1.16-1.37 mrad per N<em>m against at least 24 mrad per N</em>m for the open U (not converged, so a lower bound), i.e. 17-21 times softer without the cover; bending rotation 1.1-1.2 against 1.9-2.3 mrad per N*m. A screws-only joint was not modelled. Bond the cover with a CA or epoxy bead plus all 14 screws and run the hang test D3 before any bottle.</p>
+<p>Open: mass over budget (no lightening pass); cable routing at J1, J2, J3 and the column is not designed (windows and grommets only); J3 servo retention relies on TPU shims.</p>
+<h3 id="33-z-module-v061-z-module-readme-verification-table-zmod_assemblystep">3.3 Z module v0.6.1: <a href="docs/zmod_README.md.html">Z module README</a>, <a href="docs/zmod_verification.csv">verification table</a>, <span class="unpub" title="file not published on this site">zmod_assembly.step</span></h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structure</td>
+<td>4040 V-slot column, 1250 mm, with two M6 tie rods (rear and side) and a 400 x 400 x 18 mm plywood base; ballast 6.6 kg (rear half) to 10.8 kg (centre) under dynamic load</td>
+</tr>
+<tr>
+<td>Lean at the column top (calc)</td>
+<td>2.45 mm alone, 1.36 mm with rods (rod joint and foot stiffness ASSUMED); a 2040 column leans 9.3 mm and fails</td>
+</tr>
+<tr>
+<td>Drive</td>
+<td>NEMA17 17HS19-2004D-B070 with a 24 V power-off brake, T8x4 (2-start) screw, MGN12H rail 900 mm; TMC2209 driver at 1.4 A rms (UNVERIFIED)</td>
+</tr>
+<tr>
+<td>Travel and speed</td>
+<td>Carriage 0.37-1.06 m (stroke 0.69 m, hard stops 0.364 and 1.066 m); cruise at most 40 mm/s (ramp 15, 25, 40); 0.44 m level change 17.8 s at 25 mm/s, 11.3 s at 40 mm/s; torque margin 3.2 on 24 V, 12 V cannot run 40 mm/s</td>
+</tr>
+<tr>
+<td>Loads</td>
+<td>Moving mass 2.359 kg plus 2.13 kg payload, 44 N, tilt moment 12.2 N*m; carriage plate 0.41-0.43 mm at the nut (voxel FE)</td>
+</tr>
+<tr>
+<td>Unpowered hold</td>
+<td>Brake margin 17.7, thread detent and friction margin 1.77 at mu 0.05 (detent 25 and friction 10 mN*m ASSUMED); the brake is the guaranteed layer</td>
+</tr>
+<tr>
+<td>Brake transient</td>
+<td>108-172 N on the nut for 1-2 ms at an E-stop against a 5 MPa sustained allowable (6.4-10.2 MPa): open, test C4</td>
+</tr>
+<tr>
+<td>Camera</td>
+<td>Gemini 2 hinge raised 38 mm in v0.6.1; lowest point 7.3 mm above the L1 cover (v0.6 overlapped L1 at J1 = -20 degrees)</td>
+</tr>
+<tr>
+<td>Parts</td>
+<td>13 printed parts, 372 g; assembly interference 0.0 mm3 at 12 carriage positions (41 children)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Electrical (<a href="docs/zmod_electrical.md.html">zmod_electrical.md</a>): the 24 V chain is supply, T3.15 A fuse, relay K1 contacts, then driver and brake; the E-stop button only drives the relay coil, so any broken wire or press drops the 24 V rail and the brake locks. The 12 V servo bus (10 A supply recommended) stays alive on purpose so the arm holds its pose. The brake sequence (release, move, ramp to zero, lock, power down) and the Raspberry Pi Pico pin list are in the page; the TMC2209 current and the 80 ms release delay are UNVERIFIED.</p>
+<h3 id="34-fixture-v11-fixture-readme-interface-limits">3.4 Fixture v1.1: <a href="docs/fixture_README.md.html">fixture README</a>, <a href="docs/fixture_interface_limits.csv">interface limits</a></h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Levels</td>
+<td>Floors at z = 100 and 540 mm (pitch 440 mm); 12 mm shelf plates tilted 6 degrees (4-10 degrees available by shims); the level-1 plate underside at the entrance is 519.7 mm</td>
+</tr>
+<tr>
+<td>Lanes</td>
+<td>Five lanes at 90 mm pitch (87 mm free), 35 mm dividers, 0.4 m long, PTFE or UHMW tape floor; bottle target y = 270 + D/2 + 1.5 mm</td>
+</tr>
+<tr>
+<td>Tote</td>
+<td>Six D75 pockets (2 x 3 grid at x -300 / -215, y 0 / 100 / 200 mm), pocket 8 mm deep, rim 11 mm above the pocket floor, ledge x -370 to -165 mm, three stops</td>
+</tr>
+<tr>
+<td>Mass</td>
+<td>27 printed parts, no supports needed; 6.69 kg default set, 9.21 kg with every option</td>
+</tr>
+<tr>
+<td>Optional</td>
+<td>3-lane wide set (125 mm pitch) and D120 tray for 1.5 L and 2 L</td>
+</tr>
+<tr>
+<td>Frame</td>
+<td>Posts 599.6 / 573.4 mm on four feet; a common baseboard of at least 18 mm plywood, 920 x 1000 mm, carries fixture and robot (top face = world z 0)</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="35-single-table-of-shared-datums">3.5 Single table of shared datums</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Datum</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame</td>
+<td>x lateral, y toward the shelf, z up; J1 axis is world z through (0, 0)</td>
+<td>design_params</td>
+</tr>
+<tr>
+<td>zeta</td>
+<td>height above the gripper datum, up positive; z = z_c + (zeta - 150 mm)</td>
+<td>arm, gripper</td>
+</tr>
+<tr>
+<td>Grasp rule</td>
+<td>z_g = z_floor + max(H + 10 mm, 143 mm); z_c = z_g + 150 mm</td>
+<td>gripper, fixture</td>
+</tr>
+<tr>
+<td>Gripper body bottom</td>
+<td>zeta -3.8 (designed), -4.3 as mounted; bottle top at -10; clearance 5.7 mm</td>
+<td>gripper, lead</td>
+</tr>
+<tr>
+<td>Fingertip, pad band</td>
+<td>zeta -140; pad band -137 to -87</td>
+<td>gripper</td>
+</tr>
+<tr>
+<td>J3 plane</td>
+<td>gripper 63.0, arm 62.5 (gripper sits 0.5 mm lower)</td>
+<td>lead</td>
+</tr>
+<tr>
+<td>Link tops</td>
+<td>L2 cover 130, L1 cover 201</td>
+<td>arm</td>
+</tr>
+<tr>
+<td>Lane entrance plane</td>
+<td>y = 270 mm; lane plate front edge y = 253 mm</td>
+<td>fixture</td>
+</tr>
+<tr>
+<td>Assumed cooler rear opening plane</td>
+<td>y = 250 mm, used only by the illustrative outline and figures</td>
+<td>lead</td>
+</tr>
+<tr>
+<td>Carriage range</td>
+<td>z_c 0.37-1.06 m</td>
+<td>Z module</td>
+</tr>
+</tbody>
+</table></div>
+<p>All parameters: <a href="docs/design_params.json">design_params.json (v0.4.3)</a>.</p>
+<h3 id="36-payload-mass-what-is-modelled-what-is-not-added-2026-10-02">3.6 Payload mass: what is modelled, what is not (added 2026-10-02)</h3>
+<p>A colleague asked whether the weight of the liquid is considered and whether it differs between drinks, beer, returnable and glass containers. Mass is modelled per SKU, with one density per SKU, and the SKU table contains only aluminium cans and one-way PET bottles. On 2026-10-02 glass and returnable containers were removed from the plan, so this section covers cans and one-way PET.</p>
+<p><strong>Model.</strong> Full mass = liquid density x volume + assumed empty pack (<a href="docs/design_params.json">design_params.json v0.4.3</a>, <code>skus</code>): 1.00 g/mL for water, 1.04 g/mL for soft drinks, 13-50 g of pack. Published measurements give regular cola 1.042 g/mL and diet cola 0.997 g/mL (<a href="https://chem.washington.edu/lecture-demos/density-column-coke-and-diet-coke">University of Washington chemistry demonstration</a>), and a full can of regular cola about 384 g against about 370 g for diet (<a href="https://web.physics.ucsb.edu/~lecturedemonstrations/Composer/Pages/36.34.html">UCSB physics demonstration</a>). Two drinks of the same volume therefore differ by about 4 % in liquid mass (600 mL: 0.598 to 0.625 kg of liquid). Finished beer has a final gravity of about 1.004-1.012 (<a href="https://shop.theelectricbrewery.com/pages/measuring-gravity">The Electric Brewery</a>, <a href="https://dointhemost.org/guides/what-should-my-beers-final-gravity-be/">Do In The Most</a>), so its liquid is close to water. The Monte Carlo runs vary the mass by +-5 %, which covers this spread. Container material is outside the table by design: only aluminium cans and one-way PET are in scope.</p>
+<p><strong>Table 3.6 Full mass and the friction needed to hold it.</strong> Required clamp per finger is SF m (g + a) / (2 mu) with SF 2 and a = 0.5 g; the table gives the smallest mu that meets it at the default clamp for the class and at the 41.7 N cap (<a href="docs/payload_mass_scenarios.csv">payload_mass_scenarios.csv</a>).</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Container</th>
+<th>Full mass (kg)</th>
+<th>Basis</th>
+<th>mu needed at the default clamp</th>
+<th>mu needed at the 41.7 N cap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>355 mL can, regular cola</td>
+<td>0.383</td>
+<td>modelled</td>
+<td>0.38 (15 N)</td>
+<td>0.14</td>
+</tr>
+<tr>
+<td>355 mL can, diet cola</td>
+<td>0.367</td>
+<td>density variant</td>
+<td>0.36 (15 N)</td>
+<td>0.13</td>
+</tr>
+<tr>
+<td>500 mL PET, water</td>
+<td>0.519</td>
+<td>modelled</td>
+<td>0.31 (25 N)</td>
+<td>0.18</td>
+</tr>
+<tr>
+<td>600 mL PET, regular cola</td>
+<td>0.651</td>
+<td>modelled</td>
+<td>0.38 (25 N)</td>
+<td>0.23</td>
+</tr>
+<tr>
+<td>600 mL PET, diet cola</td>
+<td>0.624</td>
+<td>density variant</td>
+<td>0.37 (25 N)</td>
+<td>0.22</td>
+</tr>
+<tr>
+<td>1 L PET, regular cola</td>
+<td>1.074</td>
+<td>modelled; the size is an estimate</td>
+<td>0.46 (34 N)</td>
+<td>0.38</td>
+</tr>
+<tr>
+<td>2 L PET, regular cola</td>
+<td>2.134</td>
+<td>modelled (stretch)</td>
+<td>commanded at the cap</td>
+<td>0.75</td>
+</tr>
+</tbody>
+</table></div>
+<p>The preform of a 600 mL PET bottle weighs 18.8 g (<a href="https://www.remsaplasticos.com/productos/botellas-pet/botella-pet-600ml">Remsa</a>); the modelled pack mass of 26 g adds cap and label.</p>
+<p><strong>Where mass enters.</strong></p>
+<ol>
+<li>Pad friction is the limit. At the assumed wet friction of 0.4, the 600 mL default clamp (25 N) meets the design criterion with a 5 % margin (23.9 N needed) and the 1 L default (34 N) falls 14 % short (39.5 N needed). The 1 L is therefore commanded at the 41.7 N cap when it is wet (design_params <code>pet_1000_wet</code>); the tolerance of a PET shell to 41.7 N has not been tested. Desk research (Section 8.1) found only dry friction values for printed TPU 95A, 0.2-1.0 against steel and other surfaces, and none for wet PET, so the value of 0.4 has no literature support. The design value for printed pads is now 0.3, an inference (dry 0.4-0.5 reduced by wetting). At 0.3 a 600 mL bottle needs 32 N, inside the 34.7 N rated clamp, and a 1 L bottle needs 53 N, above the cap (<a href="docs/grip_force_needed_by_sku.csv">grip_force_needed_by_sku.csv</a>, <a href="docs/friction_limit_table.csv">friction_limit_table.csv</a>). The 1 L is therefore a case for cast polyurethane or silicone pads (target 0.4-0.5, assumed) or for form closure at the neck (Section 8.4).</li>
+<li>Simulation (Figure 8, <a href="docs/payload_mass_sensitivity.csv">payload_mass_sensitivity.csv</a>): 70 runs of the nominal level-1 cycle (lane 3, three runs in lane 5) with the container mass scaled from 1 to 5 times (600 mL: 0.65 to 3.25 kg; 1 L: 1.07 to 3.75 kg; cans to 0.57 kg), friction 0.3, 0.4 or 0.8 (0.35 and 0.7 for cans), and the clamp at the SKU default or at the cap. 51 runs held with at most 1 mm of slip, 9 held while slipping and 10 dropped on the lift. The static limit 2 F mu / (g cos 15 deg) with the V pad separates them: the heaviest container held was 0.996 times the limit and the lightest one dropped was 1.015 times it. The cycle's vertical accelerations are therefore about 0.02 g or less, far below the 0.5 g in the design criterion. Examples for the 600 mL class: mu 0.3 at 25 N holds 1.46 kg (slip 2.6 mm) and drops at 1.63 kg; mu 0.4 at 25 N holds 1.95 kg and drops at 2.28 kg; mu 0.3 at the cap holds 2.60 kg (slip 7.6 mm) and drops at 3.25 kg. The 1 L at mu 0.3 and 34 N holds 2.14 kg with 18 mm of slip and drops at 2.41 kg.</li>
+<li>The design criterion is about 3.1 times stricter than the static limit (safety factor 2, 1.5 g of load, no V-pad credit). At the cap and mu 0.4 it allows 1.13 kg against a static hold of 3.52 kg. The simulation alone would pass loads that the design should not carry, so the design criterion, not the simulation, sets the SKU scope.</li>
+<li>Joints and Z (lane 3): for runs that held without slipping, the loaded peak torque is 0.22 N<em>m on J1 and 0.15 N</em>m on J2 at 0.65 kg, at most 0.30 and 0.22 N<em>m between 1.1 and 1.7 kg, and 0.38 and 0.30 N</em>m between 2.2 and 2.8 kg (rated 2.206 N<em>m). The highest values in the set, 0.66 N</em>m on J1 and 0.90 N*m on J2 (30 % and 41 % of rated), belong to runs in which the container slipped in the pads. The largest carriage force in the runs is 35 N at 0.65 kg, 49-50 N between 0.7 and 2.2 kg and 55-61 N between 2.2 and 3.4 kg, against the 44 N static value for the 2.13 kg design payload of the Z module; two can runs reached the simulated actuator limit of 80 N (cause not investigated). Payloads above 2.13 kg are outside the Z design.</li>
+<li>Shelf load: the fixture is designed for 25 kg per level (20.3 kg is 25 bottles of 600 mL with a factor of 1.25).</li>
+<li>Nothing on the arm senses weight: the J1-J3 axes are vertical (no gravity torque) and the gripper register reads clamp torque. The mass must come from SKU recognition and a measured table, or from a scale (a load cell under the tote tray is an idea, not a design).</li>
+</ol>
+<figure><img alt="Figure 8. Where the grip holds. One panel per clamp command per finger (25 N, 34 N, 41.7 N); each marker is one MuJoCo run at level 1 (circles: 600 mL, squares: 1 L; filled: held with at most 1 mm of slip, open: held while slipping, crosses: dropped on the lift). Blue dashed line: design limit (safety factor 2, 0.5 g); red line: static limit with the V pad and no acceleration; grey bands a-c: container scenarios by full mass (a: 600 mL PET 0.65 kg, b: 1 L PET 1.07 kg, c: 2 L PET 2.13 kg, stretch)." src="img/fig_payload_grip_limits.png" /><figcaption>Figure 8. Where the grip holds. One panel per clamp command per finger (25 N, 34 N, 41.7 N); each marker is one MuJoCo run at level 1 (circles: 600 mL, squares: 1 L; filled: held with at most 1 mm of slip, open: held while slipping, crosses: dropped on the lift). Blue dashed line: design limit (safety factor 2, 0.5 g); red line: static limit with the V pad and no acceleration; grey bands a-c: container scenarios by full mass (a: 600 mL PET 0.65 kg, b: 1 L PET 1.07 kg, c: 2 L PET 2.13 kg, stretch).</figcaption></figure>
+<p><strong>Decisions.</strong> v1 covers cans and one-way PET up to 1 L. Glass and returnable containers are out of the plan (user decision, 2026-10-02). <a href="docs/container_data_sheet.csv">container_data_sheet.csv</a> (PET and cans only) and tests A5-A7 remain as optional tools: weigh and measure what is at hand, measure pad friction dry and wet, recompute Table 3.6. The 1.5 L and 2 L bottles stay stretch. A planner must reject any SKU whose required clamp at the measured wet friction exceeds the cap rather than clamp harder.</p>
+<p><strong>Not modelled:</strong> slosh and partial fills (the bodies are rigid and full), PET shell compliance at high clamp force, condensation beyond the friction number. Scripts: <span class="unpub" title="file not published on this site">payload_mass_sensitivity_run.py</span>, <span class="unpub" title="file not published on this site">payload_mass_boundary_run.py</span>.</p>
+<h2 id="4-how-the-design-was-checked-and-what-that-does-not-prove">4. How the design was checked, and what that does not prove</h2>
+<h3 id="41-independent-integration-checks-lead-on-the-real-cad-meshes">4.1 Independent integration checks (lead, on the real CAD meshes)</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Method</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Printability</td>
+<td>Watertightness, positive volume and bed fit of every STL (<a href="docs/stl_audit_arm_final.csv">arm audit</a>, <a href="docs/stl_audit_gripper_r4.csv">gripper audit</a>); viewer copies byte-identical to the store</td>
+<td>23 arm STLs and 9 gripper part STLs pass</td>
+</tr>
+<tr>
+<td>Part-to-part overlaps</td>
+<td>Boolean intersection volumes (manifold3d) (<a href="docs/independent_interference_audit.csv">independent_interference_audit.csv</a>)</td>
+<td>Gripper assembly 13 bodies / 78 pairs (one pose, gap 70 mm; the 20-position sweep is the gripper track's own result) and arm 190 pairs: 0 overlaps (touching only by design); pinion-rack gap 0.082 mm</td>
+</tr>
+<tr>
+<td>Z module assembly</td>
+<td>Overlap at 12 carriage positions, 41 children</td>
+<td>0.0 mm3</td>
+</tr>
+<tr>
+<td>Arm against the Z module</td>
+<td>Sweep over 3 carriage heights, J1 -20 to 160, J2 -130 to 130, 5 J3 angles, then a fine sweep J1 -20 to 40 every 2.5 degrees (<span class="unpub" title="file not published on this site">assembly_check.py</span>)</td>
+<td><strong>v0.6: the camera overlapped L1 (446 and 386 mm3 at J1 = -20) and came within 1.6-1.8 mm at J1 30-40 and 140-150.</strong> v0.6.1: 0 overlaps, no gap of 3 mm or less in the operating chain; designed minimum 4.00 mm (J1 pedestal top to camera bracket foot)</td>
+</tr>
+<tr>
+<td>Arm against the fixture</td>
+<td>Headroom by upward search at the place pose, level 0 and 1, all SKUs (<a href="docs/assembly_headroom_v1_1_place_pose.csv">assembly_headroom_v1_1_place_pose.csv</a>)</td>
+<td>Table 4.2</td>
+</tr>
+<tr>
+<td>Simulation replays against the CAD</td>
+<td>Every other frame of all six replays posed on the CAD (<span class="unpub" title="file not published on this site">replay_cad_check.py</span>, <a href="docs/replay_cad_check_v11_all.csv">results</a>)</td>
+<td>Arm and gripper chain: 0 overlaps with fixture, column, camera or brackets in any frame. Pad-to-neighbour gap 0.76-0.78 mm in the default retreat (the simulation counts it as contact). The released bottle overlaps the CAD end stop because the simulated lane is about 12 mm longer than the CAD lane; the viewer stops it at the CAD wall</td>
+</tr>
+<tr>
+<td>L1 link stiffness</td>
+<td>Voxel FE, 1.0 and 1.5 mm</td>
+<td>closed box 17-21 times stiffer in torsion than the open U (Section 3.2)</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="42-free-lift-above-the-place-pose-600-ml-level-0-the-ceiling-is-the-level-1-plate-and-bracket-seats">4.2 Free lift above the place pose, 600 mL, level 0 (the ceiling is the level-1 plate and bracket seats)</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Target</th>
+<th>CAD boolean (this work)</th>
+<th>MuJoCo, no margin</th>
+<th>MuJoCo with the planner's 1.5 mm margin</th>
+<th>Needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lane 1</td>
+<td>21.6 mm</td>
+<td>21.2</td>
+<td>19.7</td>
+<td>13 mm (rim 11 + 2)</td>
+</tr>
+<tr>
+<td>Lane 3</td>
+<td>38.5 mm</td>
+<td>38.3</td>
+<td>36.8</td>
+<td>13 mm</td>
+</tr>
+<tr>
+<td>Lane 5</td>
+<td>39.2 mm</td>
+<td>38.9</td>
+<td>37.4</td>
+<td>13 mm</td>
+</tr>
+<tr>
+<td>Tote cell (-300, 200)</td>
+<td>37.3 mm</td>
+<td>37.7</td>
+<td>36.2</td>
+<td>13-14 mm</td>
+</tr>
+<tr>
+<td>Tote cells (-215, 0), (-215, 200)</td>
+<td>50.6 mm</td>
+<td>51.0</td>
+<td>49.5</td>
+<td>13-14 mm</td>
+</tr>
+<tr>
+<td>Tote cell (-300, 0)</td>
+<td>blocked</td>
+<td>blocked</td>
+<td>blocked</td>
+<td>cans only, as the last pick</td>
+</tr>
+<tr>
+<td>1 L, any level-0 target</td>
+<td>blocked</td>
+<td>blocked</td>
+<td>blocked</td>
+<td>needs a level pitch of at least 461 mm (486 mm in lane 1)</td>
+</tr>
+<tr>
+<td>Any SKU, level 1</td>
+<td>90 mm or more (search limit)</td>
+<td>no ceiling modelled</td>
+<td>-</td>
+<td>carriage stroke limits instead</td>
+</tr>
+</tbody>
+</table></div>
+<p>Two independent methods agree within 0.5 mm. The fixture track's closed-form values (42.7 mm at the lane axis, 25 mm in lane 1) assume a bottle resting flat at the lane centre; for placing, a held vertical bottle touches the sloped floor at its uphill edge, 3.7 mm higher, so those values are 3.7-5 mm optimistic for placing and correct for picking a resting bottle. I first made the same mistake twice in the opposite direction (review log R43, R44).</p>
+<p>The margins are thin at level 0: lane 1 has 8.6 mm to spare in the CAD (6.7 mm in the simulation), and the level pitch can drop by about 6 mm at most (the planner fails at 434 mm). Level 1 has no such limit, which is why it is the first test level.</p>
+<h3 id="43-errors-found-in-order-of-consequence-full-log-design_review_logcsv-65-rows">4.3 Errors found, in order of consequence (full log: <a href="docs/ElRobot2_S1_design_review_log.csv">design_review_log.csv, 65 rows</a>)</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Found by</th>
+<th>Effect</th>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lewis tooth stress used circular pitch with the module-form factor</td>
+<td>independent auditor</td>
+<td>stress understated 3.14 times</td>
+<td>fixed (FE 1.0-1.1 times Lewis)</td>
+</tr>
+<tr>
+<td>Clamp force per finger is eta<em>T/(2 r_p), not eta</em>T/r_p</td>
+<td>lead</td>
+<td>overstated 2 times; 1.5 L and 2 L moved to stretch</td>
+<td>fixed</td>
+</tr>
+<tr>
+<td>Lead-screw whirl speed formula missing the mode factor (lead), and the same class of error in the Z agent's first version</td>
+<td>lead cross-check</td>
+<td>limit understated about 10 times; cruise is set by stepper torque instead</td>
+<td>fixed</td>
+</tr>
+<tr>
+<td>2040 column</td>
+<td>Z module track</td>
+<td>9.3 mm lean</td>
+<td>4040 plus tie rods</td>
+</tr>
+<tr>
+<td>T8x8 screw does not hold when unpowered</td>
+<td>lead derivation</td>
+<td>carriage could creep</td>
+<td>T8x4 plus brake motor; assumptions open</td>
+</tr>
+<tr>
+<td>Camera overlapped the L1 link</td>
+<td>lead boolean sweep</td>
+<td>collision at J1 = -20 degrees</td>
+<td>fixed in v0.6.1</td>
+</tr>
+<tr>
+<td>Level pitch too small for the real stack: 0.30 m, then 0.40 m, then 0.42 m (tilted plates lower the ceiling by 8.3 mm; the CAD boolean found 16 mm of free lift)</td>
+<td>lead, fixture track</td>
+<td>level 0 unusable or marginal</td>
+<td>pitch 0.44 m</td>
+</tr>
+<tr>
+<td>Tote rim 22 mm above the pocket floor in the CAD, 12 mm in the simulation</td>
+<td>lead</td>
+<td>bottle foot would hit the rim</td>
+<td>rim 11 mm</td>
+</tr>
+<tr>
+<td>Tote cell (-300, 0) infeasible with the final arm at level 0</td>
+<td>lead boolean check</td>
+<td>five usable cells for PET</td>
+<td>scope decision</td>
+</tr>
+<tr>
+<td>Lane targets used the entrance plane, not the bottle centre</td>
+<td>fixture track</td>
+<td>outer lanes 2.9 mm from the reach limit</td>
+<td>fixed</td>
+</tr>
+<tr>
+<td>Retreat blocked by the neighbour lane's first slot</td>
+<td>simulation</td>
+<td>default retreat contact-free in only 16/45</td>
+<td>bay rule</td>
+</tr>
+<tr>
+<td>Lane headroom measured at the wrong datum (twice)</td>
+<td>lead self-audit, settled by the simulation</td>
+<td>5.7 mm and 3.7 mm errors</td>
+<td>fixed (Table 4.2)</td>
+</tr>
+<tr>
+<td>Heat-set inserts: 120 needed, 100 ordered</td>
+<td>lead BOM check</td>
+<td>build stalls</td>
+<td>second pack in batch 1</td>
+</tr>
+<tr>
+<td>Fixture baseboard did not extend under the robot base</td>
+<td>lead</td>
+<td>different z = 0 planes</td>
+<td>common 920 x 1000 mm baseboard</td>
+</tr>
+<tr>
+<td>Figures and text put the lane entrance at y = 250 mm; the fixture datum is 270 mm (250 mm is the assumed cooler plane)</td>
+<td>automated review of this session</td>
+<td>20 mm labelling error, no check affected</td>
+<td>fixed (figures 2a, 2b, Section 2.2)</td>
+</tr>
+<tr>
+<td>'Undisturbed' bay-rule retreats: the released bottle is dragged 7.3 mm on average, 14.5 mm at most</td>
+<td>automated review of this session, confirmed on sim_results_nominal_bay.csv</td>
+<td>wording overstated the result</td>
+<td>fixed (Section 5)</td>
+</tr>
+<tr>
+<td>1 L default clamp (34 N) is below the design criterion at wet friction 0.4 (39.5 N needed); the 600 mL default has a 5 % margin</td>
+<td>lead, from the mass sensitivity (Section 3.6)</td>
+<td>a wet 1 L bottle could slip in transport</td>
+<td>1 L commanded at the 41.7 N cap when wet; confirm in test B</td>
+</tr>
+<tr>
+<td>Design basis taken from Japanese stores; manufacturers' and resellers' data for the racks behind Mexican 'tipo OXXO' doors give a shelf pitch of 0.287-0.381 m (inference), below the 0.41-0.43 m the v1 stack needs for a 600 mL bottle</td>
+<td>colleague, then desk research (Section 8)</td>
+<td>the v1 gripper stack cannot serve a 600 mL or larger PET bottle in a standard rack</td>
+<td>S2 concept (offset wrist, neck-jaw, flat clamp); open until the S2 CAD, simulation and Phase H tests exist</td>
+</tr>
+<tr>
+<td>Glide lanes in the vendor data are 74.6 mm wide against the fixture's 90 mm</td>
+<td>desk research (Section 8.1)</td>
+<td>a 600 mL bottle leaves 3.6-5 mm per side against 3.4 mm of servo backlash at full reach</td>
+<td>75 mm lane inserts in the S2 mock-up; open (test H3)</td>
+</tr>
+<tr>
+<td>Every published friction value for printed TPU is dry; the v1 assumption of 0.4 wet has no support</td>
+<td>desk research (Section 3.6)</td>
+<td>the 1 L needs 0.38 at the cap, the 600 mL needs 32 N at 0.3</td>
+<td>design value 0.3, cast pads or neck-jaw for the 1 L; open (A5 optional, H2)</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="5-simulation-mujoco-fixture-v11-sim_summarymd-sim_key_numbersjson">5. Simulation (MuJoCo, fixture v1.1): <a href="docs/sim_summary.md.html">sim_summary.md</a>, <a href="docs/sim_key_numbers.json">sim_key_numbers.json</a></h2>
+<p>Rigid bodies, ideal position servos clipped at rated torque, hand-tuned gains, assumed masses and friction, convex hulls of the final arm CAD, box models of the fixture structures. The whole v1.0 suite was rerun on v1.1 with the same harness, success rules and seeds. It is a design check, not a prediction of hardware success rates. Values in brackets are the fixture v1.0 results.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>v1.1 (v1.0)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nominal dry, accepted picks</td>
+<td>45/45 (44/44); 5 of 50 matrix entries impossible: 1 L at level 0 in all five lanes (v1.0 also lost 600 mL lane 1)</td>
+</tr>
+<tr>
+<td>Nominal wet (pad mu 0.4)</td>
+<td>45/45 (44/44)</td>
+</tr>
+<tr>
+<td>Loaded J1 / J2 torque, nominal and wet</td>
+<td>0.45 / 0.20 N<em>m (0.45 / 0.18); at most 1.65 / 1.35 N</em>m over 580 successful runs; none reaches 2.2</td>
+</tr>
+<tr>
+<td>Slip in transport, nominal and wet</td>
+<td>at most 0.28 mm</td>
+</tr>
+<tr>
+<td>Monte Carlo 600 mL, 3 mm and 3 degree errors, mu 0.4-0.8, mass +-5 %</td>
+<td>level 0: 60/60 (51/60); level 1: 60/60; mixed 59/60; level 0 lane 1: 20/20</td>
+</tr>
+<tr>
+<td>Monte Carlo 1 L, level 1</td>
+<td>52/60 with D75 pockets, 48/60 with D80, 44/60 with D85; failures are divider contacts in the 87 mm lane</td>
+</tr>
+<tr>
+<td>Lateral pick error sweep, 600 mL</td>
+<td>12/12 up to 10 mm at both levels; 12 mm: 10/12 and 11/12</td>
+</tr>
+<tr>
+<td>Retreat, default (slot-0 neighbour)</td>
+<td>contact-free 16/45; 28 of 45 runs reach the torque limit on J1 (stall against a bottle)</td>
+</tr>
+<tr>
+<td>Retreat, bay rule</td>
+<td>contact-free 45/45; bottles stay upright and on the plate but are dragged sideways 7.3 mm on average (14.5 mm at most, up to the lane free play); 19.9 s; torque limit reached in 4 of 45</td>
+</tr>
+<tr>
+<td>Retreat, fully populated lanes</td>
+<td>0/45 at the 90 mm pitch (pad stall forces up to 1.2 kN in the model)</td>
+</tr>
+<tr>
+<td>Wide lanes (3 lanes, 125 mm), 600 mL, full neighbours</td>
+<td>corridor retreat 7/10; with a deeper back-out 10/10, Monte Carlo 20/20, 17/20 with neighbours scattered by 4 mm: works but not recommended (4.8-6.5 mm clearance per side, 15 slots per level)</td>
+</tr>
+<tr>
+<td>Lift-over retreat</td>
+<td>needs 139 mm of lift: carriage travel 1.080 m (600 mL) and 1.133 m (1 L) against the 1.06 m stroke; impossible at level 0</td>
+</tr>
+<tr>
+<td>1.5 L and 2 L on the wide lanes with a D120 tray</td>
+<td>36/36 at clamp 34.7-104 N; the cap is 41.7 N, and the 2 L passes only a relaxed 15 mm rear-edge rule (18 of 36 fail the original 5 mm)</td>
+</tr>
+<tr>
+<td>Cycle time</td>
+<td>24.3 s mean (default), 19.9 s (bay rule); Z at 50 mm/s saves 1.2 s</td>
+</tr>
+<tr>
+<td>Lane flow (fixture only)</td>
+<td>only mu 0.10 at 6 degrees flows without toppling (3.4 s); mu 0.05 topples at every slope, mu 0.2 does not flow</td>
+</tr>
+</tbody>
+</table></div>
+<figure><img alt="Figure 5. Servo torque over one 600 mL level-0 cycle, default retreat (left) and bay rule (right). Grey: bottle gripped, at most 0.22 / 0.15 / 0.03 N*m on J1 / J2 / J3. Orange: retreat; with a neighbour in slot 0 the arm stalls against it." src="img/sim_torque_600ml_L0_lane3.png" /><figcaption>Figure 5. Servo torque over one 600 mL level-0 cycle, default retreat (left) and bay rule (right). Grey: bottle gripped, at most 0.22 / 0.15 / 0.03 N*m on J1 / J2 / J3. Orange: retreat; with a neighbour in slot 0 the arm stalls against it.</figcaption></figure>
+<p>Recommendation carried into the plan: use the bay rule on the five-lane set. Drop a bottle into a lane only while slots 0 and 1 (the first 160 mm) of both neighbouring lanes are empty; at most lanes 1, 3 and 5 can then be full, lanes 2 and 4 hold three bottles each, and the capacity is 21 of 25 slots (arithmetic from the rule). Both retreat types drag the released bottle sideways, so the lane layout has to tolerate a bottle that ends against a divider. A product needs either a gripper with narrower rear fingers or a lane pitch of at least 125 mm with a corridor retreat.</p>
+<p><strong>Deviations declared by the simulation track (carry these into any use of the numbers):</strong> cans are grasped at z_g = floor + 185 mm (its v1.0 rule), not the fixture rule of 148-153 mm; the wrist camera is not modelled (no collision geometry); fixture structures are boxes from voxel probes of the STLs (1.5-2.3 mm more generous than the CAD at the lane poses); the fingertip was corrected from -143 to -140.5 mm; level-pitch, rim and cell-pitch studies are planner-only; the solver-settings torque table and the 2 L static-hold and force-sweep results are carried over from v1.0; the 1.5 L and 2 L runs have one bottle and no neighbours; the rear-edge tolerance is 15 mm; the 1 L base cup (0.94 D) and the Monte Carlo distributions are assumptions.</p>
+<h2 id="6-see-it">6. See it</h2>
+<ul>
+<li>Interactive 3D viewer: <a href="viewer/">ElRobot2_S1_3d_viewer.html</a>. Self-contained; joint sliders, targets, six simulation replays on the CAD, a cooler-outline toggle (illustrative), camera buttons for the corridor and the customer side. WebGL could not be opened in the authoring sandbox: the code path was exercised against a stand-in and frames were produced by the viewer's own software renderer.</li>
+<li>This site: the interactive viewer is served at <a href="viewer/">viewer/</a>; it is byte-identical to ElRobot2_S1_3d_viewer.html.</li>
+<li>Replay videos (MuJoCo motion on the CAD, 1.25 times speed): <span class="unpub" title="file not published on this site">600 mL level 1</span>, <span class="unpub" title="file not published on this site">600 mL level 0 with the bay rule</span>, <span class="unpub" title="file not published on this site">1 L level 1</span>; keyframe sheets <a href="img/ElRobot2_S1_replay_level1_keyframes_v11.png">level 1</a>, <a href="img/ElRobot2_S1_replay_level0_bay_keyframes_v11.png">level 0</a>, <a href="img/ElRobot2_S1_replay_1L_keyframes_v11.png">1 L</a>.</li>
+<li>Live MuJoCo window on a Mac: <span class="unpub" title="file not published on this site">ElRobot2_S1_mujoco_local.zip</span> (<code>pip install mujoco numpy</code>, <code>mjpython sim_view_local.py</code>). Tested headless in a clean folder; the window itself is untested.</li>
+</ul>
+<figure><img alt="Figure 6. Keyframes of the 600 mL level-1 episode (default retreat). Orange bottles are the tote and the moved bottle, blue ones lane neighbours; the light blue frame is the illustrative cooler outline." src="img/ElRobot2_S1_replay_level1_keyframes_v11.png" /><figcaption>Figure 6. Keyframes of the 600 mL level-1 episode (default retreat). Orange bottles are the tote and the moved bottle, blue ones lane neighbours; the light blue frame is the illustrative cooler outline.</figcaption></figure>
+<figure><img alt="Figure 7. Keyframes of the 600 mL level-0 episode with the bay rule: the arm works under the level-1 plate and the retreat is contact-free." src="img/ElRobot2_S1_replay_level0_bay_keyframes_v11.png" /><figcaption>Figure 7. Keyframes of the 600 mL level-0 episode with the bay rule: the arm works under the level-1 plate and the retreat is contact-free.</figcaption></figure>
+<h2 id="7-building-it">7. Building it</h2>
+<h3 id="71-bill-of-materials-elrobot2_s1_bomcsv-fasteners">7.1 Bill of materials: <a href="docs/ElRobot2_S1_BOM.csv">ElRobot2_S1_BOM.csv</a>, <a href="docs/ElRobot2_S1_BOM_fasteners.csv">fasteners</a></h3>
+<p>Items not already on hand, 76 priced lines: <strong>US$553 in total</strong> (prices found on retailer pages US$124, estimates US$429; treat as +-35 %, i.e. US$403-703; EUR to USD 1.10 assumed). Order batch 1 (long lead: 4040 column, rail, screw, brake motor, 24 V and 12 V supplies, 6806 bearings, drivers, second pack of inserts) US$303; batch 2 (hardware store: fasteners, plywood, rods, tape, baseboard) US$250. By module: Z module US$301, fixture US$139, system (12 V supply, fuses, cables, inserts) US$79, arm US$34, gripper US$1. On hand or already ordered and therefore not in the total: the servos, the 6701 and 624 bearings, the first 100 heat-set inserts, M3x10 and M2x12 screws, the printer and filament (filament is not priced). The to-buy lines are checked one-to-one against the four module hardware lists.</p>
+<h3 id="72-printing-plan-print-manifest-print-package-stl-manifest-bom-notes">7.2 Printing plan: <a href="docs/ElRobot2_S1_print_manifest.csv">print manifest</a>, <span class="unpub" title="file not published on this site">print package (STL, manifest, BOM, notes)</span></h3>
+<p>PETG, 0.4 mm hardened nozzle, 0.2 mm layers, 6 walls, 22 % gyroid; 100 % infill for the pinion, racks, yokes, brackets, shims, feet and stops; TPU 95A for pads and arm shims; supports only in a few arm parts (hubs, pedestal, L2 root plate) and under the Z motor mount. Hours use a 33 g/h rule of thumb taken from the arm track's estimates (+-40 %); your slicer will give better numbers.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Contents</th>
+<th>Mass</th>
+<th>Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A. Coupons</td>
+<td>STS3095 pocket and bearing-seat coupon, STS3215 pocket coupon</td>
+<td>259 g</td>
+<td>8</td>
+</tr>
+<tr>
+<td>B. Gripper</td>
+<td>9 part types, 13 pieces, plus 4 bottle dummies (605 g, 18 h)</td>
+<td>336 g</td>
+<td>10</td>
+</tr>
+<tr>
+<td>C. Z module</td>
+<td>13 parts</td>
+<td>372 g</td>
+<td>11</td>
+</tr>
+<tr>
+<td>D. Arm</td>
+<td>22 parts</td>
+<td>927 g</td>
+<td>28</td>
+</tr>
+<tr>
+<td>E1. Fixture, level 1 half</td>
+<td>5 lanes, tote tray, brackets, feet, stops</td>
+<td>3.47 kg</td>
+<td>105</td>
+</tr>
+<tr>
+<td>E2. Fixture, level 0</td>
+<td>second half</td>
+<td>3.23 kg</td>
+<td>98</td>
+</tr>
+</tbody>
+</table></div>
+<p>Robot alone 1.64 kg; with the fixture and coupons the core set is 9.2 kg and about 280 h of printing. Print the coupons first and measure before anything large. Optional and not needed for v1: the wide lane set (1.81 kg) and the D120 tray pair (0.53 kg).</p>
+<p><strong>Print holds after the desk research (2026-10-02).</strong> Hold stage E2 (level-0 fixture half) and the 90 mm lane plates until a rack mock-up with adjustable pitch (0.29-0.44 m) and 75 mm lane inserts is designed. Stage B (the v1 gripper) is optional: it is a development tool for cans and open racks, not the PET hand. The L2 and J3 parts can be reused with an adapter for the offset wrist, but the J3 pin and flange must be re-verified for a moment of 0.8-1.25 N*m before they are trusted (Section 8.4). Stages A, C, D and E1 do not depend on the rack pitch.</p>
+<h3 id="73-test-plan-build-and-test-plan-v23">7.3 Test plan: <a href="docs/ElRobot2_S1_build_test_plan.md.html">build and test plan v2.3</a></h3>
+<p>Nine phases, each with a pass criterion: S real cooler survey with the Spanish survey sheet (optional, not available now); A coupons and measurements (servo dimensions, bearing seats, gear mesh and mass are required; pad friction, real SKU sizes and weights and the grip table from measured masses, A5-A7, are optional and deferred); B gripper bench for the v1 gripper as a development tool (gap calibration, force against the torque register, hold test, backlash, endurance); C Z module (ramp to 40 mm/s, repeatability, power-off hold, brake transient, column lean, overturning, camera clearance); D arm (range, accuracy, link stiffness with the bonded cover, current and temperature); E integrated pick-and-place of the v1 gripper on fixture v1.1 (ArUco calibration, ten-cycle runs at level 1 then level 0 under the bay rule, mixed SKUs, wet bottles, lane flow, fault recovery); H the S2 end effector (neck geometry, neck-jaw hold, placement into a 75 mm lane at 0.318 m, tote cycle, J3 moment, flat clamp on cans); F cold environment; G teleoperation data. Gates that must pass before the next step: servo coupons fit before printing the arm; torque register verified (B2) before any bottle is clamped; brake and E-stop test (C3, C4) before unattended runs; cover-bond hang test (D3) before bottle tests; H1 (neck geometry) before the jaw is cut; H3 (placement at 0.318 m) before S2 is called a solution, with the push-in plate as the fallback if it fails twice. Risks and their tests: <a href="docs/ElRobot2_S1_risk_register.csv">risk register, 39 rows</a>. No test now depends on a store visit; the level-0 half of the fixture and the 90 mm lane plates wait for the adjustable-pitch rack mock-up instead.</p>
+<h3 id="74-control-software-sketch-not-built">7.4 Control software sketch (not built)</h3>
+<ul>
+<li>Hardware interfaces: Feetech STS bus through the Waveshare adapter for J1-J3 and the gripper; a Raspberry Pi Pico for the Z axis (step, direction, brake, limits, E-stop sense); Orbbec Gemini 2 on the carriage plus the wrist camera; LeRobot for teleoperation and datasets.</li>
+<li>Kinematics: analytic two-link inverse kinematics (elbow branch +1), closing axis angle q1 + q2 + q3, joint limits, reach annulus 0.17-0.385 m.</li>
+<li>Task sequence: the scripted controller used in the simulation (<span class="unpub" title="file not published on this site">sim_controller.py</span>) is the seed: hover, descend, close to D / cos 15 degrees, lift 25 mm, carry, lower to contact, release, open to 125 mm, clear forward, bay-rule retreat, return. It needs a hardware abstraction layer in place of MuJoCo.</li>
+<li>Perception: ArUco markers 20-23 (80 mm) for camera-to-base calibration, depth for pocket and lane occupancy; the bay rule needs a lane-occupancy estimate.</li>
+<li>Supervisor: torque limits (gripper 1.177 N<em>m, J3 1.0 N</em>m, J1 and J2 at 40 % in early runs), E-stop sense, the brake sequence, and a teleoperation fallback with the leader arm.</li>
+</ul>
+<h2 id="8-the-real-cooler-gap-desk-research-and-the-s2-decision">8. The real-cooler gap, desk research and the S2 decision</h2>
+<p>On 2026-10-02 the user removed glass and returnable containers from the plan and stated that a store visit, a scale with real containers and a tilt-friction test are not available for now. The questions those three items were meant to answer (what the racks look like, what the containers weigh and measure, how well the pads grip) were therefore researched from public sources. Every fact has an evidence grade (A manufacturer or primary source, B vendor specification with numbers, C reseller, aggregator or forum, D inference) in <a href="docs/cooler_envelope_evidence.csv">cooler_envelope_evidence.csv</a> (28 rows), and the findings are summarised in <a href="docs/ElRobot2_desk_research_pack.md.html">ElRobot2_desk_research_pack.md</a>. Anything below that is not a quotation of a source is inference or calculation.</p>
+<h3 id="81-what-manufacturers-and-resellers-publish">8.1 What manufacturers and resellers publish</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Data</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Door and opening height</td>
+<td>Anthony 401 net openings of 67 1/4, 75 1/4 and 79 1/4 in (1708, 1911 and 2013 mm). Mexican 'tipo OXXO' doors: 24 x 75 and 26 x 75 in; a used door is listed at 23 x 73 in</td>
+<td><a href="https://www.anthonyintl.com/docs/default-source/2017productspricesheet/401-price-sheet.pdf?sfvrsn=2">Anthony 401 price sheet</a>, <a href="https://camarasreachin.com/">camarasreachin.com</a>, <a href="https://listado.mercadolibre.com.mx/industrias-y-oficinas/industria-gastronomica/refrigeradores/camaras/puertas-tipo-oxxo">MercadoLibre listing</a></td>
+</tr>
+<tr>
+<td>Shelves per door</td>
+<td>Anthony 401: five, six on doors of 79 in or taller. Anthony 101: five, seven on 79 in doors. Infinity MAX: seven on 79 in doors. Mexican look-alikes: five (two vendors) or six (one)</td>
+<td><a href="https://www.uscooler.com/wp-content/uploads/2017/06/Anthony-glass-doors.pdf">Anthony 401 brochure</a>, <a href="https://www.anthonyintl.com/docs/default-source/2025-documents/2025-price-sheets/101-series-domestic-price-sheet-02-2025-rev-l-web.pdf">Anthony 101 price sheet</a>, <a href="https://www.anthonyintl.com/why-infinity-max/">Infinity MAX</a>, <a href="https://camarasreachin.com/">camarasreachin.com</a>, <a href="https://www.construex.com.mx/exhibidores/comercializadora_enriquez/producto/camara_tipo_oxxo_ciudad_de_mexico">Construex</a>, <a href="https://puertas-reach-in.com/">puertas-reach-in.com</a></td>
+</tr>
+<tr>
+<td>Rack type and depth</td>
+<td>Flat shelves 24, 27 or 36 in deep; gravity-flow shelving 24-42 in; rear-entry gravity-flow shelves rated up to 500 lb each. A B-O-F rack for 30 in doors is 88 in tall and 27 in deep, with seven shelves and 70 dividers</td>
+<td><a href="https://www.anthonyintl.com/solutions/other-solutions/shelving/AnthonyShelving.aspx">Anthony shelving</a>, <a href="https://www.griffin-industries.com/shelving/">Griffin Industries</a>, <a href="https://www.dgsretail.com/V4055/BOF-Gravity-Feed-Shelving-Rack-30W-Walk-in-Cooler-Doors-27D-x-88H">DGS Retail</a></td>
+</tr>
+<tr>
+<td>Lane glides</td>
+<td>20-25 oz organizer: lane width 2 15/16 in (74.6 mm), ring height 3 1/4 in (82.6 mm), 27 in deep, placed directly on angled shelves; the same catalogue lists wider lanes of 3 13/16 and 3 15/16 in (97-100 mm)</td>
+<td><a href="https://www.avantcorefrigeration.com/product/178SLD9LN20/">Avantco 178SLD9LN20</a>, <a href="https://www.webstaurantstore.com/38581/bottle-lane-organizers.html?vendor=Avantco-Refrigeration">catalogue filter</a></td>
+</tr>
+<tr>
+<td>Shelf rating</td>
+<td>up to 80 kg (steel grids); 100 kg per shelf in the six-shelf sets</td>
+<td><a href="https://camarasreachin.com/">camarasreachin.com</a>, <a href="https://puertas-reach-in.com/">puertas-reach-in.com</a></td>
+</tr>
+<tr>
+<td>Chamber</td>
+<td>depth 1 m (self-contained minisuper), 1.5 m or more (self-service, beer cave), 2.00 m (Steel Full line, 3 to 12 doors, 2.40 m high, 2.5 in panel; 4.60 m long for 6 doors, 6.70 m for 9); staff access door 0.90 x 1.90 m</td>
+<td><a href="https://camarasreachin.com/">camarasreachin.com</a>, <a href="https://maquinariazeus.mx/product/steel-full-reach-inn-cuarto-frio-de-8-puertas/">Maquinaria Zeus</a>, <a href="https://equipamientoelite.mx/product/steel-full-reach-inn-cuarto-frio-de-6-puertas/">Equipamiento Elite, 6 doors</a>, <a href="https://equipamientoelite.mx/product/steel-full-reach-inn-cuarto-frio-de-9-puertas/">9 doors</a>, <a href="https://www.construex.com.mx/exhibidores/comercializadora_enriquez/producto/camara_tipo_oxxo_ciudad_de_mexico">Construex</a></td>
+</tr>
+<tr>
+<td>US walk-in rooms</td>
+<td>30 in wide, 79 in high glass doors with 27 or 36 in deep shelves, in rooms 8-12 ft deep</td>
+<td><a href="https://www.modernstoreequipment.com/products/12-glass-door-display-walk-in-cooler-with-shelving-8d-left-or-right-entry-pass-through-choice-of-refrigeration">Modern Store Equipment</a></td>
+</tr>
+</tbody>
+</table></div>
+<p><a href="https://unifrio.com.mx/camaras-frigorificas-tipo-oxxo/">Unifrio</a> describes the 'tipo OXXO' chamber as a reach-in chamber with glass doors. These are manufacturers' US catalogues and resellers' look-alike products, not OXXO specifications; none of the numbers was measured in a store. For rear loading, the only statements found are the resellers' description of a room with a staff door behind the glass doors and a weak aggregator page saying that OXXO staff refill from the cold room.</p>
+<p>The one deployed precedent is Telexistence's TX SCARA, which works from the store's backyard behind the cooler with <a href="https://tx-inc.com/en/blog/2021/11/02/11451/">joint axes and link length chosen for that space, installable without changing the backyard</a>; its software chooses the gripping point per beverage and plans the path from grasp to placement, and an <a href="https://www.theworldfolio.com/interviews/telexistence-revolutionizing-robotics/6077/">interview reports a 98.9 % success rate over more than seven million items</a>. No dimensions are published, so it supports the architecture (a rear-side SCARA with a hand that does not need the shelf above) but gives no numbers.</p>
+<h3 id="82-reference-rack-used-for-the-design-desk">8.2 Reference rack used for the design (desk)</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value used</th>
+<th>Range</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shelf pitch</td>
+<td>0.318 m (design-driving)</td>
+<td>0.287-0.381 m</td>
+<td>door height divided by the shelf count (inference); shelves are adjustable</td>
+</tr>
+<tr>
+<td>Structure between the bottle base and the shelf above (shelf frame + glide base)</td>
+<td>30 mm</td>
+<td>20-40 mm</td>
+<td>ASSUMED; calibrated on the v1.1 planner (Section 8.3)</td>
+</tr>
+<tr>
+<td>Clearance margin</td>
+<td>5 mm</td>
+<td>-</td>
+<td>design choice</td>
+</tr>
+<tr>
+<td>Lane width, 600 mL class</td>
+<td>75 mm</td>
+<td>74.6-90 mm</td>
+<td>Avantco glide; fixture v1.1 uses 90 mm</td>
+</tr>
+<tr>
+<td>Lane width, 1 L</td>
+<td>90 mm</td>
+<td>85-100 mm</td>
+<td>fixture v1.1; wider glides exist</td>
+</tr>
+<tr>
+<td>Shelf depth</td>
+<td>686 mm (27 in)</td>
+<td>610-1067 mm</td>
+<td>Anthony, Griffin</td>
+</tr>
+<tr>
+<td>Slope</td>
+<td>6 deg, rear end up</td>
+<td>angle not found</td>
+<td>Anthony installation sheet and glide sheet give the direction only</td>
+</tr>
+<tr>
+<td>Rack height</td>
+<td>1.9-2.2 m</td>
+<td>-</td>
+<td>Anthony openings, B-O-F rack; the Z range 0.37-1.06 m reaches 2-3 shelves</td>
+</tr>
+</tbody>
+</table></div>
+<p>Pitch by configuration (door height divided by the shelf count): 7 shelves in a 79 in door 0.287 m; 6 in a 75 in door 0.318 m; 7 in an 88 in rack 0.319 m; 6 in a 79 in door 0.334 m; 5 in a 75 in door 0.381 m (<a href="docs/standard_rack_configurations_gap.csv">standard_rack_configurations_gap.csv</a>).</p>
+<h3 id="83-what-fits-the-clearance-model">8.3 What fits: the clearance model</h3>
+<p>The smallest pitch at which an end effector fits above an object is p_min = H + T + m + R, where H is the object height, T the structure thickness of the shelf and lane (30 mm), m a margin (5 mm) and R the height of end-effector structure above the object top that must enter the shelf tunnel. For the v1 stack R = 140 mm (CAD: the L2 cover top is 130 mm above the grasp datum and the bottle top 10 mm below it). The model with T = 30 mm and m = 5 mm reproduces the smallest level pitches of the v1.1 planner (600 mL: 0.412 m against 0.407-0.434 m; 500 mL: 0.385 against 0.380-0.407; 1 L: 0.465 against 0.461-0.487; 355 mL can: 0.298 against about 0.31), which is why T = 30 mm is used; changing T by 10 mm moves every p_min by 10 mm (the bars in Figure 9). R for the S2 concepts is a target, not a CAD result.</p>
+<p>Gap above a 600 mL bottle (237 mm) and margin per concept, per standard configuration (mm; negative means the end effector does not fit):</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Pitch (mm)</th>
+<th>Gap above the bottle</th>
+<th>v1 gripper (R 140)</th>
+<th>S2 flat clamp (R 50)</th>
+<th>S2 neck-jaw (R 15)</th>
+<th>Push-in plate (R 0)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7 shelves, 79 in door</td>
+<td>287</td>
+<td>15</td>
+<td>-125</td>
+<td>-35</td>
+<td>0</td>
+<td>15</td>
+</tr>
+<tr>
+<td>6 shelves, 75 in door</td>
+<td>318</td>
+<td>46</td>
+<td>-94</td>
+<td>-4</td>
+<td>30</td>
+<td>46</td>
+</tr>
+<tr>
+<td>7 shelves, 88 in rack</td>
+<td>319</td>
+<td>47</td>
+<td>-93</td>
+<td>-3</td>
+<td>32</td>
+<td>47</td>
+</tr>
+<tr>
+<td>6 shelves, 79 in door</td>
+<td>334</td>
+<td>62</td>
+<td>-78</td>
+<td>12</td>
+<td>47</td>
+<td>62</td>
+</tr>
+<tr>
+<td>5 shelves, 75 in door</td>
+<td>381</td>
+<td>109</td>
+<td>-31</td>
+<td>59</td>
+<td>94</td>
+<td>109</td>
+</tr>
+</tbody>
+</table></div>
+<p>Smallest pitch (m) per SKU and concept (<a href="docs/eoat_min_pitch_by_sku.csv">eoat_min_pitch_by_sku.csv</a>, <a href="docs/eoat_clearance_matrix.csv">eoat_clearance_matrix.csv</a>); the standard racks span 0.287-0.381 m:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>v1 gripper</th>
+<th>S2 flat clamp</th>
+<th>S2 neck-jaw</th>
+<th>Push-in plate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>355 mL can (123 mm)</td>
+<td>0.298</td>
+<td>0.208</td>
+<td>-</td>
+<td>0.158</td>
+</tr>
+<tr>
+<td>473 mL tall can (157 mm)</td>
+<td>0.332</td>
+<td>0.242</td>
+<td>-</td>
+<td>0.192</td>
+</tr>
+<tr>
+<td>500 mL PET (210 mm)</td>
+<td>0.385</td>
+<td>0.295</td>
+<td>0.260</td>
+<td>0.245</td>
+</tr>
+<tr>
+<td>600 mL PET (237 mm)</td>
+<td>0.412</td>
+<td>0.322</td>
+<td>0.287</td>
+<td>0.272</td>
+</tr>
+<tr>
+<td>1 L PET (290 mm, estimate)</td>
+<td>0.465</td>
+<td>0.375</td>
+<td>0.340</td>
+<td>0.325</td>
+</tr>
+<tr>
+<td>1.5 L PET (311 mm)</td>
+<td>0.486</td>
+<td>0.396</td>
+<td>0.361</td>
+<td>0.346</td>
+</tr>
+<tr>
+<td>2 L PET (320 mm)</td>
+<td>0.495</td>
+<td>0.405</td>
+<td>0.370</td>
+<td>0.355</td>
+</tr>
+</tbody>
+</table></div>
+<figure><img alt="Figure 9. Smallest shelf pitch at which each end-effector concept fits above each SKU (model p_min = H + 30 mm + 5 mm + R; bars: structure thickness 20-40 mm). The shaded band is the pitch range of standard racks inferred from manufacturers' shelf counts (7 to 5 shelves per door, 0.287-0.381 m). A concept fits a rack when its marker lies to the left of the rack's pitch. Targets for the S2 concepts, CAD for v1." src="img/fig_clearance_vs_pitch.png" /><figcaption>Figure 9. Smallest shelf pitch at which each end-effector concept fits above each SKU (model p_min = H + 30 mm + 5 mm + R; bars: structure thickness 20-40 mm). The shaded band is the pitch range of standard racks inferred from manufacturers' shelf counts (7 to 5 shelves per door, 0.287-0.381 m). A concept fits a rack when its marker lies to the left of the rack's pitch. Targets for the S2 concepts, CAD for v1.</figcaption></figure>
+<p>What follows (calculation on desk inputs):</p>
+<ol>
+<li>The v1 gripper cannot serve a 600 mL or larger PET bottle in any of the five configurations (600 mL needs 0.412 m, 1 L 0.465 m). The 500 mL bottle needs 0.385 m, so it fits only in the 5-shelf door (0.381 m) and only if the structure is thinner than about 26 mm. The v1 gripper serves a 355 mL can down to 0.298 m and a tall can down to 0.332 m, so it is a can tool for the denser racks.</li>
+<li>A flat body clamp with 50 mm of structure serves a 600 mL bottle from 0.322 m: the 6-shelf 79 in door and the 5-shelf door, not the denser racks. It serves every can in every configuration.</li>
+<li>A neck-jaw that keeps 15 mm above the cap serves a 600 mL bottle from 0.287 m (all five configurations, with zero margin in the densest) and a 1 L bottle from 0.340 m; 1.5 L and 2 L need 0.361 and 0.370 m even then.</li>
+<li>Level 1 of the test fixture is not affected: the ceiling that limits level 0 is the level-1 plate, so every bench test on level 1 stays valid at any pitch.</li>
+</ol>
+<h3 id="84-decision-s2-an-offset-wrist-with-low-profile-end-effectors">8.4 Decision: S2, an offset wrist with low-profile end effectors</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>R (mm)</th>
+<th>For</th>
+<th>Against</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1 top-down gripper</td>
+<td>140</td>
+<td>built in CAD and simulated; friction clamp serves cans</td>
+<td>cannot serve 600 mL or larger PET in standard racks</td>
+<td>development tool and Stage 0</td>
+</tr>
+<tr>
+<td>S2 flat body clamp</td>
+<td>50</td>
+<td>small step from v1; serves all cans; 600 mL at 0.322 m</td>
+<td>friction-limited; marginal at 0.318 m</td>
+<td>cans, bench</td>
+</tr>
+<tr>
+<td>S2 neck-jaw</td>
+<td>15</td>
+<td>form closure on the support ring, no friction needed; serves 600 mL in all five configurations</td>
+<td>needs the PCO-1881 ring geometry and a free neck below it; bottle swing; PET only</td>
+<td>primary for PET</td>
+</tr>
+<tr>
+<td>Push-in from a transfer plate</td>
+<td>0</td>
+<td>any container; independent of pitch</td>
+<td>extra mechanism, alignment on a sloped shelf, pushing over the lip</td>
+<td>fallback</td>
+</tr>
+<tr>
+<td>Suction on the cap</td>
+<td>about 30 (inference)</td>
+<td>thin</td>
+<td>wet and cold surfaces, can lids, pump and tubing</td>
+<td>not pursued</td>
+</tr>
+</tbody>
+</table></div>
+<figure><img alt="Figure 10. Schematic side view at a pitch of 0.318 m (not to scale in x; the 6 degree slope is not drawn). Left: the v1 stack, 140 mm above the bottle top, collides with the shelf above. Right: the S2 neck-jaw on an offset wrist keeps the J3 servo and the end of L2 in the corridor and leaves 51 mm above the cap." src="img/fig_s2_vs_v1_side_view.png" /><figcaption>Figure 10. Schematic side view at a pitch of 0.318 m (not to scale in x; the 6 degree slope is not drawn). Left: the v1 stack, 140 mm above the bottle top, collides with the shelf above. Right: the S2 neck-jaw on an offset wrist keeps the J3 servo and the end of L2 in the corridor and leaves 51 mm above the cap.</figcaption></figure>
+<p>Why the neck. Nearly every soda and water bottle has a <a href="https://alpaco.it/blog/pet-bottle-thread-sizes/">PCO-1881 neck</a>, with a finish height of 17.00 mm and a support-ring height of 11.20 mm (<a href="https://bottlepreform.com/pco-1810-vs-pco-1881/">bottlepreform.com</a>); the support-ring outside diameter was not retrieved and is assumed to be 33 mm. Holding PET by the neck ring is routine on bottling lines: air conveyors carry bottles with the neck in a slot, <a href="https://patents.justia.com/patent/6024518">the ring on the flange margins and the body hanging below</a> (empty bottles); grippers for filled bottles <a href="https://patents.google.com/patent/US6371717B1/en">close around the neck below the cap, with pins carrying the weight</a>. The weight of 0.65-1.07 kg on an assumed ring-ledge contact of about 30 mm2 gives 0.2-0.35 MPa (calc), so strength is not the issue; the unknowns are the free neck below the ring and the swing.</p>
+<p>Geometry (calc; details in <a href="docs/S2_design_brief.md.html">S2_design_brief.md</a>). An offset bar L3 of 100 mm (allowed 85-130 mm) between the J3 axis and the neck axis keeps J3 and the end of L2 in the corridor: for a bottle at y = 305 mm the J3 axis sits at y = 205 mm and the stack front edge at 230 mm, 23 mm behind the tunnel mouth (253 mm), and the J3 radius stays inside the 170-385 mm reach annulus for lane pitches of 75 and 90 mm. The static moment at J3 is 0.83 N<em>m (0.65 kg) to 1.25 N</em>m (1.07 kg) with a 0.2 kg tool, carried by a pair of 6701-2RS bearings 30 mm apart (28-42 N per bearing), so the servo transmits torque only. A 20 x 10 mm PETG bar droops 2.5 mm under 1.27 kg; use 20 x 16 mm or aluminium. Accelerations while a bottle hangs are limited to 0.3 g, and the tote becomes a single row with a pitch of at least 85 mm, open on the arm side.</p>
+<p>S2 keeps the Z module, base, J1/J2, L1, L2 and the electronics. It adds an adapter and bearing housing, the L3 bar, the neck-jaw, the flat clamp, a single-row tote tray and a rack mock-up with adjustable pitch and 75 mm lane inserts. <strong>S2 is a concept: it has no CAD, no simulation and no test.</strong> The next design step is S2 CAD and a MuJoCo test (hanging bottle, swing, release into a 75 mm lane); the bench tests are Phase H of the test plan, with the push-in plate as the fallback if H3 fails twice.</p>
+<h3 id="85-other-gaps-not-changed-by-the-desk-research">8.5 Other gaps (not changed by the desk research)</h3>
+<ol>
+<li><strong>Rear opening and uprights.</strong> Opening height and width, door frame, strip curtains and the uprights between bays can intrude on the arm sweep; only the plates and our own posts are checked.</li>
+<li><strong>Corridor.</strong> The robot and tote need at least 651 mm behind the assumed rear plane (400 mm base plus 250 mm; 671 mm from the lane-entrance datum) and about 0.9 m of width on the test board. The corridor behind the shelves is the chamber depth minus the 686 mm shelf depth, before door frame and insulation: about 0.3 m at 1 m depth (too shallow), 0.8 m at 1.5 m and 1.3 m at 2 m. If the corridor is a cold room, Phase F becomes a core test.</li>
+<li><strong>Capacity.</strong> The bay rule caps lanes at 21 of 25 slots; the fix is a gripper with narrower rear fingers or a 125 mm lane pitch. The S2 hands are narrower at the lane mouth than the v1 fingers, which may remove the rule; this is not tested.</li>
+<li><strong>X rail.</strong> The carriage plate keeps an X-slider pattern for the lateral rail. The 120 mm quill is superseded by the offset wrist for the pitch problem.</li>
+<li><strong>Z range.</strong> The carriage travels 0.37-1.06 m, which reaches 2-3 shelves of a 1.9-2.2 m rack; a longer column and screw are needed for production and are not designed.</li>
+<li><strong>1 L.</strong> A 1 L bottle (D 76-82 mm) does not fit a 74.6 mm glide lane; it needs a wider lane (the catalogue lists up to 100 mm) with a clear width of at least 92 mm or a lead-in chamfer, and a measured base cup.</li>
+</ol>
+<h3 id="86-what-desk-research-cannot-close">8.6 What desk research cannot close</h3>
+<ul>
+<li>The actual pitch, glide type and slope of OXXO's racks (the range 0.287-0.381 m is inferred).</li>
+<li>The free neck below the support ring and its outside diameter on the bottles that matter (a 3 mm jaw needs 4 mm of neck).</li>
+<li>Wet friction on PET at 4 C, and the 1 L size.</li>
+<li>The structure thickness T (assumed 30 mm).</li>
+</ul>
+<p>Each is a measurement of minutes once a bottle, a caliper or a rack is at hand; Phase H lists them in order, starting with the neck (H1). The two-page Spanish survey sheet (<a href="docs/hoja_levantamiento_refrigerador_OXXO.pdf">hoja_levantamiento_refrigerador_OXXO.pdf</a>) stays available for a store visit; its printed thresholds (430, 410 and 310 mm) describe the v1 stack only.</p>
+<h2 id="9-business-view">9. Business view</h2>
+<figure><img alt="Figure 4. Payback years against installed cost and restock hours replaced per day (60 MXN/h base wage), and the installed cost that gives a 2-year payback at three wages." src="img/fig4_business_payback.png" /><figcaption>Figure 4. Payback years against installed cost and restock hours replaced per day (60 MXN/h base wage), and the installed cost that gives a 2-year payback at three wages.</figcaption></figure>
+<p>Assumptions (all adjustable in <a href="docs/business_sensitivity.csv">business_sensitivity.csv</a>): loaded labour cost 1.35 times the base wage, the robot replaces 80 % of the restock hours, running cost 10 % of capex per year, 18.5 MXN per US dollar. The only sourced input is the 315.04 MXN daily minimum wage (39.38 MXN/h over 8 h). Replacing one hour of restocking a day at 60 MXN/h saves about US$1,280 a year, which supports an installed cost of about US$2,100 for a two-year payback; at four hours a day, about US$8,500. At the statutory minimum wage the ceilings are US$1,400 and US$5,600. At the simulated 20-24 s per bottle the robot moves 150-180 bottles an hour, so a 1,000 bottle day is 5.5-6.7 robot hours, plus level changes of 11-18 s each; human time saved depends on how long staff really restock, which is unknown. A labour-only case supports a low-cost unit, not a rail machine with installation and remote support; plausible further value is shelf availability, rotation compliance, night restocking and shelf data (none quantified). No open FEMSA pilot programme was found; the route is the OXXO innovation team. The prototype's material cost is irrelevant to unit economics.</p>
+<h2 id="10-stage-0-the-am-arm200-you-are-building">10. Stage 0: the AM-ARM200 you are building</h2>
+<p>Fastest way to moving video and teleoperation data this week: calibrate it in LeRobot with the leader; fit TPU pads; set torque limits to 60 % for first runs; work at 0.26-0.34 m reach with a top-down grasp (355 mL can or 500 mL bottle) from a tote slot into a printed lane; log load and temperature registers; weigh the follower; record 50 teleoperated episodes; do not lift 1 L or heavier. The model puts the most-loaded joint at 0.8-1.5 times rated for a can and 0.95-1.9 times for a 600 mL bottle (Figure 1b), so keep holds short and rest the arm.</p>
+<h3 id="101-a-short-physical-demonstration-for-a-retail-contact-added-2026-10-02">10.1 A short physical demonstration for a retail contact (added 2026-10-02)</h3>
+<p>A colleague has a contact in retail and asked for something tangible, ideally a video. The replays of Section 6 show a design in simulation and would be read as footage of a real robot unless they are labelled. What can be filmed with the hardware on hand is Stage 0.</p>
+<ol>
+<li><strong>Rig.</strong> The AM-ARM200 follower with TPU pads, teleoperated with the leader arm; a mock shelf of foam board or plywood with three lanes (75 mm wide as in the vendor glide data, 6 degree slope, PTFE tape floor), one level with an open top for the first take; a second shelf at 0.32 m, the design-driving pitch of Section 8.2, only after checking that the AM-ARM200 wrist fits under it (not checked); a tote with five cans and five 500 mL bottles. No 600 mL or larger bottle: Section 10 limits this arm to cans and 500 mL.</li>
+<li><strong>Shot list, about 90 s.</strong> 0-20 s: wide shot of the mock shelf and the arm. 20-60 s: one uncut take moving the five cans from the tote into the lanes with a visible clock. 60-75 s: close-up of the pads closing on a can. 75-90 s: title card with the measured cycle time per item, successes out of attempts and the price band of Section 9. Optional: 10-15 s of the S1 replay, labelled 'simulation'.</li>
+<li><strong>Labels.</strong> 'Teleoperated prototype (AM-ARM200)' on the physical footage and 'S1 design, simulation only' on the replay. The success count is reported as obtained, failures included.</li>
+<li><strong>What it shows and what it does not.</strong> It shows grasping and placing cans and 500 mL bottles into sloped lanes at a given pitch. It does not show fit in an OXXO cooler, autonomy, speed, 600 mL bottles or cold-environment behaviour; the test plan decides those.</li>
+<li><strong>Order.</strong> A store visit is not available now. If it becomes possible, survey first and build the mock shelf to the measured pitch; a clip that matches a real cooler's dimensions is more useful to a retailer than a generic one.</li>
+</ol>
+<h2 id="11-what-i-need-from-you-one-batch">11. What I need from you (one batch)</h2>
+<p>Nothing blocks the next design step. Without a store visit, a scale or a friction test, the work continues on the desk-research values of Section 8.2, and S2 CAD and simulation are the next step unless you say otherwise.</p>
+<ol>
+<li>Optional, about five minutes, no store and no scale: any PET bottle of the sizes you care about (500 mL, 600 mL, 1 L) and a caliper. Measure the support-ring outside diameter, the free neck below the ring and the distance from the cap top to the ring underside, and photograph the neck. This closes the largest unverified assumption of the S2 neck-jaw (test H1).</li>
+<li>When the coupons are printed: caliper values (servo bodies, shaft offsets, horn bolt pattern and thread depth, bearing seats) and a photo of each servo with its horn.</li>
+<li>The weight of the finished AM-ARM200 follower, and confirmation that 2 STS3095 and 3 STS3215 C018 are still loose.</li>
+<li>Licence preference for the release (the AM-ARM200 is Apache-2.0).</li>
+<li>Only if it becomes possible: one cooler measured with the Spanish survey sheet; weights of the containers in <a href="docs/container_data_sheet.csv">container_data_sheet.csv</a> (cans and PET); the two friction numbers (TPU on PET dry and wet, and the lane floor at the slope you will use); bottles per day and staff restock minutes for one store; and whether that store's staff load the coolers from the rear.</li>
+</ol>
+<h2 id="12-limits-of-this-work">12. Limits of this work</h2>
+<ol>
+<li>Nothing has been printed, built or measured; every dimension and mass is CAD or estimate.</li>
+<li>Servo geometry is inferred from AM-ARM200 STL files; friction coefficients (0.8 dry and 0.4 wet in the simulation, 0.3 wet as the design value for printed pads), the 1 L size and base cup, the structure thickness T of 30 mm, the support-ring outside diameter of 33 mm, and the Z-module brake, detent, friction, driver-current and rod-stiffness values are assumptions.</li>
+<li>The simulation uses ideal contacts and servos, convex hulls and box fixtures; it is a design check. The CAD replay check covers sampled frames (every other one) with 1 mm3 overlap and 1 mm gap thresholds.</li>
+<li>Structural results are hand calculations and self-written voxel finite elements (meshes 1.0-2.0 mm; the open-U link result is not converged); no commercial FEA.</li>
+<li>The printed gripper (335 g against 250 g) and arm sides are over their mass budgets; cable routing is not designed; the L1 and L2 covers must be bonded.</li>
+<li>Real cooler geometry, certification and electrical safety are not assessed; the cooler outline in the figures is illustrative.</li>
+<li>The interactive viewer's WebGL path has not been run on a real GPU, and the local MuJoCo window has not been opened; both were exercised only through stand-ins and headless runs.</li>
+<li>Market and price facts come from earlier web searches in this project and from vendor pages; BOM estimates are unsourced.</li>
+<li>Payload masses are computed from density and assumed pack masses, not weighed. Slosh, partial fills and PET shell compliance are not modelled.</li>
+<li>The rack data are manufacturers' US catalogues and Mexican resellers' listings for look-alike products. The shelf pitch of 0.287-0.381 m is the door height divided by the shelf count, an inference; shelf positions are adjustable and nothing was measured in a store.</li>
+<li>The clearance model p_min = H + T + m + R has one fitted constant (T = 30 mm, calibrated on the v1.1 planner minima to within 0.01-0.02 m) and takes R for the S2 concepts from targets, not from CAD.</li>
+<li>S2 is a concept: no CAD, no simulation, no test. Swing of a bottle hanging by the neck ring, the free neck below the ring, tamper bands and sleeve labels, the J3 pin under the offset moment, and placement tolerance in 75 mm lanes (3.6-5 mm per side against 3.4 mm of backlash) are open (risks R33-R36).</li>
+<li>Every published friction value found for printed TPU is dry and on other surfaces; the wet design value of 0.3 is an inference and the cast-pad value of 0.4-0.5 an assumption.</li>
+</ol>
+<h2 id="13-files">13. Files</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>File</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="viewer/">ElRobot2_S1_3d_viewer.html</a></td>
+<td>interactive 3D viewer (v2)</td>
+</tr>
+<tr>
+<td><span class="unpub" title="file not published on this site">ElRobot2_S1_mujoco_local.zip</span></td>
+<td>live MuJoCo window package</td>
+</tr>
+<tr>
+<td><span class="unpub" title="file not published on this site">ElRobot2_S1_print_package.zip</span></td>
+<td>STL files, manifest, BOM, print notes</td>
+</tr>
+<tr>
+<td><a href="docs/design_params.json">design_params.json</a></td>
+<td>v0.4.3 shared parameters (glass removed; adds the rack reference, end-effector concepts, friction design values and the S2 block)</td>
+</tr>
+<tr>
+<td><a href="docs/ElRobot2_S1_build_test_plan.md.html">ElRobot2_S1_build_test_plan.md</a></td>
+<td>build sequence and test plan v2.3 (Phase S and A5-A7 optional, new Phase H for the S2 end effector)</td>
+</tr>
+<tr>
+<td><a href="docs/ElRobot2_S1_risk_register.csv">ElRobot2_S1_risk_register.csv</a> / <a href="docs/ElRobot2_S1_design_review_log.csv">ElRobot2_S1_design_review_log.csv</a></td>
+<td>39 risks / 65 review findings</td>
+</tr>
+<tr>
+<td><a href="docs/ElRobot2_S1_BOM.csv">ElRobot2_S1_BOM.csv</a> / <a href="docs/ElRobot2_S1_BOM_fasteners.csv">ElRobot2_S1_BOM_fasteners.csv</a> / <a href="docs/ElRobot2_S1_print_manifest.csv">ElRobot2_S1_print_manifest.csv</a></td>
+<td>purchase and print lists</td>
+</tr>
+<tr>
+<td><a href="docs/gripper_README.md.html">gripper README</a> / <a href="docs/arm_README.md.html">arm README</a> / <a href="docs/zmod_README.md.html">Z module README</a> / <a href="docs/fixture_README.md.html">fixture README</a></td>
+<td>module documentation</td>
+</tr>
+<tr>
+<td><span class="unpub" title="file not published on this site">arm_assembly.step</span> / <span class="unpub" title="file not published on this site">zmod_assembly.step</span> / <span class="unpub" title="file not published on this site">gripper_assembly_gap70.step</span></td>
+<td>assemblies</td>
+</tr>
+<tr>
+<td><a href="docs/sim_summary.md.html">sim_summary.md</a> / <a href="docs/sim_key_numbers.json">sim_key_numbers.json</a></td>
+<td>simulation report and numbers</td>
+</tr>
+<tr>
+<td><a href="docs/sku_fit_by_level.csv">sku_fit_by_level.csv</a></td>
+<td>vertical fit of every SKU on both levels with the final grasp rule (CAD lift where a CAD run exists, closed-form estimate otherwise)</td>
+</tr>
+<tr>
+<td><a href="docs/assembly_headroom_v1_1_place_pose.csv">assembly_headroom_v1_1_place_pose.csv</a> / <a href="docs/replay_cad_check_v11_all.csv">replay_cad_check_v11_all.csv</a> / <span class="unpub" title="file not published on this site">assembly_check.py</span> / <span class="unpub" title="file not published on this site">replay_cad_check.py</span></td>
+<td>lead's integration checks</td>
+</tr>
+<tr>
+<td><span class="unpub" title="file not published on this site">l1_fe2.py</span> / <a href="docs/l1_fe2_dx1.5.json">l1_fe2_dx1.5.json</a> / <a href="docs/l1_fe2_dx1.0.json">l1_fe2_dx1.0.json</a></td>
+<td>L1 link finite-element check</td>
+</tr>
+<tr>
+<td><a href="img/fig_payload_grip_limits.png">fig_payload_grip_limits.png</a></td>
+<td>Figure 8: held, slipping and dropped runs against mass and friction at three clamp commands (PET scenarios only)</td>
+</tr>
+<tr>
+<td><a href="docs/payload_mass_sensitivity.csv">payload_mass_sensitivity.csv</a> / <a href="docs/payload_mass_scenarios.csv">payload_mass_scenarios.csv</a></td>
+<td>70-run mass sensitivity; container scenarios (cans and PET) with the friction each needs</td>
+</tr>
+<tr>
+<td><a href="docs/container_data_sheet.csv">container_data_sheet.csv</a></td>
+<td>optional fill-in sheet for container weights, dimensions, neck ring and friction (10 prefilled rows; cans and PET)</td>
+</tr>
+<tr>
+<td><span class="unpub" title="file not published on this site">payload_mass_sensitivity_run.py</span> / <span class="unpub" title="file not published on this site">payload_mass_boundary_run.py</span></td>
+<td>scripts that drive the MuJoCo harness for the mass runs</td>
+</tr>
+<tr>
+<td><a href="docs/hoja_levantamiento_refrigerador_OXXO.pdf">hoja_levantamiento_refrigerador_OXXO.pdf</a></td>
+<td>optional two-page Spanish survey sheet for measuring one real cooler (thresholds describe the v1 stack only)</td>
+</tr>
+<tr>
+<td><a href="docs/ElRobot2_desk_research_pack.md.html">ElRobot2_desk_research_pack.md</a></td>
+<td>desk-research findings, reference rack, clearance model and decision (third round)</td>
+</tr>
+<tr>
+<td><a href="docs/cooler_envelope_evidence.csv">cooler_envelope_evidence.csv</a></td>
+<td>28 graded evidence rows with source URLs, use and caveat</td>
+</tr>
+<tr>
+<td><a href="docs/S2_design_brief.md.html">S2_design_brief.md</a></td>
+<td>S2 requirements, offset wrist, neck-jaw and flat clamp concepts, validation sequence</td>
+</tr>
+<tr>
+<td><a href="docs/eoat_clearance_matrix.csv">eoat_clearance_matrix.csv</a> / <a href="docs/eoat_min_pitch_by_sku.csv">eoat_min_pitch_by_sku.csv</a> / <a href="docs/standard_rack_configurations_gap.csv">standard_rack_configurations_gap.csv</a></td>
+<td>clearance model outputs behind Figure 9 and Section 8.3</td>
+</tr>
+<tr>
+<td><a href="docs/friction_limit_table.csv">friction_limit_table.csv</a> / <a href="docs/grip_force_needed_by_sku.csv">grip_force_needed_by_sku.csv</a></td>
+<td>maximum mass and clamp force needed against pad friction</td>
+</tr>
+</tbody>
+</table></div></article></div><footer><div class="wrap">Design, simulation and desk research only; nothing has been printed, built or measured. Updated 2 October 2026.</div></footer></body></html>

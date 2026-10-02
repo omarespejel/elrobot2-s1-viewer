@@ -1,0 +1,9 @@
+container,volume_mL,liquid,rho_g_mL,liquid_kg,empty_container_kg_assumed,full_kg,status,source,vs_600mL_modelled_%,default_clamp_N,F_req_N_mu0.8,F_req_N_mu0.5,F_req_N_mu0.4,F_req_N_mu0.3,mu_min_at_default_clamp,mu_min_at_cap,static_hold_kg_at_cap_mu0.4,meets_design_at_cap_if_mu_0.4,meets_design_at_cap_if_mu_0.8
+"355 mL can, regular cola (modelled)",355,cola,1.042,0.37,0.013,0.383,modelled,"design_params v0.4.1 (rho 1.04, can 13 g)",-41.0,15.0,7.0,11.3,14.1,18.8,0.38,0.14,3.52,True,True
+"355 mL can, diet cola",355,diet_cola,0.997,0.354,0.013,0.367,variant,UW chemistry demo: 0.997 g/mL,-44.0,15.0,6.8,10.8,13.5,18.0,0.36,0.13,3.52,True,True
+"355 mL can, beer",355,beer,1.01,0.359,0.013,0.372,variant,final gravity 1.004-1.012,-43.0,15.0,6.8,10.9,13.7,18.2,0.36,0.13,3.52,True,True
+"500 mL PET, water (modelled)",500,water,1.0,0.5,0.019,0.519,modelled,design_params v0.4.1,-20.0,25.0,9.5,15.3,19.1,25.5,0.31,0.18,3.52,True,True
+"600 mL PET, regular cola (modelled)",600,cola,1.042,0.625,0.026,0.651,modelled,design_params v0.4.1 (bottle alone 18.8 g per a PET maker),0.0,25.0,12.0,19.2,23.9,31.9,0.38,0.23,3.52,True,True
+"600 mL PET, diet cola",600,diet_cola,0.997,0.598,0.026,0.624,variant,UW chemistry demo: 0.997 g/mL,-4.0,25.0,11.5,18.4,23.0,30.6,0.37,0.22,3.52,True,True
+"1 L PET, regular cola (modelled)",1000,cola,1.042,1.042,0.032,1.074,modelled,"design_params v0.4.1 (ESTIMATE, no source)",65.0,34.0,19.8,31.6,39.5,52.7,0.46,0.38,3.52,True,True
+"2 L PET, regular cola (modelled)",2000,cola,1.042,2.084,0.05,2.134,modelled,design_params v0.4.1,228.0,41.7,39.3,62.8,78.5,104.7,0.75,0.75,3.52,False,True

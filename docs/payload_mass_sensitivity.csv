@@ -1,0 +1,71 @@
+group,sku,level,lane,req_mass_scale,mass_kg,req_mu,mu_pad,clamp_cmd,clamp_N,success,reason,outcome,max_slip_mm,loaded_peak_j1,loaded_peak_j2,loaded_peak_j3,peak_z_N,design_F_req_N,design_ok,static_limit_kg
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.0,0.65,0.8,0.8,SKU default,25.0,True,,held,0.277,0.221,0.151,0.028,35.4,12.0,True,4.221
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.0,0.65,0.8,0.8,cap 41.7,41.7,True,,held,0.283,0.219,0.15,0.028,35.4,12.0,True,7.041
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.0,0.65,0.4,0.4,SKU default,25.0,True,,held,0.277,0.218,0.151,0.028,35.4,23.9,True,2.111
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.0,0.65,0.4,0.4,cap 41.7,41.7,True,,held,0.283,0.219,0.151,0.028,35.4,23.9,True,3.521
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.0,0.65,0.3,0.3,SKU default,25.0,True,,held,0.362,0.221,0.151,0.028,35.4,31.9,False,1.583
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.0,0.65,0.3,0.3,cap 41.7,41.7,True,,held,0.283,0.219,0.151,0.028,35.4,31.9,True,2.64
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.25,0.8125,0.8,0.8,SKU default,25.0,True,,held,0.276,0.234,0.162,0.028,37.0,14.9,True,4.221
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.25,0.8125,0.8,0.8,cap 41.7,41.7,True,,held,0.281,0.233,0.161,0.028,37.0,14.9,True,7.041
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.25,0.8125,0.4,0.4,SKU default,25.0,True,,held,0.276,0.232,0.162,0.028,37.0,29.9,False,2.111
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.25,0.8125,0.4,0.4,cap 41.7,41.7,True,,held,0.281,0.233,0.162,0.028,37.0,29.9,True,3.521
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.25,0.8125,0.3,0.3,SKU default,25.0,True,,held,0.375,0.234,0.163,0.028,37.0,39.9,False,1.583
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.25,0.8125,0.3,0.3,cap 41.7,41.7,True,,held,0.282,0.232,0.162,0.028,37.0,39.9,True,2.64
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.5,0.975,0.8,0.8,SKU default,25.0,True,,held,0.276,0.246,0.174,0.028,38.6,17.9,True,4.221
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.5,0.975,0.8,0.8,cap 41.7,41.7,True,,held,0.28,0.247,0.173,0.028,38.6,17.9,True,7.041
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.5,0.975,0.4,0.4,SKU default,25.0,True,,held,0.276,0.245,0.174,0.028,38.6,35.9,False,2.111
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.5,0.975,0.4,0.4,cap 41.7,41.7,True,,held,0.28,0.246,0.174,0.028,38.6,35.9,True,3.521
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.5,0.975,0.3,0.3,SKU default,25.0,True,,held,0.531,0.245,0.175,0.028,38.6,47.8,False,1.583
+"A 600 mL PET, lane 3",pet_600_soda,1,3,1.5,0.975,0.3,0.3,cap 41.7,41.7,True,,held,0.339,0.245,0.174,0.028,38.6,47.8,False,2.64
+"A 600 mL PET, lane 3",pet_600_soda,1,3,2.0,1.3,0.8,0.8,SKU default,25.0,True,,held,0.275,0.273,0.198,0.028,41.8,23.9,True,4.221
+"A 600 mL PET, lane 3",pet_600_soda,1,3,2.0,1.3,0.8,0.8,cap 41.7,41.7,True,,held,0.279,0.275,0.197,0.028,41.8,23.9,True,7.041
+"A 600 mL PET, lane 3",pet_600_soda,1,3,2.0,1.3,0.4,0.4,SKU default,25.0,True,,held,0.277,0.272,0.198,0.028,41.8,47.8,False,2.111
+"A 600 mL PET, lane 3",pet_600_soda,1,3,2.0,1.3,0.4,0.4,cap 41.7,41.7,True,,held,0.279,0.273,0.198,0.028,41.8,47.8,False,3.521
+"A 600 mL PET, lane 3",pet_600_soda,1,3,2.0,1.3,0.3,0.3,SKU default,25.0,True,,"held, slipping",1.334,0.349,0.242,0.028,41.8,63.8,False,1.583
+"A 600 mL PET, lane 3",pet_600_soda,1,3,2.0,1.3,0.3,0.3,cap 41.7,41.7,True,,held,0.325,0.275,0.198,0.028,41.8,63.8,False,2.64
+"B 1 L PET, lane 3",pet_1000,1,3,1.0,1.072,0.8,0.8,SKU default,34.0,True,,held,0.275,0.256,0.178,0.028,48.07,19.7,True,5.741
+"B 1 L PET, lane 3",pet_1000,1,3,1.0,1.072,0.8,0.8,cap 41.7,41.7,True,,held,0.276,0.255,0.178,0.028,49.1,19.7,True,7.041
+"B 1 L PET, lane 3",pet_1000,1,3,1.0,1.072,0.4,0.4,SKU default,34.0,True,,held,0.275,0.253,0.178,0.028,39.56,39.4,False,2.87
+"B 1 L PET, lane 3",pet_1000,1,3,1.0,1.072,0.4,0.4,cap 41.7,41.7,True,,held,0.275,0.254,0.178,0.028,39.56,39.4,True,3.521
+"B 1 L PET, lane 3",pet_1000,1,3,1.0,1.072,0.3,0.3,SKU default,34.0,True,,held,0.59,0.253,0.178,0.028,39.56,52.6,False,2.153
+"B 1 L PET, lane 3",pet_1000,1,3,1.0,1.072,0.3,0.3,cap 41.7,41.7,True,,held,0.59,0.253,0.178,0.028,39.56,52.6,False,2.64
+"B 1 L PET, lane 3",pet_1000,1,3,1.25,1.34,0.8,0.8,SKU default,34.0,True,,held,0.275,0.278,0.197,0.028,47.31,24.6,True,5.741
+"B 1 L PET, lane 3",pet_1000,1,3,1.25,1.34,0.8,0.8,cap 41.7,41.7,True,,held,0.275,0.278,0.197,0.028,48.55,24.6,True,7.041
+"B 1 L PET, lane 3",pet_1000,1,3,1.25,1.34,0.4,0.4,SKU default,34.0,True,,held,0.275,0.276,0.198,0.028,42.19,49.3,False,2.87
+"B 1 L PET, lane 3",pet_1000,1,3,1.25,1.34,0.4,0.4,cap 41.7,41.7,True,,held,0.275,0.276,0.198,0.028,42.19,49.3,False,3.521
+"B 1 L PET, lane 3",pet_1000,1,3,1.25,1.34,0.3,0.3,SKU default,34.0,True,,held,0.636,0.276,0.198,0.027,42.19,65.7,False,2.153
+"B 1 L PET, lane 3",pet_1000,1,3,1.25,1.34,0.3,0.3,cap 41.7,41.7,True,,held,0.584,0.276,0.201,0.028,42.19,65.7,False,2.64
+"B 1 L PET, lane 3",pet_1000,1,3,1.5,1.608,0.8,0.8,SKU default,34.0,True,,held,0.275,0.3,0.217,0.028,50.24,29.6,True,5.741
+"B 1 L PET, lane 3",pet_1000,1,3,1.5,1.608,0.8,0.8,cap 41.7,41.7,True,,held,0.275,0.301,0.217,0.028,48.55,29.6,True,7.041
+"B 1 L PET, lane 3",pet_1000,1,3,1.5,1.608,0.4,0.4,SKU default,34.0,True,,held,0.984,0.299,0.217,0.028,44.83,59.2,False,2.87
+"B 1 L PET, lane 3",pet_1000,1,3,1.5,1.608,0.4,0.4,cap 41.7,41.7,True,,held,0.275,0.299,0.217,0.028,44.83,59.2,False,3.521
+"B 1 L PET, lane 3",pet_1000,1,3,1.5,1.608,0.3,0.3,SKU default,34.0,True,,"held, slipping",1.01,0.298,0.287,0.028,44.83,78.9,False,2.153
+"B 1 L PET, lane 3",pet_1000,1,3,1.5,1.608,0.3,0.3,cap 41.7,41.7,True,,held,0.562,0.298,0.218,0.028,44.83,78.9,False,2.64
+"C 355 mL can, lane 3",can_355_std,1,3,1.0,0.382,0.8,0.7,SKU default,15.0,True,,held,0.277,0.197,0.134,0.027,80.0,8.0,True,2.216
+"C 355 mL can, lane 3",can_355_std,1,3,1.0,0.382,0.4,0.35,SKU default,15.0,True,,held,0.277,0.196,0.134,0.027,64.74,16.1,False,1.108
+"C 355 mL can, lane 3",can_355_std,1,3,1.5,0.573,0.8,0.7,SKU default,15.0,True,,held,0.275,0.213,0.146,0.027,80.0,12.0,True,2.216
+"C 355 mL can, lane 3",can_355_std,1,3,1.5,0.573,0.4,0.35,SKU default,15.0,True,,held,0.274,0.212,0.146,0.027,64.75,24.1,False,1.108
+D far lane 5,pet_600_soda,1,5,1.0,0.65,0.8,0.8,cap 41.7,41.7,True,,held,0.283,0.219,0.082,0.025,35.4,12.0,True,7.041
+D far lane 5,pet_600_soda,1,5,2.0,1.3,0.8,0.8,cap 41.7,41.7,True,,held,0.279,0.275,0.086,0.025,41.8,23.9,True,7.041
+D far lane 5,pet_1000,1,5,1.5,1.608,0.8,0.8,cap 41.7,41.7,True,,held,0.275,0.301,0.087,0.026,55.3,29.6,True,7.041
+"E boundary 600 mL, SKU clamp",pet_600_soda,1,3,2.25,1.4625,0.3,0.3,SKU default,25.0,True,,"held, slipping",2.574,0.383,0.391,0.028,43.4,71.7,False,1.583
+"E boundary 600 mL, SKU clamp",pet_600_soda,1,3,2.5,1.625,0.3,0.3,SKU default,25.0,False,dropped_on_lift,dropped,23.702,0.329,0.265,0.005,54.16,79.7,False,1.583
+"E boundary 600 mL, SKU clamp",pet_600_soda,1,3,3.0,1.95,0.3,0.3,SKU default,25.0,False,dropped_on_lift,dropped,24.949,0.329,0.247,0.004,53.64,95.6,False,1.583
+"E boundary 600 mL, SKU clamp",pet_600_soda,1,3,3.5,2.275,0.3,0.3,SKU default,25.0,False,dropped_on_lift,dropped,24.949,0.123,0.234,0.002,52.48,111.6,False,1.583
+"E boundary 600 mL, cap",pet_600_soda,1,3,3.5,2.275,0.3,0.3,cap 41.7,41.7,True,,"held, slipping",1.48,0.355,0.346,0.028,51.41,111.6,False,2.64
+"E boundary 600 mL, cap",pet_600_soda,1,3,4.0,2.6,0.3,0.3,cap 41.7,41.7,True,,"held, slipping",7.555,0.664,0.649,0.028,54.62,127.5,False,2.64
+"E boundary 600 mL, cap",pet_600_soda,1,3,5.0,3.25,0.3,0.3,cap 41.7,41.7,False,dropped_on_lift,dropped,24.915,0.183,0.263,0.014,63.04,159.4,False,2.64
+"E boundary 600 mL, SKU clamp",pet_600_soda,1,3,2.25,1.4625,0.4,0.4,SKU default,25.0,True,,held,0.682,0.287,0.213,0.028,43.4,53.8,False,2.111
+"E boundary 600 mL, SKU clamp",pet_600_soda,1,3,2.5,1.625,0.4,0.4,SKU default,25.0,True,,held,0.972,0.3,0.223,0.028,45.0,59.8,False,2.111
+"E boundary 600 mL, SKU clamp",pet_600_soda,1,3,3.0,1.95,0.4,0.4,SKU default,25.0,True,,"held, slipping",2.651,0.478,0.586,0.027,48.2,71.7,False,2.111
+"E boundary 600 mL, SKU clamp",pet_600_soda,1,3,3.5,2.275,0.4,0.4,SKU default,25.0,False,dropped_on_lift,dropped,24.932,0.187,0.332,0.01,65.89,83.7,False,2.111
+"E boundary 600 mL, cap",pet_600_soda,1,3,3.5,2.275,0.4,0.4,cap 41.7,41.7,True,,held,0.459,0.355,0.272,0.028,51.41,83.7,False,3.521
+"E boundary 600 mL, cap",pet_600_soda,1,3,4.0,2.6,0.4,0.4,cap 41.7,41.7,True,,held,0.672,0.383,0.299,0.028,54.61,95.6,False,3.521
+"E boundary 600 mL, cap",pet_600_soda,1,3,5.0,3.25,0.4,0.4,cap 41.7,41.7,True,,"held, slipping",2.691,0.648,0.693,0.028,61.02,119.6,False,3.521
+"F boundary 1 L, SKU clamp",pet_1000,1,3,1.75,1.876,0.3,0.3,SKU default,34.0,True,,"held, slipping",1.766,0.376,0.513,0.028,47.47,92.0,False,2.153
+"F boundary 1 L, SKU clamp",pet_1000,1,3,2.0,2.144,0.3,0.3,SKU default,34.0,True,,"held, slipping",18.124,0.573,0.898,0.032,50.12,105.2,False,2.153
+"F boundary 1 L, SKU clamp",pet_1000,1,3,2.25,2.412,0.3,0.3,SKU default,34.0,False,dropped_on_lift,dropped,24.922,0.24,0.305,0.008,61.42,118.3,False,2.153
+"F boundary 1 L, SKU clamp",pet_1000,1,3,2.5,2.68,0.3,0.3,SKU default,34.0,False,dropped_on_lift,dropped,24.93,0.384,0.305,0.004,58.75,131.5,False,2.153
+"F boundary 1 L, cap",pet_1000,1,3,2.5,2.68,0.3,0.3,cap 41.7,41.7,False,dropped_on_lift,dropped,24.927,0.34,0.326,0.006,66.61,131.5,False,2.64
+"F boundary 1 L, cap",pet_1000,1,3,3.0,3.216,0.3,0.3,cap 41.7,41.7,False,dropped_on_lift,dropped,24.915,0.207,0.257,0.004,62.91,157.7,False,2.64
+"F boundary 1 L, cap",pet_1000,1,3,3.5,3.752,0.3,0.3,cap 41.7,41.7,False,dropped_on_lift,dropped,24.915,0.357,0.245,0.004,64.11,184.0,False,2.64

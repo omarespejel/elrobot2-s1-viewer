@@ -1,0 +1,10 @@
+file,triangles,bodies,watertight,winding_ok,volume_mm3,bbox_x,bbox_y,bbox_z,identical_to_store_latest
+gripper_base.stl,2592,1,True,True,81242.3,144.0,58.3,25.3,True
+gripper_camera_plate.stl,3306,1,True,True,11927.0,32.0,36.0,25.4,True
+gripper_carrier.stl,7200,1,True,True,65818.0,144.0,58.3,38.5,True
+gripper_finger.stl,2512,1,True,True,47532.3,13.0,135.7,44.3,True
+gripper_pad.stl,1844,1,True,True,8791.6,50.0,40.0,7.9,True
+gripper_pinion.stl,6392,1,True,True,7115.3,27.0,27.0,23.0,True
+gripper_rack.stl,936,1,True,True,8508.6,75.0,19.6,14.0,True
+gripper_top_plate.stl,2068,1,True,True,8116.7,64.0,43.5,3.0,True
+gripper_yoke.stl,3504,1,True,True,13300.6,40.0,73.4,8.0,True

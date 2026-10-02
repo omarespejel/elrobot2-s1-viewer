@@ -1,0 +1,11 @@
+sku,volume_mL,D_min_mm,D_max_mm,H_mm,rho_g_per_mL,pack_g,source_note,mass_kg,D_nom_mm
+can_355_std,355,66.0,66.0,122.7,1.04,13,pdmeasurement.com 12 oz can: 66 mm x 122.7 mm; mass = rho*V + shell,0.382,66.0
+can_355_slim,355,57.0,57.0,156.0,1.04,13,candimension.com slim 12 oz: 57 mm x 156 mm,0.382,57.0
+can_473_tall,473,66.0,66.0,157.2,1.04,15,pdmeasurement.com 16 oz: 66 mm x 157.2 mm,0.507,66.0
+pet_500_water,500,63.5,68.0,210.0,1.0,19,dimensions.com 63.5 x 203 mm; retail 500 mL PET 65-71 mm x 205-222 mm (varies by brand),0.519,65.8
+pet_600_soda,600,64.0,71.0,237.0,1.04,26,"Remsa 600 mL PET 239x64 / 235x68.5 mm; Makro CO 71x71x235 mm, 0.648 kg gross",0.65,67.5
+pet_1000,1000,76.0,82.0,290.0,1.04,32,ESTIMATE (no source retrieved) - measure with caliper,1.072,79.0
+pet_1500,1500,89.0,89.0,311.0,1.04,45,candimension.com 1.5 L: 311 mm x 89 mm,1.605,89.0
+pet_2000,2000,102.0,110.0,320.0,1.04,50,candimension 318x102 mm; Wikipedia 2 L: 300-330 mm x 100-120 mm,2.13,106.0
+pet_2500,2500,105.0,115.0,345.0,1.04,55,mozzafiatoconce.cl ~35 cm x ~10 cm - low-quality source; measure,2.655,110.0
+pet_3000,3000,112.0,130.0,330.0,1.04,90,conflicting sources (292x130 vs 330x112 mm) - measure,3.21,121.0

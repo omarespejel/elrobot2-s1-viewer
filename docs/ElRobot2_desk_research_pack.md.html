@@ -1,0 +1,228 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>ElRobot2_desk_research_pack.md</title><link rel="stylesheet" href="../assets/style.css"></head><body><header class="site"><div class="wrap"><p class="sub">ElRobot2 &middot; document</p><nav class="top"><a href="../">Versions</a><a href="../viewer/">3D viewer (S1 v1.1)</a><a href="../report.html">Design report</a><a href="../docs/">Documents</a></nav></div></header><main class="wrap"><article><div class="banner"><strong>Working document (2 October 2026).</strong> Design, simulation and desk research only: nothing has been printed, built or measured. Raw file: <a href="ElRobot2_desk_research_pack.md">ElRobot2_desk_research_pack.md</a>.</div><h1 id="elrobot2-desk-research-pack-on-racks-containers-and-grip-2026-10-02">ElRobot2: desk-research pack on racks, containers and grip (2026-10-02)</h1>
+<p>Status: research summary and design decision. Nothing here was measured in a store or on hardware. Evidence ids (E01-E24) refer to cooler_envelope_evidence.csv; grades are A manufacturer or primary source, B vendor specification with numbers, C reseller, aggregator or forum, D inference.</p>
+<h2 id="0-why-this-pack-exists">0. Why this pack exists</h2>
+<p>On 2026-10-02 the user removed glass and returnable containers from the plan and stated that a store visit, a 1 g scale with real containers and a tilt-friction test are not available for now. The unknowns those three items were meant to settle (rack geometry, container size and mass, pad friction) were therefore researched from public sources, and the design was re-checked against the result. The check changed the design: the v1 top-down gripper cannot serve 600 mL or larger PET bottles in standard racks (Section 3), and the recommended next design is S2 (Section 4).</p>
+<h2 id="1-findings">1. Findings</h2>
+<h3 id="11-racks">1.1 Racks</h3>
+<ul>
+<li>The "tipo OXXO" chamber sold in Mexico is a reach-in cold room with glass doors of 24 x 75 or 26 x 75 in, 5 shelves per door (6 in some door sets, with 26 x 27 in shelves rated 100 kg), chambers 1 m, 1.5 m or 2 m deep, and a staff access door of 0.90 x 1.90 m (E09-E12). These are resellers' look-alike products (grade C), not OXXO specifications.</li>
+<li>The same door family is a US product line with manufacturer data: Anthony sells five shelves for doors shorter than 79 in and six for doors of 79 in or more, and its 79 in all-glass door comes with seven (E01, E02). A B-O-F gravity-feed rack for 30 in doors is 88 in tall with seven shelves (E05). Dividing the door height by the shelf count gives pitches from 0.287 m (7 in 79 in) through 0.318 m (6 in 75 in), 0.319 m (7 in 88 in) and 0.334 m (6 in 79 in) to 0.381 m (5 in 75 in). Shelf positions are adjustable, so this is a range, not a measurement.</li>
+<li>Beverage racks are gravity-flow and rear-entry: depths 24-42 in, door widths 24-30 in (E04); the shelf is installed with its rear end tilted up (E07). Lanes for 20-25 oz bottles are 74.6 mm wide with a 82.6 mm ring height (E06). The test fixture v1.1 uses 90 mm lanes.</li>
+<li>OXXO staff refill the coolers from the cold room behind them (E15, grade C). Japanese backrooms work the same way, with dividers every 2-3 columns instead of every column (E16).</li>
+</ul>
+<h3 id="12-the-only-deployed-precedent">1.2 The only deployed precedent</h3>
+<p>Telexistence's TX SCARA is a SCARA on a linear axis in the backyard, with joint axes and link length chosen for that space and no change to the room (E17). It moves in a narrow aisle with the arm going up and down and in and out of each shelf, uses a simple pincer, one hand for all beverage shapes, picks the grip point per beverage, and restocks above 98 % autonomously (E18). No dimensions are published, so it constrains the architecture (rear-side SCARA) but not the numbers.</p>
+<h3 id="13-containers">1.3 Containers</h3>
+<ul>
+<li>Nearly every soda and water bottle has a PCO-1881 neck (E20): finish height 17.0 mm, support-ring height 11.2 mm (E21). The support-ring outside diameter (about 33 mm) was not retrieved and is an assumption.</li>
+<li>Holding PET bottles at the neck is established factory practice. Air conveyors carry them by the neck ring, with the neck in a slot, the ring on the flange margins and the body hanging below (E26; empty bottles). Grippers for filled bottles close around the neck below the cap with pins carrying the weight, claw grippers under the cap head are rated to 15-17 kg, and round, wet or unstable containers are held best at the neck (E22).</li>
+<li>The Mexican 600 mL soda bottle is 235-239 mm tall (design_params source notes); the 1 L size remains an estimate. Mass: density x volume + pack, density spread 4 % (E23).</li>
+</ul>
+<h3 id="14-pad-friction">1.4 Pad friction</h3>
+<p>Every published coefficient found for printed TPU 95A is a dry value against a test counter-surface, not against PET: about 0.2-0.44 in a belt-friction study, 0.47-1.0 in ball-on-disc tests against steel depending on infill, 0.50 for a gradient infill (E24). A patent claims soft cast polyurethane above 1.0 dry and 0.9 wet on floor surfaces (E28, not re-read). Nothing was found for wet PET at 4 C. The v1 assumption of 0.4 wet therefore has no support in the literature, and the design value of 0.3 for printed TPU 95A is an inference (dry 0.4-0.5 reduced by wetting), not a measurement. Cast polyurethane or silicone pads for the 1 L; form closure wherever possible.</p>
+<h2 id="2-reference-rack-used-for-design">2. Reference rack used for design</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value used</th>
+<th>Range</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shelf pitch</td>
+<td>0.318 m (design-driving)</td>
+<td>0.287-0.381 m</td>
+<td>E01, E02, E05, E09-E11; inferred by even division</td>
+</tr>
+<tr>
+<td>Structure between bottle base and the shelf above (shelf frame + glide base)</td>
+<td>30 mm</td>
+<td>20-40 mm</td>
+<td>ASSUMED; calibrated against the v1 planner (below)</td>
+</tr>
+<tr>
+<td>Clearance margin</td>
+<td>5 mm</td>
+<td>-</td>
+<td>design choice</td>
+</tr>
+<tr>
+<td>Lane width, 600 mL class</td>
+<td>75 mm</td>
+<td>74.6-90 mm</td>
+<td>E06</td>
+</tr>
+<tr>
+<td>Lane width, 1 L</td>
+<td>90 mm</td>
+<td>85-95 mm</td>
+<td>fixture v1.1</td>
+</tr>
+<tr>
+<td>Shelf depth</td>
+<td>686 mm (27 in)</td>
+<td>610-1067 mm</td>
+<td>E01, E03, E04</td>
+</tr>
+<tr>
+<td>Corridor behind the shelves</td>
+<td>chamber depth - 0.69 m</td>
+<td>0.3-1.3 m</td>
+<td>E09, E12 (1.0-2.0 m chambers)</td>
+</tr>
+<tr>
+<td>Slope</td>
+<td>6 deg, rear end up</td>
+<td>not found</td>
+<td>E07 and E06 give the direction (glides sit on angled shelves); the angle was not found</td>
+</tr>
+<tr>
+<td>Rack height</td>
+<td>1.9-2.2 m</td>
+<td>-</td>
+<td>E05, E08; the Z range 0.37-1.06 m reaches 2-3 shelves</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="3-what-fits">3. What fits</h2>
+<p>Model: the smallest pitch at which an end effector fits above an object is p_min = H + T + m + R, where H is the object height, T the structure thickness, m the margin and R the height of end-effector structure above the object top that must enter the shelf tunnel. For the v1 stack R = 140 mm (CAD: L2 cover top 130 mm above the datum, bottle top 10 mm below it).</p>
+<p>Calibration: the model with T = 30 mm and m = 5 mm reproduces the v1 planner's smallest level pitches (600 mL 0.412 against 0.407-0.434 m; 500 mL 0.385 against 0.380-0.407 m; 1 L 0.465 against 0.461-0.487 m; 355 mL can 0.298 against about 0.31 m), which is why T = 30 mm is used. Changing T by 10 mm moves every p_min by 10 mm (the error bars in Figure 9).</p>
+<p>Gap above a 600 mL bottle (237 mm) and margin by concept, per rack configuration (mm; positive = fits):</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Pitch (mm)</th>
+<th>Gap above the bottle</th>
+<th>v1 gripper (R 140)</th>
+<th>S2 flat clamp (R 50)</th>
+<th>S2 neck-jaw (R 15)</th>
+<th>Push-in plate (R 0)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7 shelves, 79 in door</td>
+<td>287</td>
+<td>15</td>
+<td>-125</td>
+<td>-35</td>
+<td>0</td>
+<td>15</td>
+</tr>
+<tr>
+<td>6 shelves, 75 in door</td>
+<td>318</td>
+<td>46</td>
+<td>-94</td>
+<td>-4</td>
+<td>30</td>
+<td>46</td>
+</tr>
+<tr>
+<td>7 shelves, 88 in rack</td>
+<td>319</td>
+<td>47</td>
+<td>-93</td>
+<td>-3</td>
+<td>32</td>
+<td>47</td>
+</tr>
+<tr>
+<td>6 shelves, 79 in door</td>
+<td>334</td>
+<td>62</td>
+<td>-78</td>
+<td>12</td>
+<td>47</td>
+<td>62</td>
+</tr>
+<tr>
+<td>5 shelves, 75 in door</td>
+<td>381</td>
+<td>109</td>
+<td>-31</td>
+<td>59</td>
+<td>94</td>
+<td>109</td>
+</tr>
+</tbody>
+</table></div>
+<p>Results:</p>
+<ol>
+<li>The v1 gripper cannot serve a 600 mL or larger PET bottle in any of the five configurations (600 mL needs 0.412 m, 1 L 0.465 m). The 500 mL bottle needs 0.385 m, so it fits only in the 5-shelf door (0.381 m) and only if the structure is thinner than about 26 mm. It serves a 355 mL can down to 0.298 m and a tall can (157 mm) down to 0.332 m.</li>
+<li>A flat body clamp with 50 mm of structure above the object serves a 600 mL bottle from 0.322 m, so 6 shelves in 79 in and 5 in 75 in but not the denser racks.</li>
+<li>A neck-jaw that keeps 15 mm above the cap serves a 600 mL bottle from 0.287 m (all five configurations, with zero margin in the densest) and a 1 L from 0.340 m.</li>
+<li>Cans: the flat clamp serves every configuration (355 mL from 0.208 m, tall cans from 0.242 m).</li>
+<li>A 1.5 L and 2 L bottle need 0.361 and 0.370 m even with the neck-jaw: they sit on the roomier shelves of a rack.</li>
+</ol>
+<p>Figure 9 (fig_clearance_vs_pitch.png) shows the smallest pitch per SKU and concept against the vendor pitch range. Figure 10 (fig_s2_vs_v1_side_view.png) shows the 0.318 m case to scale.</p>
+<h2 id="4-decision-s2-offset-wrist-low-profile-end-effectors">4. Decision: S2 = offset wrist + low-profile end effectors</h2>
+<p>Concepts compared:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>R (mm)</th>
+<th>For</th>
+<th>Against</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1 top-down gripper</td>
+<td>140</td>
+<td>built in CAD, simulated, friction clamp for cans</td>
+<td>cannot serve 600 mL or larger PET in standard racks</td>
+<td>bench tool only</td>
+</tr>
+<tr>
+<td>S2 flat body clamp</td>
+<td>50</td>
+<td>small step from v1, serves all cans, 600 mL at 6/79 in and 5/75 in</td>
+<td>still friction-limited; marginal at 0.318 m</td>
+<td>cans and bench</td>
+</tr>
+<tr>
+<td>S2 neck-jaw</td>
+<td>15</td>
+<td>form closure on the support ring (no friction needed), industrial practice, serves 600 mL in all five configurations</td>
+<td>depends on PCO-1881 geometry and free neck below the ring; bottle swing; PET only</td>
+<td>primary for PET</td>
+</tr>
+<tr>
+<td>Push-in from a transfer plate</td>
+<td>0</td>
+<td>any container, insensitive to pitch</td>
+<td>extra mechanism on the carriage, alignment to a sloped shelf, pushing over the lip</td>
+<td>fallback</td>
+</tr>
+<tr>
+<td>Suction on the cap</td>
+<td>about 30 (inference)</td>
+<td>thin</td>
+<td>wet and cold surfaces, can lids, pump and tubing</td>
+<td>not pursued</td>
+</tr>
+</tbody>
+</table></div>
+<p>S2 keeps the Z module, the base, J1, J2, L1, L2 and the electronics. It adds an offset bar L3 (100 mm, allowed 85-130 mm) so that J3 and the end of L2 stay in the corridor (stack front edge at y = 230 mm against the tunnel mouth at 253 mm), and a tool that enters the tunnel only with a thin neck-jaw or flat clamp. Reach check: with L3 = 100 mm the J3 axis lies 205-273 mm from J1 for lane pitches of 75 and 90 mm, inside the 170-385 mm reach annulus (L3 above 130 mm leaves the annulus). Static moment at J3: 0.83 N<em>m for a 600 mL bottle and 1.25 N</em>m for a 1 L (bearing pair 30 mm apart: 28-42 N per bearing); a 20 x 10 mm PETG bar deflects 2.5 mm under 1.27 kg, so use a 20 x 16 mm section (0.6 mm) or aluminium. Details: S2_design_brief.md.</p>
+<h2 id="5-the-plan-without-a-store-visit-a-scale-or-a-friction-test">5. The plan without a store visit, a scale or a friction test</h2>
+<ol>
+<li>Design values are the conservative ones in Section 2 and the friction value of 0.3 for printed pads; every one is recorded in design_params.json (v0.4.3) with its grade.</li>
+<li>Deferred, not blocking: Phase S (store survey), A5 (pad friction), A6 (real SKU measurements) and A7 (grip table from measured masses). They refine values; the design no longer depends on them.</li>
+<li>Hardware that can proceed now because it does not depend on pitch: Z column and base (Phase C), J1/J2 turret, L1 and L2 (Phase D), electronics, camera calibration (E1), the AM-ARM200 for Stage 0 demos. Hold the level-0 fixture half and the 90 mm lane plates; hold the v1 gripper unless a development tool is wanted for level-1 tests.</li>
+<li>New in the test plan: Phase H (S2 end effector), starting with a printed PCO-1881 neck stub so that the first jaw test needs no store and no scale.</li>
+</ol>
+<h2 id="6-what-desk-research-cannot-close">6. What desk research cannot close</h2>
+<ul>
+<li>The actual pitch, glide type and slope of OXXO's racks (the vendor range is 0.287-0.381 m).</li>
+<li>The free neck below the support ring and the ring outside diameter on the bottles that matter (jaw thickness 3 mm needs at least 4 mm).</li>
+<li>Wet friction on PET at 4 C and the 1 L size.</li>
+<li>The structure thickness T (assumed 30 mm).</li>
+</ul>
+<p>Each of these is closed by a measurement of minutes once a bottle, a caliper or a rack is at hand; Phase H lists them in order.</p><figure><img src="../img/fig_clearance_vs_pitch.png" alt="Figure 9. Smallest shelf pitch at which each end-effector concept fits above each SKU, against the 0.287-0.381 m range of standard racks (inferred)."><figcaption>Figure 9. Smallest shelf pitch at which each end-effector concept fits above each SKU, against the 0.287-0.381 m range of standard racks (inferred).</figcaption></figure><figure><img src="../img/fig_s2_vs_v1_side_view.png" alt="Figure 10. Schematic side view at a 0.318 m pitch: the v1 stack hits the shelf above; the S2 neck-jaw leaves 51 mm above the cap."><figcaption>Figure 10. Schematic side view at a 0.318 m pitch: the v1 stack hits the shelf above; the S2 neck-jaw leaves 51 mm above the cap.</figcaption></figure></article></main><footer><div class="wrap">Design, simulation and desk research only; nothing has been printed, built or measured. Updated 2 October 2026.</div></footer></body></html>

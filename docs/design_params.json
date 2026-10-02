@@ -1,0 +1,1183 @@
+{
+ "name": "ElRobot2-S1 (Z-lift SCARA bottle restocker), design params v0.4.3",
+ "date": "2026-10-02",
+ "conventions": {
+  "frame": "x = lateral (right), y = forward toward shelf, z = up. J1 axis is the world z-axis through (0,0). Angles CCW from +x when viewed from above.",
+  "units": "SI: metres, kg, N, N*m, rad unless a key ends in _mm / _deg / _g",
+  "printer": {
+   "model": "Bambu Lab X2D",
+   "bed_mm": [
+    256,
+    256,
+    260
+   ],
+   "materials": [
+    "PETG (Mexico Makers black, Bambu gray)",
+    "TPU 95A (ELEGOO, on order)",
+    "ABS",
+    "PLA"
+   ],
+   "inserts": "ruthex M3 x 5 x 4 brass heat-set (100 on order)",
+   "screws_on_hand_or_ordered": [
+    "M2x12 socket",
+    "M3x10 socket"
+   ],
+   "bearings_on_order": [
+    "6701-2RS 12x18x4 (x20)",
+    "624-2RS 4x13x5 (x10)"
+   ],
+   "bearings_to_buy": [
+    "6806-2RS 30x42x7 (x4)"
+   ]
+  }
+ },
+ "servos": {
+  "STS3095_C002_12V": {
+   "qty_loose_after_AMARM200_build": 2,
+   "dims_mm": [
+    30,
+    65,
+    48
+   ],
+   "mass_kg": 0.1945,
+   "rated_Nm": 2.206,
+   "peak_stall_Nm": 9.316,
+   "noload_rpm_12V": 31,
+   "stall_A_12V": 9.8,
+   "gear_ratio_label": 399,
+   "shaft": "double, 15T spline OD7.6",
+   "horn_bolt_circle": {
+    "holes": 8,
+    "pcd_mm": 24.0,
+    "bolt": "M3",
+    "note": "extracted from AM-ARM200 J2/J3/J4 STLs (7 of 8 holes detected)"
+   },
+   "mount_note": "AM-ARM200 uses aluminium case; pocket/holes to be verified with caliper before printing"
+  },
+  "STS3215_C018_12V": {
+   "qty_loose_after_AMARM200_build": 3,
+   "dims_mm": [
+    45.2,
+    24.7,
+    35.0
+   ],
+   "mass_kg": 0.055,
+   "rated_Nm": 0.981,
+   "peak_stall_Nm": 2.942,
+   "noload_rpm_12V": 45,
+   "stall_A_12V": 2.7,
+   "gear_ratio": 345,
+   "shaft": "25T spline OD5.9, output shaft centred on the 24.7 mm width, ~12.5 mm from the horn-side end face (VERIFY)",
+   "horn_bolt_pattern": {
+    "holes": 4,
+    "square_mm": 10.0,
+    "bolt": "M3 (3.0 mm thru, 5.5 mm counterbore)",
+    "note": "extracted from AM-ARM200 J7 jaw STL"
+   },
+   "pocket_in_AMARM200_mm": [
+    24.6,
+    34.2
+   ],
+   "recommended_pocket_clearance_mm": 0.25
+  }
+ },
+ "fixture": {
+  "levels_z_floor_m": [
+   0.1,
+   0.54
+  ],
+  "level_pitch_m": 0.44,
+  "lane_entrance_plane_y_m": 0.27,
+  "lane_x_m": [
+   -0.18,
+   -0.09,
+   0.0,
+   0.09,
+   0.18
+  ],
+  "lane_pitch_m": 0.09,
+  "lane_divider_height_m": 0.035,
+  "lane_floor_slope_deg": 6.0,
+  "lane_length_m": 0.4,
+  "lane_friction_pet": 0.1,
+  "tote": {
+   "grid_x_m": [
+    -0.3,
+    -0.215
+   ],
+   "grid_y_m": [
+    0.0,
+    0.1,
+    0.2
+   ],
+   "centre_xy_m": [
+    -0.2575,
+    0.1
+   ],
+   "tray_outline_m": [
+    0.185,
+    0.305
+   ],
+   "pocket_depth_m": 0.008,
+   "rim_top_above_pocket_floor_m": 0.011,
+   "tray_surface_above_pocket_floor_m": 0.008,
+   "tray_height_m": 0.017,
+   "pocket_diameter_for_600ml_m": 0.075,
+   "ledge_x_m": [
+    -0.37,
+    -0.165
+   ],
+   "ledge_y_m": [
+    -0.0625,
+    0.2525
+   ],
+   "ledge_thickness_m": 0.006,
+   "stops_xy_m": [
+    [
+     [
+      -0.33,
+      -0.305
+     ],
+     [
+      -0.0605,
+      -0.0525
+     ]
+    ],
+    [
+     [
+      -0.21,
+      -0.185
+     ],
+     [
+      -0.0605,
+      -0.0525
+     ]
+    ],
+    [
+     [
+      -0.358,
+      -0.35
+     ],
+     [
+      0.0875,
+      0.1125
+     ]
+    ]
+   ],
+   "stop_height_m": 0.012,
+   "stand_panel_x_m": [
+    -0.403,
+    -0.385
+   ],
+   "stand_panel_y_m": [
+    -0.04,
+    0.24
+   ],
+   "stand_panel_top_z_m": 0.594,
+   "d120_pockets_xy_m": [
+    [
+     -0.2575,
+     0.03
+    ],
+    [
+     -0.2575,
+     0.17
+    ]
+   ],
+   "unusable_cells_level0": {
+    "(-0.30, 0.0)": "500 mL (needs level pitch 445-447 mm) and 600 mL (472-474 mm) and 1 L (525 mm); 355 mL cans work there as the last pick"
+   }
+  },
+  "note": "One staging tote per level; v1 organises within a level, then the Z lift changes level. Level 0 has the level-1 plate above it (underside z = 0.5197 m at the entrance): 600 mL free lift at the place pose 21.6 mm (lane 1) / 38.5-39.2 mm (lanes 3, 5); 1 L is impossible at level 0 (needs level pitch >= 461 mm lanes 2-5, 486 mm lane 1). Level 1 is open above.",
+  "shelf_plate_thickness_m": 0.012,
+  "lane_configs": {
+   "small": {
+    "lanes": 5,
+    "x_m": [
+     -0.18,
+     -0.09,
+     0.0,
+     0.09,
+     0.18
+    ],
+    "pitch_m": 0.09,
+    "free_width_m": 0.087,
+    "max_D_mm": 82,
+    "levels": [
+     0,
+     1
+    ],
+    "skus": [
+     "can_355_std",
+     "can_355_slim",
+     "can_473_tall",
+     "pet_500_water",
+     "pet_600_soda",
+     "pet_1000 if D<=82"
+    ],
+    "note": "default; 90 mm pitch, 87 mm free width. 1 L: D<=82 but 8 of 60 Monte Carlo draws touch a divider (needs >= 92 mm clear width or a chamfer)"
+   },
+   "wide": {
+    "lanes": 3,
+    "x_m": [
+     -0.125,
+     0.0,
+     0.125
+    ],
+    "pitch_m": 0.125,
+    "free_width_m": 0.1205,
+    "max_D_mm": 110,
+    "levels": [
+     1
+    ],
+    "skus": [
+     "pet_1500",
+     "pet_2000"
+    ],
+    "tote": "two D120 pockets (positions by fixture track, inside r 0.17-0.385 m)",
+    "tote_pockets_xy_m": [
+     [
+      -0.2575,
+      0.03
+     ],
+     [
+      -0.2575,
+      0.17
+     ]
+    ],
+    "status": "optional (1.5 L / 2 L stretch); with 600 mL it works only with the deeper back-out and is not recommended (4.8-6.5 mm clearance per side, 15 slots per level)",
+    "divider_thickness_m": 0.0045,
+    "note_v0_4_1": "free width 120.5 mm = 125 - 4.5 mm divider (CAD lane modules 125 mm; v0.4 had 0.122 from a 3 mm divider)"
+   }
+  },
+  "note_v0_2": "default config is 'small'; 'wide' is a level-1 swap for 1.5 L / 2 L.",
+  "lane_target_rule": "bottle centre y = y_entrance + D/2 + 0.0015",
+  "shelf_slope_by": "tilting the shelf plates; flat lane modules; wedge shims 4-10 deg (fixture track)",
+  "upper_plate_underside_at_entrance_m": 0.5197,
+  "lane_module_brackets": {
+   "x_m": [
+    -0.263,
+    0.263
+   ],
+   "front_y_m": [
+    0.2798,
+    0.3198
+   ],
+   "rear_y_m": [
+    0.5285,
+    0.5685
+   ],
+   "seat_underside_z_m": {
+    "level0_front": 0.0556,
+    "level0_rear": 0.0294,
+    "level1_front": 0.4956,
+    "level1_rear": 0.4694
+   }
+  },
+  "retreat_rule_v1": "bay rule: drop into a lane only while slots 0-1 (first 160 mm) of both neighbouring lanes are empty; capacity 21 of 25 slots",
+  "baseboard": {
+   "size_m": [
+    0.92,
+    1.0
+   ],
+   "x_m": [
+    -0.62,
+    0.3
+   ],
+   "y_m": [
+    -0.42,
+    0.58
+   ],
+   "top_face_z_m": 0.0,
+   "min_thickness_m": 0.018
+  },
+  "lane_friction_note": "simulation: only mu 0.10 at 6 deg flows without toppling; measure the real lane floor (PTFE or UHMW tape) before choosing the shim angle"
+ },
+ "arm": {
+  "type": "SCARA: J1 yaw, J2 yaw, J3 wrist yaw (aligns gripper closing axis with lane axis), gripper; macro Z-lift on column",
+  "L1_m": 0.2,
+  "L2_m": 0.2,
+  "r_min_m": 0.17,
+  "r_max_m": 0.385,
+  "joint_range_deg": {
+   "J1": [
+    -20,
+    160
+   ],
+   "J2": [
+    -130,
+    130
+   ],
+   "J3": [
+    -180,
+    180
+   ]
+  },
+  "joints": {
+   "J1": "STS3095",
+   "J2": "STS3095",
+   "J3": "STS3215",
+   "gripper": "STS3215"
+  },
+  "stack_above_gripper_body_bottom_m": {
+   "gripper_body_top": 0.055,
+   "J3_servo_top": 0.095,
+   "L2_plate": [
+    0.1,
+    0.118
+   ],
+   "L1_plate": [
+    0.145,
+    0.163
+   ],
+   "note": "links sit >=0.10 m above bottle tops so they pass over neighbours",
+   "clearance_rule": "L2 cover top (zeta 130 mm, i.e. z_g + 0.130 m) must stay >= 0.015 m below the upper shelf underside; z_g = z_floor + max(H + 0.010, 0.143) m. Measured free lifts at the place pose: see fixture.note",
+   "note_v0_4_1": "design-stage budget values (L2_plate, L1_plate, ...); superseded by arm.cad_levels_zeta_mm, which are the as-built CAD levels"
+  },
+  "mass_budget_kg": {
+   "carriage_plate_blocks_nut": 0.35,
+   "J1_turret_servo_bearings": 0.405,
+   "L1_with_J2_cartridge": 0.485,
+   "L2_with_J3": 0.195,
+   "gripper_with_wrist_cam": 0.278,
+   "cables": 0.06
+  },
+  "bearing_for_moment": "2x 6806-2RS per cartridge (J1, J2); servo carries torque only via horn bolt circle",
+  "datum_updates": {
+   "L1_floor_bottom_zeta_mm": 145,
+   "L1_top_zeta_mm": 201,
+   "J1_horn_plane_zeta_mm": 150,
+   "L2_top_zeta_mm": 130,
+   "J3_plane_arm_zeta_mm": 62.5
+  },
+  "J3_servo_torque_limit_Nm": 1.0,
+  "J1_pedestal_to_carriage_pattern": {
+   "holes": "6 x M3 through (plate) / heat-set inserts (pedestal flange)",
+   "x_mm": [
+    -30,
+    30
+   ],
+   "rows_below_horn_plane_mm": [
+    20,
+    55,
+    90
+   ],
+   "plate_front_face_y_m": -0.11,
+   "keepout": "x in [-45,45] mm, z in [z_c-105, z_c-5] mm in front of the plate face"
+  },
+  "mass_kg_as_designed": {
+   "J1_turret_with_servo": 0.555,
+   "L1_side_with_J2": 0.627,
+   "L2_side_with_J3": 0.303,
+   "gripper": 0.44,
+   "cables": 0.06,
+   "note": "mass_budget_kg is exceeded: L1 side 0.627 (budget 0.485), L2 side 0.303 (0.195)"
+  },
+  "cad_levels_zeta_mm": {
+   "L1": [
+    145,
+    201
+   ],
+   "L1_cover": [
+    198,
+    201
+   ],
+   "J2_housing": [
+    115.4,
+    145
+   ],
+   "L2": [
+    85.3,
+    130
+   ],
+   "L2_cover_top": 130,
+   "J3_housing_top": 127.3,
+   "J3_interface_plane_arm": 62.5
+  },
+  "j1_tilt_moment_Nm": 12.2,
+  "tip_droop_mm_at_0p385m_2p4kg": {
+   "cover_bonded": 3.6,
+   "cover_not_acting": "36-44 (beam theory); FE: closed box 17-21 times stiffer in torsion"
+  },
+  "camera": {
+   "model": "Orbbec Gemini 2",
+   "hinge_y_z_mm": [
+    -85.5,
+    "z_c + 78"
+   ],
+   "tilt_range_deg_below_horizontal": [
+    30,
+    60
+   ],
+   "lowest_point_above_L1_cover_mm": 7.3
+  },
+  "clearances_mm": {
+   "operational_min": 4.0,
+   "closest": "J1 pedestal top to camera bracket foot",
+   "L1_J2_flange_to_carriage_plane_at_q1_m20": 3.1
+  }
+ },
+ "gripper": {
+  "type": "top-down parallel, rack-and-pinion, closing axis along local x; one STS3215",
+  "pinion": {
+   "module": 1.5,
+   "teeth": 16,
+   "pitch_d_mm": 24.0,
+   "face_mm": 14.0,
+   "pressure_deg": 20,
+   "hub_flange": "D24 x 3.5 mm on the floor (screw-head) side, 0.5 mm neck",
+   "min_flank_gap_mm": 0.082,
+   "contact_ratio": 1.74
+  },
+  "rack": {
+   "module": 1.5,
+   "face_mm": 14.0,
+   "travel_each_mm": 42.5
+  },
+  "pad_gap_mm": {
+   "min": 40.0,
+   "max": 125.0,
+   "ticks_span": 2309,
+   "pinion_rotation_deg": 202.9
+  },
+  "finger": {
+   "length_mm": 140.0,
+   "width_mm": 28.0,
+   "thickness_root_mm": 10.0,
+   "thickness_tip_mm": 4.0,
+   "material": "PETG, 6 walls",
+   "width_at_pad_mm": 40.0,
+   "width_at_root_mm": 28.0
+  },
+  "pad": {
+   "material": "TPU 95A",
+   "base_thickness_mm": 1.5,
+   "width_mm": 40.0,
+   "contact_h_mm": 50.0,
+   "profile": "shallow V, 150 deg included (flank 15 deg), V depth 5.4 mm, 1 mm ribs at 3 mm pitch",
+   "reason": "V flanks touch cylinders D 57-110 mm at +-8..14 mm off-axis; self-centres within the 40 mm width"
+  },
+  "body": {
+   "footprint_mm": [
+    149.5,
+    60.3
+   ],
+   "zeta_mm": [
+    -3.8,
+    63.0
+   ],
+   "J3_plane_zeta_mm": 63.0,
+   "mounted_offset_vs_arm_mm": -0.5,
+   "printed_mass_g": 335.5,
+   "mass_target_g": 250
+  },
+  "clamp_force_per_finger_N": {
+   "rated_torque": 34.7,
+   "cap_1p2x_rated": 41.7,
+   "burst": 70,
+   "stall": 104.2,
+   "efficiency": 0.85,
+   "formula": "eta*T/(2*r_p), r_p = 12 mm"
+  },
+  "grip_band_height_rule": "pad centre ~ 0.55 * bottle height above the shelf floor for H>=0.2 m; ~0.65*H for cans",
+  "grip_force_limits_N": {
+   "can": 15,
+   "pet_le_600": 25,
+   "pet_1000": 34,
+   "pet_1500": "burst only: 47 N at mu0.5 (>rated 34.7)",
+   "pet_2000": "burst only: 63 N at mu0.5 (>rated 34.7)"
+  },
+  "closing_axis": "along lane axis (+y at lane entrance) so fingers never sit between lateral neighbours",
+  "grip_band_rule": "pad band (50 mm tall, centred 112 mm below the gripper-body bottom) always sits just under the bottle shoulder: z_g = z_floor + max(H + 0.010, 0.143); pad band spans z_g-0.137 .. z_g-0.087 above the floor reference. For cans (H<0.145) fingertips stop 3 mm above the floor and the pads grip the lower ~50 mm of the can.",
+  "z_g_rule": "z_g = z_floor + max(H + 10 mm, 143 mm); z_c = z_g + 150 mm (J1 horn plane); bottle top is 10 mm below the gripper datum, body bottom 4.3 mm below it -> 5.7 mm clearance",
+  "datum_zeta_mm": {
+   "body_bottom": -3.8,
+   "fingertip": -140,
+   "pad_band": [
+    -137,
+    -87
+   ],
+   "J3_plane": 63.0
+  },
+  "tooth_force_per_contact_N": {
+   "at_rated_torque": 40.9,
+   "at_stall": 122.6
+  },
+  "lewis": {
+   "form": "sigma = F_t/(b*m*Y), module form",
+   "Y_z16": 0.296,
+   "face_mm": 14.0,
+   "module_mm": 1.5,
+   "sigma_rated_MPa": 6.6,
+   "sigma_stall_MPa": 19.7,
+   "note": "nominal, no stress concentration; root fillet factor Kt~1.5 and printed-PETG allowables to be applied by the gripper track",
+   "face_mm_note": "v0.4.1: face 14 mm (rev 4); stresses scaled 1/b from the b = 10 mm values (9.2 / 27.6 MPa); the FE outline check was not re-run at b = 14"
+  },
+  "upgrade_options": {
+   "B_pitch_radius_9mm": "46.3 N rated / 139 N stall per finger (m1.5 z12 with +0.3 shift or m1.0 z18; hub flange above the teeth)",
+   "STS3250_servo": "55.6 N rated / 173.7 N stall per finger at r_p 12 mm (rated 1.569 N*m, stall 4.903 N*m)"
+  },
+  "interface_to_J3": "46x46 mm square plate (corner radius 6) with 4xM3 on a 36x36 mm square; gripper cover carries a matching 46x46 boss with 4 heat-set inserts",
+  "torque_cap_Nm": 1.177,
+  "torque_cap_register_note": "about 400 of 1000, ASSUMED scaling, verify in test B2",
+  "pinion_tip_loading_margin": {
+   "rated": 1.52,
+   "cap": 1.27,
+   "burst": 1.32,
+   "stall": "0.89 FAIL without the cap"
+  },
+  "grip_command_limits_N": {
+   "can": 15,
+   "pet_le_600": 25,
+   "pet_1000": 34,
+   "pet_1500": "47 needed, above the cap",
+   "pet_2000": "63 needed, above the cap",
+   "pet_1000_wet": 41.7,
+   "pet_le_600_at_mu_0p3": 32,
+   "note_v0_4_3": "friction-clamp commands assume wet mu 0.4; at the desk-research design value 0.3 for printed TPU 95A a 600 mL bottle needs 32 N and a 1 L needs 53 N (above the 41.7 N cap): 1 L needs cast PU/silicone pads or form closure (neck-jaw)"
+  },
+  "lewis_note": "Lewis form sigma = F_t/(b m Y) (module form); FEM generated outline 1.0-1.1x Lewis; not re-run at b = 14 (scaled 1/b)"
+ },
+ "z_axis": {
+  "type": "NEMA17 with 24 V power-off brake + T8x4 (2-start) lead screw + MGN12H rail on a 4040 V-slot column with two M6 tie rods",
+  "column": {
+   "profile": "4040 V-slot, 1250 mm, x -30..10 mm",
+   "I_cm4_nominal": 8.14,
+   "I_range_cm4": [
+    7.5,
+    9.9
+   ],
+   "lean_top_mm": {
+    "alone": 2.45,
+    "with_rods": 1.36
+   },
+   "tie_rods": "2 x M6 (rear 1225 mm at 7.8 deg, side 1221 mm at 6.0 deg), printed clamps and anchors"
+  },
+  "base": {
+   "plywood_mm": [
+    400,
+    400,
+    18
+   ],
+   "x_m": [
+    -0.2,
+    0.2
+   ],
+   "y_m": [
+    -0.401,
+    -0.001
+   ],
+   "ballast_kg": {
+    "rear_half_static": 4.3,
+    "rear_half_dynamic": 6.6,
+    "centre_static": 7.1,
+    "centre_dynamic": 10.8
+   }
+  },
+  "carriage_range_m": [
+   0.37,
+   1.06
+  ],
+  "stroke_m": 0.69,
+  "hard_stops_m": [
+   0.364,
+   1.066
+  ],
+  "rail_mm": 900,
+  "screw_cut_mm": 836,
+  "speed_mm_s": {
+   "first_runs": 15,
+   "ramp": [
+    15,
+    25,
+    40
+   ],
+   "cruise_max": 40
+  },
+  "accel_mm_s2": 150,
+  "motor": {
+   "model": "OMC 17HS19-2004D-B070",
+   "current_A_per_phase": 2.0,
+   "driver_current_A_rms_assumed": 1.4,
+   "brake": "24 V 3.7 W 0.7 N*m catalogue, derated 0.35 N*m (ASSUMED)",
+   "supply": "24 V 5 A; 12 V cannot run 40 mm/s (28 mm/s limit)",
+   "torque_margin_at_40mm_s_24V": 3.2
+  },
+  "hold_margin_unpowered": {
+   "brake": 17.7,
+   "detent_and_friction_mu0p05": 1.77,
+   "assumed": "detent 25 mN*m, friction 10 mN*m"
+  },
+  "moving_mass_kg": 2.359,
+  "payload_kg": 2.13,
+  "W_N": 44.0,
+  "tilt_moment_Nm": 12.2,
+  "self_locking": false,
+  "carriage_plate": "v6 (rear pad and gussets): 0.41-0.43 mm at the nut",
+  "brake_transient_N": [
+   108,
+   172
+  ],
+  "z_c_rule": "z_c (J1 horn plane) = z_g + 0.15; hover and carry lift 25 mm",
+  "note": "v2: 120 mm quill at the gripper and an X rail; carriage plate keeps an X-slider pattern. Camera hinge raised 38 mm in v0.6.1."
+ },
+ "contacts": {
+  "mu_tpu_pet_dry": 0.8,
+  "mu_tpu_pet_wet": 0.4,
+  "mu_tpu_can": 0.7,
+  "mu_pet_lane_floor": 0.1,
+  "mu_pet_tote_floor": 0.3,
+  "density_petg_kg_m3": 1270,
+  "note_v0_4": "friction values are assumptions; measure in A5",
+  "note_v0_4_3": "mu_tpu_pet_wet 0.4 stays the value used in the v1 simulation. Published printed-TPU 95A coefficients are dry values against other surfaces (0.2-1.0) and nothing was found for wet PET at 4 C, so the design value 0.3 for printed pads is an inference (dry 0.4-0.5 reduced by wetting), not a measurement; cast PU/silicone pad target 0.4-0.5 is an ASSUMPTION"
+ },
+ "skus": [
+  {
+   "sku": "can_355_std",
+   "volume_mL": 355,
+   "D_min_mm": 66.0,
+   "D_max_mm": 66.0,
+   "H_mm": 122.7,
+   "rho_g_per_mL": 1.04,
+   "pack_g": 13,
+   "source_note": "pdmeasurement.com 12 oz can: 66 mm x 122.7 mm; mass = rho*V + shell",
+   "mass_kg": 0.382,
+   "D_nom_mm": 66.0
+  },
+  {
+   "sku": "can_355_slim",
+   "volume_mL": 355,
+   "D_min_mm": 57.0,
+   "D_max_mm": 57.0,
+   "H_mm": 156.0,
+   "rho_g_per_mL": 1.04,
+   "pack_g": 13,
+   "source_note": "candimension.com slim 12 oz: 57 mm x 156 mm",
+   "mass_kg": 0.382,
+   "D_nom_mm": 57.0
+  },
+  {
+   "sku": "can_473_tall",
+   "volume_mL": 473,
+   "D_min_mm": 66.0,
+   "D_max_mm": 66.0,
+   "H_mm": 157.2,
+   "rho_g_per_mL": 1.04,
+   "pack_g": 15,
+   "source_note": "pdmeasurement.com 16 oz: 66 mm x 157.2 mm",
+   "mass_kg": 0.507,
+   "D_nom_mm": 66.0
+  },
+  {
+   "sku": "pet_500_water",
+   "volume_mL": 500,
+   "D_min_mm": 63.5,
+   "D_max_mm": 68.0,
+   "H_mm": 210.0,
+   "rho_g_per_mL": 1.0,
+   "pack_g": 19,
+   "source_note": "dimensions.com 63.5 x 203 mm; retail 500 mL PET 65-71 mm x 205-222 mm (varies by brand)",
+   "mass_kg": 0.519,
+   "D_nom_mm": 65.8
+  },
+  {
+   "sku": "pet_600_soda",
+   "volume_mL": 600,
+   "D_min_mm": 64.0,
+   "D_max_mm": 71.0,
+   "H_mm": 237.0,
+   "rho_g_per_mL": 1.04,
+   "pack_g": 26,
+   "source_note": "Remsa 600 mL PET 239x64 / 235x68.5 mm; Makro CO 71x71x235 mm, 0.648 kg gross",
+   "mass_kg": 0.65,
+   "D_nom_mm": 67.5
+  },
+  {
+   "sku": "pet_1000",
+   "volume_mL": 1000,
+   "D_min_mm": 76.0,
+   "D_max_mm": 82.0,
+   "H_mm": 290.0,
+   "rho_g_per_mL": 1.04,
+   "pack_g": 32,
+   "source_note": "ESTIMATE (no source retrieved) - measure with caliper",
+   "mass_kg": 1.072,
+   "D_nom_mm": 79.0
+  },
+  {
+   "sku": "pet_1500",
+   "volume_mL": 1500,
+   "D_min_mm": 89.0,
+   "D_max_mm": 89.0,
+   "H_mm": 311.0,
+   "rho_g_per_mL": 1.04,
+   "pack_g": 45,
+   "source_note": "candimension.com 1.5 L: 311 mm x 89 mm",
+   "mass_kg": 1.605,
+   "D_nom_mm": 89.0
+  },
+  {
+   "sku": "pet_2000",
+   "volume_mL": 2000,
+   "D_min_mm": 102.0,
+   "D_max_mm": 110.0,
+   "H_mm": 320.0,
+   "rho_g_per_mL": 1.04,
+   "pack_g": 50,
+   "source_note": "candimension 318x102 mm; Wikipedia 2 L: 300-330 mm x 100-120 mm",
+   "mass_kg": 2.13,
+   "D_nom_mm": 106.0
+  },
+  {
+   "sku": "pet_2500",
+   "volume_mL": 2500,
+   "D_min_mm": 105.0,
+   "D_max_mm": 115.0,
+   "H_mm": 345.0,
+   "rho_g_per_mL": 1.04,
+   "pack_g": 55,
+   "source_note": "mozzafiatoconce.cl ~35 cm x ~10 cm - low-quality source; measure",
+   "mass_kg": 2.655,
+   "D_nom_mm": 110.0
+  },
+  {
+   "sku": "pet_3000",
+   "volume_mL": 3000,
+   "D_min_mm": 112.0,
+   "D_max_mm": 130.0,
+   "H_mm": 330.0,
+   "rho_g_per_mL": 1.04,
+   "pack_g": 90,
+   "source_note": "conflicting sources (292x130 vs 330x112 mm) - measure",
+   "mass_kg": 3.21,
+   "D_nom_mm": 121.0
+  }
+ ],
+ "changelog_v0_2": [
+  "G1 clamp force per finger = eta*T/(2*r_p) for a pinion between TWO racks (v0.1 used eta*T/r_p, 2x too high): 34.7 N at rated, 104.2 N at stall for r_p=12 mm, eta=0.85.",
+  "G2 Lewis stress in module form sigma=F_t/(b*m*Y), Y(z16)=0.296 with F_t=T/(2 r_p); the v0.1 helper multiplied circular pitch by the module-form Y (pi too low).",
+  "G3 per-SKU clamp limits revised to what rated torque can deliver; 1.5 L and 2 L need > rated torque (burst-only) unless pitch radius is reduced or the STS3250 is used.",
+  "F1 lane pitch 90 mm (87 mm free) cannot hold D>82 mm: added wide lane config (125 mm pitch, 3 lanes) for level 1 and a large-bottle tote insert.",
+  "A1 J2 range +-130 deg gives r_min 0.169 m (0.14 m needs 139.0 deg = 2 acos(0.14 / 0.40)); nearest fixture target is 0.219 m so no target is affected.",
+  "A2 J3 interface changed from D50 round flange (4xM3 on 36x36 square needs radius 25.5 mm) to a 46x46 mm square plate with the same 4xM3 on 36x36 mm.",
+  "A3 datum update from the arm track: L1 floor bottom zeta 145, J1 horn plane zeta 150, L2 max top zeta 119.8 (target 118, limit 131 for the 15 mm shelf rule), J3 servo torque limit <= 1.0 N*m (pin shear).",
+  "Z1 T8x8 screw is not self-locking (lead angle 20 deg > friction angle 6-12 deg): add stop/brake or counterweight for unattended use; first-run speed 15 mm/s (critical speed 16-24 mm/s)."
+ ],
+ "sku_tiers": {
+  "tier1_rated_torque": [
+   "can_355_std",
+   "can_355_slim",
+   "can_473_tall",
+   "pet_500_water",
+   "pet_600_soda"
+  ],
+  "tier2_needs_mu_ge_0p5_and_gentle_motion": [
+   "pet_1000",
+   "pet_1500"
+  ],
+  "tier3_needs_upgrade": [
+   "pet_2000",
+   "pet_2500",
+   "pet_3000"
+  ]
+ },
+ "changelog_v0_3": [
+  "L1 lane TARGETS are bottle centres, not the entrance plane: y_target = y_entrance + D/2 + 1.5 mm. With the entrance plane at 0.30 m the outer small lanes sat at r = 382.1 mm (2.9 mm inside r_max 385): too tight.",
+  "FIX: entrance plane moved to y = 0.27 m from the J1 axis -> small outer lanes r = 355 mm, wide outer lanes r = 349 mm (>= 29 mm margin). Tote slot y shifted by -0.02 m (y = 0.02, 0.105, 0.19) so the tote no longer reaches the lane module corner.",
+  "Fixture slopes by tilting the shelf plates (flat 8.2 mm lane modules): the level-0 ceiling at the entrance is 8.3 mm lower than the flat-plate value and the 600 mL margin fell to 14.7-19.7 mm. FIX: level pitch 0.40 -> 0.42 m (floors 0.10 / 0.52 m), carriage range 0.37-1.00 m (stroke 0.63 m, rail >= 700 mm): 600 mL margin becomes about 35-38 mm and 2 L at level 1 still fits (z_c 0.995 m)."
+ ],
+ "layout_rule_summary": {
+  "lane_entrance_y_m": 0.27,
+  "small_lane_targets_y_m_for_D71": 0.307,
+  "wide_lane_targets_y_m_for_D110": 0.3265
+ },
+ "status_note": "v0.4 = values after fixture v1.1, Z module v0.6.1, gripper rev 4, arm as built in CAD, master assembly checks and the MuJoCo rerun on fixture v1.1. Nothing is built or measured; items marked ASSUMED need a caliper, scale or bench test. v0.4.3 (2026-10-02): glass and returnable containers removed from the plan by user decision; store survey, scale weigh-in and tilt-friction test are not available, so rack, container and friction values come from desk research (cooler_envelope_evidence.csv, grades A-D) and carry worst-case margins. New: reference_rack, eoat_concepts, friction_design, s2.",
+ "sim_v1_1_results": {
+  "nominal_dry": "45/45 accepted picks (5 of 50 matrix entries impossible: 1 L at level 0)",
+  "nominal_wet": "45/45",
+  "mc_600ml_level0": "60/60",
+  "mc_600ml_level1": "60/60",
+  "mc_1l_level1_D75": "52/60",
+  "retreat_default_contact_free": "16/45",
+  "retreat_bay_rule_contact_free": "45/45",
+  "cycle_mean_s": {
+   "default": 24.3,
+   "bay_rule": 19.9,
+   "z_50mm_s": 23.0
+  },
+  "loaded_peak_J1_J2_Nm": [
+   0.45,
+   0.2
+  ],
+  "source": "sim_summary.md (fixture v1.1)"
+ },
+ "recommended_first_test_configuration": "level 1 only, 5 lanes (90 mm), 600 mL, bay rule; then level 0 with the bay rule (PET in lanes 1-5, tote cells except (-0.30, 0)); 1 L only at level 1; wide lanes optional",
+ "changelog_v0_4": [
+  "Level pitch 0.44 m (floors 0.10 / 0.54); tote pocket 8 mm, rim 11 mm above the pocket floor; ledge x -0.37..-0.165 and three stops.",
+  "Z module v0.6.1: 4040 column with two tie rods, T8x4, 24 V brake motor, carriage range 0.37-1.06 m, cruise 40 mm/s; the 25 mm/s whirl note is withdrawn.",
+  "Gripper rev 4: face 14 mm, hub flange, J3 plane 63.0 (arm 62.5), clamp 34.7 / 41.7 / 70 / 104.2 N, torque cap 1.177 N*m.",
+  "Arm: as-built CAD levels and masses (over budget); camera pose.",
+  "Grasp rule z_g = z_floor + max(H + 10, 143) mm.",
+  "Retreat rule for v1: bay rule on the 5-lane set; wide set optional.",
+  "Common baseboard 920 x 1000 mm."
+ ],
+ "changelog_v0_4_1": [
+  "arm.stack_above_gripper_body_bottom_m.clearance_rule rewritten to the final rule (L2 cover top at z_g + 0.130 m; z_g = z_floor + max(H + 0.010, 0.143) m); the old H + 0.005 text is removed.",
+  "gripper.grip_band_rule: H + 0.005 corrected to H + 0.010 (it contradicted gripper.z_g_rule).",
+  "gripper.lewis: face 14 mm and stresses 6.6 / 19.7 MPa (v0.4 still listed the b = 10 mm values 9.2 / 27.6 MPa).",
+  "changelog_v0_2 A1: J2 angle for r_min 0.14 m is 139.0 deg (2 acos(0.35)), not 139.2.",
+  "fixture.lane_configs.wide: free width 120.5 mm (4.5 mm dividers), not 122 mm."
+ ],
+ "payload": {
+  "mass_model": "mass = rho * V + pack; rho 1.00 g/mL water, 1.04 g/mL soft drinks (measured: regular cola 1.042, diet cola 0.997; finished beer about 1.01)",
+  "liquid_density_spread_pct": 4.3,
+  "mc_mass_window": "+-5 % on the SKU mass (covers the density spread, not the container material)",
+  "grip_criterion": {
+   "safety_factor": 2.0,
+   "transport_accel_g": 0.5,
+   "formula_N_per_finger": "SF*m*(g+a)/(2*mu)",
+   "static_limit_formula_kg": "2*F*mu/(g*cos(15 deg)), V pad factor 1.0353",
+   "sim_check": "70 runs, 600 mL and 1 L: held up to 0.996 x the static limit, dropped from 1.015 x"
+  },
+  "required_mu_design_criterion": {
+   "can_355 at 15 N": 0.38,
+   "pet_600 at 25 N": 0.38,
+   "pet_600 at cap": 0.23,
+   "pet_1000 at 34 N": 0.46,
+   "pet_1000 at cap 41.7 N": 0.38,
+   "pet_2000 at cap": 0.75
+  },
+  "command_note": "At the assumed wet friction 0.4 the 600 mL default (25 N) has 5 % margin and the 1 L default (34 N) is 14 % short (needs 39.5 N): command the 1 L at the 41.7 N cap when wet",
+  "scope": {
+   "in_v1": [
+    "aluminium cans (355 mL standard/slim, 473 mL tall)",
+    "one-way PET 500 mL, 600 mL and 1 L (1 L at level 1 only)"
+   ],
+   "stretch": [
+    "1.5 L and 2 L PET (neck-jaw, tall racks only)"
+   ],
+   "out_of_plan": [
+    "glass bottles",
+    "returnable PET",
+    "partially filled containers"
+   ],
+   "reason": "out of plan by user decision on 2026-10-02 (not deferred); no store, scale or friction test is available"
+  },
+  "other_mass_limits": {
+   "fixture_design_load_kg_per_level": 25,
+   "z_and_bearing_payload_kg": 2.13,
+   "joint_loaded_peak_Nm_at_1p6kg": {
+    "J1": 0.3,
+    "J2": 0.22
+   },
+   "J1_J2_rated_Nm": 2.206
+  },
+  "not_modelled": [
+   "liquid slosh and partial fills",
+   "PET shell compliance at high clamp",
+   "condensation (wet friction is only a number)"
+  ],
+  "measure": "optional: container_data_sheet.csv (PET and cans only); tests A5-A7 are deferred and non-blocking"
+ },
+ "real_cooler_evidence": {
+  "status": "INFERENCE from vendor and manufacturer catalogues (cooler_envelope_evidence.csv, grades A-C); not OXXO drawings. Replaces the earlier 0.32-0.38 m range; confirm with hoja_levantamiento_refrigerador_OXXO.pdf only if a visit becomes possible",
+  "door_size_in": [
+   [
+    24,
+    75
+   ],
+   [
+    26,
+    75
+   ],
+   [
+    23,
+    73
+   ]
+  ],
+  "door_size_mm": [
+   [
+    610,
+    1905
+   ],
+   [
+    660,
+    1905
+   ]
+  ],
+  "shelves_per_door": {
+   "5": [
+    "Anthony 401 (doors under 79 in)",
+    "camarasreachin.com",
+    "construex.com.mx"
+   ],
+   "6": [
+    "Anthony 401 (79 in and taller)",
+    "puertas-reach-in.com"
+   ],
+   "7": [
+    "Anthony Infinity MAX 79 in",
+    "B-O-F VersaRack 88 in"
+   ]
+  },
+  "shelf_rating_kg": [
+   80,
+   100
+  ],
+  "chamber_depth_m": {
+   "minisuper_self_contained": 1.0,
+   "self_service_or_beer_cave": "1.5 or more",
+   "steel_full_line": 2.0
+  },
+  "chamber_height_m": 2.4,
+  "access_door_m": [
+   0.9,
+   1.9
+  ],
+  "panel_thickness_in": 2.5,
+  "implied_shelf_pitch_m": [
+   0.287,
+   0.381
+  ],
+  "implied_by": "5 shelves (1905/5 = 0.381 m) or 6 shelves (1905/6 = 0.318 m) evenly spaced over a 75 in door; shelf positions are adjustable and the clear gap is smaller than the pitch by the shelf thickness",
+  "v1_min_level_pitch_m": {
+   "pet_500": [
+    0.38,
+    0.407
+   ],
+   "pet_600": [
+    0.407,
+    0.434
+   ],
+   "pet_1000": [
+    0.461,
+    0.487
+   ],
+   "can_355": "not limiting in the planner study; closed form about 0.31"
+  },
+  "shelf_size_in_6_shelf_sets": {
+   "W": 26,
+   "D": 27
+  },
+  "stack_height_needed_for_600mL_mm_calc_no_margin": {
+   "pitch_0.381_m": 99,
+   "pitch_0.360_m": 78,
+   "pitch_0.318_m": 36,
+   "today": 130,
+   "note": "planner closed form pitch_min = 281.8 + S for a 600 mL bottle; v0.4.3 model p_min = H + T + margin + R (R = 140 mm for the v1 stack) gives the same 0.412 m. A 6-shelf door (0.318 m) leaves 51 mm above a 600 mL bottle: v1 cannot enter; use S2."
+  },
+  "design_driving_pitch_m": 0.318,
+  "configurations_pitch_m": {
+   "7 shelves in 79 in door (Anthony Infinity MAX)": 0.287,
+   "6 shelves in 75 in door": 0.318,
+   "7 shelves in 88 in rack (B-O-F VersaRack)": 0.319,
+   "6 shelves in 79 in door (Anthony 401)": 0.334,
+   "5 shelves in 75 in door": 0.381
+  },
+  "lane": {
+   "glide_lane_width_mm": 74.6,
+   "glide_ring_height_mm": 82.6,
+   "glide_depth_in": 27,
+   "source": "E06 (Avantco/Visi-Slide 20-25 oz glide)",
+   "fixture_v1_1_lane_mm": 90
+  },
+  "T_struct_mm": {
+   "value": 30,
+   "band": [
+    20,
+    40
+   ],
+   "status": "ASSUMED; calibrated so that the model reproduces the v1.1 planner minima (600 mL 0.412 vs 0.407-0.434 m)"
+  },
+  "rack_height_m": [
+   1.9,
+   2.2
+  ],
+  "z_range_note": "carriage 0.37-1.06 m reaches 2-3 shelves; column extension needed for the full rack",
+  "slope": "rear end tilted up (Anthony installation sheet); angle not found, fixture uses 6 deg",
+  "evidence_file": "cooler_envelope_evidence.csv"
+ },
+ "changelog_v0_4_2": [
+  "payload: mass model, grip criterion and required friction per container class, v1 scope (glass and returnable out), other mass limits, items not modelled.",
+  "real_cooler_evidence: vendor-catalogue data for 'tipo OXXO' chambers and door sets (5-6 shelves per 75 in door, implying a pitch of about 0.32-0.38 m, inference) against the minimum level pitch the v1.1 planner accepts.",
+  "gripper.grip_command_limits_N.pet_1000_wet = 41.7 (the 34 N default is 14 % short of the design criterion at wet friction 0.4)."
+ ],
+ "reference_rack": {
+  "pitch_m": {
+   "design_driving": 0.318,
+   "range": [
+    0.287,
+    0.381
+   ]
+  },
+  "T_struct_mm": 30,
+  "margin_mm": 5,
+  "lane_mm": {
+   "600_mL_class": 75,
+   "1_L": 90
+  },
+  "shelf_depth_m": 0.686,
+  "slope_deg": 6,
+  "rack_height_m": [
+   1.9,
+   2.2
+  ],
+  "model": "p_min = H + T_struct + margin + R",
+  "calibration": "reproduces v1.1 planner minima within 0.01-0.02 m",
+  "evidence": "cooler_envelope_evidence.csv E01-E16"
+ },
+ "eoat_concepts": {
+  "R_mm_structure_above_object_top": {
+   "v1_top_down_gripper": 140,
+   "S2_flat_body_clamp": 50,
+   "S2_neck_jaw_PET_only": 15,
+   "push_in_transfer_plate": 0
+  },
+  "min_pitch_m_by_sku": {
+   "355 mL can": {
+    "v1 top-down gripper (CAD)": 0.298,
+    "S2 flat body clamp (target)": 0.208,
+    "S2 neck-jaw, PET only (target)": null,
+    "push-in from transfer plate": 0.158
+   },
+   "473 mL tall can": {
+    "v1 top-down gripper (CAD)": 0.332,
+    "S2 flat body clamp (target)": 0.242,
+    "S2 neck-jaw, PET only (target)": null,
+    "push-in from transfer plate": 0.192
+   },
+   "355 mL slim can": {
+    "v1 top-down gripper (CAD)": 0.331,
+    "S2 flat body clamp (target)": 0.241,
+    "S2 neck-jaw, PET only (target)": null,
+    "push-in from transfer plate": 0.191
+   },
+   "500 mL PET": {
+    "v1 top-down gripper (CAD)": 0.385,
+    "S2 flat body clamp (target)": 0.295,
+    "S2 neck-jaw, PET only (target)": 0.26,
+    "push-in from transfer plate": 0.245
+   },
+   "600 mL PET": {
+    "v1 top-down gripper (CAD)": 0.412,
+    "S2 flat body clamp (target)": 0.322,
+    "S2 neck-jaw, PET only (target)": 0.287,
+    "push-in from transfer plate": 0.272
+   },
+   "1 L PET": {
+    "v1 top-down gripper (CAD)": 0.465,
+    "S2 flat body clamp (target)": 0.375,
+    "S2 neck-jaw, PET only (target)": 0.34,
+    "push-in from transfer plate": 0.325
+   },
+   "1.5 L PET": {
+    "v1 top-down gripper (CAD)": 0.486,
+    "S2 flat body clamp (target)": 0.396,
+    "S2 neck-jaw, PET only (target)": 0.361,
+    "push-in from transfer plate": 0.346
+   },
+   "2 L PET": {
+    "v1 top-down gripper (CAD)": 0.495,
+    "S2 flat body clamp (target)": 0.405,
+    "S2 neck-jaw, PET only (target)": 0.37,
+    "push-in from transfer plate": 0.355
+   }
+  },
+  "verdict": {
+   "v1_top_down_gripper": "cannot serve a 600 mL or larger PET bottle in any standard rack configuration (500 mL only in the sparsest rack if T < 26 mm); development tool and open racks only",
+   "S2_flat_body_clamp": "cans in all configurations; 600 mL from 0.322 m (6 shelves in 79 in and 5 in 75 in)",
+   "S2_neck_jaw_PET_only": "primary for PET: 500/600 mL in all five configurations, 1 L from 0.340 m",
+   "push_in_transfer_plate": "fallback for any container"
+  },
+  "source": "eoat_clearance_matrix.csv; eoat_min_pitch_by_sku.csv; fig_clearance_vs_pitch.png"
+ },
+ "friction_design": {
+  "mu_wet_design_fff_tpu_95A": 0.3,
+  "mu_wet_cast_pad_target_ASSUMED": [
+   0.4,
+   0.5
+  ],
+  "literature_range_fff_tpu": [
+   0.2,
+   1.0
+  ],
+  "wet_pet_cold_found": false,
+  "max_mass_kg_at_41p7N_cap": {
+   "0.2": 0.57,
+   "0.3": 0.85,
+   "0.4": 1.13,
+   "0.5": 1.42,
+   "0.8": 2.27
+  },
+  "max_mass_kg_at_34p7N_rated": {
+   "0.2": 0.47,
+   "0.3": 0.71,
+   "0.4": 0.94,
+   "0.5": 1.18,
+   "0.8": 1.89
+  },
+  "rule": "1 L (1.072 kg) needs mu_wet >= 0.38 at the cap: cast PU/silicone pads or form closure; PET at the neck ring needs no friction",
+  "evidence": "E24, E28; friction_limit_table.csv; grip_force_needed_by_sku.csv",
+  "literature_note": "all published values found are DRY and against steel or other test surfaces, none on PET"
+ },
+ "s2": {
+  "status": "CONCEPT (S2_design_brief.md): no CAD, no simulation, no test",
+  "offset_wrist": {
+   "L3_mm": 100,
+   "allowed_mm": [
+    85,
+    130
+   ],
+   "j3_axis_y_mm_at_bottle_y_305": 205,
+   "stack_front_edge_y_mm": 230,
+   "tunnel_mouth_y_mm": 253,
+   "j3_radius_range_mm_for_lane_pitch_75_90": [
+    205,
+    273
+   ],
+   "reach_annulus_mm": [
+    170,
+    385
+   ]
+  },
+  "j3_static_moment_Nm": {
+   "600_mL": 0.83,
+   "1_L": 1.25,
+   "tool_mass_kg_incl": 0.2
+  },
+  "bearing_pair": {
+   "type": "6701-2RS",
+   "spacing_mm": 30,
+   "load_per_bearing_N": [
+    28,
+    42
+   ]
+  },
+  "bar_section_mm": "20 x 16 PETG or aluminium (20 x 10 PETG droops 2.5 mm)",
+  "neck_jaw": {
+   "neck": "PCO-1881 28 mm",
+   "finish_height_mm": 17.0,
+   "support_ring_height_mm": 11.2,
+   "ring_OD_mm_ASSUMED": 33.0,
+   "jaw_thickness_mm": 3,
+   "free_neck_below_ring_needed_mm": 4,
+   "notch_mm_ASSUMED": 30,
+   "stroke_per_side_mm": 6,
+   "tool_mass_target_kg": 0.25,
+   "hold": "form closure on the ring; clamp only prevents swing"
+  },
+  "flat_clamp": {
+   "stack_above_can_top_mm": 50,
+   "clamp_force_per_finger_N": "as v1 (34.7 rated, 41.7 cap)"
+  },
+  "accel_limit_g_while_hanging": 0.3,
+  "tote": "single row, pitch >= 85 mm, open on the arm side",
+  "validation": "S2_design_brief.md section 7; test plan Phase H"
+ },
+ "changelog_v0_4_3": [
+  "Glass and returnable containers removed from payload scope, required_mu table, not_modelled and measure (user decision 2026-10-02).",
+  "real_cooler_evidence: pitch range 0.287-0.381 m (design-driving 0.318 m), lane 74.6 mm, T_struct, configurations, evidence file reference.",
+  "New blocks: reference_rack, eoat_concepts (min pitch by SKU and concept), friction_design (printed TPU wet mu 0.3), s2 (offset wrist and neck-jaw concept).",
+  "grip_command_limits_N: added pet_le_600_at_mu_0p3 and a note that 1 L needs cast pads or form closure."
+ ]
+}

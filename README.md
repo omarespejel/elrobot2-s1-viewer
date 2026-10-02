@@ -1,26 +1,27 @@
-# ElRobot2-S1 interactive 3D viewer
+# ElRobot2: design versions
 
-**Open the viewer: https://omarespejel.github.io/elrobot2-s1-viewer/**
+Open the site from this repository's GitHub Pages link. The landing page shows the versions of a robot-arm
+design that restocks cans and PET bottles through the rear of a convenience-store cooler, with the numbers
+that separate them.
 
-A single self-contained HTML page (no build step, no server, no dependencies). It shows the CAD of a
-Z-lift SCARA arm designed to restock cans and PET bottles through the rear of a convenience-store
-cooler, plus six replays of a rigid-body simulation played back on that CAD.
+## Contents
 
-What you can do in the page: drag to orbit, scroll to zoom, move the joint and carriage sliders,
-pick a pick-and-place target, play any of the six simulation replays, and toggle the fixture, the
-bottles, the column and the illustrative cooler outline.
+* `index.html`: versions (S1 v1.1 as designed and simulated, S2 as a concept), version history, caveats.
+* `viewer/index.html`: interactive 3D viewer of S1 v1.1 (a single self-contained page with six simulation replays).
+* `report.html`: the design report (third round, 2 October 2026).
+* `docs/`: parameters, test plan, risk register, review log, evidence table, S2 design brief, desk-research pack and module notes.
+* `img/`: figures used in the report.
 
 ## What this is and is not
 
-* The arm, gripper, lane fixture and Z column are the real design geometry (STEP/STL tessellations).
-  Purchased parts (extrusion, rail, screw, motor, camera) are drawn as approximate boxes.
-* The replays are logged joint and bottle trajectories from a MuJoCo simulation with a simplified
-  box fixture. Every second frame was re-posed on the real CAD and tested for overlaps; the arm and
-  gripper never overlap the fixture, column or camera in any of the six replays.
-* The pick-and-place preview (sliders and targets) is joint-space interpolation for looking at reach
-  only: it has no collision or load checking.
-* The cooler outline is illustrative. Its dimensions are assumed; no real cooler was measured.
-* **Nothing in this design has been printed, built or measured.** Every dimension, mass and margin is
-  CAD, hand calculation or simulation.
+* The arm, gripper, lane fixture and Z column are drawn in CAD and tested in a MuJoCo rigid-body simulation with a
+  simplified fixture. The viewer replays those simulations on the CAD.
+* The cooler outline in the viewer is illustrative. Rack dimensions in the report are inferred from public
+  catalogues (US manufacturers, Mexican resellers); no real cooler was measured.
+* S2 (offset wrist with a neck-jaw for PET bottles and a flat clamp for cans) is a concept: it has not been
+  drawn, simulated or tested.
+* **Nothing in this design has been printed, built or measured.** Every dimension, mass and margin is CAD,
+  hand calculation, simulation or desk research.
+* Scope: aluminium cans and one-way PET bottles. Glass and returnable containers are out of scope.
 
-Renders with WebGL2, and falls back to a built-in software rasteriser if WebGL2 is unavailable.
+The pages carry a noindex tag so that search engines are asked to skip them.

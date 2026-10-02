@@ -1,0 +1,649 @@
+case,frame,t,phase,mover,env,gap_mm,overlap_mm3,kind
+600ml_L1_lane3,358,14.32,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+600ml_L1_lane3,378,15.12,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,812.2,overlap
+600ml_L1_lane3,380,15.2,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4314.7,overlap
+600ml_L1_lane3,382,15.28,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4110.1,overlap
+600ml_L1_lane3,384,15.36,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4143.6,overlap
+600ml_L1_lane3,386,15.44,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4373.0,overlap
+600ml_L1_lane3,388,15.52,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,3603.7,overlap
+600ml_L1_lane3,390,15.6,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,3711.9,overlap
+600ml_L1_lane3,392,15.68,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,3921.7,overlap
+600ml_L1_lane3,394,15.76,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4187.3,overlap
+600ml_L1_lane3,396,15.84,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,398,15.92,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,400,16.0,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,402,16.08,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,404,16.16,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,406,16.24,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,408,16.32,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,410,16.4,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,412,16.48,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,414,16.56,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,416,16.64,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,418,16.72,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,420,16.8,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,422,16.88,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,424,16.96,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,426,17.04,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,428,17.12,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,430,17.2,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,432,17.28,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,434,17.36,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,436,17.44,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,438,17.52,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,440,17.6,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,442,17.68,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,444,17.76,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,446,17.84,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,448,17.92,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,450,18.0,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,452,18.08,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,454,18.16,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,456,18.24,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,458,18.32,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,460,18.4,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,462,18.48,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,464,18.56,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,466,18.64,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,468,18.72,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,470,18.8,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,472,18.88,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,474,18.96,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,476,19.04,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,478,19.12,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,480,19.2,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,482,19.28,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.77,0.0,gap<=1mm
+600ml_L1_lane3,482,19.28,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,484,19.36,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.8,0.0,gap<=1mm
+600ml_L1_lane3,484,19.36,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,486,19.44,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.96,0.0,gap<=1mm
+600ml_L1_lane3,486,19.44,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,488,19.52,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,490,19.6,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,492,19.68,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,494,19.76,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,496,19.84,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,498,19.92,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,500,20.0,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,502,20.08,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,504,20.16,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,506,20.24,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,508,20.32,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,510,20.4,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,512,20.48,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,514,20.56,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,516,20.64,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+600ml_L1_lane3,516,20.64,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,518,20.72,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,520,20.8,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,522,20.88,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,524,20.96,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,526,21.04,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,528,21.12,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,530,21.2,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,532,21.28,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,534,21.36,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,536,21.44,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,538,21.52,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,540,21.6,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,542,21.68,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,544,21.76,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,546,21.84,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,548,21.92,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,550,22.0,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,552,22.08,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,554,22.16,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,556,22.24,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,558,22.32,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,560,22.4,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,562,22.48,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,564,22.56,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,566,22.64,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,568,22.72,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,570,22.8,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,572,22.88,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,574,22.96,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,576,23.04,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,578,23.12,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,580,23.2,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,582,23.28,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,584,23.36,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,586,23.44,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,588,23.52,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,590,23.6,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,592,23.68,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,594,23.76,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,596,23.84,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,598,23.92,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L1_lane3,600,24.0,return to the tote,carried_bottle,L1_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,358,14.32,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+600ml_L0_lane3,376,15.04,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4346.8,overlap
+600ml_L0_lane3,378,15.12,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4100.1,overlap
+600ml_L0_lane3,380,15.2,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4088.2,overlap
+600ml_L0_lane3,382,15.28,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4208.0,overlap
+600ml_L0_lane3,384,15.36,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4215.6,overlap
+600ml_L0_lane3,386,15.44,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,3505.4,overlap
+600ml_L0_lane3,388,15.52,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,3758.9,overlap
+600ml_L0_lane3,390,15.6,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4026.5,overlap
+600ml_L0_lane3,392,15.68,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4357.7,overlap
+600ml_L0_lane3,394,15.76,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4481.7,overlap
+600ml_L0_lane3,396,15.84,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,398,15.92,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,400,16.0,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,402,16.08,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,404,16.16,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,406,16.24,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,408,16.32,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,410,16.4,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,412,16.48,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,414,16.56,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,416,16.64,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,418,16.72,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,420,16.8,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,422,16.88,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,424,16.96,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,426,17.04,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,428,17.12,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,430,17.2,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,432,17.28,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,434,17.36,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,436,17.44,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,438,17.52,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,440,17.6,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,442,17.68,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,444,17.76,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,446,17.84,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,448,17.92,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,450,18.0,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,452,18.08,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,454,18.16,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,456,18.24,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,458,18.32,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,460,18.4,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,462,18.48,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,464,18.56,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,466,18.64,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,468,18.72,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,470,18.8,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,472,18.88,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,474,18.96,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,476,19.04,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,478,19.12,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,480,19.2,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,482,19.28,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.78,0.0,gap<=1mm
+600ml_L0_lane3,482,19.28,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,484,19.36,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.79,0.0,gap<=1mm
+600ml_L0_lane3,484,19.36,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,486,19.44,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.94,0.0,gap<=1mm
+600ml_L0_lane3,486,19.44,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,488,19.52,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,490,19.6,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,492,19.68,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,494,19.76,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,496,19.84,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,498,19.92,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,500,20.0,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,502,20.08,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,504,20.16,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,506,20.24,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,508,20.32,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,510,20.4,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,512,20.48,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,514,20.56,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,516,20.64,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,518,20.72,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+600ml_L0_lane3,518,20.72,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,520,20.8,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,522,20.88,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,524,20.96,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,526,21.04,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,528,21.12,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.99,0.0,gap<=1mm
+600ml_L0_lane3,528,21.12,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,530,21.2,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,532,21.28,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,534,21.36,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,536,21.44,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,538,21.52,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,540,21.6,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,542,21.68,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,544,21.76,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,546,21.84,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,548,21.92,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,550,22.0,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,552,22.08,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,554,22.16,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,556,22.24,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,558,22.32,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,560,22.4,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,562,22.48,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,564,22.56,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,566,22.64,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,568,22.72,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,570,22.8,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,572,22.88,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,574,22.96,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,576,23.04,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,578,23.12,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,580,23.2,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,582,23.28,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,584,23.36,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,586,23.44,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,588,23.52,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,590,23.6,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,592,23.68,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,594,23.76,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,596,23.84,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,598,23.92,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3,600,24.0,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,376,15.04,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4368.2,overlap
+600ml_L0_lane3_bay,378,15.12,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4100.3,overlap
+600ml_L0_lane3_bay,380,15.2,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4105.5,overlap
+600ml_L0_lane3_bay,382,15.28,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4250.8,overlap
+600ml_L0_lane3_bay,384,15.36,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,4017.4,overlap
+600ml_L0_lane3_bay,386,15.44,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,3534.4,overlap
+600ml_L0_lane3_bay,388,15.52,retreat: sweep sideways along the row,carried_bottle,L0_lane2_X,0.0,3660.6,overlap
+600ml_L0_lane3_bay,390,15.6,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,3828.6,overlap
+600ml_L0_lane3_bay,392,15.68,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4093.0,overlap
+600ml_L0_lane3_bay,394,15.76,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4374.7,overlap
+600ml_L0_lane3_bay,396,15.84,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,398,15.92,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,400,16.0,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,402,16.08,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,404,16.16,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,406,16.24,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,408,16.32,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,410,16.4,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,412,16.48,narrow the gap for the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,414,16.56,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,416,16.64,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,418,16.72,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,420,16.8,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,422,16.88,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,424,16.96,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,426,17.04,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,428,17.12,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,430,17.2,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,432,17.28,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,434,17.36,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,436,17.44,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,438,17.52,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,440,17.6,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,442,17.68,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,444,17.76,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,446,17.84,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,448,17.92,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,450,18.0,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,452,18.08,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,454,18.16,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,456,18.24,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,458,18.32,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,460,18.4,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+600ml_L0_lane3_bay,462,18.48,return to the tote,carried_bottle,L0_lane2_X,0.0,4483.0,overlap
+1000ml_L1_lane3,354,14.16,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.76,0.0,gap<=1mm
+1000ml_L1_lane3,356,14.24,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,358,14.32,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.81,0.0,gap<=1mm
+1000ml_L1_lane3,360,14.4,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.78,0.0,gap<=1mm
+1000ml_L1_lane3,362,14.48,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.8,0.0,gap<=1mm
+1000ml_L1_lane3,364,14.56,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.86,0.0,gap<=1mm
+1000ml_L1_lane3,366,14.64,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,368,14.72,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,370,14.8,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,372,14.88,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,374,14.96,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,376,15.04,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,376,15.04,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4590.5,overlap
+1000ml_L1_lane3,378,15.12,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,378,15.12,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4472.0,overlap
+1000ml_L1_lane3,380,15.2,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,380,15.2,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4397.3,overlap
+1000ml_L1_lane3,382,15.28,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,382,15.28,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4479.8,overlap
+1000ml_L1_lane3,384,15.36,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,384,15.36,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4737.8,overlap
+1000ml_L1_lane3,386,15.44,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,386,15.44,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,3627.5,overlap
+1000ml_L1_lane3,388,15.52,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,388,15.52,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,3720.4,overlap
+1000ml_L1_lane3,390,15.6,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,390,15.6,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,3909.4,overlap
+1000ml_L1_lane3,392,15.68,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,392,15.68,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4183.8,overlap
+1000ml_L1_lane3,394,15.76,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,394,15.76,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4519.7,overlap
+1000ml_L1_lane3,396,15.84,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,396,15.84,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,398,15.92,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,398,15.92,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,400,16.0,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,400,16.0,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,402,16.08,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,402,16.08,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,404,16.16,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,404,16.16,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,406,16.24,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,406,16.24,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,408,16.32,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,408,16.32,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,410,16.4,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,410,16.4,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,412,16.48,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,412,16.48,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,414,16.56,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,414,16.56,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,416,16.64,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,416,16.64,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,418,16.72,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,418,16.72,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,420,16.8,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,420,16.8,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,422,16.88,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,422,16.88,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,424,16.96,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,424,16.96,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,426,17.04,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,426,17.04,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,428,17.12,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,428,17.12,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,430,17.2,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,430,17.2,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,432,17.28,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,432,17.28,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,434,17.36,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,434,17.36,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,436,17.44,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,436,17.44,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,438,17.52,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,438,17.52,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,440,17.6,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,440,17.6,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,442,17.68,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,442,17.68,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,444,17.76,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,444,17.76,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,446,17.84,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,446,17.84,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,448,17.92,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,448,17.92,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,450,18.0,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,450,18.0,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,452,18.08,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,452,18.08,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,454,18.16,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,454,18.16,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,456,18.24,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,456,18.24,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,458,18.32,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,458,18.32,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,460,18.4,retreat: sweep sideways along the row,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,460,18.4,retreat: sweep sideways along the row,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,462,18.48,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,462,18.48,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,464,18.56,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,464,18.56,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,466,18.64,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,466,18.64,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,468,18.72,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.9,0.0,gap<=1mm
+1000ml_L1_lane3,468,18.72,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,470,18.8,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.88,0.0,gap<=1mm
+1000ml_L1_lane3,470,18.8,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,472,18.88,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.9,0.0,gap<=1mm
+1000ml_L1_lane3,472,18.88,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,474,18.96,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.86,0.0,gap<=1mm
+1000ml_L1_lane3,474,18.96,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,476,19.04,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.82,0.0,gap<=1mm
+1000ml_L1_lane3,476,19.04,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,478,19.12,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,478,19.12,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,480,19.2,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,480,19.2,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,482,19.28,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,482,19.28,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,484,19.36,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,484,19.36,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,486,19.44,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,486,19.44,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,488,19.52,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,488,19.52,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,490,19.6,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,490,19.6,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,492,19.68,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,492,19.68,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,494,19.76,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,494,19.76,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,496,19.84,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,496,19.84,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,498,19.92,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,498,19.92,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,500,20.0,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,500,20.0,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,502,20.08,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,502,20.08,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,504,20.16,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,504,20.16,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,506,20.24,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,506,20.24,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,508,20.32,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,508,20.32,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,510,20.4,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,510,20.4,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,512,20.48,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,512,20.48,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,514,20.56,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,514,20.56,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,516,20.64,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,516,20.64,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,518,20.72,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,518,20.72,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,520,20.8,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,520,20.8,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,522,20.88,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,522,20.88,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,524,20.96,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,524,20.96,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,526,21.04,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,526,21.04,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,528,21.12,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,528,21.12,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,530,21.2,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,530,21.2,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,532,21.28,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,532,21.28,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,534,21.36,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,534,21.36,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,536,21.44,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,536,21.44,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,538,21.52,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,538,21.52,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,540,21.6,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,540,21.6,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,542,21.68,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,542,21.68,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,544,21.76,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,544,21.76,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,546,21.84,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,546,21.84,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,548,21.92,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,548,21.92,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,550,22.0,narrow the gap for the tote,gripper_pad+,nbr_ln1,0.84,0.0,gap<=1mm
+1000ml_L1_lane3,550,22.0,narrow the gap for the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,552,22.08,return to the tote,gripper_pad+,nbr_ln1,0.83,0.0,gap<=1mm
+1000ml_L1_lane3,552,22.08,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,554,22.16,return to the tote,gripper_pad+,nbr_ln1,0.78,0.0,gap<=1mm
+1000ml_L1_lane3,554,22.16,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,556,22.24,return to the tote,gripper_pad+,nbr_ln1,0.81,0.0,gap<=1mm
+1000ml_L1_lane3,556,22.24,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,558,22.32,return to the tote,gripper_pad+,nbr_ln1,0.93,0.0,gap<=1mm
+1000ml_L1_lane3,558,22.32,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,560,22.4,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,562,22.48,return to the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,562,22.48,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,564,22.56,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,564,22.56,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,566,22.64,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,566,22.64,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,568,22.72,return to the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,568,22.72,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,570,22.8,return to the tote,gripper_pad+,nbr_ln1,0.89,0.0,gap<=1mm
+1000ml_L1_lane3,570,22.8,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,572,22.88,return to the tote,gripper_pad+,nbr_ln1,0.89,0.0,gap<=1mm
+1000ml_L1_lane3,572,22.88,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,574,22.96,return to the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,574,22.96,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,576,23.04,return to the tote,gripper_pad+,nbr_ln1,0.93,0.0,gap<=1mm
+1000ml_L1_lane3,576,23.04,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,578,23.12,return to the tote,gripper_pad+,nbr_ln1,0.85,0.0,gap<=1mm
+1000ml_L1_lane3,578,23.12,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,580,23.2,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,580,23.2,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,582,23.28,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,582,23.28,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,584,23.36,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,584,23.36,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,586,23.44,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,586,23.44,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,588,23.52,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,588,23.52,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,590,23.6,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,590,23.6,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,592,23.68,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,592,23.68,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,594,23.76,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,594,23.76,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,596,23.84,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,596,23.84,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,598,23.92,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,598,23.92,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,600,24.0,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,600,24.0,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,602,24.08,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,602,24.08,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,604,24.16,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,604,24.16,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,606,24.24,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,606,24.24,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,608,24.32,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,608,24.32,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,610,24.4,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,610,24.4,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,612,24.48,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,612,24.48,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,614,24.56,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,614,24.56,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,616,24.64,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,616,24.64,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,618,24.72,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,618,24.72,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,620,24.8,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,620,24.8,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,622,24.88,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,622,24.88,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,624,24.96,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,624,24.96,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,626,25.04,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,626,25.04,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,628,25.12,return to the tote,gripper_pad+,nbr_ln1,0.92,0.0,gap<=1mm
+1000ml_L1_lane3,628,25.12,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,630,25.2,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,630,25.2,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,632,25.28,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,632,25.28,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,634,25.36,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,634,25.36,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,636,25.44,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,636,25.44,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,638,25.52,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,638,25.52,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,640,25.6,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,640,25.6,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,642,25.68,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,642,25.68,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,644,25.76,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,644,25.76,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,646,25.84,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,646,25.84,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,648,25.92,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,648,25.92,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,650,26.0,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,650,26.0,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,652,26.08,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,652,26.08,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,654,26.16,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,654,26.16,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,656,26.24,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,656,26.24,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,658,26.32,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,658,26.32,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,660,26.4,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,660,26.4,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,662,26.48,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,662,26.48,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,664,26.56,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,664,26.56,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,666,26.64,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,666,26.64,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+1000ml_L1_lane3,668,26.72,return to the tote,gripper_pad+,nbr_ln1,0.91,0.0,gap<=1mm
+1000ml_L1_lane3,668,26.72,return to the tote,carried_bottle,L1_lane2_X,0.0,4782.9,overlap
+600ml_L1_wide_lane2_corridor,416,16.64,return to the tote,carried_bottle,W_L1_lane1_X,0.0,424.2,overlap
+600ml_L1_wide_lane2_corridor,418,16.72,return to the tote,carried_bottle,W_L1_lane1_X,0.0,27378.8,overlap
+600ml_L1_wide_lane2_corridor,420,16.8,return to the tote,carried_bottle,W_L1_lane1_X,0.0,29519.6,overlap
+600ml_L1_wide_lane2_corridor,422,16.88,return to the tote,carried_bottle,W_L1_lane1_X,0.0,29306.2,overlap
+600ml_L1_wide_lane2_corridor,424,16.96,return to the tote,carried_bottle,W_L1_lane1_X,0.0,29846.9,overlap
+600ml_L1_wide_lane2_corridor,426,17.04,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane2_corridor,428,17.12,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane2_corridor,430,17.2,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane2_corridor,432,17.28,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane2_corridor,434,17.36,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane2_corridor,436,17.44,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane2_corridor,438,17.52,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane2_corridor,440,17.6,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane2_corridor,442,17.68,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane2_corridor,444,17.76,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane2_corridor,446,17.84,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane2_corridor,448,17.92,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane2_corridor,450,18.0,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane2_corridor,452,18.08,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane2_corridor,454,18.16,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane2_corridor,456,18.24,return to the tote,carried_bottle,W_L1_lane1_X,0.0,30157.9,overlap
+600ml_L1_wide_lane3_corridor,482,19.28,retreat: sweep sideways along the row,carried_bottle,W_L1_lane2_X,0.0,15168.8,overlap
+600ml_L1_wide_lane3_corridor,484,19.36,retreat: sweep sideways along the row,carried_bottle,W_L1_lane2_X,0.0,29467.9,overlap
+600ml_L1_wide_lane3_corridor,486,19.44,retreat: sweep sideways along the row,carried_bottle,W_L1_lane2_X,0.0,29337.7,overlap
+600ml_L1_wide_lane3_corridor,488,19.52,retreat: sweep sideways along the row,carried_bottle,W_L1_lane2_X,0.0,29394.8,overlap
+600ml_L1_wide_lane3_corridor,490,19.6,retreat: sweep sideways along the row,carried_bottle,W_L1_lane2_X,0.0,29755.4,overlap
+600ml_L1_wide_lane3_corridor,492,19.68,retreat: sweep sideways along the row,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,494,19.76,narrow the gap for the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,496,19.84,narrow the gap for the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,498,19.92,narrow the gap for the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,500,20.0,narrow the gap for the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,502,20.08,narrow the gap for the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,504,20.16,narrow the gap for the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,506,20.24,narrow the gap for the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,508,20.32,narrow the gap for the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,510,20.4,narrow the gap for the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,512,20.48,narrow the gap for the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,514,20.56,narrow the gap for the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,516,20.64,narrow the gap for the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,518,20.72,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,520,20.8,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,522,20.88,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,524,20.96,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,526,21.04,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,528,21.12,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,530,21.2,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,532,21.28,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,534,21.36,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,536,21.44,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,538,21.52,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,540,21.6,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,542,21.68,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,544,21.76,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,546,21.84,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,548,21.92,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,550,22.0,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,552,22.08,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,554,22.16,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,556,22.24,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,558,22.32,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,560,22.4,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,562,22.48,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,564,22.56,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
+600ml_L1_wide_lane3_corridor,566,22.64,return to the tote,carried_bottle,W_L1_lane2_X,0.0,30161.4,overlap
