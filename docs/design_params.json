@@ -1337,7 +1337,6 @@
    },
    "SF_at_1.0Nm_35.4N": 2.08,
    "SF_at_1.177Nm_41.7N": 1.77,
-   "SF_stall_100N_single_event": 1.29,
    "sustained_hold_limit_Nm": 1.0,
    "clamp_Nm": 0.7,
    "lip_hold_SF_inplane_3.0mm_lip": [
@@ -1375,7 +1374,22 @@
     "droop_limited_PTFE": 1.37,
     "droop_limited_printed_gaps": 1.01
    },
-   "note": "peak across-layer stress at the sharp inner corner of the tab window rises with mesh refinement; use the finest-mesh value"
+   "note": "peak across-layer stress at the sharp inner corner of the tab window rises with mesh refinement; use the finest-mesh value",
+   "stall_100N_per_jaw": {
+    "peak_across_layer_MPa": {
+     "jaw_B": 13.58,
+     "jaw_A": 11.7
+    },
+    "SF_vs_repeated_allowable_10MPa": {
+     "jaw_B": 0.74,
+     "jaw_A": 0.85
+    },
+    "SF_vs_single_event_allowable_17.5MPa": {
+     "jaw_B": 1.29,
+     "jaw_A": 1.5
+    },
+    "rule": "one-time event at most; never repeated"
+   }
   },
   "sim_headlines": {
    "source": "s2sim_README.md v3; same 60 draws recur in all 6 cells of a row, so intervals are bootstrapped over draws",
