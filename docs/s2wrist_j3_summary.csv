@@ -1,0 +1,67 @@
+config,check,element,SF_500mL,SF_600mL,SF_1L,SF_1p5L,SF_2L,max_bottle_kg_at_SF2
+AS_BUILT,A2,flange 46x46x3 PETG plate between the 36x36 screws and the D14 collar,1.89,1.53,0.93,0.63,0.48,< 0.52
+AS_BUILT,A3,flange cruciform key tabs 3x10x2.5 (torque 1.0 N*m servo limit),0.96,0.96,0.96,0.96,0.96,< 0.52
+AS_BUILT,A3b,horn plate cruciform key tabs 3x10x2.5 (torque 1.0 N*m servo limit),0.96,0.96,0.96,0.96,0.96,< 0.52
+AS_BUILT,A3c,key flank bearing on the pin pocket walls (torque 1.0 N*m),3.98,3.98,3.98,3.98,3.98,>= 2.13
+AS_BUILT,A4a,"printed pin D11.95/bore 3.4, ring section",1.31,1.05,0.63,0.42,0.32,< 0.52
+AS_BUILT,A4b,"printed pin, key-pocket zone (cruciform 3.3x10.3x2.6): lobed net section",0.45,0.36,0.22,0.14,0.11,< 0.52
+AS_BUILT,A4c,printed pin torsion at the servo limit,6.73,6.73,6.73,6.73,6.73,>= 2.13
+AS_BUILT,A5,"central tie M3x20 (as built, 2.0 mm engaged) in the printed plate post pilot D2.6",0.28,0.22,0.13,0.09,0.07,< 0.52
+AS_BUILT,A5b,central tie M3x25 (7.0 mm engaged) in the printed plate post pilot D2.6,0.96,0.77,0.47,0.31,0.24,< 0.52
+AS_BUILT,A6,horn plate D24x3.5 PETG under the tie force,1.09,0.87,0.53,0.35,0.27,< 0.52
+AS_BUILT,C1,hand screws 4xM3x12 on 36x36 -> carrier / bar heat-set inserts,9.18,7.41,4.53,3.05,2.31,>= 2.13
+AS_BUILT,C10a,"L2 floor at J3 (7 mm, 3.8 mm under the D6 counterbore): housing-screw head pull-through",15.55,12.55,7.68,5.18,3.92,>= 2.13
+AS_BUILT,C10b,"L2 floor strip between servo-pocket wall and side wall (8.35 mm span, 3.8 mm under the head)",34.68,28.0,17.12,11.54,8.75,>= 2.13
+AS_BUILT,C8,"2 x 6701-2RS (lower bearing, centre spacing 14 mm), C0r 530 N",5.6,4.49,2.72,1.82,1.38,1.46
+AS_BUILT,C8s,"2 x 6701-2RS STAINLESS (W 61701-2RS1), C0r 260 N",2.75,2.2,1.33,0.89,0.68,0.71
+AS_BUILT,C9a,housing 48x48 flange: 4 x M3 into heat-set inserts (38x38),9.63,7.77,4.75,3.2,2.43,>= 2.13
+AS_BUILT,C9b,housing D26 cylinder wall (OD26/ID18.1) between lower bearing and the 48x48 flange,17.22,13.82,8.36,5.61,4.24,>= 2.13
+AS_BUILT,C9c,housing seat for the lower 6701 (D18.1 x 4 mm),11.95,9.59,5.8,3.89,2.94,>= 2.13
+KIT_CNC_6061,C1,hand screws 4xM3x12 on 36x36 -> carrier / bar heat-set inserts,9.18,7.41,4.53,3.05,2.31,>= 2.13
+KIT_CNC_6061,C10a,"L2 floor at J3 (7 mm, 3.8 mm under the D6 counterbore): housing-screw head pull-through",15.55,12.55,7.68,5.18,3.92,>= 2.13
+KIT_CNC_6061,C10b,"L2 floor strip between servo-pocket wall and side wall (8.35 mm span, 3.8 mm under the head)",34.68,28.0,17.12,11.54,8.75,>= 2.13
+KIT_CNC_6061,C8,"2 x 6701-2RS (lower bearing, centre spacing 14 mm), C0r 530 N",5.6,4.49,2.72,1.82,1.38,1.46
+KIT_CNC_6061,C8s,"2 x 6701-2RS STAINLESS (W 61701-2RS1), C0r 260 N",2.75,2.2,1.33,0.89,0.68,0.71
+KIT_CNC_6061,C9a,housing 48x48 flange: 4 x M3 into heat-set inserts (38x38),9.63,7.77,4.75,3.2,2.43,>= 2.13
+KIT_CNC_6061,C9b,housing D26 cylinder wall (OD26/ID18.1) between lower bearing and the 48x48 flange,17.22,13.82,8.36,5.61,4.24,>= 2.13
+KIT_CNC_6061,C9c,housing seat for the lower 6701 (D18.1 x 4 mm),11.95,9.59,5.8,3.89,2.94,>= 2.13
+KIT_CNC_6061,K2,6061-T6 shaft-flange 46x46x3 plate between the 36x36 screws and the D14 hub,5.68,4.58,2.8,1.89,1.43,1.51
+KIT_CNC_6061,K3,6061-T6 pin D11.95/bore 3.4 above the hub shoulder (z 67.1),3.95,3.16,1.9,1.27,0.96,1.02
+KIT_CNC_6061,K4,2 integral pegs D3x2 (r 4 mm) on the pin top: torque 1.0 N*m,4.9,4.9,4.9,4.9,4.9,>= 2.13
+KIT_CNC_6061,K5,peg holes D3.1 in the 3.5 mm Al horn plate,12.6,12.6,12.6,12.6,12.6,>= 2.13
+KIT_CNC_6061,K6,M3x25 tie into the M3 thread of the Al horn plate (2.0 mm engaged),3.73,3.69,3.55,3.4,3.26,>= 2.13
+KIT_CNC_6061,K7,Al horn plate 3.5 mm under the tie (supported on the pin-top annulus),3.93,3.88,3.74,3.58,3.43,>= 2.13
+KIT_CNC_7075,C1,hand screws 4xM3x12 on 36x36 -> carrier / bar heat-set inserts,9.18,7.41,4.53,3.05,2.31,>= 2.13
+KIT_CNC_7075,C10a,"L2 floor at J3 (7 mm, 3.8 mm under the D6 counterbore): housing-screw head pull-through",15.55,12.55,7.68,5.18,3.92,>= 2.13
+KIT_CNC_7075,C10b,"L2 floor strip between servo-pocket wall and side wall (8.35 mm span, 3.8 mm under the head)",34.68,28.0,17.12,11.54,8.75,>= 2.13
+KIT_CNC_7075,C8,"2 x 6701-2RS (lower bearing, centre spacing 14 mm), C0r 530 N",5.6,4.49,2.72,1.82,1.38,1.46
+KIT_CNC_7075,C8s,"2 x 6701-2RS STAINLESS (W 61701-2RS1), C0r 260 N",2.75,2.2,1.33,0.89,0.68,0.71
+KIT_CNC_7075,C9a,housing 48x48 flange: 4 x M3 into heat-set inserts (38x38),9.63,7.77,4.75,3.2,2.43,>= 2.13
+KIT_CNC_7075,C9b,housing D26 cylinder wall (OD26/ID18.1) between lower bearing and the 48x48 flange,17.22,13.82,8.36,5.61,4.24,>= 2.13
+KIT_CNC_7075,C9c,housing seat for the lower 6701 (D18.1 x 4 mm),11.95,9.59,5.8,3.89,2.94,>= 2.13
+KIT_CNC_7075,K2,7075-T6 shaft-flange 46x46x3 plate between the 36x36 screws and the D14 hub,9.46,7.63,4.66,3.14,2.38,>= 2.13
+KIT_CNC_7075,K3,7075-T6 pin D11.95/bore 3.4 above the hub shoulder (z 67.1),6.59,5.26,3.16,2.11,1.6,1.7
+KIT_CNC_7075,K4,2 integral pegs D3x2 (r 4 mm) on the pin top: torque 1.0 N*m,8.16,8.16,8.16,8.16,8.16,>= 2.13
+KIT_CNC_7075,K5,peg holes D3.1 in the 3.5 mm Al horn plate,21.0,21.0,21.0,21.0,21.0,>= 2.13
+KIT_CNC_7075,K6,M3x25 tie into the M3 thread of the Al horn plate (2.0 mm engaged),6.22,6.15,5.92,5.67,5.43,>= 2.13
+KIT_CNC_7075,K7,Al horn plate 3.5 mm under the tie (supported on the pin-top annulus),6.55,6.47,6.24,5.97,5.72,>= 2.13
+KIT_NC,C1,hand screws 4xM3x12 on 36x36 -> carrier / bar heat-set inserts,9.18,7.41,4.53,3.05,2.31,>= 2.13
+KIT_NC,C10a,"L2 floor at J3 (7 mm, 3.8 mm under the D6 counterbore): housing-screw head pull-through",15.55,12.55,7.68,5.18,3.92,>= 2.13
+KIT_NC,C10b,"L2 floor strip between servo-pocket wall and side wall (8.35 mm span, 3.8 mm under the head)",34.68,28.0,17.12,11.54,8.75,>= 2.13
+KIT_NC,C8,"2 x 6701-2RS (lower bearing, centre spacing 14 mm), C0r 530 N",5.6,4.49,2.72,1.82,1.38,1.46
+KIT_NC,C8s,"2 x 6701-2RS STAINLESS (W 61701-2RS1), C0r 260 N",2.75,2.2,1.33,0.89,0.68,0.71
+KIT_NC,C9a,housing 48x48 flange: 4 x M3 into heat-set inserts (38x38),9.63,7.77,4.75,3.2,2.43,>= 2.13
+KIT_NC,C9b,housing D26 cylinder wall (OD26/ID18.1) between lower bearing and the 48x48 flange,17.22,13.82,8.36,5.61,4.24,>= 2.13
+KIT_NC,C9c,housing seat for the lower 6701 (D18.1 x 4 mm),11.95,9.59,5.8,3.89,2.94,>= 2.13
+KIT_NC,N2,Al 3 mm flange plate (6061-T6 / 5052-H32 or better) between the 36x36 screws and the D12 rod face,5.22,4.21,2.57,1.73,1.31,1.38
+KIT_NC,N3,D12 steel rod with 3 tapped M2.5 holes on r 3.5 (net section) at the lower bearing,8.2,6.55,3.94,2.64,1.99,2.12
+KIT_NC,N4a,flange-rod screw M2.5 8.8 (worst of 3): tension M/9.5 mm + W/3,8.7,6.96,4.2,2.81,2.12,>= 2.13
+KIT_NC,N4b,thread strip of M2.5 in the mild-steel rod (4 mm engaged),7.09,5.68,3.42,2.29,1.73,1.84
+KIT_NC,N4c,"csk head pull-through in the 3 mm Al plate (D5.0 cone, 1.5 mm rim)",6.05,4.84,2.92,1.95,1.47,1.56
+KIT_NC,N4d,rod end face toe contact on the Al plate,5.45,4.35,2.61,1.74,1.31,1.4
+KIT_NC,N5a,flange-rod screws in shear if the clamp friction slips: torque 1.0 N*m,7.93,7.93,7.93,7.93,7.93,>= 2.13
+KIT_NC,N5b,Al plate holes D3.0 (with 90 deg countersinks) for the M2.5 screws: torque 1.0 N*m,11.81,11.81,11.81,11.81,11.81,>= 2.13
+KIT_NC,N6a,2 x D3 steel dowels (ISO 2338 3x6) pressed in the rod top: torque 1.0 N*m,4.92,4.92,4.92,4.92,4.92,>= 2.13
+KIT_NC,N6b,"dowel holes D3.2 (0.2 mm diametral clearance, retaining compound) in the 3 mm Al horn plate",10.8,10.8,10.8,10.8,10.8,>= 2.13
+KIT_NC,N6c,dowel holes D3 x 4 deep in the steel rod top,14.4,14.4,14.4,14.4,14.4,>= 2.13
+KIT_NC,N7,top face bond rod / Al plate (retaining compound or epoxy): holds the weight,16.53,14.49,10.37,7.63,6.05,>= 2.13

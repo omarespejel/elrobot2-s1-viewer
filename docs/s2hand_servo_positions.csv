@@ -1,0 +1,6 @@
+position,jaw_displacement_from_hard_stop_mm,rack_travel_s_mm,pinion_angle_deg,ticks_from_mech_zero,ticks_zero_at_2048,lip_gap_mm,cap_wall_gap_mm,groove_gap_mm,note
+real mechanical closed hard stop,0.0,-2.25,-10.74,-122.2,1925.8,26.5,29.0,34.0,s = -2.25 (0.25 mm beyond the S1 CSV -2.0; boolean-verified). Never command beyond.
+closed command target without bottle,0.1,-2.15,-10.27,-116.8,1931.2,26.7,29.2,34.2,"0.1 mm short of the hard stop, torque limit TQ_CLAMP"
+OPEN = approach = drop-over (recommended),10.0,7.75,37.0,421.0,2469.0,46.5,49.0,54.0,lip gap 46.5 / cap-wall gap 49.0 / groove gap 54.0 mm (>= 46 at both cap and lip level); outer width 66 mm
+wide open (diagnostic),20.0,17.75,84.75,964.3,3012.3,66.5,69.0,74.0,inside the 43.5 mm travel; outer width 86 mm
+real mechanical open hard stop,45.75,43.5,207.7,2363.1,4411.1,118.0,120.5,125.5,s = +43.5 (0.25 mm beyond the S1 CSV 43.25; boolean-verified)

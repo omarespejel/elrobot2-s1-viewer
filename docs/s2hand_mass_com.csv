@@ -1,0 +1,9 @@
+jaw_type,pose,camera_plate,delta_mm,mass_g,com_x_mm,com_y_mm,com_zeta_mm,com_zprime_mm,moving_mass_g
+C,hard stop,False,0.0,398.4,2.72,10.78,12.86,25.16,99.1
+C,hard stop,True,0.0,410.1,4.09,10.47,13.65,25.95,99.1
+C,open (lip gap 46.5),False,10.0,398.4,2.63,10.78,12.86,25.16,99.1
+C,open (lip gap 46.5),True,10.0,410.1,4.01,10.47,13.65,25.95,99.1
+F,hard stop,False,0.0,396.9,2.73,10.34,12.91,25.21,97.6
+F,hard stop,True,0.0,408.6,4.1,10.05,13.7,26.0,97.6
+F,open (lip gap 46.5),False,10.0,396.9,2.64,10.34,12.91,25.21,97.6
+F,open (lip gap 46.5),True,10.0,408.6,4.02,10.05,13.7,26.0,97.6

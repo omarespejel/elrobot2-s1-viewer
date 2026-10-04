@@ -1,0 +1,447 @@
+jaw_type,pose,delta_mm,part_a,part_b,overlap_mm3
+C,closed hard stop,0.0,base_v2,carrier,-0.0
+C,closed hard stop,0.0,base_v2,top_plate,0.0
+C,closed hard stop,0.0,base_v2,guide_rail,0.0
+C,closed hard stop,0.0,base_v2,servo_STS3215_standin,0.0
+C,closed hard stop,0.0,base_v2,bearing_624_standin,0.0
+C,closed hard stop,0.0,base_v2,pinion,0.0
+C,closed hard stop,0.0,base_v2,rack_A,0.0
+C,closed hard stop,0.0,base_v2,rack_B,0.0
+C,closed hard stop,0.0,base_v2,jaw_A_C,0.0
+C,closed hard stop,0.0,base_v2,jaw_B_C,0.0
+C,closed hard stop,0.0,carrier,top_plate,0.0
+C,closed hard stop,0.0,carrier,guide_rail,0.0
+C,closed hard stop,0.0,carrier,servo_STS3215_standin,0.0
+C,closed hard stop,0.0,carrier,bearing_624_standin,0.0
+C,closed hard stop,0.0,carrier,pinion,0.0
+C,closed hard stop,0.0,carrier,rack_A,0.0
+C,closed hard stop,0.0,carrier,rack_B,0.0
+C,closed hard stop,0.0,carrier,jaw_A_C,0.0
+C,closed hard stop,0.0,carrier,jaw_B_C,0.0
+C,closed hard stop,0.0,top_plate,guide_rail,0.0
+C,closed hard stop,0.0,top_plate,servo_STS3215_standin,0.0
+C,closed hard stop,0.0,top_plate,bearing_624_standin,0.0
+C,closed hard stop,0.0,top_plate,pinion,0.0
+C,closed hard stop,0.0,top_plate,rack_A,0.0
+C,closed hard stop,0.0,top_plate,rack_B,0.0
+C,closed hard stop,0.0,top_plate,jaw_A_C,0.0
+C,closed hard stop,0.0,top_plate,jaw_B_C,0.0
+C,closed hard stop,0.0,guide_rail,servo_STS3215_standin,0.0
+C,closed hard stop,0.0,guide_rail,bearing_624_standin,0.0
+C,closed hard stop,0.0,guide_rail,pinion,0.0
+C,closed hard stop,0.0,guide_rail,rack_A,0.0
+C,closed hard stop,0.0,guide_rail,rack_B,0.0
+C,closed hard stop,0.0,guide_rail,jaw_A_C,0.0
+C,closed hard stop,0.0,guide_rail,jaw_B_C,0.0
+C,closed hard stop,0.0,servo_STS3215_standin,bearing_624_standin,0.0
+C,closed hard stop,0.0,servo_STS3215_standin,pinion,-0.0
+C,closed hard stop,0.0,servo_STS3215_standin,rack_A,0.0
+C,closed hard stop,0.0,servo_STS3215_standin,rack_B,0.0
+C,closed hard stop,0.0,servo_STS3215_standin,jaw_A_C,0.0
+C,closed hard stop,0.0,servo_STS3215_standin,jaw_B_C,0.0
+C,closed hard stop,0.0,bearing_624_standin,pinion,0.0
+C,closed hard stop,0.0,bearing_624_standin,rack_A,0.0
+C,closed hard stop,0.0,bearing_624_standin,rack_B,0.0
+C,closed hard stop,0.0,bearing_624_standin,jaw_A_C,0.0
+C,closed hard stop,0.0,bearing_624_standin,jaw_B_C,0.0
+C,closed hard stop,0.0,pinion,rack_A,0.0
+C,closed hard stop,0.0,pinion,rack_B,0.0
+C,closed hard stop,0.0,pinion,jaw_A_C,0.0
+C,closed hard stop,0.0,pinion,jaw_B_C,0.0
+C,closed hard stop,0.0,rack_A,rack_B,0.0
+C,closed hard stop,0.0,rack_A,jaw_A_C,0.0
+C,closed hard stop,0.0,rack_A,jaw_B_C,0.0
+C,closed hard stop,0.0,rack_B,jaw_A_C,0.0
+C,closed hard stop,0.0,rack_B,jaw_B_C,0.0
+C,closed hard stop,0.0,jaw_A_C,jaw_B_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,base_v2,carrier,-0.0
+C,"open (recommended, delta 10 mm)",10.0,base_v2,top_plate,0.0
+C,"open (recommended, delta 10 mm)",10.0,base_v2,guide_rail,0.0
+C,"open (recommended, delta 10 mm)",10.0,base_v2,servo_STS3215_standin,0.0
+C,"open (recommended, delta 10 mm)",10.0,base_v2,bearing_624_standin,0.0
+C,"open (recommended, delta 10 mm)",10.0,base_v2,pinion,0.0
+C,"open (recommended, delta 10 mm)",10.0,base_v2,rack_A,0.0
+C,"open (recommended, delta 10 mm)",10.0,base_v2,rack_B,0.0
+C,"open (recommended, delta 10 mm)",10.0,base_v2,jaw_A_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,base_v2,jaw_B_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,carrier,top_plate,0.0
+C,"open (recommended, delta 10 mm)",10.0,carrier,guide_rail,0.0
+C,"open (recommended, delta 10 mm)",10.0,carrier,servo_STS3215_standin,0.0
+C,"open (recommended, delta 10 mm)",10.0,carrier,bearing_624_standin,0.0
+C,"open (recommended, delta 10 mm)",10.0,carrier,pinion,0.0
+C,"open (recommended, delta 10 mm)",10.0,carrier,rack_A,0.0
+C,"open (recommended, delta 10 mm)",10.0,carrier,rack_B,0.0
+C,"open (recommended, delta 10 mm)",10.0,carrier,jaw_A_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,carrier,jaw_B_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,top_plate,guide_rail,0.0
+C,"open (recommended, delta 10 mm)",10.0,top_plate,servo_STS3215_standin,0.0
+C,"open (recommended, delta 10 mm)",10.0,top_plate,bearing_624_standin,0.0
+C,"open (recommended, delta 10 mm)",10.0,top_plate,pinion,0.0
+C,"open (recommended, delta 10 mm)",10.0,top_plate,rack_A,0.0
+C,"open (recommended, delta 10 mm)",10.0,top_plate,rack_B,0.0
+C,"open (recommended, delta 10 mm)",10.0,top_plate,jaw_A_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,top_plate,jaw_B_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,guide_rail,servo_STS3215_standin,0.0
+C,"open (recommended, delta 10 mm)",10.0,guide_rail,bearing_624_standin,0.0
+C,"open (recommended, delta 10 mm)",10.0,guide_rail,pinion,0.0
+C,"open (recommended, delta 10 mm)",10.0,guide_rail,rack_A,0.0
+C,"open (recommended, delta 10 mm)",10.0,guide_rail,rack_B,0.0
+C,"open (recommended, delta 10 mm)",10.0,guide_rail,jaw_A_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,guide_rail,jaw_B_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,servo_STS3215_standin,bearing_624_standin,0.0
+C,"open (recommended, delta 10 mm)",10.0,servo_STS3215_standin,pinion,-0.0
+C,"open (recommended, delta 10 mm)",10.0,servo_STS3215_standin,rack_A,0.0
+C,"open (recommended, delta 10 mm)",10.0,servo_STS3215_standin,rack_B,0.0
+C,"open (recommended, delta 10 mm)",10.0,servo_STS3215_standin,jaw_A_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,servo_STS3215_standin,jaw_B_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,bearing_624_standin,pinion,0.0
+C,"open (recommended, delta 10 mm)",10.0,bearing_624_standin,rack_A,0.0
+C,"open (recommended, delta 10 mm)",10.0,bearing_624_standin,rack_B,0.0
+C,"open (recommended, delta 10 mm)",10.0,bearing_624_standin,jaw_A_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,bearing_624_standin,jaw_B_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,pinion,rack_A,0.0
+C,"open (recommended, delta 10 mm)",10.0,pinion,rack_B,0.0
+C,"open (recommended, delta 10 mm)",10.0,pinion,jaw_A_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,pinion,jaw_B_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,rack_A,rack_B,0.0
+C,"open (recommended, delta 10 mm)",10.0,rack_A,jaw_A_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,rack_A,jaw_B_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,rack_B,jaw_A_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,rack_B,jaw_B_C,0.0
+C,"open (recommended, delta 10 mm)",10.0,jaw_A_C,jaw_B_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,base_v2,carrier,-0.0
+C,wide open diagnostic (delta 20 mm),20.0,base_v2,top_plate,0.0
+C,wide open diagnostic (delta 20 mm),20.0,base_v2,guide_rail,0.0
+C,wide open diagnostic (delta 20 mm),20.0,base_v2,servo_STS3215_standin,0.0
+C,wide open diagnostic (delta 20 mm),20.0,base_v2,bearing_624_standin,0.0
+C,wide open diagnostic (delta 20 mm),20.0,base_v2,pinion,0.0
+C,wide open diagnostic (delta 20 mm),20.0,base_v2,rack_A,0.0
+C,wide open diagnostic (delta 20 mm),20.0,base_v2,rack_B,0.0
+C,wide open diagnostic (delta 20 mm),20.0,base_v2,jaw_A_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,base_v2,jaw_B_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,carrier,top_plate,0.0
+C,wide open diagnostic (delta 20 mm),20.0,carrier,guide_rail,0.0
+C,wide open diagnostic (delta 20 mm),20.0,carrier,servo_STS3215_standin,0.0
+C,wide open diagnostic (delta 20 mm),20.0,carrier,bearing_624_standin,0.0
+C,wide open diagnostic (delta 20 mm),20.0,carrier,pinion,0.0
+C,wide open diagnostic (delta 20 mm),20.0,carrier,rack_A,0.0
+C,wide open diagnostic (delta 20 mm),20.0,carrier,rack_B,0.0
+C,wide open diagnostic (delta 20 mm),20.0,carrier,jaw_A_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,carrier,jaw_B_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,top_plate,guide_rail,0.0
+C,wide open diagnostic (delta 20 mm),20.0,top_plate,servo_STS3215_standin,0.0
+C,wide open diagnostic (delta 20 mm),20.0,top_plate,bearing_624_standin,0.0
+C,wide open diagnostic (delta 20 mm),20.0,top_plate,pinion,0.0
+C,wide open diagnostic (delta 20 mm),20.0,top_plate,rack_A,0.0
+C,wide open diagnostic (delta 20 mm),20.0,top_plate,rack_B,0.0
+C,wide open diagnostic (delta 20 mm),20.0,top_plate,jaw_A_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,top_plate,jaw_B_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,guide_rail,servo_STS3215_standin,0.0
+C,wide open diagnostic (delta 20 mm),20.0,guide_rail,bearing_624_standin,0.0
+C,wide open diagnostic (delta 20 mm),20.0,guide_rail,pinion,0.0
+C,wide open diagnostic (delta 20 mm),20.0,guide_rail,rack_A,0.0
+C,wide open diagnostic (delta 20 mm),20.0,guide_rail,rack_B,0.0
+C,wide open diagnostic (delta 20 mm),20.0,guide_rail,jaw_A_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,guide_rail,jaw_B_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,servo_STS3215_standin,bearing_624_standin,0.0
+C,wide open diagnostic (delta 20 mm),20.0,servo_STS3215_standin,pinion,-0.0
+C,wide open diagnostic (delta 20 mm),20.0,servo_STS3215_standin,rack_A,0.0
+C,wide open diagnostic (delta 20 mm),20.0,servo_STS3215_standin,rack_B,-0.0
+C,wide open diagnostic (delta 20 mm),20.0,servo_STS3215_standin,jaw_A_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,servo_STS3215_standin,jaw_B_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,bearing_624_standin,pinion,0.0
+C,wide open diagnostic (delta 20 mm),20.0,bearing_624_standin,rack_A,0.0
+C,wide open diagnostic (delta 20 mm),20.0,bearing_624_standin,rack_B,0.0
+C,wide open diagnostic (delta 20 mm),20.0,bearing_624_standin,jaw_A_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,bearing_624_standin,jaw_B_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,pinion,rack_A,0.0
+C,wide open diagnostic (delta 20 mm),20.0,pinion,rack_B,0.0
+C,wide open diagnostic (delta 20 mm),20.0,pinion,jaw_A_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,pinion,jaw_B_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,rack_A,rack_B,0.0
+C,wide open diagnostic (delta 20 mm),20.0,rack_A,jaw_A_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,rack_A,jaw_B_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,rack_B,jaw_A_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,rack_B,jaw_B_C,0.0
+C,wide open diagnostic (delta 20 mm),20.0,jaw_A_C,jaw_B_C,0.0
+C,open hard stop,45.75,base_v2,carrier,-0.0
+C,open hard stop,45.75,base_v2,top_plate,0.0
+C,open hard stop,45.75,base_v2,guide_rail,0.0
+C,open hard stop,45.75,base_v2,servo_STS3215_standin,0.0
+C,open hard stop,45.75,base_v2,bearing_624_standin,0.0
+C,open hard stop,45.75,base_v2,pinion,0.0
+C,open hard stop,45.75,base_v2,rack_A,-0.0
+C,open hard stop,45.75,base_v2,rack_B,-0.0
+C,open hard stop,45.75,base_v2,jaw_A_C,0.0
+C,open hard stop,45.75,base_v2,jaw_B_C,0.0
+C,open hard stop,45.75,carrier,top_plate,0.0
+C,open hard stop,45.75,carrier,guide_rail,0.0
+C,open hard stop,45.75,carrier,servo_STS3215_standin,0.0
+C,open hard stop,45.75,carrier,bearing_624_standin,0.0
+C,open hard stop,45.75,carrier,pinion,0.0
+C,open hard stop,45.75,carrier,rack_A,0.0
+C,open hard stop,45.75,carrier,rack_B,0.0
+C,open hard stop,45.75,carrier,jaw_A_C,0.0
+C,open hard stop,45.75,carrier,jaw_B_C,0.0
+C,open hard stop,45.75,top_plate,guide_rail,0.0
+C,open hard stop,45.75,top_plate,servo_STS3215_standin,0.0
+C,open hard stop,45.75,top_plate,bearing_624_standin,0.0
+C,open hard stop,45.75,top_plate,pinion,0.0
+C,open hard stop,45.75,top_plate,rack_A,0.0
+C,open hard stop,45.75,top_plate,rack_B,0.0
+C,open hard stop,45.75,top_plate,jaw_A_C,0.0
+C,open hard stop,45.75,top_plate,jaw_B_C,0.0
+C,open hard stop,45.75,guide_rail,servo_STS3215_standin,0.0
+C,open hard stop,45.75,guide_rail,bearing_624_standin,0.0
+C,open hard stop,45.75,guide_rail,pinion,0.0
+C,open hard stop,45.75,guide_rail,rack_A,0.0
+C,open hard stop,45.75,guide_rail,rack_B,0.0
+C,open hard stop,45.75,guide_rail,jaw_A_C,0.0
+C,open hard stop,45.75,guide_rail,jaw_B_C,0.0
+C,open hard stop,45.75,servo_STS3215_standin,bearing_624_standin,0.0
+C,open hard stop,45.75,servo_STS3215_standin,pinion,0.0
+C,open hard stop,45.75,servo_STS3215_standin,rack_A,-0.0
+C,open hard stop,45.75,servo_STS3215_standin,rack_B,0.0
+C,open hard stop,45.75,servo_STS3215_standin,jaw_A_C,0.0
+C,open hard stop,45.75,servo_STS3215_standin,jaw_B_C,0.0
+C,open hard stop,45.75,bearing_624_standin,pinion,0.0
+C,open hard stop,45.75,bearing_624_standin,rack_A,0.0
+C,open hard stop,45.75,bearing_624_standin,rack_B,0.0
+C,open hard stop,45.75,bearing_624_standin,jaw_A_C,0.0
+C,open hard stop,45.75,bearing_624_standin,jaw_B_C,0.0
+C,open hard stop,45.75,pinion,rack_A,0.0
+C,open hard stop,45.75,pinion,rack_B,0.0
+C,open hard stop,45.75,pinion,jaw_A_C,0.0
+C,open hard stop,45.75,pinion,jaw_B_C,0.0
+C,open hard stop,45.75,rack_A,rack_B,0.0
+C,open hard stop,45.75,rack_A,jaw_A_C,0.0
+C,open hard stop,45.75,rack_A,jaw_B_C,0.0
+C,open hard stop,45.75,rack_B,jaw_A_C,0.0
+C,open hard stop,45.75,rack_B,jaw_B_C,0.0
+C,open hard stop,45.75,jaw_A_C,jaw_B_C,0.0
+F,closed hard stop,0.0,base_v2,carrier,-0.0
+F,closed hard stop,0.0,base_v2,top_plate,0.0
+F,closed hard stop,0.0,base_v2,guide_rail,0.0
+F,closed hard stop,0.0,base_v2,servo_STS3215_standin,0.0
+F,closed hard stop,0.0,base_v2,bearing_624_standin,0.0
+F,closed hard stop,0.0,base_v2,pinion,0.0
+F,closed hard stop,0.0,base_v2,rack_A,0.0
+F,closed hard stop,0.0,base_v2,rack_B,0.0
+F,closed hard stop,0.0,base_v2,jaw_A_F,0.0
+F,closed hard stop,0.0,base_v2,jaw_B_F,0.0
+F,closed hard stop,0.0,carrier,top_plate,0.0
+F,closed hard stop,0.0,carrier,guide_rail,0.0
+F,closed hard stop,0.0,carrier,servo_STS3215_standin,0.0
+F,closed hard stop,0.0,carrier,bearing_624_standin,0.0
+F,closed hard stop,0.0,carrier,pinion,0.0
+F,closed hard stop,0.0,carrier,rack_A,0.0
+F,closed hard stop,0.0,carrier,rack_B,0.0
+F,closed hard stop,0.0,carrier,jaw_A_F,0.0
+F,closed hard stop,0.0,carrier,jaw_B_F,0.0
+F,closed hard stop,0.0,top_plate,guide_rail,0.0
+F,closed hard stop,0.0,top_plate,servo_STS3215_standin,0.0
+F,closed hard stop,0.0,top_plate,bearing_624_standin,0.0
+F,closed hard stop,0.0,top_plate,pinion,0.0
+F,closed hard stop,0.0,top_plate,rack_A,0.0
+F,closed hard stop,0.0,top_plate,rack_B,0.0
+F,closed hard stop,0.0,top_plate,jaw_A_F,0.0
+F,closed hard stop,0.0,top_plate,jaw_B_F,0.0
+F,closed hard stop,0.0,guide_rail,servo_STS3215_standin,0.0
+F,closed hard stop,0.0,guide_rail,bearing_624_standin,0.0
+F,closed hard stop,0.0,guide_rail,pinion,0.0
+F,closed hard stop,0.0,guide_rail,rack_A,0.0
+F,closed hard stop,0.0,guide_rail,rack_B,0.0
+F,closed hard stop,0.0,guide_rail,jaw_A_F,0.0
+F,closed hard stop,0.0,guide_rail,jaw_B_F,0.0
+F,closed hard stop,0.0,servo_STS3215_standin,bearing_624_standin,0.0
+F,closed hard stop,0.0,servo_STS3215_standin,pinion,-0.0
+F,closed hard stop,0.0,servo_STS3215_standin,rack_A,0.0
+F,closed hard stop,0.0,servo_STS3215_standin,rack_B,0.0
+F,closed hard stop,0.0,servo_STS3215_standin,jaw_A_F,0.0
+F,closed hard stop,0.0,servo_STS3215_standin,jaw_B_F,0.0
+F,closed hard stop,0.0,bearing_624_standin,pinion,0.0
+F,closed hard stop,0.0,bearing_624_standin,rack_A,0.0
+F,closed hard stop,0.0,bearing_624_standin,rack_B,0.0
+F,closed hard stop,0.0,bearing_624_standin,jaw_A_F,0.0
+F,closed hard stop,0.0,bearing_624_standin,jaw_B_F,0.0
+F,closed hard stop,0.0,pinion,rack_A,0.0
+F,closed hard stop,0.0,pinion,rack_B,0.0
+F,closed hard stop,0.0,pinion,jaw_A_F,0.0
+F,closed hard stop,0.0,pinion,jaw_B_F,0.0
+F,closed hard stop,0.0,rack_A,rack_B,0.0
+F,closed hard stop,0.0,rack_A,jaw_A_F,0.0
+F,closed hard stop,0.0,rack_A,jaw_B_F,0.0
+F,closed hard stop,0.0,rack_B,jaw_A_F,0.0
+F,closed hard stop,0.0,rack_B,jaw_B_F,0.0
+F,closed hard stop,0.0,jaw_A_F,jaw_B_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,base_v2,carrier,-0.0
+F,"open (recommended, delta 10 mm)",10.0,base_v2,top_plate,0.0
+F,"open (recommended, delta 10 mm)",10.0,base_v2,guide_rail,0.0
+F,"open (recommended, delta 10 mm)",10.0,base_v2,servo_STS3215_standin,0.0
+F,"open (recommended, delta 10 mm)",10.0,base_v2,bearing_624_standin,0.0
+F,"open (recommended, delta 10 mm)",10.0,base_v2,pinion,0.0
+F,"open (recommended, delta 10 mm)",10.0,base_v2,rack_A,0.0
+F,"open (recommended, delta 10 mm)",10.0,base_v2,rack_B,0.0
+F,"open (recommended, delta 10 mm)",10.0,base_v2,jaw_A_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,base_v2,jaw_B_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,carrier,top_plate,0.0
+F,"open (recommended, delta 10 mm)",10.0,carrier,guide_rail,0.0
+F,"open (recommended, delta 10 mm)",10.0,carrier,servo_STS3215_standin,0.0
+F,"open (recommended, delta 10 mm)",10.0,carrier,bearing_624_standin,0.0
+F,"open (recommended, delta 10 mm)",10.0,carrier,pinion,0.0
+F,"open (recommended, delta 10 mm)",10.0,carrier,rack_A,0.0
+F,"open (recommended, delta 10 mm)",10.0,carrier,rack_B,0.0
+F,"open (recommended, delta 10 mm)",10.0,carrier,jaw_A_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,carrier,jaw_B_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,top_plate,guide_rail,0.0
+F,"open (recommended, delta 10 mm)",10.0,top_plate,servo_STS3215_standin,0.0
+F,"open (recommended, delta 10 mm)",10.0,top_plate,bearing_624_standin,0.0
+F,"open (recommended, delta 10 mm)",10.0,top_plate,pinion,0.0
+F,"open (recommended, delta 10 mm)",10.0,top_plate,rack_A,0.0
+F,"open (recommended, delta 10 mm)",10.0,top_plate,rack_B,0.0
+F,"open (recommended, delta 10 mm)",10.0,top_plate,jaw_A_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,top_plate,jaw_B_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,guide_rail,servo_STS3215_standin,0.0
+F,"open (recommended, delta 10 mm)",10.0,guide_rail,bearing_624_standin,0.0
+F,"open (recommended, delta 10 mm)",10.0,guide_rail,pinion,0.0
+F,"open (recommended, delta 10 mm)",10.0,guide_rail,rack_A,0.0
+F,"open (recommended, delta 10 mm)",10.0,guide_rail,rack_B,0.0
+F,"open (recommended, delta 10 mm)",10.0,guide_rail,jaw_A_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,guide_rail,jaw_B_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,servo_STS3215_standin,bearing_624_standin,0.0
+F,"open (recommended, delta 10 mm)",10.0,servo_STS3215_standin,pinion,-0.0
+F,"open (recommended, delta 10 mm)",10.0,servo_STS3215_standin,rack_A,0.0
+F,"open (recommended, delta 10 mm)",10.0,servo_STS3215_standin,rack_B,0.0
+F,"open (recommended, delta 10 mm)",10.0,servo_STS3215_standin,jaw_A_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,servo_STS3215_standin,jaw_B_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,bearing_624_standin,pinion,0.0
+F,"open (recommended, delta 10 mm)",10.0,bearing_624_standin,rack_A,0.0
+F,"open (recommended, delta 10 mm)",10.0,bearing_624_standin,rack_B,0.0
+F,"open (recommended, delta 10 mm)",10.0,bearing_624_standin,jaw_A_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,bearing_624_standin,jaw_B_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,pinion,rack_A,0.0
+F,"open (recommended, delta 10 mm)",10.0,pinion,rack_B,0.0
+F,"open (recommended, delta 10 mm)",10.0,pinion,jaw_A_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,pinion,jaw_B_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,rack_A,rack_B,0.0
+F,"open (recommended, delta 10 mm)",10.0,rack_A,jaw_A_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,rack_A,jaw_B_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,rack_B,jaw_A_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,rack_B,jaw_B_F,0.0
+F,"open (recommended, delta 10 mm)",10.0,jaw_A_F,jaw_B_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,base_v2,carrier,-0.0
+F,wide open diagnostic (delta 20 mm),20.0,base_v2,top_plate,0.0
+F,wide open diagnostic (delta 20 mm),20.0,base_v2,guide_rail,0.0
+F,wide open diagnostic (delta 20 mm),20.0,base_v2,servo_STS3215_standin,0.0
+F,wide open diagnostic (delta 20 mm),20.0,base_v2,bearing_624_standin,0.0
+F,wide open diagnostic (delta 20 mm),20.0,base_v2,pinion,0.0
+F,wide open diagnostic (delta 20 mm),20.0,base_v2,rack_A,0.0
+F,wide open diagnostic (delta 20 mm),20.0,base_v2,rack_B,0.0
+F,wide open diagnostic (delta 20 mm),20.0,base_v2,jaw_A_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,base_v2,jaw_B_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,carrier,top_plate,0.0
+F,wide open diagnostic (delta 20 mm),20.0,carrier,guide_rail,0.0
+F,wide open diagnostic (delta 20 mm),20.0,carrier,servo_STS3215_standin,0.0
+F,wide open diagnostic (delta 20 mm),20.0,carrier,bearing_624_standin,0.0
+F,wide open diagnostic (delta 20 mm),20.0,carrier,pinion,0.0
+F,wide open diagnostic (delta 20 mm),20.0,carrier,rack_A,0.0
+F,wide open diagnostic (delta 20 mm),20.0,carrier,rack_B,0.0
+F,wide open diagnostic (delta 20 mm),20.0,carrier,jaw_A_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,carrier,jaw_B_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,top_plate,guide_rail,0.0
+F,wide open diagnostic (delta 20 mm),20.0,top_plate,servo_STS3215_standin,0.0
+F,wide open diagnostic (delta 20 mm),20.0,top_plate,bearing_624_standin,0.0
+F,wide open diagnostic (delta 20 mm),20.0,top_plate,pinion,0.0
+F,wide open diagnostic (delta 20 mm),20.0,top_plate,rack_A,0.0
+F,wide open diagnostic (delta 20 mm),20.0,top_plate,rack_B,0.0
+F,wide open diagnostic (delta 20 mm),20.0,top_plate,jaw_A_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,top_plate,jaw_B_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,guide_rail,servo_STS3215_standin,0.0
+F,wide open diagnostic (delta 20 mm),20.0,guide_rail,bearing_624_standin,0.0
+F,wide open diagnostic (delta 20 mm),20.0,guide_rail,pinion,0.0
+F,wide open diagnostic (delta 20 mm),20.0,guide_rail,rack_A,0.0
+F,wide open diagnostic (delta 20 mm),20.0,guide_rail,rack_B,0.0
+F,wide open diagnostic (delta 20 mm),20.0,guide_rail,jaw_A_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,guide_rail,jaw_B_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,servo_STS3215_standin,bearing_624_standin,0.0
+F,wide open diagnostic (delta 20 mm),20.0,servo_STS3215_standin,pinion,-0.0
+F,wide open diagnostic (delta 20 mm),20.0,servo_STS3215_standin,rack_A,0.0
+F,wide open diagnostic (delta 20 mm),20.0,servo_STS3215_standin,rack_B,-0.0
+F,wide open diagnostic (delta 20 mm),20.0,servo_STS3215_standin,jaw_A_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,servo_STS3215_standin,jaw_B_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,bearing_624_standin,pinion,0.0
+F,wide open diagnostic (delta 20 mm),20.0,bearing_624_standin,rack_A,0.0
+F,wide open diagnostic (delta 20 mm),20.0,bearing_624_standin,rack_B,0.0
+F,wide open diagnostic (delta 20 mm),20.0,bearing_624_standin,jaw_A_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,bearing_624_standin,jaw_B_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,pinion,rack_A,0.0
+F,wide open diagnostic (delta 20 mm),20.0,pinion,rack_B,0.0
+F,wide open diagnostic (delta 20 mm),20.0,pinion,jaw_A_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,pinion,jaw_B_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,rack_A,rack_B,0.0
+F,wide open diagnostic (delta 20 mm),20.0,rack_A,jaw_A_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,rack_A,jaw_B_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,rack_B,jaw_A_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,rack_B,jaw_B_F,0.0
+F,wide open diagnostic (delta 20 mm),20.0,jaw_A_F,jaw_B_F,0.0
+F,open hard stop,45.75,base_v2,carrier,-0.0
+F,open hard stop,45.75,base_v2,top_plate,0.0
+F,open hard stop,45.75,base_v2,guide_rail,0.0
+F,open hard stop,45.75,base_v2,servo_STS3215_standin,0.0
+F,open hard stop,45.75,base_v2,bearing_624_standin,0.0
+F,open hard stop,45.75,base_v2,pinion,0.0
+F,open hard stop,45.75,base_v2,rack_A,-0.0
+F,open hard stop,45.75,base_v2,rack_B,-0.0
+F,open hard stop,45.75,base_v2,jaw_A_F,0.0
+F,open hard stop,45.75,base_v2,jaw_B_F,0.0
+F,open hard stop,45.75,carrier,top_plate,0.0
+F,open hard stop,45.75,carrier,guide_rail,0.0
+F,open hard stop,45.75,carrier,servo_STS3215_standin,0.0
+F,open hard stop,45.75,carrier,bearing_624_standin,0.0
+F,open hard stop,45.75,carrier,pinion,0.0
+F,open hard stop,45.75,carrier,rack_A,0.0
+F,open hard stop,45.75,carrier,rack_B,0.0
+F,open hard stop,45.75,carrier,jaw_A_F,0.0
+F,open hard stop,45.75,carrier,jaw_B_F,0.0
+F,open hard stop,45.75,top_plate,guide_rail,0.0
+F,open hard stop,45.75,top_plate,servo_STS3215_standin,0.0
+F,open hard stop,45.75,top_plate,bearing_624_standin,0.0
+F,open hard stop,45.75,top_plate,pinion,0.0
+F,open hard stop,45.75,top_plate,rack_A,0.0
+F,open hard stop,45.75,top_plate,rack_B,0.0
+F,open hard stop,45.75,top_plate,jaw_A_F,0.0
+F,open hard stop,45.75,top_plate,jaw_B_F,0.0
+F,open hard stop,45.75,guide_rail,servo_STS3215_standin,0.0
+F,open hard stop,45.75,guide_rail,bearing_624_standin,0.0
+F,open hard stop,45.75,guide_rail,pinion,0.0
+F,open hard stop,45.75,guide_rail,rack_A,0.0
+F,open hard stop,45.75,guide_rail,rack_B,0.0
+F,open hard stop,45.75,guide_rail,jaw_A_F,0.0
+F,open hard stop,45.75,guide_rail,jaw_B_F,0.0
+F,open hard stop,45.75,servo_STS3215_standin,bearing_624_standin,0.0
+F,open hard stop,45.75,servo_STS3215_standin,pinion,0.0
+F,open hard stop,45.75,servo_STS3215_standin,rack_A,-0.0
+F,open hard stop,45.75,servo_STS3215_standin,rack_B,0.0
+F,open hard stop,45.75,servo_STS3215_standin,jaw_A_F,0.0
+F,open hard stop,45.75,servo_STS3215_standin,jaw_B_F,0.0
+F,open hard stop,45.75,bearing_624_standin,pinion,0.0
+F,open hard stop,45.75,bearing_624_standin,rack_A,0.0
+F,open hard stop,45.75,bearing_624_standin,rack_B,0.0
+F,open hard stop,45.75,bearing_624_standin,jaw_A_F,0.0
+F,open hard stop,45.75,bearing_624_standin,jaw_B_F,0.0
+F,open hard stop,45.75,pinion,rack_A,0.0
+F,open hard stop,45.75,pinion,rack_B,0.0
+F,open hard stop,45.75,pinion,jaw_A_F,0.0
+F,open hard stop,45.75,pinion,jaw_B_F,0.0
+F,open hard stop,45.75,rack_A,rack_B,0.0
+F,open hard stop,45.75,rack_A,jaw_A_F,0.0
+F,open hard stop,45.75,rack_A,jaw_B_F,0.0
+F,open hard stop,45.75,rack_B,jaw_A_F,0.0
+F,open hard stop,45.75,rack_B,jaw_B_F,0.0
+F,open hard stop,45.75,jaw_A_F,jaw_B_F,0.0
+C,control: jaw_A_C raised 0.6 mm into the base bar gap,0.0,jaw_A_C,base_v2,365.864
+C,control: jaw_A_C 0.5 mm outward (closing-side wall into the rack A tab; 0.2 mm clearance),0.0,jaw_A_C,rack_A,17.76
+C,control: jaw_A_C lowered 0.5 mm into the rail,0.0,jaw_A_C,guide_rail,50.82
+C,control: jaw_B_C 3 mm toward the closing plane (jaw-jaw),0.0,jaw_B_C,jaw_A_C,1693.382
+C,control: pinion rotated the wrong way (+4.7746 deg/mm) at delta 10 mm,10.0,pinion,rack_A,77.692
+C,control: pinion rotated the wrong way (+4.7746 deg/mm) at delta 10 mm,10.0,pinion,rack_B,77.692

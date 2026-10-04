@@ -1,0 +1,6 @@
+sku,label,height_mm,height_source,insertion_lift_mm,shelf_structure_mm_ASSUMED,margin_mm,R_neck_claw_mm,R_body_claw_S1_mm,pmin_neck_claw_mm,pmin_body_claw_mm,neck_claw_fits_287,body_claw_fits_287,neck_claw_fits_318,body_claw_fits_318,neck_claw_fits_334,body_claw_fits_334,neck_claw_fits_381,body_claw_fits_381
+pet_500,500 mL,210.0,container_data_sheet.csv (H122.7..H320 per SKU),5.0,30.0,5.0,0.0,140.0,250.0,390.0,True,False,True,False,True,False,True,False
+pet_600_soda,600 mL,237.0,container_data_sheet.csv,5.0,30.0,5.0,0.0,140.0,277.0,417.0,True,False,True,False,True,False,True,False
+pet_1000,1 L,290.0,container_data_sheet.csv: ESTIMATE,5.0,30.0,5.0,0.0,140.0,330.0,470.0,False,False,False,False,True,False,True,False
+pet_1500,1.5 L,311.0,container_data_sheet.csv,5.0,30.0,5.0,0.0,140.0,351.0,491.0,False,False,False,False,False,False,True,False
+pet_2000,2 L,320.0,container_data_sheet.csv,5.0,30.0,5.0,0.0,140.0,360.0,500.0,False,False,False,False,False,False,True,False

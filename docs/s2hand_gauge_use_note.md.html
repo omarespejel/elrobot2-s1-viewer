@@ -1,0 +1,83 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>s2hand_gauge_use_note.md</title><link rel="stylesheet" href="../assets/style.css"></head><body><header class="site"><div class="wrap"><p class="sub">ElRobot2 &middot; document</p><nav class="top"><a href="../">Versions</a><a href="../viewer/">3D viewer (S1 v1.1)</a><a href="../viewer-s2/">3D viewer (S2-RC2)</a><a href="../report.html">S1 report</a><a href="../report-s2.html">S2-RC2 report</a><a href="../docs/">Documents</a></nav></div></header><main class="wrap"><article><div class="banner"><strong>Working document (4 October 2026).</strong> Design, simulation and desk research only: nothing has been printed, built or measured. Raw file: <a href="s2hand_gauge_use_note.md">s2hand_gauge_use_note.md</a>.</div><h1 id="gate-0-slot-gauges-use-note">Gate-0 slot gauges - use note</h1>
+<p><strong>Use note (one paragraph)</strong>: each gauge is the two jaw slot profiles (lip, groove and cap-wall steps, back wall at y = 83, 45 deg lead-ins, lip ramp) cut from a 20 mm slab and joined by a 4 mm back bridge at the face spacing of one cap-OD position (jaw displacement 0.25 / 0.75 / 1.50 mm = cap 29.5 / 30.5 / 32.0 mm; the lip / cap-wall / groove face gaps are 27.0 / 29.5 / 34.5, 28.0 / 30.5 / 35.5 and 29.5 / 32.0 / 37.0 mm; the lip2 gauge is the 30.5 position with a 2.0 mm lip). The notches in the top edge of the bridge count 1 / 2 / 3 / 4 (cap 29.5 / 30.5 / 32.0 / 30.5-lip2); in use the notched edge is the TOP, the part is printed lying on its back. Hold the gauge level, slot opening toward the bottle, push it onto the neck from the front about 1-2 mm below the final height until the cap approaches the back wall, then lift until the ring underside rests on the lip. <strong>Good</strong>: the cap sits between the cap-wall faces touching (or with a hair of play) for the gauge whose OD matches it, and with about 0.25 mm per side of visible gap for a cap 0.5 mm smaller; the ring lies in the groove with air above and beside it (groove 5.5 mm high, 34.5-37 mm wide); the lip tip is under the ring and the ring rests on it; the bottle hangs from the lip; the cap top stands about 1 mm ABOVE the jaw top for the nominal 18 mm cap (master spec: the jaw top z' = 17 is 1 mm below the cap top; a cap shorter than 17 mm ends below the jaw top and is also fine). <strong>Failures and their meaning</strong>: the cap does not enter the faces -&gt; cap OD is larger than this gauge, use the next gauge (boolean: +0.6 mm = 26-27 mm3 overlap); the ring does not enter the groove or stops on the lead-in -&gt; ring OD above the groove gap minus 0.5 mm or ring thicker than 5.5 mm (14 mm3 / 9-59 mm3); the gauge cannot be lifted to the ring because the lip does not pass under it -&gt; free neck too short for the 3.0 mm lip, use the lip2 gauge (needs free neck &gt;= 3.0 mm at a release lowering of 2 mm, &gt;= 1.6 mm just to close at 0.2 mm above the seat); the neck wedges against the lip faces -&gt; neck OD larger than the lip face gap (27.0 / 28.0 / 29.5 mm). All 49 boolean cases (nominal pass, tolerance extremes pass, controls fail) are in the gauge checks CSV.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>part</th>
+<th>cap_od_position_mm</th>
+<th>jaw_displacement_mm</th>
+<th>lip_mm</th>
+<th>lip_face_gap_mm</th>
+<th>cap_wall_gap_mm</th>
+<th>groove_gap_mm</th>
+<th>back_wall_y_mm</th>
+<th>mass_g_15pct_infill</th>
+<th>bbox_x</th>
+<th>bbox_y</th>
+<th>bbox_z</th>
+<th>identification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s2hand_gauge_cap29p5</td>
+<td>29.5</td>
+<td>0.25</td>
+<td>3.0</td>
+<td>27.0</td>
+<td>29.5</td>
+<td>34.5</td>
+<td>83.0</td>
+<td>12.8</td>
+<td>39.3</td>
+<td>20.0</td>
+<td>48.0</td>
+<td>1 notch(es) in the top edge of the back bridge (CAP 29.5)</td>
+</tr>
+<tr>
+<td>s2hand_gauge_cap30p5</td>
+<td>30.5</td>
+<td>0.75</td>
+<td>3.0</td>
+<td>28.0</td>
+<td>30.5</td>
+<td>35.5</td>
+<td>83.0</td>
+<td>12.9</td>
+<td>40.3</td>
+<td>20.0</td>
+<td>48.0</td>
+<td>2 notch(es) in the top edge of the back bridge (CAP 30.5)</td>
+</tr>
+<tr>
+<td>s2hand_gauge_cap32p0</td>
+<td>32.0</td>
+<td>1.50</td>
+<td>3.0</td>
+<td>29.5</td>
+<td>32.0</td>
+<td>37.0</td>
+<td>83.0</td>
+<td>13.0</td>
+<td>41.8</td>
+<td>20.0</td>
+<td>48.0</td>
+<td>3 notch(es) in the top edge of the back bridge (CAP 32.0)</td>
+</tr>
+<tr>
+<td>s2hand_gauge_cap30p5_lip2</td>
+<td>30.5</td>
+<td>0.75</td>
+<td>2.0</td>
+<td>28.0</td>
+<td>30.5</td>
+<td>35.5</td>
+<td>83.0</td>
+<td>12.1</td>
+<td>40.3</td>
+<td>19.0</td>
+<td>48.0</td>
+<td>4 notch(es) in the top edge of the back bridge (CAP 30.5 L2)</td>
+</tr>
+</tbody>
+</table></div></article></main><footer><div class="wrap">Design, simulation and desk research only; nothing has been printed, built or measured. Updated 4 October 2026.</div></footer></body></html>

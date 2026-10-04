@@ -1,0 +1,32 @@
+direction,step,action,count,operation,seconds_each_ASSUMED,seconds_total,note
+PET -> CAN,P2C-1,"Power down: J3 to the service heading, Z carriage to bench height, 12 V off",1,power,30,30,J3 torque disabled
+PET -> CAN,P2C-2,Unplug the hand servo cable at the arm harness,1,conn,20,20,3-pin connector; keep the stock lead for PET mode
+PET -> CAN,P2C-3,Remove the 4 x M3x12 that hold the hand to the J3 flange; lift the hand off,4,rm_j3,15,60,2.5 mm ball-end hex; heads sit under the 48x48 housing flange
+PET -> CAN,P2C-4,Remove the PET guide rail (2 end brackets) from the base end-face inserts,4,rm,8,32,"M3 x 4, length per Hand BOM (ASSUMED M3x8)"
+PET -> CAN,P2C-5,Remove PET jaws A and B from the rack tabs,2,rm,8,16,"M3x8 x 2 (one per jaw, same position as the S1 yoke screw)"
+PET -> CAN,P2C-6,"Fit the S1 finger sets (yoke + finger + pad, kept assembled) on the rack tabs",2,fit,15,30,M3x8 x 2
+PET -> CAN,P2C-7,"Place the body on the bar pad (closing axis along the bar), cable through the pad slot",1,part,20,20,pad slot over the plate notch
+PET -> CAN,P2C-8,Fit 4 x M3x14 DIN 7991 flat head through the pad into the carrier inserts,4,fit,15,60,heads flush in the 90 deg countersinks
+PET -> CAN,P2C-9,Offer the bar to the J3 flange and fit 4 x M3x12 into the bar inserts,4,fit_j3,25,100,same 4 screws as step 3
+PET -> CAN,P2C-10,"Lay the cable in the groove, 2 zip ties in the bar slots; plug the 300 mm extension into the arm harness",1,route,60,60,"bend radius >= 8 mm, loop at the J3 side window"
+PET -> CAN,P2C-11,"Plug the cable, select CAN mode in the controller (hand mass, L3 = 104, J3 +-90 deg heading offset, J3 torque register), power up, open/close test",1,soft,120,120,see README section 4
+PET -> CAN,handling,"pick / align / put down the 6 moved parts (2 jaws, rail, body, bar, 2 finger sets, minus those not moved in this direction)",6,part,20,120,
+PET -> CAN,TOTAL,total time [min] and fastener operations,20,,,668.0,11.1 min (target < 15 min); with a margin of 1.5x: 16.7 min
+CAN -> PET,C2P-1,Power down,1,power,30,30,
+CAN -> PET,C2P-2,Unplug the hand servo cable (and extension),1,conn,20,20,
+CAN -> PET,C2P-3,Remove the 4 x M3x12 holding the bar to the J3 flange; lift bar + hand off,4,rm_j3,15,60,
+CAN -> PET,C2P-4,Remove the 4 x M3x14 flat-head screws; separate the body from the bar,4,rm,8,32,
+CAN -> PET,C2P-5,Remove the S1 finger sets (2 x M3x8),2,rm,8,16,
+CAN -> PET,C2P-6,Fit PET jaws A and B (2 x M3x8),2,fit,15,30,
+CAN -> PET,C2P-7,"Fit the PET guide rail (4 x M3, 2 end brackets)",4,fit,15,60,
+CAN -> PET,C2P-8,Offer the body to the J3 flange ROTATED 90 deg (closing axis perpendicular to the heading) and fit 4 x M3x12,4,fit_j3,25,100,
+CAN -> PET,C2P-9,"Plug the stock cable, select PET mode in the controller, power up, open/close test",1,soft,120,120,
+CAN -> PET,handling,"pick / align / put down the 6 moved parts (2 jaws, rail, body, bar, 2 finger sets, minus those not moved in this direction)",6,part,20,120,
+CAN -> PET,TOTAL,total time [min] and fastener operations,20,,,588.0,9.8 min (target < 15 min); with a margin of 1.5x: 14.7 min
+DUAL-HAND swap (two complete hands),D-1,Power down,1,,30,30,
+DUAL-HAND swap (two complete hands),D-2,Unplug the hand servo cable,1,,20,20,
+DUAL-HAND swap (two complete hands),D-3,"Remove 4 x M3x12 (J3 flange), lift the hand off",4,,15,60,
+DUAL-HAND swap (two complete hands),D-4,"Offer the other pre-assembled hand, fit 4 x M3x12",4,,25,100,
+DUAL-HAND swap (two complete hands),D-5,"Plug the cable, select the mode, power up, open/close test",1,,120,120,
+DUAL-HAND swap (two complete hands),D-6,handling (2 hands),2,,20,40,
+DUAL-HAND swap (two complete hands),TOTAL,total time [min],8,,,370,"6.2 min; costs a second hand body (335 g printed, ~11 h) + a second STS3215 (S1 BOM: 3 on hand) + 30 inserts"

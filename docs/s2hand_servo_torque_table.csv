@@ -1,0 +1,8 @@
+TQ_limit_Nm,register_0_1000,clamp_per_jaw_N,pct_of_stall,pct_of_rated_0p981,note
+0.35,119,12.4,11.9,35.7,positioning / pre-contact
+0.5,170,17.7,17.0,51.0,light
+0.7,238,24.8,23.8,71.4,RECOMMENDED TQ_CLAMP (spec 0.70 = about 25 N per jaw)
+0.85,289,30.1,28.9,86.6,
+1.0,340,35.4,34.0,101.9,"transport torque for >= 1 L (jaw across-layer SF 2.08 at the 1.0 mm voxel FE [2.65 at 1.5 mm], rack tab SF 2.08)"
+1.177,400,41.7,40.0,120.0,"S1 firmware cap (1.2 x rated, 41.7 N): highest value ever commanded; also EEPROM Max_Torque_Limit = 400; jaw across-layer SF 1.77 at the 1.0 mm voxel FE (< 2: not for sustained holds)"
+2.942,1000,104.2,100.0,299.9,"stall: never (single event only: jaw SF 1.3-1.9 vs single-event allowables, 1.0 / 1.5 mm voxel FE; S1 pinion tip-loading FAIL 0.89)"

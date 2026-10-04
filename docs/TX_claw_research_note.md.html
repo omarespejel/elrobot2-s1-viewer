@@ -1,0 +1,110 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>TX_claw_research_note.md</title><link rel="stylesheet" href="../assets/style.css"></head><body><header class="site"><div class="wrap"><p class="sub">ElRobot2 &middot; document</p><nav class="top"><a href="../">Versions</a><a href="../viewer/">3D viewer (S1 v1.1)</a><a href="../viewer-s2/">3D viewer (S2-RC2)</a><a href="../report.html">S1 report</a><a href="../report-s2.html">S2-RC2 report</a><a href="../docs/">Documents</a></nav></div></header><main class="wrap"><article><div class="banner"><strong>Working document (4 October 2026).</strong> Design, simulation and desk research only: nothing has been printed, built or measured. Raw file: <a href="TX_claw_research_note.md">TX_claw_research_note.md</a>.</div><h1 id="telexistence-beverage-restocking-claw-public-evidence-what-the-photographs-show-and-what-it-means-for-elrobot2-s2">Telexistence beverage-restocking claw: public evidence, what the photographs show, and what it means for ElRobot2-S2</h1>
+<p>Date: 2026-10-03. Status: desk research plus inspection of four published photographs. Nothing here was measured on hardware. Photographs are linked, not reproduced.</p>
+<h2 id="1-the-company-and-what-is-deployed">1. The company and what is deployed</h2>
+<ul>
+<li>Telexistence Inc. (TX), Tokyo. Product line: TX SCARA (announced 2 Nov 2021 at the FamilyMart store inside the Ministry of Economy, Trade and Industry, Tokyo), mass deployment to 300 FamilyMart stores from August 2022, now marketed as TX Ghost; pilots in Tokyo 7-Eleven stores announced September 2025. A third-party registry also lists two Lawson stores (not confirmed by TX).</li>
+<li>System (public descriptions): a SCARA arm on a vertical column on a linear rail inside the refrigerated back room, cameras that scan the shelves, an AI system (Gordon) that chooses the product, the grip point and the path, and remote operators who take over when a bottle tips or rolls. Vendor-stated autonomy above 98 %; up to about 1,000 bottles and cans per day; a METI journal report gives 30 to 50 s per bottle; one store's back aisle is 70 to 80 cm wide (trade press).</li>
+<li>Hand, as TX describes it: one hand for all PET bottles (to 2 L) and all can sizes, with a grip point that differs per beverage and is found by a neural network.</li>
+</ul>
+<h2 id="2-photographs-examined">2. Photographs examined</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Source (open it yourself)</th>
+<th>Date</th>
+<th>What is visible</th>
+<th>Confidence in my reading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>tx-inc.com, TX SCARA press render (file 2022/02/TX-SCARA_Press_1-1-1)</td>
+<td>2022</td>
+<td>Electric parallel-jaw hand on a forearm tilted about 20 to 25 degrees down. Two long, flat, blade-like fingers on parallelogram linkages. Rendering, not a field photograph.</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Diamond Chain Store Online article on the Sagamihara store (photo MG_6955)</td>
+<td>Dec 2021</td>
+<td>First-generation hand seen from behind the shelves: black parallel-jaw body with a flat black blade finger and a white finger with a scooped profile; arm entering a shelf tier from the rear.</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>3</td>
+<td>NVIDIA blog, 10 Aug 2022 (photo of the METI store robot)</td>
+<td>2022</td>
+<td>A 600 mL PET bottle hangs below the hand. Two flat vertical plates sit directly around the cap and neck; the cap top shows just above the near plate. Horizontal arm.</td>
+<td>high that the bottle is held at the top; medium on plate size</td>
+</tr>
+<tr>
+<td>4</td>
+<td>AP photograph, 26 Aug 2022 (TechXplore story)</td>
+<td>2022</td>
+<td>A 650 mL PET bottle hangs from a black block about as wide as the bottle body and about a third of a cap-to-shoulder length tall, directly on the bottle shoulder. Horizontal arm, camera and light behind the plates.</td>
+<td>high that the bottle is held at the top</td>
+</tr>
+</tbody>
+</table></div>
+<p>Scale: plate width and height were scaled from the bottle body width (assumed 65 mm). Estimated plates: about 50 to 65 mm wide and 20 to 25 mm tall, uncertainty about 25 %.</p>
+<h2 id="3-reading-of-the-claw-shape-my-interpretation">3. Reading of the claw shape (my interpretation)</h2>
+<ol>
+<li>A parallel-jaw hand whose two jaws are flat plates closing horizontally across the bottle's neck zone. The plates are about as wide as the bottle body, thin in the closing direction and 20 to 25 mm tall.</li>
+<li>The plates cover the cap and the neck down to the start of the shoulder. The bottle hangs from them with its body free. Nothing of the hand is above the cap top apart from the plate edge.</li>
+<li>The arm is horizontal when it carries the bottle; the hand's bulk (camera, light, motor) is behind the plates.</li>
+<li>Not visible in any photograph I found: whether the plates also hook under the support ring, the clamp force, the pad material, how cans are held, and how a bottle is released.</li>
+</ol>
+<h2 id="4-why-a-claw-at-the-neck-beats-a-claw-around-the-body-for-a-rack-gap">4. Why a claw at the neck beats a claw around the body, for a rack gap</h2>
+<figure><img alt="Claw above the bottle versus claw at the neck, minimum shelf pitch by container" src="../img/fig_claw_families.png" /></figure>
+<p><em>Figure 1. Minimum shelf pitch p = H + 5 mm insertion lift + 30 mm shelf structure (assumed) + 5 mm margin + R, with R the height of claw structure above the bottle top: 140 mm for the S1 hand, about 0 for a claw at the neck. Data: claw_families_pmin.csv.</em></p>
+<ul>
+<li>Vertical stack. The S1 claw puts its body 6 mm above the bottle and its fingers down the sides, so 140 mm of hand sits above the cap. That needs 417 mm of pitch for a 600 mL bottle; none of the four rack pitches found in the desk research (0.287 to 0.381 m) reaches it, not even for 500 mL. A claw at the neck adds nothing above the cap: 277 mm for 600 mL, which fits all four racks, and 1 L, 1.5 L and 2 L fit from 0.334 m, 0.381 m and 0.381 m.</li>
+<li>Side clearance. Fingers beside the bottle need free space in the lane; a lane 73 mm wide holding a 65 mm bottle has about 4 mm per side. At the neck the jaws sit above the neighbours' caps, which are 60 mm away from the lane axis.</li>
+<li>Load path. The weight goes through the injection-moulded neck finish, a standardised rigid part (28 mm PCO 1881 in the sources used here), not through the thin, variable wall of the body. One hand then fits every brand, which is what TX claims.</li>
+<li>Costs. The bottle hangs and can swing; a neck grip needs side access to the neck at pick-up (bottles in a single spaced row, not a dense crate); cans have no neck, so they need a second mode; the neck dimensions must be measured on local bottles.</li>
+</ul>
+<h2 id="5-what-changes-in-the-s2-design-lead-decision-2026-10-03">5. What changes in the S2 design (lead decision, 2026-10-03)</h2>
+<p>My S2-RC1 hand already grips at the neck, with two 2 mm tongues under the support ring. The TX photographs show a stiffer and more tolerant form, and a beam calculation shows that my tongues were too flexible:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Finger form (PETG, E = 1800 MPa, 8.8 N per finger = 1.2 kg x 1.5)</th>
+<th>Tip deflection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flat tongue 14 x 4 mm, 126 mm long (the long finger of the thin fork)</td>
+<td>43.7 mm</td>
+</tr>
+<tr>
+<td>same, 72 mm long (with a guide beam)</td>
+<td>8.2 mm</td>
+</tr>
+<tr>
+<td>vertical plate 5 x 22 mm, 126 mm long</td>
+<td>0.73 mm</td>
+</tr>
+<tr>
+<td>vertical plate 5 x 22 mm, 72 mm long</td>
+<td>0.14 mm</td>
+</tr>
+</tbody>
+</table></div>
+<p>New baseline: collar jaws. Each jaw is a vertical plate whose inner edge is a stepped half-bore: a cap wall (about 15 mm tall, bore 30 to 31 mm, light torque-limited clamp, TPU pad), a ring groove (3 to 4 mm tall, bore 35 mm) and a lip under the ring (3 mm tall, bore 27 mm) that carries the weight when friction on the cap slips. The thin fork (lip only) stays as a variant. The plates end flush with the cap top, so the claw adds nothing above the bottle. The Gate-0 print kit tests both forms by hand on real bottles.</p>
+<h2 id="6-sources">6. Sources</h2>
+<ul>
+<li>TX SCARA press release, 2 Nov 2021: https://tx-inc.com/en/blog/2021/11/02/11451/</li>
+<li>TX 300-store press release, 10 Aug 2022 (same hand for all beverages, grip point per beverage): https://tx-inc.com/en/blog/2022/08/10/11712/</li>
+<li>NVIDIA blog with the METI-store photograph: https://blogs.nvidia.com/blog/telexistence-convenience-store-robotics/</li>
+<li>AP story and photographs: https://techxplore.com/news/2022-09-robot-stocks-corner.html</li>
+<li>Diamond Chain Store Online (Sagamihara store): https://diamond-rm.net/technology/100237/2/</li>
+<li>METI journal (30 to 50 s per bottle): https://journal.meti.go.jp/p/18742/</li>
+<li>TX and Physical Intelligence partnership (rolled-over bottles as the hard error case): https://tx-inc.com/en/blog/2025/06/25/12307/</li>
+<li>TX home page (TX Ghost, 7-Eleven pilot): https://tx-inc.com/en/</li>
+<li>Model-T hand (2020: vacuum suction plus two-finger gripper): https://tx-inc.com/en/blog/2020/07/21/10624/</li>
+<li>Product listing (PET up to 2 L): https://www.robotatta.com/products/344</li>
+<li>Bottling-line background (PET bottles are carried by the neck below the support collar): https://patents.google.com/patent/US8662553</li>
+</ul></article></main><footer><div class="wrap">Design, simulation and desk research only; nothing has been printed, built or measured. Updated 4 October 2026.</div></footer></body></html>

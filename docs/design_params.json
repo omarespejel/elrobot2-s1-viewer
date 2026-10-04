@@ -1,6 +1,6 @@
 {
- "name": "ElRobot2-S1 (Z-lift SCARA bottle restocker), design params v0.4.3",
- "date": "2026-10-02",
+ "name": "ElRobot2-S1 body + S2-RC2 neck-grip hand, design params v0.4.5",
+ "date": "2026-10-04",
  "conventions": {
   "frame": "x = lateral (right), y = forward toward shelf, z = up. J1 axis is the world z-axis through (0,0). Angles CCW from +x when viewed from above.",
   "units": "SI: metres, kg, N, N*m, rad unless a key ends in _mm / _deg / _g",
@@ -1121,63 +1121,348 @@
   "literature_note": "all published values found are DRY and against steel or other test surfaces, none on PET"
  },
  "s2": {
-  "status": "CONCEPT (S2_design_brief.md): no CAD, no simulation, no test",
-  "offset_wrist": {
-   "L3_mm": 100,
-   "allowed_mm": [
-    85,
-    130
+  "status": "S2-RC2: CAD (Hand track), exact-mesh audit (lead), MuJoCo Monte Carlo (Sim track), hand calculations; NO hardware test. Neck dimensions are ASSUMED until Gate 0.",
+  "concept": "neck-grip collar jaws (type C primary; type F fork dominated) on the S1 rack-and-pinion gripper body rotated 90 deg: closing axis perpendicular to the hand heading; bore (cap axis) L3 = 104 mm ahead of the J3 axis",
+  "frames": {
+   "world": "x lateral, y toward the shelf, z up; J1 axis (0, 0)",
+   "q3": "q3 = 0 when the hand heading is parallel to the forearm",
+   "carriage_rule": "z_c = z_ring_underside + 162.3 mm (seat plane zeta0 = -12.3 mm; loaded plane sits 0.5-0.8 mm lower)",
+   "j3_interface_plane_zeta_mm": 62.5
+  },
+  "neck_ASSUMED_PCO1881": {
+   "cap_od_mm": [
+    30.5,
+    29.5,
+    32.0
    ],
-   "j3_axis_y_mm_at_bottle_y_305": 205,
-   "stack_front_edge_y_mm": 230,
-   "tunnel_mouth_y_mm": 253,
-   "j3_radius_range_mm_for_lane_pitch_75_90": [
-    205,
-    273
+   "cap_top_to_ring_underside_mm": [
+    18,
+    16,
+    21
    ],
-   "reach_annulus_mm": [
-    170,
-    385
+   "ring_od_mm": [
+    33,
+    32,
+    34
+   ],
+   "ring_thickness_mm": [
+    2,
+    1.5,
+    3
+   ],
+   "neck_od_mm": [
+    25.5,
+    24.5,
+    26.5
+   ],
+   "free_neck_mm": [
+    6,
+    3,
+    10
+   ],
+   "shoulder_length_mm": [
+    35,
+    45
+   ],
+   "format": "nominal, min, max"
+  },
+  "hand_type_C": {
+   "faces_at_closed_hard_stop_mm": {
+    "lip": 26.5,
+    "cap_wall": 29.0,
+    "groove": 34.0
+   },
+   "faces_open_drop_over_mm": {
+    "lip": 46.5,
+    "cap_wall": 49.0,
+    "groove": 54.0
+   },
+   "groove_height_mm": 5.5,
+   "lip_thickness_mm": 3.0,
+   "lip2_option_thickness_mm": 2.0,
+   "jaw_top_zeta_mm": 4.7,
+   "jaw_bottom_zeta_mm": -15.3,
+   "back_wall_y_mm": 83.0,
+   "lead_in": "45 deg x 6 mm",
+   "lip_ramp": "45 deg from y = L3 + 10 (lip2: 30 deg)",
+   "bore_style": "flat stepped planar faces (circular bores cannot clamp the cap-OD range)",
+   "rack_stops_s_mm": {
+    "closed": -2.25,
+    "open": 43.5,
+    "recommended_open": 7.75
+   },
+   "mass_g": {
+    "type_C": 398.4,
+    "type_F": 396.9,
+    "camera_plate_extra": 11.7
+   },
+   "com_hand_frame_mm": [
+    2.72,
+    10.78,
+    12.86
+   ],
+   "part_masses_g": {
+    "jaw_A_C": 37.1,
+    "jaw_B_C": 40.4,
+    "guide_rail": 44.4,
+    "base_v2": 72.3
+   }
+  },
+  "grip_servo": {
+   "model": "Feetech STS3215 C018 12 V",
+   "torque_limit_register_grasp": 238,
+   "torque_Nm_grasp": 0.7,
+   "clamp_per_jaw_N": 24.8,
+   "register_transport_1L": 340,
+   "register_never_above": 400,
+   "eeprom_max_torque_limit": 400,
+   "ticks_zero_2048": {
+    "closed_hard_stop": 1925.8,
+    "closed_target_no_bottle": 1931.2,
+    "open_drop_over": 2469.0,
+    "open_hard_stop_never_command": 4411.1,
+    "stall_window_at_register_238": [
+     1925.8,
+     1985.2
+    ]
+   },
+   "register_addresses": "Torque_Limit RAM 48, Max_Torque_Limit EEPROM 16 (from memory of the Feetech table: VERIFY in test B2)",
+   "closing_policy": "stall at the hard stop with a bottle present is a valid grasp (clamp is spring-limited below cap OD 30.3 mm)"
+  },
+  "wrist_J3": {
+   "L3_mm": 104.0,
+   "printed_chain": "fails SF >= 2 at every S2 payload (0.28 at 500 mL): carries no bottle",
+   "kit_options": {
+    "CNC_7075": "payload at SF 2 about 1.7 kg",
+    "CNC_6061": "about 1.0 kg",
+    "no_CNC": "about 1.38 kg"
+   },
+   "bearings": "2 x 6701-2RS chrome steel (C0r 530 N): payload limit 1.46 kg; stainless 260 N: 0.72 kg",
+   "torque_register_with_kit": 200,
+   "torque_register_printed_chain": 130,
+   "hand_mass_for_loads_kg": 0.44
+  },
+  "release": {
+   "sequence": "lower the hand 2.0 mm (effective lip drop >= 2.0 mm), open to 49.0 mm, retreat",
+   "rejected": [
+    "open at height (0/60)",
+    "open while retreating (<= 27/60)"
+   ],
+   "free_neck_rule_mm": "lip + D - 1.0 (D = release lowering)",
+   "baseline_lip_needs_free_neck_mm": {
+    "worst_corner": 4.0,
+    "typical_600mL": 3.25
+   },
+   "lip2_needs_free_neck_mm": {
+    "worst_corner": 3.0,
+    "typical_600mL": 2.25
+   }
+  },
+  "stand_in_bench_constants": {
+   "y_E_mm": 330.0,
+   "ceiling_front_plane_y_mm": 313.0,
+   "lane_pitch_mm": 76.0,
+   "lane_clear_mm": 73.0,
+   "divider_nose_clear_mm": 75.4,
+   "slope_deg": 6.0,
+   "lane_length_mm": 250.0,
+   "divider_height_mm": 35.0,
+   "plate_thickness_mm": 12.0,
+   "T_struct_mm": 30.0,
+   "shelf_pitch_m": [
+    0.287,
+    0.318,
+    0.381
+   ],
+   "lane_x_mm": [
+    -152,
+    -76,
+    0,
+    76,
+    152
    ]
   },
-  "j3_static_moment_Nm": {
-   "600_mL": 0.83,
-   "1_L": 1.25,
-   "tool_mass_kg_incl": 0.2
+  "tote": {
+   "x_mm": -300.0,
+   "pocket_y_mm": [
+    0.0,
+    100.0,
+    200.0
+   ],
+   "pocket_floor_mm": 40.0,
+   "pocket_radius_mm": 37.5,
+   "rim_mm": 8.0,
+   "pick": "vertical drop-over (a straight horizontal approach reaches only 26 / 58.5 mm at pocket y = 0 / 100)"
   },
-  "bearing_pair": {
-   "type": "6701-2RS",
-   "spacing_mm": 30,
-   "load_per_bearing_N": [
-    28,
-    42
+  "min_pitch_m_R0": {
+   "500_mL": 0.25,
+   "600_mL": 0.277,
+   "1_L": 0.33,
+   "1.5_L": 0.351,
+   "2_L": 0.36,
+   "rule": "H + 5 lift + 30 structure + 5 margin + R (R = 0 for the neck hand)"
+  },
+  "supported_set": {
+   "verified": [
+    "pet_500",
+    "pet_600_soda"
+   ],
+   "conditional": [
+    "pet_1000: tote or wide lane only; pad jaws; 1.0 N*m transport; chrome bearings"
+   ],
+   "not_supported": [
+    "pet_1500",
+    "pet_2000",
+    "cans in lanes"
    ]
   },
-  "bar_section_mm": "20 x 16 PETG or aluminium (20 x 10 PETG droops 2.5 mm)",
-  "neck_jaw": {
-   "neck": "PCO-1881 28 mm",
-   "finish_height_mm": 17.0,
-   "support_ring_height_mm": 11.2,
-   "ring_OD_mm_ASSUMED": 33.0,
-   "jaw_thickness_mm": 3,
-   "free_neck_below_ring_needed_mm": 4,
-   "notch_mm_ASSUMED": 30,
-   "stroke_per_side_mm": 6,
-   "tool_mass_target_kg": 0.25,
-   "hold": "form closure on the ring; clamp only prevents swing"
+  "can_mode": {
+   "hardware": "v1 hand on the printed offset bar (L3 = 104 mm, pad 5.0 mm, R_can 78.0 / 83.3 mm, p_min(473 mL) 275.2 mm)",
+   "status": "tote picks and arm checks only; lane placement NOT validated: front finger blocks the retreat (216/216 retreat poses collide), lift-over needs 130 mm"
   },
-  "flat_clamp": {
-   "stack_above_can_top_mm": 50,
-   "clamp_force_per_finger_N": "as v1 (34.7 rated, 41.7 cap)"
+  "accel_limit_g_at_hand": 0.3,
+  "validation": "S2 design report; test plan v2.5 Phase H; S2_neck_measurement_sheet v4; risk register R1-R62",
+  "strength_final": {
+   "source": "Hand README v3, s2hand_fe_clamp_convergence.csv, s2hand_max_mass.csv, s2hand_droop_budget.csv",
+   "clamp_across_layer_SF_at_25N": {
+    "jaw_A": {
+     "mesh_1.5mm": 4.07,
+     "mesh_1.25mm": 3.58,
+     "mesh_1.0mm": 3.42
+    },
+    "jaw_B": {
+     "mesh_1.5mm": 3.75,
+     "mesh_1.0mm": 2.95
+    }
+   },
+   "SF_at_1.0Nm_35.4N": 2.08,
+   "SF_at_1.177Nm_41.7N": 1.77,
+   "SF_stall_100N_single_event": 1.29,
+   "sustained_hold_limit_Nm": 1.0,
+   "clamp_Nm": 0.7,
+   "lip_hold_SF_inplane_3.0mm_lip": [
+    12.6,
+    13.4
+   ],
+   "lip2_hold_SF_inplane_1.0mm_mesh": [
+    9.7,
+    9.8
+   ],
+   "guide_rail_SF": 5.8,
+   "droop_mm": {
+    "elastic": [
+     0.4,
+     0.372
+    ],
+    "gaps_0.2mm": [
+     1.192,
+     1.142
+    ],
+    "gaps_0.12mm_PTFE": [
+     0.875,
+     0.834
+    ],
+    "limit": 1.0
+   },
+   "max_bottle_mass_kg_SF2": {
+    "friction_only_face_mu_0.3_0.5_0.6": [
+     0.486,
+     0.739,
+     0.85
+    ],
+    "lip_beam_3.0mm": 4.05,
+    "lip_beam_2.0mm": 1.8,
+    "droop_limited_PTFE": 1.37,
+    "droop_limited_printed_gaps": 1.01
+   },
+   "note": "peak across-layer stress at the sharp inner corner of the tab window rises with mesh refinement; use the finest-mesh value"
   },
-  "accel_limit_g_while_hanging": 0.3,
-  "tote": "single row, pitch >= 85 mm, open on the arm side",
-  "validation": "S2_design_brief.md section 7; test plan Phase H"
+  "sim_headlines": {
+   "source": "s2sim_README.md v3; same 60 draws recur in all 6 cells of a row, so intervals are bootstrapped over draws",
+   "G4_spec_box_grip_of_360": {
+    "C_500": 338,
+    "C_600": 261,
+    "F_500": 319,
+    "F_600": 232
+   },
+   "G4_spec_box_strict_of_360": {
+    "C_500": 259,
+    "C_600": 178,
+    "F_500": 251,
+    "F_600": 156
+   },
+   "G4c_lateral_1p5mm_grip_of_360": {
+    "C_500": 358,
+    "C_600": 358,
+    "F_500": 345,
+    "F_600": 306
+   },
+   "F_with_2p5mm_lip_drop_G4c_grip_of_360": {
+    "F_500": 359,
+    "F_600": 358
+   },
+   "gate": "57/60 in every cell: NOT met in the spec box (4 of 24 cells); met by type C in all 12 cells with +-1.5 mm lateral centring",
+   "nominal_cycles": "24/24",
+   "nominal_cycle_time_s_median": 28.4,
+   "pick_frontier_type_C_mm": {
+    "pick_vertical": [
+     -4,
+     3
+    ],
+    "pick_along_heading": [
+     -10,
+     8
+    ],
+    "pick_lateral": [
+     0,
+     6
+    ],
+    "place_vertical": [
+     -6,
+     6
+    ],
+    "place_along_heading": [
+     -20,
+     20
+    ]
+   },
+   "lip_drop_effective_mm": {
+    "type_C": 2.0,
+    "type_F": 2.5
+   },
+   "regrasp_schedule": "shifts s,-s,2s,-2s, s = 1 mm, at most 4 re-grasps (tuned on its own pick draws)",
+   "not_simulated": [
+    "old-datum suite",
+    "can mode",
+    "pitch 0.381 m",
+    "divider height 80 mm"
+   ]
+  },
+  "audit_exact_mesh": {
+   "placement_poses": "576/576",
+   "release_retreat_with_released_bottle": "792/792",
+   "tote_poses": "42/42",
+   "seating_bottles": "65/65",
+   "can_retreat": "36/252 (216 collide)",
+   "clearance_min_mm": {
+    "hand_ceiling_0.287": 10.0,
+    "bottle_divider": 2.9,
+    "base_rail_to_front_plane": 21.7
+   }
+  }
  },
  "changelog_v0_4_3": [
   "Glass and returnable containers removed from payload scope, required_mu table, not_modelled and measure (user decision 2026-10-02).",
   "real_cooler_evidence: pitch range 0.287-0.381 m (design-driving 0.318 m), lane 74.6 mm, T_struct, configurations, evidence file reference.",
   "New blocks: reference_rack, eoat_concepts (min pitch by SKU and concept), friction_design (printed TPU wet mu 0.3), s2 (offset wrist and neck-jaw concept).",
   "grip_command_limits_N: added pet_le_600_at_mu_0p3 and a note that 1 L needs cast pads or form closure."
+ ],
+ "changelog_v0_4_4": [
+  "s2 block rewritten for S2-RC2 (collar jaws, L3 104, seat plane -12.3, z_c rule +162.3, servo registers and ticks, release rule, stand-in bench constants, tote, supported set, can-mode limits).",
+  "J3: printed chain fails SF 2; metal kit required; torque register 200 / 130; 6701 bearings must be chrome steel.",
+  "Superseded in v0.4.3 s2: L3 100, notch 30, jaw thickness 3, free neck 4, tool mass 0.25 kg, flat clamp, neck-jaw stroke 6 mm."
+ ],
+ "changelog_v0_4_5": [
+  "s2: final Hand and Sim results added (strength_final, sim_headlines, audit_exact_mesh); release and retreat audit with the released bottle (792/792); risk register R59-R62; test plan v2.5; measurement sheet v4."
  ]
 }

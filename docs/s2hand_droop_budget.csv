@@ -1,0 +1,4 @@
+jaw,P_N,jaw_elastic_FE_mm,rail_flex_via_lever_mm,elastic_total_mm,limit_mm,lever_U_over_P,lever_D_over_P,rail_stiffness_N_per_mm,play_closure_nose_mm_gap_0p2,play_closure_nose_mm_gap_0p12_PTFE,droop_incl_play_0p2_mm,droop_incl_play_0p12_mm
+A,8.83,0.219,0.181,0.4,1.0,2.48,1.48,299.1,0.792,0.475,1.192,0.875
+B,8.83,0.206,0.165,0.372,1.0,2.424,1.424,313.5,0.77,0.462,1.142,0.834
+A-B difference,,0.013,0.016,0.028,0.5,,,,0.022,,,

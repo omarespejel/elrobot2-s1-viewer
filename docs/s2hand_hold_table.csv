@@ -1,0 +1,61 @@
+sku,mass_kg,weight_N,face,mu,clamp_case,F_cap_N,hold_z_carry_N,SF_z_static,hold_y_pullout_while_carrying_N,hold_y_pullout_lip_supported_N,carried_by
+500 mL,0.519,5.1,PETG line contact,0.3,"25 N per jaw at the cap (spec, no guide loss)",25.0,15.0,2.95,14.1,16.5,friction only (SF>=2)
+500 mL,0.519,5.1,PETG line contact,0.3,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),21.9,13.1,2.58,12.1,14.6,friction only (SF>=2)
+500 mL,0.519,5.1,PETG line contact,0.3,TQ 1.00 servo-limited: 35.4 N minus guide friction,32.5,19.5,3.83,18.8,21.0,friction only (SF>=2)
+500 mL,0.519,5.1,PETG line contact,0.5,"25 N per jaw at the cap (spec, no guide loss)",25.0,25.0,4.91,24.5,26.5,friction only (SF>=2)
+500 mL,0.519,5.1,PETG line contact,0.5,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),21.9,21.9,4.3,21.3,23.4,friction only (SF>=2)
+500 mL,0.519,5.1,PETG line contact,0.5,TQ 1.00 servo-limited: 35.4 N minus guide friction,32.5,32.5,6.38,32.1,34.0,friction only (SF>=2)
+500 mL,0.519,5.1,1 mm TPU pad (ASSUMED mu),0.6,"25 N per jaw at the cap (spec, no guide loss)",25.0,30.0,5.89,29.6,31.5,friction only (SF>=2)
+500 mL,0.519,5.1,1 mm TPU pad (ASSUMED mu),0.6,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),21.9,26.2,5.15,25.7,27.8,friction only (SF>=2)
+500 mL,0.519,5.1,1 mm TPU pad (ASSUMED mu),0.6,TQ 1.00 servo-limited: 35.4 N minus guide friction,32.5,39.0,7.65,38.6,40.5,friction only (SF>=2)
+500 mL,0.519,5.1,"1 mm TPU pad (ASSUMED mu, dry)",0.8,"25 N per jaw at the cap (spec, no guide loss)",25.0,40.0,7.86,39.7,41.5,friction only (SF>=2)
+500 mL,0.519,5.1,"1 mm TPU pad (ASSUMED mu, dry)",0.8,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),21.9,35.0,6.87,34.6,36.5,friction only (SF>=2)
+500 mL,0.519,5.1,"1 mm TPU pad (ASSUMED mu, dry)",0.8,TQ 1.00 servo-limited: 35.4 N minus guide friction,32.5,51.9,10.2,51.7,53.5,friction only (SF>=2)
+600 mL,0.65,6.4,PETG line contact,0.3,"25 N per jaw at the cap (spec, no guide loss)",25.0,15.0,2.35,13.6,16.9,friction only (SF>=2)
+600 mL,0.65,6.4,PETG line contact,0.3,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),21.1,12.7,1.99,11.0,14.6,friction marginal (1<SF<2): use the lip
+600 mL,0.65,6.4,PETG line contact,0.3,TQ 1.00 servo-limited: 35.4 N minus guide friction,31.7,19.0,2.99,17.9,20.9,friction only (SF>=2)
+600 mL,0.65,6.4,PETG line contact,0.5,"25 N per jaw at the cap (spec, no guide loss)",25.0,25.0,3.92,24.2,26.9,friction only (SF>=2)
+600 mL,0.65,6.4,PETG line contact,0.5,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),21.1,21.1,3.31,20.1,23.0,friction only (SF>=2)
+600 mL,0.65,6.4,PETG line contact,0.5,TQ 1.00 servo-limited: 35.4 N minus guide friction,31.7,31.7,4.98,31.1,33.6,friction only (SF>=2)
+600 mL,0.65,6.4,1 mm TPU pad (ASSUMED mu),0.6,"25 N per jaw at the cap (spec, no guide loss)",25.0,30.0,4.71,29.3,31.9,friction only (SF>=2)
+600 mL,0.65,6.4,1 mm TPU pad (ASSUMED mu),0.6,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),21.1,25.3,3.98,24.5,27.3,friction only (SF>=2)
+600 mL,0.65,6.4,1 mm TPU pad (ASSUMED mu),0.6,TQ 1.00 servo-limited: 35.4 N minus guide friction,31.7,38.1,5.97,37.5,40.0,friction only (SF>=2)
+600 mL,0.65,6.4,"1 mm TPU pad (ASSUMED mu, dry)",0.8,"25 N per jaw at the cap (spec, no guide loss)",25.0,40.0,6.28,39.5,41.9,friction only (SF>=2)
+600 mL,0.65,6.4,"1 mm TPU pad (ASSUMED mu, dry)",0.8,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),21.1,33.8,5.3,33.2,35.7,friction only (SF>=2)
+600 mL,0.65,6.4,"1 mm TPU pad (ASSUMED mu, dry)",0.8,TQ 1.00 servo-limited: 35.4 N minus guide friction,31.7,50.8,7.96,50.3,52.7,friction only (SF>=2)
+1 L,1.072,10.5,PETG line contact,0.3,"25 N per jaw at the cap (spec, no guide loss)",25.0,15.0,1.43,10.7,18.2,friction marginal (1<SF<2): use the lip
+1 L,1.072,10.5,PETG line contact,0.3,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),18.7,11.2,1.07,4.0,14.4,friction marginal (1<SF<2): use the lip
+1 L,1.072,10.5,PETG line contact,0.3,TQ 1.00 servo-limited: 35.4 N minus guide friction,29.3,17.6,1.67,14.1,20.8,friction marginal (1<SF<2): use the lip
+1 L,1.072,10.5,PETG line contact,0.5,"25 N per jaw at the cap (spec, no guide loss)",25.0,25.0,2.38,22.7,28.2,friction only (SF>=2)
+1 L,1.072,10.5,PETG line contact,0.5,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),18.7,18.7,1.78,15.5,21.9,friction marginal (1<SF<2): use the lip
+1 L,1.072,10.5,PETG line contact,0.5,TQ 1.00 servo-limited: 35.4 N minus guide friction,29.3,29.3,2.79,27.4,32.5,friction only (SF>=2)
+1 L,1.072,10.5,1 mm TPU pad (ASSUMED mu),0.6,"25 N per jaw at the cap (spec, no guide loss)",25.0,30.0,2.85,28.1,33.2,friction only (SF>=2)
+1 L,1.072,10.5,1 mm TPU pad (ASSUMED mu),0.6,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),18.7,22.5,2.14,19.9,25.6,friction only (SF>=2)
+1 L,1.072,10.5,1 mm TPU pad (ASSUMED mu),0.6,TQ 1.00 servo-limited: 35.4 N minus guide friction,29.3,35.2,3.35,33.6,38.4,friction only (SF>=2)
+1 L,1.072,10.5,"1 mm TPU pad (ASSUMED mu, dry)",0.8,"25 N per jaw at the cap (spec, no guide loss)",25.0,40.0,3.8,38.6,43.2,friction only (SF>=2)
+1 L,1.072,10.5,"1 mm TPU pad (ASSUMED mu, dry)",0.8,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),18.7,30.0,2.85,28.1,33.1,friction only (SF>=2)
+1 L,1.072,10.5,"1 mm TPU pad (ASSUMED mu, dry)",0.8,TQ 1.00 servo-limited: 35.4 N minus guide friction,29.3,46.9,4.46,45.7,50.1,friction only (SF>=2)
+1.5 L,1.605,15.7,PETG line contact,0.3,"25 N per jaw at the cap (spec, no guide loss)",25.0,15.0,0.95,0.0,19.7,LIP REQUIRED (friction SF<1)
+1.5 L,1.605,15.7,PETG line contact,0.3,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),15.7,9.4,0.6,0.0,14.1,LIP REQUIRED (friction SF<1)
+1.5 L,1.605,15.7,PETG line contact,0.3,TQ 1.00 servo-limited: 35.4 N minus guide friction,26.3,15.8,1.0,1.2,20.5,friction marginal (1<SF<2): use the lip
+1.5 L,1.605,15.7,PETG line contact,0.5,"25 N per jaw at the cap (spec, no guide loss)",25.0,25.0,1.59,19.4,29.7,friction marginal (1<SF<2): use the lip
+1.5 L,1.605,15.7,PETG line contact,0.5,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),15.7,15.7,1.0,0.0,20.4,LIP REQUIRED (friction SF<1)
+1.5 L,1.605,15.7,PETG line contact,0.5,TQ 1.00 servo-limited: 35.4 N minus guide friction,26.3,26.3,1.67,21.1,31.0,friction marginal (1<SF<2): use the lip
+1.5 L,1.605,15.7,1 mm TPU pad (ASSUMED mu),0.6,"25 N per jaw at the cap (spec, no guide loss)",25.0,30.0,1.91,25.5,34.7,friction marginal (1<SF<2): use the lip
+1.5 L,1.605,15.7,1 mm TPU pad (ASSUMED mu),0.6,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),15.7,18.9,1.2,10.4,23.6,friction marginal (1<SF<2): use the lip
+1.5 L,1.605,15.7,1 mm TPU pad (ASSUMED mu),0.6,TQ 1.00 servo-limited: 35.4 N minus guide friction,26.3,31.6,2.01,27.4,36.3,friction only (SF>=2)
+1.5 L,1.605,15.7,"1 mm TPU pad (ASSUMED mu, dry)",0.8,"25 N per jaw at the cap (spec, no guide loss)",25.0,40.0,2.54,36.8,44.7,friction only (SF>=2)
+1.5 L,1.605,15.7,"1 mm TPU pad (ASSUMED mu, dry)",0.8,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),15.7,25.1,1.6,19.6,29.9,friction marginal (1<SF<2): use the lip
+1.5 L,1.605,15.7,"1 mm TPU pad (ASSUMED mu, dry)",0.8,TQ 1.00 servo-limited: 35.4 N minus guide friction,26.3,42.1,2.67,39.0,46.8,friction only (SF>=2)
+2 L,2.13,20.9,PETG line contact,0.3,"25 N per jaw at the cap (spec, no guide loss)",25.0,15.0,0.72,0.0,21.3,LIP REQUIRED (friction SF<1)
+2 L,2.13,20.9,PETG line contact,0.3,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),12.7,7.6,0.37,0.0,13.9,LIP REQUIRED (friction SF<1)
+2 L,2.13,20.9,PETG line contact,0.3,TQ 1.00 servo-limited: 35.4 N minus guide friction,23.3,14.0,0.67,0.0,20.3,LIP REQUIRED (friction SF<1)
+2 L,2.13,20.9,PETG line contact,0.5,"25 N per jaw at the cap (spec, no guide loss)",25.0,25.0,1.2,13.7,31.3,friction marginal (1<SF<2): use the lip
+2 L,2.13,20.9,PETG line contact,0.5,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),12.7,12.7,0.61,0.0,19.0,LIP REQUIRED (friction SF<1)
+2 L,2.13,20.9,PETG line contact,0.5,TQ 1.00 servo-limited: 35.4 N minus guide friction,23.3,23.3,1.12,10.4,29.6,friction marginal (1<SF<2): use the lip
+2 L,2.13,20.9,1 mm TPU pad (ASSUMED mu),0.6,"25 N per jaw at the cap (spec, no guide loss)",25.0,30.0,1.44,21.5,36.3,friction marginal (1<SF<2): use the lip
+2 L,2.13,20.9,1 mm TPU pad (ASSUMED mu),0.6,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),12.7,15.3,0.73,0.0,21.6,LIP REQUIRED (friction SF<1)
+2 L,2.13,20.9,1 mm TPU pad (ASSUMED mu),0.6,TQ 1.00 servo-limited: 35.4 N minus guide friction,23.3,28.0,1.34,18.7,34.3,friction marginal (1<SF<2): use the lip
+2 L,2.13,20.9,"1 mm TPU pad (ASSUMED mu, dry)",0.8,"25 N per jaw at the cap (spec, no guide loss)",25.0,40.0,1.91,34.1,46.3,friction marginal (1<SF<2): use the lip
+2 L,2.13,20.9,"1 mm TPU pad (ASSUMED mu, dry)",0.8,TQ 0.70 servo-limited: 24.8 N minus guide friction (mu_guide 0.3),12.7,20.4,0.98,0.0,26.7,LIP REQUIRED (friction SF<1)
+2 L,2.13,20.9,"1 mm TPU pad (ASSUMED mu, dry)",0.8,TQ 1.00 servo-limited: 35.4 N minus guide friction,23.3,37.3,1.79,31.0,43.6,friction marginal (1<SF<2): use the lip

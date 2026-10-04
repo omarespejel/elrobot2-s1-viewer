@@ -1,0 +1,49 @@
+element,case,load,result,value,unit,allowable,SF,source,note
+jaw B,hold lip (1.2 kg x 1.5 g / 2),8.8 N per jaw,in-plane vM peak,1.496,MPa,20.0,13.37,voxel FE 1.5 mm (s2hand_fe_run.py),"PETG E 1200 MPa; supports: rail y,z; rear base-bottom z; screw link x only"
+jaw B,hold lip,8.8 N per jaw,across-layer sigma_xx peak,0.63,MPa,10.0,15.87,voxel FE 1.5 mm,
+jaw B,hold lip,8.8 N per jaw,vertical deflection of the load patch,0.2058,mm,1.0,4.86,voxel FE 1.5 mm,elastic only; rail flexure and guide-gap closure are separate lines
+jaw B,hold friction (1.2 kg x 1.5 g / 2),8.8 N per jaw,in-plane vM peak,1.494,MPa,20.0,13.39,voxel FE 1.5 mm (s2hand_fe_run.py),"PETG E 1200 MPa; supports: rail y,z; rear base-bottom z; screw link x only"
+jaw B,hold friction,8.8 N per jaw,across-layer sigma_xx peak,0.63,MPa,10.0,15.87,voxel FE 1.5 mm,
+jaw B,hold friction,8.8 N per jaw,vertical deflection of the load patch,0.2016,mm,1.0,4.96,voxel FE 1.5 mm,elastic only; rail flexure and guide-gap closure are separate lines
+jaw B,clamp (cap-face reaction pushes the jaw outward),25 N per jaw,in-plane vM peak (all elements),7.324,MPa,20.0,2.73,voxel FE 1.5 mm,
+jaw B,clamp,25 N per jaw,across-layer sigma_xx peak (all elements),2.668,MPa,10.0,3.75,voxel FE 1.5 mm,includes nodal-load / support singularities (conservative)
+jaw B,clamp,25 N per jaw,in-plane peak excluding load/support elements,4.613,MPa,20.0,4.34,voxel FE 1.5 mm,"at [-1.2, 31.2, -14.5]"
+jaw B,clamp,25 N per jaw,across-layer peak excluding load/support elements,2.668,MPa,10.0,3.75,voxel FE 1.5 mm,"at [1.8, -22.8, 12.5] (strap bridge bar, tension along the build direction x)"
+jaw B,clamp,25 N per jaw,lateral deflection of the cap face relative to the tab wall (servo reading includes it),0.7317,mm,,,voxel FE 1.5 mm,stiffness k = P / u = 34.2 N/mm
+jaw B,stall (cap-face reaction pushes the jaw outward) (single-event allowables 35 / 17.5 MPa),100 N per jaw,in-plane vM peak (all elements),29.295,MPa,35.0,1.19,voxel FE 1.5 mm,
+jaw B,stall (single-event allowables 35 / 17.5 MPa),100 N per jaw,across-layer sigma_xx peak (all elements),10.67,MPa,17.5,1.64,voxel FE 1.5 mm,includes nodal-load / support singularities (conservative)
+jaw B,stall (single-event allowables 35 / 17.5 MPa),100 N per jaw,in-plane peak excluding load/support elements,18.453,MPa,35.0,1.9,voxel FE 1.5 mm,"at [-1.2, 31.2, -14.5]"
+jaw B,stall (single-event allowables 35 / 17.5 MPa),100 N per jaw,across-layer peak excluding load/support elements,10.67,MPa,17.5,1.64,voxel FE 1.5 mm,"at [1.8, -22.8, 12.5] (strap bridge bar, tension along the build direction x)"
+jaw B,stall,100 N per jaw,lateral deflection of the cap face relative to the tab wall (servo reading includes it),2.927,mm,,,voxel FE 1.5 mm,stiffness k = P / u = 34.2 N/mm
+jaw A,hold lip (1.2 kg x 1.5 g / 2),8.8 N per jaw,in-plane vM peak,1.582,MPa,20.0,12.64,voxel FE 1.5 mm (s2hand_fe_run.py),"PETG E 1200 MPa; supports: rail y,z; rear base-bottom z; screw link x only"
+jaw A,hold lip,8.8 N per jaw,across-layer sigma_xx peak,0.657,MPa,10.0,15.22,voxel FE 1.5 mm,
+jaw A,hold lip,8.8 N per jaw,vertical deflection of the load patch,0.2179,mm,1.0,4.59,voxel FE 1.5 mm,elastic only; rail flexure and guide-gap closure are separate lines
+jaw A,hold friction (1.2 kg x 1.5 g / 2),8.8 N per jaw,in-plane vM peak,1.586,MPa,20.0,12.61,voxel FE 1.5 mm (s2hand_fe_run.py),"PETG E 1200 MPa; supports: rail y,z; rear base-bottom z; screw link x only"
+jaw A,hold friction,8.8 N per jaw,across-layer sigma_xx peak,0.658,MPa,10.0,15.2,voxel FE 1.5 mm,
+jaw A,hold friction,8.8 N per jaw,vertical deflection of the load patch,0.2123,mm,1.0,4.71,voxel FE 1.5 mm,elastic only; rail flexure and guide-gap closure are separate lines
+jaw A,clamp (cap-face reaction pushes the jaw outward),25 N per jaw,in-plane vM peak (all elements),5.815,MPa,20.0,3.44,voxel FE 1.5 mm,
+jaw A,clamp,25 N per jaw,across-layer sigma_xx peak (all elements),2.456,MPa,10.0,4.07,voxel FE 1.5 mm,includes nodal-load / support singularities (conservative)
+jaw A,clamp,25 N per jaw,in-plane peak excluding load/support elements,3.92,MPa,20.0,5.1,voxel FE 1.5 mm,"at [21.8, 31.8, -14.5]"
+jaw A,clamp,25 N per jaw,across-layer peak excluding load/support elements,2.456,MPa,10.0,4.07,voxel FE 1.5 mm,"at [-2.2, 28.8, 12.5] (strap bridge bar, tension along the build direction x)"
+jaw A,clamp,25 N per jaw,lateral deflection of the cap face relative to the tab wall (servo reading includes it),0.5919,mm,,,voxel FE 1.5 mm,stiffness k = P / u = 42.2 N/mm
+jaw A,stall (cap-face reaction pushes the jaw outward) (single-event allowables 35 / 17.5 MPa),100 N per jaw,in-plane vM peak (all elements),23.261,MPa,35.0,1.5,voxel FE 1.5 mm,
+jaw A,stall (single-event allowables 35 / 17.5 MPa),100 N per jaw,across-layer sigma_xx peak (all elements),9.824,MPa,17.5,1.78,voxel FE 1.5 mm,includes nodal-load / support singularities (conservative)
+jaw A,stall (single-event allowables 35 / 17.5 MPa),100 N per jaw,in-plane peak excluding load/support elements,15.682,MPa,35.0,2.23,voxel FE 1.5 mm,"at [21.8, 31.8, -14.5]"
+jaw A,stall (single-event allowables 35 / 17.5 MPa),100 N per jaw,across-layer peak excluding load/support elements,9.824,MPa,17.5,1.78,voxel FE 1.5 mm,"at [-2.2, 28.8, 12.5] (strap bridge bar, tension along the build direction x)"
+jaw A,stall,100 N per jaw,lateral deflection of the cap face relative to the tab wall (servo reading includes it),2.3677,mm,,,voxel FE 1.5 mm,stiffness k = P / u = 42.2 N/mm
+guide rail,both jaws 26 N each (hold 2 L x 1.5 g would be 31 N),26 N per jaw,von Mises peak,3.446,MPa,20.0,5.8,voxel FE 1.5 mm (s2hand_fe_rail.py),
+guide rail,both jaws 26 N each,26 N per jaw,max deflection,0.1866,mm,,,voxel FE 1.5 mm,
+guide rail,both jaws 26 N each,26 N per jaw,bracket-screw reaction (sum / max per patch),52.0 / 30.7,N,,,voxel FE 1.5 mm,
+"lip ledge (beam, worst seat corner)",lip-supported hold 500 mL x 1.5 g,3.8 N per jaw,"sigma_xx root, lip 3.0 mm",0.64,MPa,10.0,15.59,"cantilever 3.75 mm, seat width 1.25 mm, chord 12.4 mm (hand calc)",shear tau 0.15 MPa
+"lip ledge (beam, worst seat corner)",lip-supported hold 600 mL x 1.5 g,4.8 N per jaw,"sigma_xx root, lip 3.0 mm",0.8,MPa,10.0,12.45,"cantilever 3.75 mm, seat width 1.25 mm, chord 12.4 mm (hand calc)",shear tau 0.19 MPa
+"lip ledge (beam, worst seat corner)",lip-supported hold 1 L x 1.5 g,7.9 N per jaw,"sigma_xx root, lip 3.0 mm",1.32,MPa,10.0,7.55,"cantilever 3.75 mm, seat width 1.25 mm, chord 12.4 mm (hand calc)",shear tau 0.32 MPa
+"lip ledge (beam, worst seat corner)",lip-supported hold 1.5 L x 1.5 g,11.8 N per jaw,"sigma_xx root, lip 3.0 mm",1.98,MPa,10.0,5.04,"cantilever 3.75 mm, seat width 1.25 mm, chord 12.4 mm (hand calc)",shear tau 0.48 MPa
+"lip ledge (beam, worst seat corner)",lip-supported hold 2 L x 1.5 g,15.7 N per jaw,"sigma_xx root, lip 3.0 mm",2.63,MPa,10.0,3.8,"cantilever 3.75 mm, seat width 1.25 mm, chord 12.4 mm (hand calc)",shear tau 0.63 MPa
+"lip ledge (beam, worst seat corner)",lip-supported hold 500 mL x 1.5 g,3.8 N per jaw,"sigma_xx root, lip 2.0 mm",1.44,MPa,10.0,6.93,"cantilever 3.75 mm, seat width 1.25 mm, chord 12.4 mm (hand calc)",shear tau 0.23 MPa
+"lip ledge (beam, worst seat corner)",lip-supported hold 600 mL x 1.5 g,4.8 N per jaw,"sigma_xx root, lip 2.0 mm",1.81,MPa,10.0,5.53,"cantilever 3.75 mm, seat width 1.25 mm, chord 12.4 mm (hand calc)",shear tau 0.29 MPa
+"lip ledge (beam, worst seat corner)",lip-supported hold 1 L x 1.5 g,7.9 N per jaw,"sigma_xx root, lip 2.0 mm",2.98,MPa,10.0,3.36,"cantilever 3.75 mm, seat width 1.25 mm, chord 12.4 mm (hand calc)",shear tau 0.48 MPa
+"lip ledge (beam, worst seat corner)",lip-supported hold 1.5 L x 1.5 g,11.8 N per jaw,"sigma_xx root, lip 2.0 mm",4.46,MPa,10.0,2.24,"cantilever 3.75 mm, seat width 1.25 mm, chord 12.4 mm (hand calc)",shear tau 0.71 MPa
+"lip ledge (beam, worst seat corner)",lip-supported hold 2 L x 1.5 g,15.7 N per jaw,"sigma_xx root, lip 2.0 mm",5.92,MPa,10.0,1.69,"cantilever 3.75 mm, seat width 1.25 mm, chord 12.4 mm (hand calc)",shear tau 0.95 MPa
+"rack tab root (S1 load path, unchanged)",grip clamp at TQ 0.700 N m,24.8 N per rack,"tab root bending (S1 w_eff 20 mm estimate, scaled)",6.72,MPa,20.0,2.97,gripper_hand_calcs.csv case C (11.31 MPa at 41.7 N),vertical bottle load does not enter the tab (guide rail + base-bottom)
+"rack tab root (S1 load path, unchanged)",grip clamp at TQ 1.000 N m,35.4 N per rack,"tab root bending (S1 w_eff 20 mm estimate, scaled)",9.61,MPa,20.0,2.08,gripper_hand_calcs.csv case C (11.31 MPa at 41.7 N),vertical bottle load does not enter the tab (guide rail + base-bottom)
+"rack tab root (S1 load path, unchanged)",grip clamp at TQ 1.177 N m,41.7 N per rack,"tab root bending (S1 w_eff 20 mm estimate, scaled)",11.31,MPa,20.0,1.77,gripper_hand_calcs.csv case C (11.31 MPa at 41.7 N),vertical bottle load does not enter the tab (guide rail + base-bottom)

@@ -1,0 +1,173 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>S2_neck_measurement_sheet.md</title><link rel="stylesheet" href="../assets/style.css"></head><body><header class="site"><div class="wrap"><p class="sub">ElRobot2 &middot; document</p><nav class="top"><a href="../">Versions</a><a href="../viewer/">3D viewer (S1 v1.1)</a><a href="../viewer-s2/">3D viewer (S2-RC2)</a><a href="../report.html">S1 report</a><a href="../report-s2.html">S2-RC2 report</a><a href="../docs/">Documents</a></nav></div></header><main class="wrap"><article><div class="banner"><strong>Working document (4 October 2026).</strong> Design, simulation and desk research only: nothing has been printed, built or measured. Raw file: <a href="S2_neck_measurement_sheet.md">S2_neck_measurement_sheet.md</a>.</div><h1 id="s2-neck-measurement-and-slot-gauge-sheet-gate-0-version-3">S2 neck measurement and slot-gauge sheet (Gate 0), version 3</h1>
+<p>Version 3, 2026-10-03. Companion to the S2-RC2 master specification and to the Hand README. Version 2 added the cap outer diameter (H). Version 3 replaces the placeholder text about a second test by the real one: four printed slot gauges (about 25 to 40 minutes of printing each) that tell you, before any jaw is printed, whether the real bottles sit in the jaws as drawn. It also carries the exact decision rules from the Hand track, and corrects two numbers that were stale in version 2 (groove height is 5.5 mm, not 4.5 mm; the jaw top is 1 mm below the cap top).</p>
+<h2 id="why-this-is-the-most-useful-hour-before-printing-the-hand">Why this is the most useful hour before printing the hand</h2>
+<p>The S2 hand does not squeeze the body of the bottle. Two jaws close around the cap and the neck (the same place where the Japanese restocking robot holds its bottles, as far as the public photos show), and a lip under the plastic ring below the cap catches the bottle if friction on the cap slips. The jaws are cut for a standard 28 mm (PCO 1881) neck. I have only assumed the dimensions below; the measurements and the gauges decide whether the jaws are printed as drawn, with a thinner lip, or not at all.</p>
+<figure><img alt="Neck distances to measure" src="../img/s2_neck_measurement_diagram.png" /></figure>
+<p><em>Figure 1. Distances A to E and H on the neck. F (widest body diameter) and G (total height, floor to cap top) are measured on the whole bottle. The numbers in the figure are my assumptions for a 28 mm neck; your bottles will differ a little.</em></p>
+<h2 id="what-you-need">What you need</h2>
+<ul>
+<li>Calipers (0.1 mm reading) and a ruler.</li>
+<li>Closed, full bottles from a store (cold is fine). Best: 3 brands of 600 mL soda or water, plus one 500 mL, one 1 L, one 1.5 L and one 2 L if you can. The same brand from two different batches is worth including.</li>
+<li>Your phone: one photo of each neck from the side, with the ruler next to it.</li>
+<li>The printer: PETG, 0.2 mm layers, 3 perimeters, 15 % infill, no supports, the files exactly as exported (they are already in print pose).</li>
+</ul>
+<h2 id="part-1-measure-5-minutes-per-bottle-no-printing">Part 1. Measure (5 minutes per bottle, no printing)</h2>
+<ol>
+<li><strong>A, ring outer diameter.</strong> Calipers across the ring, twice, turned 90 degrees between readings. Write "notches" in the ring column if the ring has gaps, notches or flats.</li>
+<li><strong>B, neck diameter under the ring.</strong> Calipers on the cylinder just below the ring, twice, 90 degrees apart. If the neck is slightly conical, measure 1 mm under the ring.</li>
+<li><strong>C, cap top to ring underside.</strong> Lay the ruler flat on top of the cap and measure down to the underside of the ring (or use the caliper depth rod).</li>
+<li><strong>D, free neck.</strong> Height from the underside of the ring to the point where the neck starts to widen into the shoulder. If it widens gradually, use the point where the diameter is 1 mm bigger than B. <strong>This is the number I care about most</strong>: it decides the lip.</li>
+<li><strong>E, ring thickness</strong> at its rim.</li>
+<li><strong>H, cap outer diameter,</strong> twice, 90 degrees apart, at the widest point of the cap (ribs included). Note if the cap is smooth, ribbed or has a sport nozzle.</li>
+<li><strong>F</strong> widest body diameter and <strong>G</strong> total height.</li>
+<li>Fill one row of <code>S2_neck_measurement_template.csv</code> per bottle.</li>
+</ol>
+<h2 id="part-2-print-the-four-slot-gauges-and-try-every-bottle-printing-about-2-h-in-total-testing-15-minutes">Part 2. Print the four slot gauges and try every bottle (printing about 2 h in total, testing 15 minutes)</h2>
+<p>Each gauge is the slot profile of the two jaws (lip, groove and cap-wall steps, back wall, 45 degree lead-ins) cut from a 20 mm slab and joined by a bridge, at the spacing of one cap diameter. The notches in the top edge of the bridge identify it. The gauge is printed lying on its back; in use the notched edge is the top. The Hand track's one-paragraph use note for the gauges (what a good fit and each failure look like) is <a href="s2hand_gauge_use_note.md.html">s2hand_gauge_use_note.md</a>.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>gauge</th>
+<th>file</th>
+<th>cap position</th>
+<th>lip / cap-wall / groove face gap (mm)</th>
+<th>notches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 (print first)</td>
+<td>s2hand_gauge_cap30p5.stl</td>
+<td>cap 30.5 (nominal)</td>
+<td>28.0 / 30.5 / 35.5</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>s2hand_gauge_cap29p5.stl</td>
+<td>cap 29.5 (smallest caps)</td>
+<td>27.0 / 29.5 / 34.5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>s2hand_gauge_cap32p0.stl</td>
+<td>cap 32.0 (largest caps)</td>
+<td>29.5 / 32.0 / 37.0</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4 (only if D is 3 to 4 mm)</td>
+<td>s2hand_gauge_cap30p5_lip2.stl</td>
+<td>cap 30.5, 2.0 mm lip</td>
+<td>28.0 / 30.5 / 35.5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How to use a gauge.</strong> Hold it level with the slot opening toward the bottle. Push it onto the neck from the front, about 1 to 2 mm below the final height, until the cap approaches the back wall; then lift until the ring underside rests on the lip.</p>
+<p><strong>Good:</strong> the cap sits between the cap-wall faces, touching or with a hair of play, in the gauge whose diameter matches it (with about 0.25 mm per side of visible gap for a cap 0.5 mm smaller); the ring lies in the groove with air above and beside it; the lip tip is under the ring and the ring rests on it; the bottle hangs from the lip; the cap top stands about 1 mm above the jaw top (a shorter cap that ends below the jaw top is also fine).</p>
+<p><strong>What a failure means:</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>what you see</th>
+<th>meaning</th>
+<th>what happens next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>the cap does not enter the faces</td>
+<td>the cap is wider than this gauge</td>
+<td>try the next larger gauge; if it does not enter the 32.0 gauge, the cap is outside the design range: send me the numbers</td>
+</tr>
+<tr>
+<td>the ring does not enter the groove, or stops on the lead-in</td>
+<td>ring outer diameter above the groove gap minus 0.5 mm, or ring thicker than 5.5 mm</td>
+<td>send me A and E; the groove can be widened</td>
+</tr>
+<tr>
+<td>the gauge cannot be lifted to the ring because the lip does not pass under it</td>
+<td>the free neck is too short for the 3.0 mm lip</td>
+<td>try gauge 4 (2.0 mm lip); if that also fails, stop (see the table below)</td>
+</tr>
+<tr>
+<td>the neck wedges against the lip faces</td>
+<td>neck diameter above the lip face gap (27.0 / 28.0 / 29.5 mm)</td>
+<td>send me B</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="part-3-what-i-do-with-the-numbers">Part 3. What I do with the numbers</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>measured</th>
+<th>design value</th>
+<th>fine as designed</th>
+<th>outside this range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A ring outer diameter</td>
+<td>33</td>
+<td>32.0 to 34.0, every reading</td>
+<td>below 32 the lip seat on the ring is narrower than 1.25 mm per side: I enlarge the lip</td>
+</tr>
+<tr>
+<td>B neck diameter under the ring</td>
+<td>25.5</td>
+<td>24.5 to 26.5</td>
+<td>above 26.5 the lip faces touch the neck: I widen the lip bore</td>
+</tr>
+<tr>
+<td>C cap top to ring underside</td>
+<td>18</td>
+<td>16 to 21</td>
+<td>sets the height of the cap wall; a spread above 1 mm between brands means one jaw setting per product</td>
+</tr>
+<tr>
+<td><strong>D free neck</strong></td>
+<td>6</td>
+<td><strong>4.0 or more (3.25 or more for a typical 600 mL soda bottle with a 71 mm body)</strong>: baseline jaws with the 3.0 mm lip</td>
+<td><strong>3.0 to 4.0 (2.25 to 3.25 for the typical 600 mL): print the lip2 jaws (2.0 mm lip). Below 3.0 (2.25): stop, the bottle can only be held by friction on the cap (about 600 mL) and I redesign the lip. Send me the file before printing any jaw.</strong></td>
+</tr>
+<tr>
+<td>E ring thickness</td>
+<td>2</td>
+<td>1.5 to 3.0</td>
+<td>the groove is 5.5 mm tall and takes up to 3 mm rings; thicker rings reduce the release window</td>
+</tr>
+<tr>
+<td>H cap outer diameter</td>
+<td>30.5</td>
+<td>29.5 to 32.0</td>
+<td>below 29.5 the jaws close on their stop and the clamp force falls (9 to 19 N for caps under 30.3 mm), above 32.0 the cap does not enter</td>
+</tr>
+<tr>
+<td>F widest body diameter</td>
+<td>65 to 70</td>
+<td>71 or less</td>
+<td>above 71 the bottle does not fit the 73 mm lanes (1 L and larger go to the tote and wide-lane use only)</td>
+</tr>
+<tr>
+<td>G total height</td>
+<td>237 (600 mL)</td>
+<td>any</td>
+<td>the shelf pitch needed is G + 5 mm lift + 30 mm shelf structure + 5 mm margin + the hand above the cap (0 mm for the neck hand)</td>
+</tr>
+</tbody>
+</table></div>
+<p>The rule behind the D row is the boolean result of the Hand track on 216 bottle-neck corner cases: after the hand has been lowered by D millimetres to lift the ring off the lip, the free neck must be at least lip thickness + D - 1.0 mm. The release sequence uses D = 2 mm (lower 2 mm, then open): 4.0 mm for the 3.0 mm lip, 3.0 mm for the 2.0 mm lip, worst corner.</p>
+<h2 id="part-4-optional-08-h-of-printing-each-clip-sticks">Part 4 (optional, 0.8 h of printing each). Clip sticks</h2>
+<p>s2hand_stick_A_C.stl and s2hand_stick_B_C.stl are hand-held heads of the real jaws (lip, groove, cap faces, lead-ins and the lip ramp, with a handle). Hold one stick on each side of a bottle neck (press them together by hand) and check three things: the ring enters the groove and rests on the lip, the lip ramp lets the neck slide forward and out without catching, and the ring stays on the lip when you rock the bottle gently. Pressing by hand is not a force measurement; the pull-out force with the servo clamp is measured later, on the assembled hand (test H3 of the test plan).</p>
+<h2 id="what-to-send-me">What to send me</h2>
+<ol>
+<li><code>S2_neck_measurement_template.csv</code> (one row per bottle; the new columns record the gauge result).</li>
+<li>The phone photos (side view of each neck with the ruler).</li>
+<li>Anything surprising: a cap with a tamper band that stays on, a ring with flats, a bottle that does not seat in any gauge.</li>
+</ol>
+<h2 id="not-needed-from-you">Not needed from you</h2>
+<p>Weights, friction tests with other materials, store visits, tilt tests. The design uses desk values for those; the Hand and Sim tracks list which of them are assumed.</p></article></main><footer><div class="wrap">Design, simulation and desk research only; nothing has been printed, built or measured. Updated 4 October 2026.</div></footer></body></html>

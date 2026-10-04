@@ -1,0 +1,8 @@
+jaw,lip_mm,voxel_mm,nel,ux_load_mm,k_N_per_mm,inplane_excl_contact_MPa,across_excl_contact_MPa,inplane_buf3_MPa,across_buf3_MPa,inplane_buf6_MPa,across_buf6_MPa,SF_inplane_excl_25N,SF_across_excl_25N,SF_inplane_excl_35p4N,SF_across_excl_35p4N,SF_stall100_inplane_excl,SF_stall100_across_excl,n_wall_nodes,n_link_nodes,secs,note
+A,3.0,1.5,13171,0.5919,42.2,3.92,2.456,3.098,1.941,3.098,1.887,5.1,4.07,3.6,2.88,2.23,1.78,30,72,25.2,"baseline 3.0 mm lip, corrected boundary conditions"
+A,3.0,1.25,23291,0.5164,48.4,4.169,2.796,3.128,1.8,3.118,1.761,4.8,3.58,3.39,2.53,2.1,1.56,42,154,199.6,"baseline 3.0 mm lip, corrected boundary conditions"
+A,3.0,1.0,46886,0.5027,49.7,4.608,2.926,3.594,2.208,3.594,2.208,4.34,3.42,3.07,2.41,1.9,1.5,63,291,2556.5,"baseline 3.0 mm lip, corrected boundary conditions"
+B,3.0,1.5,15253,-0.7317,34.2,4.613,2.668,3.206,2.034,3.044,1.638,4.34,3.75,3.06,2.65,1.9,1.64,30,80,42.9,"baseline 3.0 mm lip, corrected boundary conditions"
+B,3.0,1.0,50890,-0.7723,32.4,6.175,3.394,3.593,2.208,3.593,2.208,3.24,2.95,2.29,2.08,1.42,1.29,63,291,2655.0,"baseline 3.0 mm lip, corrected boundary conditions"
+A,2.0,1.0,45763,0.5164,48.4,4.603,2.927,3.86,2.332,3.86,2.332,4.34,3.42,3.07,2.41,1.9,1.49,63,291,2044.7,"lip2 (2.0 mm lip), corrected boundary conditions"
+B,2.0,1.0,49767,-0.786,31.8,6.171,3.394,3.86,2.332,3.86,2.332,3.24,2.95,2.29,2.08,1.42,1.29,63,291,2415.8,"lip2 (2.0 mm lip), corrected boundary conditions"
